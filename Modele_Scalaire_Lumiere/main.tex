@@ -1,0 +1,515 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% The Legrand Orange Book
+% LaTeX Template
+% Version 2.1.1 (14/2/16)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Mathias Legrand (legrand.mathias@gmail.com) with modifications by:
+% Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Compiling this template:
+% This template uses biber for its bibliography and makeindex for its index.
+% When you first open the template, compile it from the command line with the 
+% commands below to make sure your LaTeX distribution is configured correctly:
+%
+% 1) pdflatex main
+% 2) makeindex main.idx -s StyleInd.ist
+% 3) biber main
+% 4) pdflatex main x 2
+%
+% After this, when you wish to update the bibliography/index use the appropriate
+% command above and make sure to compile with pdflatex several times 
+% afterwards to propagate your changes to the document.
+%
+% This template also uses a number of packages which may need to be
+% updated to the newest versions for the template to compile. It is strongly
+% recommended you update your LaTeX distribution if you have any
+% compilation errors.
+%
+% Important note:
+% Chapter heading images should have a 2:1 width:height ratio,
+% e.g. 920px width and 460px height.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt,fleqn]{book} % Default font size and left-justified equations
+
+\usepackage{ifthen} 
+\newboolean{VersionProf}
+\setboolean{VersionProf}{false}
+
+\usepackage{wasysym}
+\usepackage{esint} % various fancy integral symbols
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.17}
+\usetikzlibrary{patterns}
+\usepackage{tkz-euclide} 
+\usepackage{mathtools}
+\usepackage{xurl}
+\usepackage[version=4,arrows=pgf-filled,
+textfontname=sffamily,
+mathfontname=mathsf]{mhchem}
+\usepackage{gensymb}
+\usepackage{tabularray}
+
+\usepackage[french]{babel}
+\usepackage{dingbat}
+
+\usepackage{environ}
+\usepackage{wrapfig}
+
+\NewEnviron{solution}{%
+    \ifthenelse{\boolean{VersionProf}}{\begin{solutionA}
+        \BODY%*
+        \end{solutionA}
+    }{%
+        \relax%
+    }%
+}%
+
+\usetikzlibrary {arrows.meta} 
+
+\newcommand{\degC}{{\degree}C}
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\div}{\mathrm{div}}
+\newcommand{\rot}{\vv{\mathrm{div}}}
+\newcommand{\grad}{\vv{\mathrm{grad}}}
+
+\tikzset{
+    support/.style={
+        pattern=north east lines,
+        draw=none,
+        minimum width=0.3,
+        minimum height=0.6
+    }
+    ,>=latex
+}
+
+\usepackage[d]{esvect}
+
+%SPECIFIC TO THIS CHAPTER
+\usepackage{physics}
+\usepackage{ifthen}
+\usepackage[outline]{contour} % glow around text
+\usetikzlibrary{calc} % for pic
+\usetikzlibrary{angles,quotes} % for pic
+\usetikzlibrary{patterns}
+\tikzset{>=latex} % for LaTeX arrow head
+\contourlength{1.2pt}
+
+\colorlet{myred}{red!65!black}
+\definecolor{myred}{RGB}{127,0,255}
+\tikzstyle{ground}=[preaction={fill,top color=black!10,bottom color=black!5,shading angle=20},
+                    fill,pattern=north east lines,draw=none,minimum width=0.3,minimum height=0.6]
+\tikzstyle{mass}=[line width=0.6,myred,fill=myred!40,rounded corners=1,
+                  top color=myred!40,bottom color=myred!20,shading angle=20]
+\tikzstyle{rope}=[myred!30,line width=1.2,line cap=round] %very thick
+
+% FORCES SWITCH
+\tikzstyle{force}=[->,myred,ultra thick,line cap=round]
+\tikzstyle{Fproj}=[force,myred!60]
+\newboolean{showforces}
+\setboolean{showforces}{true}
+%----------------------------------------------------------------------------------------
+
+\input{structure} % Insert the commands.tex file which contains the majority of the structure behind the template
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	TABLE OF CONTENTS
+%----------------------------------------------------------------------------------------
+
+%\usechapterimagefalse % If you don't want to include a chapter image, use this to toggle images off - it can be enabled later with \usechapterimagetrue
+
+\chapterimage{lasers.jpg} % Table of contents heading image
+
+%\pagestyle{empty} % No headers
+
+%\tableofcontents % Print the table of contents itself
+
+%\cleardoublepage % Forces the first chapter to start on an odd page so it's on the right
+
+%\pagestyle{fancy} % Print headers again
+
+
+
+%\part{\'{E}lectromagnétisme}
+
+\setcounter{chapter}{7}
+
+\chapter{Modèle scalaire des ondes lumineuses}
+
+\section{La vibration lumineuse}
+
+\subsection{Introduction}
+
+En MPSI, l'optique géométrique nous a permis d'expliquer un certain nombre de phénomènes lumineux, à partir d'une approximation simple selon laquelle la lumière se propage en ligne droite le long de rayons lumineux. Cette approche s'accorde bien avec une description corpusculaire de la lumière : la lumière correspond à un déplacement de photons transportant chacun une énergie $E = h \nu$ à la vitesse de la lumièce $c$. Néanmoins, cette approche a ses limites : elle ne permet pas de décrire tous les phénomènes associés au caractère ondulatoire de la lumière, qui sont essentiels dans un certain nombre d'instruments d'optique tels que les télescopes.
+
+Le fait que la lumière est une onde a été découvert avant que l'on connaisse la nature de cette onde : il s'agit en fait de perturbations du champ électrique $\vv E$ et du champ magnétique $\vv B$. Plutôt que de décrire complètement la structure des champs $\vv E$ et $\vv B$, ce qui s'avérerait lour mathématiquement, nous allons en optique adopter le modèle scalaire des ondes lumineuses, modèle qui a été proposé pour interpréter les expériences d'optique réalisées avant la découverte de l'électromagnétisme.
+
+\subsection{La vibration lumineuse}
+
+Dans ce modèle, nous considérons que la lumière peut être décrite par une grandeur qui oscille, de la même manière que l'on a pu décrire les tensions et intensités dans un circuit électrique en MPSI. Néanmoins, à la différence d'une tension ou d'une intensité, une onde lumineuse se propage et n'est donc pas la même en tout point de l'espace. Il s'agit alors d'un champ scalaire :
+
+\begin{definition}[Vibration lumineuse]
+	Le modèle scalaire consiste à décrire l’onde lumineuse par un champ scalaire $s(M,t)$ appelé onde scalaire, vibration scalaire ou encore vibration lumineuse.
+\end{definition}
+
+Nous n'avons pas d'\textit{a priori} sur la forme de la vibration lumineuse. Une onde lumineuse va typiquement être générée par une source et se déplacer dans l'espace en suivant une équation d'onde, à savoir l'équation de d'Alembert.
+
+
+
+\subsection{Onde monochromatique}
+Dans le cas d'une onde monochromatique, on peut s'attendre à ce que la vibration lumineuse soit une quantité qui oscille dans le temps, à une fréquence $\nu = \frac{\omega}{2\pi}$. 
+
+Dans ce cas, nous pouvons établir qu'en tout point de l'espace, l'onde va s'écrire :
+\begin{equation}
+	s(\vv{r},t) = s_0(\vv r) \cos(\omega t - \varphi(\vv r))
+\end{equation}
+
+\begin{remark}
+Dans ce cours, nous utilisons le retard de phase avec un signe $-$. Il s'agit d'une convention et de nombreuses autres références utilisent un signe $+$. Dans un sujet de concours, soyez attentifs à la convention choisie, et, si elle n'est pas explicitée dans l'énoncé, choisissez une convention et explicitez-la sur votre copie.
+\end{remark}
+
+\begin{definition}[Phase]
+	Considérons une onde monochromatique. Le champ scalaire $\hpi(\vv r,t) = \omega t - \varphi(\vv r)$ est appelé la phase de l'onde lumineuse. Il dépend du temps.
+\end{definition}
+\begin{definition}[Retard de phase]
+	En considérant la même onde monochromatique, le champ scalaire $\varphi(\vv r)$ est appelé le retard de phase de l'onde lumineuse. Son opposé, $-\varphi(\vv r)$, est l'avance de phase de l'onde lumineuse. Si l'onde est bien monochromatique, ce champ est stationnaire (indépendant du temps).
+\end{definition}
+
+\subsection{Fronts d'onde et rayons}
+
+Il est possible de définir les fronts d'onde à partir de la vibration lumineuse :
+\begin{definition}
+On appelle surface d’onde ou front d’onde une surface continue de l’espace sur laquelle la vibration lumineuse est uniforme à tout instant.
+Si les surfaces d’onde sont des sphères concentriques, l’onde est dite sphérique ; s’il s’agit de plans parallèles elle est dite plane.
+\end{definition}
+\begin{proposition}
+Une source ponctuelle émet une onde sphérique, qui peut être approximée par une onde plane à grande distance de la source (c'est-à-dire, si la taille du dispositif d'étude est petite par rapport à la distance entre la source et le dispositif).
+\end{proposition}
+
+
+On constate expérimentalement que l'énergie reçue par un capteur est maximale lorsque le capteur est pointé vers la source lumineuse. Ceci laisse supposer que pour une onde sphérique, l'énergie de l'onde se propage radialement, c'est-à-dire en ligne droite depuis la source vers l'extérieur. Pour représenter cette propagation d'énergie lumineuse, nous définissions les rayons lumineux :
+\begin{definition}
+	Un rayon lumineux est une ligne le long de laquelle l'énergie lumineuse se propage. C’est une modélisation : on ne peut pas produire ni même isoler un seul rayon lumineux, mais seulement des faisceaux composés d’une infinité de rayons lumineux. Une source ponctuelle émet des rayons lumineux dans toutes les directions. 
+\end{definition}
+\begin{remark}
+	En fin d'année, nous définirons le vecteur de Poynting $\vv \Pi(\vv r,t)$, qui indique la densité volumique de flux énergétique électromagnétique. Les rayons lumineux sont les lignes de champ du vecteur de Poynting, c'est-à-dire qu'elles sont en tout point tangentes à ce champ.
+\end{remark}
+
+Pour une onde sphérique, nous venons de voir que l'expérience montre que les rayons lumieux sont radiaux (orientés selon $\vv{e_r}$). Ils sont ainsi perpendiculaires aux surfaces d'onde, déquation $r = c^{ste}$. Cette propriété se généralise à toutes les ondes lumineuses monochromatiques :
+\begin{theorem}[Théorème de Malus (admis)]
+Les fronts d'ondes et les rayons d'une onde lumineuse monochromatique sont perpendiculaires en tout point de l'espace.
+\end{theorem}
+
+Ce théorème est très important car il permet de faire le lien entre les aspects ondulatoire de la lumière et l'optique géométrique. Pour mieux le comprendre, on rappelle la définition de deux points conjugués par un système optique :
+\begin{definition}[Stigmatisme et conjgaison (révisions)]
+Un système optique est dit stigmatique lorsque tous les rayons issus d'un point $A$ et ayant traversé le système optique passent par un point $A'$. $A'$ est alors l'image de $A$ par le système optique et on dit que les points $A$ et $A'$ sont conjugués. Si le prolongement des rayons émergents passe par $A'$, on dit que $A'$ est une image virtuelle de $A$.
+\end{definition}
+A partir de cette définition, on peut alors représenter l'effet de divers instruments d'optique sur les surfaces et fronts d'onde.
+
+Par exemple, on peut considérer une lentille convergente, qui fait d'un objet réel $AB$ une image réelle $A'B'$. Le théorème de Malus nous permet directement de représenter les surfaces d'onde sont perpendiculaires aux rayons :
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\linewidth]{image_lentille.png}
+    \caption{Effet d'une lentille sur les surfaces d'onde. Source : poly de cours de Etienne Thibierge.}
+\label{fig:lentille}
+\end{figure}
+
+
+\begin{remark}
+Plus d'exemples de ce type avec des lentilles minces seront traités en TD.
+\end{remark}
+\begin{capex}
+	Représenter l'action d'un miroir plan sur les rayons et les plans d'onde d'une onde plane en incidence oblique. Faire de même pour une onde sphérique. En déduire l'interprétation de la formation d'une image en termes de surface d'onde.
+\end{capex}
+
+
+
+\section{Chemin optique}
+
+\subsection{Onde plane monochromatique, vecteur d'onde}
+
+Nous allons maintenant nous intéresser plus particulièrement à une onde plane afin de mieux comprendre sa structure. Si l'on suppose que l'onde se propage dans la direction $+\vv{e_x}$, on s'attend à ce qu'elle vérifie l'équation d'onde de d'Alembert :
+ \begin{equation}
+\frac{\partial^2 s}{\partial x^2} = \frac{n^2}{c^2} \frac{\partial^2 s}{\partial t^2}
+ \end{equation}
+ La vitesse de propagation de l'once est $c_{onde} = \frac{c}{n}$ où $c$ est la vitesse de la lumière dans le vide. 
+ L'onde est alors de la forme :
+ \begin{equation}
+	 s = f(x - c_{onde}t) = g \left(t-\frac{n x}{c}\right)
+\end{equation}
+(L'éventuel terme en $f'(x + c_{onde}t)$ n'est pas à considérer ici puisqu'il correspond à une propagation en sens opposé, selon $- \vv{e_x}$).
+
+En comparant cette expression à l'expression de la phase, nous obtenons la relation suivante :
+\begin{equation}
+\varphi(\vv r,t) = \omega \frac{n x}{c} + \varphi_0
+\end{equation}
+où $\varphi_0$ est une constante. On pourra alors écrire :
+\begin{equation}
+	s(x,t) = s_0 \cos(\omega t - k_x x - \varphi_0)  
+\end{equation}
+où $k_x = \frac{\omega n}{c}$.
+Cette onde a une périodicité spatiale $\lambda = \frac{2\pi}{k}$ dans la direction $x$. Cette propriété se généralise en trois dimensions, et permet d'étudier la propagation d'une onde plane de direction quelconque.
+
+\begin{definition}
+On définit le vecteur d'onde $\vv k$ tel qu'une onde lumineuse plane monochromatique s'écrive de la forme :
+\begin{equation}
+	s(\vv r,t) = s_0 \cos(\omega t - \vv k \cdot \vv r + \varphi_0)
+\end{equation}
+Le vecteur d'onde est alors relié à la longueur d'onde par la relation :
+\begin{equation}
+	\lambda = \frac{2\pi}{||\vv k||}
+\end{equation}
+Et les rayons lumineux sont orientés dans la direction du vecteur $\vv k$.
+\end{definition}
+
+\subsection{Onde sphérique monochromatique}
+
+Dans le cas d'une onde sphérique, nous avons pu montrer expérimentalement que l'intensité lumineuse associée à l'onde, $\langle s^2 \rangle$ décroît comme le carré de la distance $r$. Ceci nous permet d'établir la forme de l'onde sphérique :
+\begin{proposition}[Forme d'une onde sphérique (admise)]
+Une onde sphérique monochromatique peur s'écrire sous la forme :
+\begin{equation}
+	s(r,t) = s_0 \cos\left(\omega\left(t-\frac{n r}{c}\right) - \varphi_0\right)
+\end{equation}
+\end{proposition}
+On constate qu'à l'intérieur du cosinus, la phase de l'onde $\phi$ a exactement la même expression que la phase d'une onde plane, pour peu que l'on remplace la coordonnée linéaire $x$ par le rayon $r$.
+
+\subsection{Chemin optique}
+
+L'analyse de l'onde sphérique comme de l'onde plane nous montre que la forme générale de la phase de l'onde $\phi$ ne dépend pas de la nature de l'onde. Pour exprimer cette phase, nous définisssons le chemin optique :
+\begin{definition}
+	Le chemin optique entre deux points $A$ et $B$, calculé le long d'un rayon lumineux, est donné par :
+	\begin{equation}
+		(AB) = \int_A^B n \dd \ell
+	\end{equation}
+	où $\dd \ell$ est la distance élémentaire le long du rayon lumineux considéré. Le chemin optique dépend du chemin suivi, il est donc important de préciser le long de quel rayon il est calculé.
+\end{definition}
+\begin{remark}
+	Dans un milieu homogène, le chemin optique est simplement le produit de la distance géométrique par l’indice optique. Pour un rayon en ligne droite, on a ainsi $(AB) = n AB$.
+\end{remark}
+
+\begin{capex}
+	Déterminer la phase d'une onde monochromatique issue d'une source $S$ en un point de l'espace $A$ en fonction du chemin optique $(SA)$ parcouru le long d'un premier rayon. En déduire la propriété suivante.
+\end{capex}
+\begin{proposition}
+Le déphasage d’une onde entre deux points $M$ et $M'$ se trouvant sur un même rayon lumineux est relié au chemin optique entre ces deux points :
+	\begin{equation}
+	\varphi(M') - \varphi(M) = \frac{2\pi}{\lambda} (MM')
+	\end{equation}
+\end{propositions}
+
+
+\begin{encart}[Mesures des séismes par InSAR]
+	Cette propriété est directement utilisée par la méthode InSAR, développée en 2006, et qui permet de visualiser des mouvements de terrain lors d'un séisme ou d'une éruption volcanique. Le principe est simple : un satellite en orbite basse (altitude de quelques centaines de kilomètres) envoie une onde électromagnétique vers le sol. L'onde est réfléchie par le sol et renvoyée vers le satellite, qui mesure le signal obtenu. On peut alors mesurer le déphasage entre l'onde envoyée et l'onde reçue, autrement dit, on mesure à une constante près la phase $\Phi$ de l'onde.
+
+	Lorsqu'un séisme se produit, on peut calculer la différence de phase entre la phase mesurée avant et après le séisme. La relation que nous venons de démontrer implique que :
+	\begin{equation}
+		\Delta r = \frac{\delta}{2} = \frac{\Delta \varphi}{4\pi}\lambda
+	\end{equation}
+	où $\delta$ est la différence de marche entre les deux rayons aller-retour, qui correspond au double de la variation de hauteur du sol dans la direction de visée, $\Delta r$. La longueur d'onde est choisie dans le domaine radar ($\lambda \sim 10$\,cm), ce qui permet de mesurer des déplacements centimétriques. Le principe est détaillé sur la figure suivante.
+
+	\includegraphics[width=0.35\linewidth]{principe_SAR.png} \includegraphics[width=0.64\linewidth]{principe_insar.jpg}
+
+
+	Les images ci-dessous montrent des mesures réalisées par InSAR montrant le gonflement du volcan South Sister dans l'Oregon aux Etats-Unis, ainsi qu'une estimation du déplacement du sol lors du séisme qui a frappé Haïti en 2010 (image réalisée par un groupe de charcheurs et chercheuses américains et haïtiens).
+\end{encart}
+
+
+
+\begin{figure}[p]
+    \centering
+    \includegraphics[width=\linewidth]{insar_volcan.jpg}
+    \includegraphics[width=\linewidth]{papier_haiti.png}
+	\caption{En haut : déformation du volcan South Sister aux Etats Unis. Source : USGS (United States Geological Survey). En bas : mesure de la différence de phase causée par le séisme de Haïti en 2010 (a) et estimation du mouvement total le long de la faille (b). Source : Calais et al. (2010). \textit{Transpressional rupture of an unmapped fault during the 2010 Haiti earthquake.} Nature Geoscience, 3(11), 794-799.}
+\end{figure}
+
+
+
+\begin{capex}
+Que peut-on dire du chemin optique entre une source lumineuse et deux points d'une même surface d'onde ? En déduire la propriété suivante.
+\end{capex}
+
+\begin{proposition}[Chemin optique entre points conjugués]
+	Le chemin optique séparant deux points conjugués par un système optique est indépendant du rayon lumineux choisi.
+\end{proposition}
+
+Cette propriété est bien visible, par exemple, sur la figure \ref{fig:lentille} : les rayons pour lesquels la distance géométrique est la plus courte ont un parcours plus long dans le verre de la lentille. Comme le verre a un indice optique $n>1$, ceci contribue à augmenter le chemin optique total.
+
+
+
+\subsection{Principe de superpositions}
+
+Les équations de l'électromagnétisme (que nous n'avons pas encore vues), sont des équations linéaires. Nous pouvons en déduire que le principe de superposition s'applique non pas à l'intensité lumineuse $I$, mais à la vibration lumineuse $s$ :
+\begin{theorem}[Principe de superposition]
+	Soient $s_1$ et $s_2$ deux ondes lumineuses créées par les sources respectives $S_1$ et $S_2$. Alors l'onde créée par l'ensemble des deux sources $S_1 \cup S_2$ est $s_1+s_2$.
+\end{theorem}
+
+\begin{capex}
+Etablir l'intensité résultant de la superposition de deux ondes monochromatiques de fréquence $\nu_1$ et $\nu_2$. Mettre en évidence l'existence d'un termes d'interférences.
+\end{capex}
+
+La formule obtenue nous amène à distanguer deux cas, dans lesquels on dira que les ondes lumineuses sont soit cohérentes, soit incohérentes. Dans le cas où les ondes sont cohérentes, le terme d'interférences sera non nul. Pour cela, nous avons besoin de revenir plus en détail sur l'émission et la mesure de la lumière.
+
+\section{Notion de cohérence}
+
+Nous souhaitons comprendre si deux ondes seront cohérentes, c'est-à-dire si le terme d'interférences pourra avoir une moyenne non nulle :
+\begin{equation}
+	\langle \cos \left( 2 \pi (\nu_1 - \nu_2) t + \varphi_1(\vv r) - \varphi_2(\vv r) \right) \rangle_\tau \neq 0
+\end{equation}
+
+\subsection{Récepteurs et intensité}
+
+Pour caractériser cette moyenne, nous devons comprendre plus précisément en quoi consiste cette moyenne. En effet l'intensité lumineuse n'est pas une grandeur moyennée sur une très longue période de temps, mais sur une période $\tau$ qui dépend du capteur utilisé. 
+Des valeurs de temps caractéristiques sont indiquées dans le tableau suivant :
+\begin{table}[h]
+	\begin{tabular}{ccc}
+		\toprule
+		Oeil & CCD & Photodiode \\
+		\midrule
+		0.1\,s & $10^{-4}$\,s &$10^{-8}$\,s \\
+		\bottomrule
+	\end{tabular}
+	\caption{Temps de réponse de différents capteurs lumineux.}
+\end{table}
+
+Il faut alors que, sur cette période, la moyenne du terme d'interférences soit non nulle. Ceci implique que $(\nu_1 - \nu_2) \tau \lesssim 1$. Cette relation est évidemment vérifiée si les ondes sont purement monochromatiques et ont des fréquences égales. Mais en pratique, ce n'est jamais le cas, et nous devons définir la notion de temps de cohérence et longueur de cohérence d'une source lumineuse.
+
+\subsection{Modèle d'émission des ondes lumineuses. Temps de cohérence.}
+
+En pratique, le spectre d’une onde lumineuse ne peut jamais être parfaitement pur, pas même celui d’un laser ou si l’on isole une raie à l’aide d’un filtre coloré. Ainsi, une onde lumineuse n’est jamais parfaitement sinusoïdale, c’est-à-dire que les paramètres de la sinusoïde (amplitude, fréquence, phase initiale) varient lentement au cours du temps. Logiquement, le temps caractéristique de ces variations lentes doit se retrouver sur le spectre.
+
+\begin{definition}
+	On appelle temps de cohérence $\tau_c$ d’une source lumineuse le temps caractéristique de variation des propriétés de l’onde lumineuse. On définit également la longueur de cohérence $\ell_c = c \tau_c$, qui correspond à la distance parcourue par l'onde pendant le temps de cohérence.
+\end{definition}
+
+Le temps de cohérence d'une onde lumineuse peut être relié au spectre d'émission. On sait que par le théorème de Parseval, l'intensité d'une onde lumineuse, égale à la moyenne de son carré, peut être reliée à son spectre énergétique :
+\begin{equation}
+	\int_0^\infty |\hat{s}(\omega)|^2 \dd \omega = \int_0^\infty |\underline{s}(t)|^2 \dd t
+\end{equation}
+Autrement dit, l'intensité lumineuse peut se décomposer comme une intégrale sur la fréquence, et on appellera $S(\omega) = |\hat{s}(\omega)|^2$ le spectre d'émission d'une source lumineuse.
+
+\begin{example}
+\textit{La connaissance de cet exemple n'est pas exigible, mais est vivement recommandée aux personnes qui envisagent de passer les concours les plus difficiles (Mines/Centrale/X/ENS).}
+Considérons une onde sinusoïdale amortie dans le temps :
+	\begin{equation}
+		s(t) = s_0 e^{-t/\tau_c} \cos(\omega_0 t)
+	\end{equation}
+	qui se modélise par l'onde complexe :
+	\begin{equation}
+		\underline{s}(t) = s_0 e^{j \omega t - t/\tau_c}
+	\end{equation}
+$\tau_c$ est alors le temps de cohérence de cette onde (en l'occurence, ici, c'est le temps caractéristique de variation de son amplitude).
+Quel est le spectre de cette onde ? Pour le savoir, nous pouvons en faire la transformée de Fourier :
+	\begin{align}
+		\hat{s}(\omega) &= \int_0^\infty s(t) e^{-j \omega t} \dd t  \\
+		&= s_0 \int_0^\infty  \exp\left( \left(j\left(\omega_0-\omega)-\frac{1}{\tau_c}\right)t \right)  \\
+		&= \frac{s_0}{\frac{1}{\tau_c} + j(\omega-\omega_0)}
+	\end{align}
+On obtient ainsi l'expression du spectre :
+	\begin{equation}
+		S(\omega) = \frac{s_0^2 \tau_c^2}{1 + \tau_c^2 (\omega-\omega_0)^2}
+	\end{equation}
+On constate que la largeur spectrale de la courbe à mi-hauteur est de l'ordre de $\Delta \omega = 2 \tau_c$ soit $\Delta \nu = \tau_c/\pi$. 
+\end{example}
+
+De manière générale, on retiendra la propriété suivante :
+\begin{proposition}
+	La largeur spectrale d'une source, $\Delta \nu$, est reliée à son temps de cohérence $\tau_c$ par la relation :
+	\begin{equation}
+		\Delta \nu \times \tau_c \approx 1
+	\end{equation}	
+\end{proposition}
+
+\begin{capex}
+	Utiliser cette relation pour déterminer le lien entre le temps de cohérence et la largeur spectrale de la source, évaluée en termes d'incertitude sur la longueur d'onde émise $\Delta \lambda$.
+\end{capex}
+
+\paragraph{Le modèle des trains d'onde}
+
+A priori, l’onde lumineuse est une onde presque harmonique, dont l’amplitude, la fréquence et la phase initiale peuvent varier de manière simultanée : de telles variations combinées ne peuvent pas être décrites mathématiquement de façon simple. Le modèle des trains d’onde est une simplification permettant de décrire efficacement une onde lumineuse. Il inclut l'effet de temps de cohérence en restant relativement simple.
+
+\begin{definition}[Modèle des trains d'onde]
+	Une onde lumineuse est modélisée par une succession de trains d’onde, tous de même durée $\tau_c$, pendant lesquels l’onde est parfaitement sinusoïdale. Entre deux trains d’onde, la phase subit une discontinuité aléatoire, alors que l’amplitude et la fréquence restent inchangées.
+\end{definition}
+
+
+\begin{figure}[htbp]
+    \centering
+	\includegraphics[width=\linewidth]{train_ondes.png}
+	\caption{Le modèle du train d'ondes. Source : poly de cours de Etienne Thibierge.}
+\end{figure}
+
+
+\section{Rappels}
+
+\begin{capex}
+Démontrer que les isothermes sont verticales dans les zones (1) et (3) en supposant le gaz parfait et les phases condensées idéales, et qu'elles sont horizontales sous la courbe de saturation.
+\end{capex}
+
+\begin{solution}
+Pour une phase condensée idéale ou pour un gaz parfait, on a :
+\begin{equation}
+    \dd h = c_p \dd T
+\end{equation}
+(cette égalité correspond à la deuxième loi de Joule). On en déduite que $h$ est constant si et seulement si $T$ est constante. 
+
+Pour un système diphasé on ne peut pas utiliser la deuxième loi de Joule mais on sait que la pression est égale à la pression de vapeur saturante $p = p_{sat}(T)$, si bien que les courbes de température constante sont confondues avec les courbes de pression constante.
+
+\end{solution}
+
+\begin{remark}
+    En pratique on constate que dans certaines régions du diagramme, les isothermes ne sont ni verticales ni horizontales, c'est le cas en particulier dans ou proche de la zone supercritique, où le fluide ne peut être assimilé ni à un gaz parfait ni à une phase condensée idéale.
+\end{remark}
+
+De la même manière qu'en première année sur les diagrammes de Clapeyron, on peut utiliser le théorème des moments pour trouver une fraction massique de vapeur sous la courbe de saturation :
+\begin{proposition}[Théorème des moments]
+On considère un point $M$ de titre vapeur $x$, correspondant à une enthalpie massique $h$. Sur le palier isotherme, on lit $h_{vap}$ et $h_{liq}$. Alors :
+\begin{equation}
+    x = \frac{h-h_{liq}}{h_{vap}-h_{liq}}
+\end{equation}
+\end{proposition}
+
+{\begin{wrapfigure}{r}{0.5\textwidth}
+    \vspace{-0.5cm}
+    \includegraphics[width=0.99\linewidth]{schema_frigo.jpg}
+    \caption{Fonctionnement d'un réfrigérateur. Source : Université du Québec.}
+\end{wrapfigure}
+
+
+\paragraph{Application à une machine frigorifique}
+
+On considère un réfrigérateur contenant le fluide R134a, dont le diagramme est présenté ci-dessous. Le fluide subit un cycle avec les étapes suivantes :
+\begin{itemize}
+    \item Compresseur : Compression rapide du fluide de 1.3 à 8\,bar
+    \item Condenseur : liquéfaction à pression constante au contact de la source chaude. La liquéfaction étant exothermique, de l’énergie est cédée à l’air ambiant.
+    \item Détendeur : Le fluide subit une détente adiabatique en l'absence de tout travail extérieur (pas de partie mobile dans le détendeur). La pression redescend à 1.3\,bar. La température diminue à -20$^\circ$C.
+    \item Évaporateur : le fluide s'évapore au contact de la source froide, à pression constante. L'évaporation étant endothermique, ceci refroidit l'intérieur du réfrigérateur.
+\end{itemize}}
+
+\begin{capex}
+A l'aide des différentes étapes du cycle, déterminer l'efficacité du réfrigérateur et la comparer à l'efficacité de Carnot.
+\end{capex}
+
+\begin{figure}[p]
+    \centering
+    \includegraphics[width=1.5\linewidth,angle=270]{R134a.png}
+    \caption{Diagramme enthalpique du R134a. Source : Climalife.}
+\end{figure}
+
+\end{document}

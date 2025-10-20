@@ -63,6 +63,7 @@ textfontname=sffamily,
 mathfontname=mathsf]{mhchem}
 \usepackage{gensymb}
 \usepackage{tabularray}
+\usepackage{csquotes}
 
 \usepackage[french]{babel}
 \usepackage{dingbat}
@@ -171,9 +172,39 @@ Dans ce modèle, nous considérons que la lumière peut être décrite par une g
 Nous n'avons pas d'\textit{a priori} sur la forme de la vibration lumineuse. Une onde lumineuse va typiquement être générée par une source et se déplacer dans l'espace en suivant une équation d'onde, à savoir l'équation de d'Alembert.
 
 
+\subsection{Récepteurs et intensité}
 
-\subsection{Onde monochromatique}
-Dans le cas d'une onde monochromatique, on peut s'attendre à ce que la vibration lumineuse soit une quantité qui oscille dans le temps, à une fréquence $\nu = \frac{\omega}{2\pi}$. 
+En pratique, la présence d'une onde lumineuse est mise en évidence expérimentalement par l'utilisation de photorécepteurs : des instruments capables de détecter la présence de lumière. L'oeil humain en est un, mais il existe d'autres récepteurs tels que la photodiode, ou encore les réseaux de CCD (grille constituée d'un ensemble de photorécepteurs formant des pixels).
+
+\begin{figure}[htbp]
+	\centering \includegraphics[width=0.3\linewidth]{CCD.png}
+	\caption{Schéma d'une CCD : il s'agit d'un tableau de photodiodes (formant les pixels). Ici, on a placé des filtres colorés RVB permettant d'imiter les cônes de l'oeil humain. Source : Florida State University.}
+\end{figure}
+
+Ces récepteurs sont sensibles à l'énergie transportée par l'onde lumineuse. Cette énergie est proportionnelle au carré de la vibration lumineuse (nous le démontrerons en électromagnétiqme). Par ailleurs, ces capteurs ne sont pas sensibles à la période des oscillations, qui est de l'ordre de $10^{-14}$\,s pour une onde visible. Ils mesurent une moyenne de cette énergie lumineuse sur un grand nombre de périodes. On définit ainsi l'intensité lumineuse :
+\begin{definition}
+	L'intensité d'une onde lumineuse est définie comme la moyenne du carré de la vibration lumineuse sur un grand nombre de périodes :
+	\begin{equation}
+		I(\vv r) = \langle s(\vv r,t)^2 \rangle
+	\end{equation}
+\end{definition}
+
+En pratique, la moyenne est réalisée sur une période $\tau$ qui dépend du capteur utilisé. Des valeurs de temps caractéristiques sont indiquées dans le tableau suivant :
+\begin{table}[h]
+	\begin{tabular}{ccc}
+		\toprule
+		Oeil & CCD & Photodiode \\
+		\midrule
+		0.1\,s & $10^{-4}$\,s &$10^{-8}$\,s \\
+		\bottomrule
+	\end{tabular}
+	\caption{Temps de réponse de différents capteurs lumineux.}
+\end{table}
+
+
+
+\section{Onde monochromatique}
+Nous allons maintenant nous intéresser plus précisément au cas d'une onde monochromatique. La vibration lumineuse est alors une quantité qui oscille dans le temps, à une fréquence $\nu = \frac{\omega}{2\pi}$. 
 
 Dans ce cas, nous pouvons établir qu'en tout point de l'espace, l'onde va s'écrire :
 \begin{equation}
@@ -185,7 +216,7 @@ Dans ce cours, nous utilisons le retard de phase avec un signe $-$. Il s'agit d'
 \end{remark}
 
 \begin{definition}[Phase]
-	Considérons une onde monochromatique. Le champ scalaire $\hpi(\vv r,t) = \omega t - \varphi(\vv r)$ est appelé la phase de l'onde lumineuse. Il dépend du temps.
+	Considérons une onde monochromatique. Le champ scalaire $\phi(\vv r,t) = \omega t - \varphi(\vv r)$ est appelé la phase de l'onde lumineuse. Il dépend du temps.
 \end{definition}
 \begin{definition}[Retard de phase]
 	En considérant la même onde monochromatique, le champ scalaire $\varphi(\vv r)$ est appelé le retard de phase de l'onde lumineuse. Son opposé, $-\varphi(\vv r)$, est l'avance de phase de l'onde lumineuse. Si l'onde est bien monochromatique, ce champ est stationnaire (indépendant du temps).
@@ -230,14 +261,14 @@ Par exemple, on peut considérer une lentille convergente, qui fait d'un objet r
     \caption{Effet d'une lentille sur les surfaces d'onde. Source : poly de cours de Etienne Thibierge.}
 \label{fig:lentille}
 \end{figure}
-
-
 \begin{remark}
-Plus d'exemples de ce type avec des lentilles minces seront traités en TD.
+	Plus d'exemples de ce type avec des lentilles minces seront traités en TD.
 \end{remark}
 \begin{capex}
 	Représenter l'action d'un miroir plan sur les rayons et les plans d'onde d'une onde plane en incidence oblique. Faire de même pour une onde sphérique. En déduire l'interprétation de la formation d'une image en termes de surface d'onde.
 \end{capex}
+
+
 
 
 
@@ -312,7 +343,7 @@ Le déphasage d’une onde entre deux points $M$ et $M'$ se trouvant sur un mêm
 	\begin{equation}
 	\varphi(M') - \varphi(M) = \frac{2\pi}{\lambda} (MM')
 	\end{equation}
-\end{propositions}
+\end{proposition}
 
 
 \begin{encart}[Mesures des séismes par InSAR]
@@ -324,7 +355,7 @@ Le déphasage d’une onde entre deux points $M$ et $M'$ se trouvant sur un mêm
 	\end{equation}
 	où $\delta$ est la différence de marche entre les deux rayons aller-retour, qui correspond au double de la variation de hauteur du sol dans la direction de visée, $\Delta r$. La longueur d'onde est choisie dans le domaine radar ($\lambda \sim 10$\,cm), ce qui permet de mesurer des déplacements centimétriques. Le principe est détaillé sur la figure suivante.
 
-	\includegraphics[width=0.35\linewidth]{principe_SAR.png} \includegraphics[width=0.64\linewidth]{principe_insar.jpg}
+	\includegraphics[width=0.35\linewidth]{principe_SAR.png} \includegraphics[width=0.6\linewidth]{principe_insar.jpg}
 
 
 	Les images ci-dessous montrent des mesures réalisées par InSAR montrant le gonflement du volcan South Sister dans l'Oregon aux Etats-Unis, ainsi qu'une estimation du déplacement du sol lors du séisme qui a frappé Haïti en 2010 (image réalisée par un groupe de charcheurs et chercheuses américains et haïtiens).
@@ -336,7 +367,7 @@ Le déphasage d’une onde entre deux points $M$ et $M'$ se trouvant sur un mêm
     \centering
     \includegraphics[width=\linewidth]{insar_volcan.jpg}
     \includegraphics[width=\linewidth]{papier_haiti.png}
-	\caption{En haut : déformation du volcan South Sister aux Etats Unis. Source : USGS (United States Geological Survey). En bas : mesure de la différence de phase causée par le séisme de Haïti en 2010 (a) et estimation du mouvement total le long de la faille (b). Source : Calais et al. (2010). \textit{Transpressional rupture of an unmapped fault during the 2010 Haiti earthquake.} Nature Geoscience, 3(11), 794-799.}
+	\caption{En haut : déformation du volcan South Sister aux Etats Unis. Source : USGS (United States Geological Survey). En bas : mesure de la différence de phase cau sée par le séisme de Haïti en 2010 (a) et estimation du mouvement total le long de la faille (b). Source : Calais et al. (2010). \textit{Transpressional rupture of an unmapped fault during the 2010 Haiti earthquake.} Nature Geoscience, 3(11), 794-799.}
 \end{figure}
 
 
@@ -353,42 +384,40 @@ Cette propriété est bien visible, par exemple, sur la figure \ref{fig:lentille
 
 
 
-\subsection{Principe de superpositions}
+\subsection{Principe de superposition}
 
 Les équations de l'électromagnétisme (que nous n'avons pas encore vues), sont des équations linéaires. Nous pouvons en déduire que le principe de superposition s'applique non pas à l'intensité lumineuse $I$, mais à la vibration lumineuse $s$ :
 \begin{theorem}[Principe de superposition]
 	Soient $s_1$ et $s_2$ deux ondes lumineuses créées par les sources respectives $S_1$ et $S_2$. Alors l'onde créée par l'ensemble des deux sources $S_1 \cup S_2$ est $s_1+s_2$.
 \end{theorem}
+\label{fresnel_v1}
 
 \begin{capex}
-Etablir l'intensité résultant de la superposition de deux ondes monochromatiques de fréquence $\nu_1$ et $\nu_2$. Mettre en évidence l'existence d'un termes d'interférences.
+Etablir l'intensité résultant de la superposition de deux ondes monochromatiques de fréquence $\nu_1$ et $\nu_2$ en un point $M$ de l'espace. Mettre en évidence l'existence d'un termes d'interférences.
 \end{capex}
 
+On constate que les intensités lumineuses, à la différence de la vibration lumineuse, ne satisfont pas forcément le principe de superposition. Ceci nous permet de définir la notion d'interférences lumineuses :
+\begin{definition}
+	On dit qu’il y a interférences entre deux ondes lorsque l’intensité issue de la superposition de ces deux ondes n’est pas égale à la somme des intensités de chaque onde individuelle. Deux ondes pouvant interférer sont dites cohérentes.
+\end{definition}
+
 La formule obtenue nous amène à distanguer deux cas, dans lesquels on dira que les ondes lumineuses sont soit cohérentes, soit incohérentes. Dans le cas où les ondes sont cohérentes, le terme d'interférences sera non nul. Pour cela, nous avons besoin de revenir plus en détail sur l'émission et la mesure de la lumière.
+
 
 \section{Notion de cohérence}
 
 Nous souhaitons comprendre si deux ondes seront cohérentes, c'est-à-dire si le terme d'interférences pourra avoir une moyenne non nulle :
 \begin{equation}
-	\langle \cos \left( 2 \pi (\nu_1 - \nu_2) t + \varphi_1(\vv r) - \varphi_2(\vv r) \right) \rangle_\tau \neq 0
+	\langle \cos \left( 2 \pi (\nu_1 - \nu_2) t + \varphi_1(\vv r) - \varphi_2(\vv r) \right) \rangle \neq 0
 \end{equation}
 
-\subsection{Récepteurs et intensité}
+Pour cela, il y a deux conditions de cohérence pour les vibrations lumineuses :
+\begin{itemize}
+	\item Les ondes ont la même fréquence centrale ($\nu_1 = \nu_2$)
+	\item Leur déphasage varie lentement par rapport aux temps caractéristiques de l'expérience ($\varphi_1(\vv r) - \varphi_2(\vv r)$ reste constant)
+\end{itemize}
 
-Pour caractériser cette moyenne, nous devons comprendre plus précisément en quoi consiste cette moyenne. En effet l'intensité lumineuse n'est pas une grandeur moyennée sur une très longue période de temps, mais sur une période $\tau$ qui dépend du capteur utilisé. 
-Des valeurs de temps caractéristiques sont indiquées dans le tableau suivant :
-\begin{table}[h]
-	\begin{tabular}{ccc}
-		\toprule
-		Oeil & CCD & Photodiode \\
-		\midrule
-		0.1\,s & $10^{-4}$\,s &$10^{-8}$\,s \\
-		\bottomrule
-	\end{tabular}
-	\caption{Temps de réponse de différents capteurs lumineux.}
-\end{table}
-
-Il faut alors que, sur cette période, la moyenne du terme d'interférences soit non nulle. Ceci implique que $(\nu_1 - \nu_2) \tau \lesssim 1$. Cette relation est évidemment vérifiée si les ondes sont purement monochromatiques et ont des fréquences égales. Mais en pratique, ce n'est jamais le cas, et nous devons définir la notion de temps de cohérence et longueur de cohérence d'une source lumineuse.
+Pour pouvoir interpréter ces conditions de manière plus concrète, il est nécessaire de décrire de manière un peu plus précise les propriétés des ondes.
 
 \subsection{Modèle d'émission des ondes lumineuses. Temps de cohérence.}
 
@@ -418,7 +447,7 @@ $\tau_c$ est alors le temps de cohérence de cette onde (en l'occurence, ici, c'
 Quel est le spectre de cette onde ? Pour le savoir, nous pouvons en faire la transformée de Fourier :
 	\begin{align}
 		\hat{s}(\omega) &= \int_0^\infty s(t) e^{-j \omega t} \dd t  \\
-		&= s_0 \int_0^\infty  \exp\left( \left(j\left(\omega_0-\omega)-\frac{1}{\tau_c}\right)t \right)  \\
+		&= s_0 \int_0^\infty  \exp\left( \left(j(\omega_0-\omega)-\frac{1}{\tau_c}\right)t \right)  \\
 		&= \frac{s_0}{\frac{1}{\tau_c} + j(\omega-\omega_0)}
 	\end{align}
 On obtient ainsi l'expression du spectre :
@@ -451,65 +480,184 @@ A priori, l’onde lumineuse est une onde presque harmonique, dont l’amplitude
 
 \begin{figure}[htbp]
     \centering
-	\includegraphics[width=\linewidth]{train_ondes.png}
+	\includegraphics[width=\linewidth]{trains_onde.png}
 	\caption{Le modèle du train d'ondes. Source : poly de cours de Etienne Thibierge.}
 \end{figure}
 
-
-\section{Rappels}
-
-\begin{capex}
-Démontrer que les isothermes sont verticales dans les zones (1) et (3) en supposant le gaz parfait et les phases condensées idéales, et qu'elles sont horizontales sous la courbe de saturation.
-\end{capex}
-
-\begin{solution}
-Pour une phase condensée idéale ou pour un gaz parfait, on a :
-\begin{equation}
-    \dd h = c_p \dd T
-\end{equation}
-(cette égalité correspond à la deuxième loi de Joule). On en déduite que $h$ est constant si et seulement si $T$ est constante. 
-
-Pour un système diphasé on ne peut pas utiliser la deuxième loi de Joule mais on sait que la pression est égale à la pression de vapeur saturante $p = p_{sat}(T)$, si bien que les courbes de température constante sont confondues avec les courbes de pression constante.
-
-\end{solution}
-
-\begin{remark}
-    En pratique on constate que dans certaines régions du diagramme, les isothermes ne sont ni verticales ni horizontales, c'est le cas en particulier dans ou proche de la zone supercritique, où le fluide ne peut être assimilé ni à un gaz parfait ni à une phase condensée idéale.
-\end{remark}
-
-De la même manière qu'en première année sur les diagrammes de Clapeyron, on peut utiliser le théorème des moments pour trouver une fraction massique de vapeur sous la courbe de saturation :
-\begin{proposition}[Théorème des moments]
-On considère un point $M$ de titre vapeur $x$, correspondant à une enthalpie massique $h$. Sur le palier isotherme, on lit $h_{vap}$ et $h_{liq}$. Alors :
-\begin{equation}
-    x = \frac{h-h_{liq}}{h_{vap}-h_{liq}}
-\end{equation}
+On a alors la propriété suivante :
+\begin{proposition}[Longueur d'un train d'onde]
+La longueur des trains d'onde correspond à la longueur de cohérence $\ell_c$ de la source lumineuse.
 \end{proposition}
 
-{\begin{wrapfigure}{r}{0.5\textwidth}
-    \vspace{-0.5cm}
-    \includegraphics[width=0.99\linewidth]{schema_frigo.jpg}
-    \caption{Fonctionnement d'un réfrigérateur. Source : Université du Québec.}
-\end{wrapfigure}
+\paragraph{Quelques sources lumineuses}
 
+Nous allons maintenant nous intéresser à quelques sources lumineuses.
 
-\paragraph{Application à une machine frigorifique}
+Les sources thermiques (comme une ampoule à incandescence) émettent un spectre donné qui satisfait la loi de Wien, vue au lycée. Il s'agit d'un spectre très large, dont la largeur est du même ordre de grandeur que la longueur d'onde centrale. On a ainsi $\Delta \nu \sim \nu_0$, ce qui implique que le temps de cohérence est du même ordre de grandeur que la péruiode de l'onde : $\tau_c \sim 10^{-14}$\,Hz. La longueur de cohérence est de l'ordre d'une longueur d'onde ($10^{-6}$\,m)
 
-On considère un réfrigérateur contenant le fluide R134a, dont le diagramme est présenté ci-dessous. Le fluide subit un cycle avec les étapes suivantes :
-\begin{itemize}
-    \item Compresseur : Compression rapide du fluide de 1.3 à 8\,bar
-    \item Condenseur : liquéfaction à pression constante au contact de la source chaude. La liquéfaction étant exothermique, de l’énergie est cédée à l’air ambiant.
-    \item Détendeur : Le fluide subit une détente adiabatique en l'absence de tout travail extérieur (pas de partie mobile dans le détendeur). La pression redescend à 1.3\,bar. La température diminue à -20$^\circ$C.
-    \item Évaporateur : le fluide s'évapore au contact de la source froide, à pression constante. L'évaporation étant endothermique, ceci refroidit l'intérieur du réfrigérateur.
-\end{itemize}}
+Les lampes à vapeur, en revanche, émettent une lumière avec un spectre très piqué, si bien que leur longueur de cohérence est nettement plus importante. Pour une lampe à vapeur de mercure classique, on aura $\lambda = 546.07$\,nm et $\Delta \lambda = 0.02$\,nm. Ceci implique un temps de cohérence :
+\begin{equation}
+	\tau_c = \frac{1}{\Delta \nu} = \frac{\lambda^2}{c \Delta \lambda} \sim 10^{-10}\,\mathrm{s}
+\end{equation}
+
+Enfin, le laser présente un temps de cohérence encore plus long que les sources spectrales.
+
+Voici quelques ordres de grandeurs de temps et de longueurs de cohérence pour différents trains d'onde :
+\begin{table}[h]
+	\begin{tabular}{cccc}
+		\toprule
+		&Lumière blanche & Raie spectrale & Laser \\
+		\midrule
+		$\tau_c$\,[s] & $10^{-14}$ & $10^{-10}$ & $10^{-8}$ \\
+		$\ell_c$\,[m] & $10^{-6}$ & $10^{-2}$ & $1$ \\
+		\bottomrule
+	\end{tabular}
+	\caption{Temps et longueur de cohérence de différentes sources lumineuses.}
+\end{table}
+
+\subsubsection{Interférences, trains d'onde et longueur de cohérence}
+
+Nous pouvons désormais revenir sur notre seconde condition pour que les ondes soient cohérentes : il faut que $\varphi_1(M,t) - \varphi_2(M,t)$ soit constant. Sachant que le déphasage entre deux trains d'onde différent est aléatoire, il faut que les deux vibrations lumineuses au point $M$ appartiennent au \textbf{même train d'onde}.
+
+Cela est évidemment impossible pour des sources physiquement différentes. Ainsi, pour faire interférer deux ondes, il est nécessaire de crééer deux sources secondaires à partir d'une source primaire. Pour cela, nous verrons deux types de dispositifs : les dispositifs à division d'amplitude et les dispositifs à division de front d'onde. Dans les deux cas, les deux ondes $s_1$ et $s_2$ sont issues de la même source primaire, mais n'ont pas parcouru les mêmes rayons lumineux. Elles ont donc un chemin optique différent, ce qui induit un déphasage.
+
+On définit alors la différence de marche des deux rayons :
+\begin{definition}[Différence de marche]
+	La différence de marche entre deux ondes lumineuses $s_1$ et $s_2$ atteignant un même point $M$ est donnée par la différence de chemin optique entre ces deux rayons (notés 1 et 2) depuis une même source primaire $S$ :
+	\begin{equation}
+		\delta = (SM)_2 - (SM)_1
+	\end{equation}
+\end{definition}
 
 \begin{capex}
-A l'aide des différentes étapes du cycle, déterminer l'efficacité du réfrigérateur et la comparer à l'efficacité de Carnot.
+Traduire la condition de cohérence sur les trains d'onde en une inégalité sur la longueur de cohérence de la source primaire et la différence de marche entre les deux rayons parcourus par chacune des ondes.
 \end{capex}
 
-\begin{figure}[p]
+On aboutit aux conditions de cohérence suivantes :
+\begin{proposition}[Cohérence de deux ondes]
+Deux ondes sont cohérentes en un point $M$ de l'espace, si et seulement si :
+\begin{itemize}
+	\item Elles ont même longueur d'onde ;
+	\item Elles proviennent d'une même source primaire ;
+	\item La différence de marche $\delta$ entre les deux ondes au point $M$ est inférieure à la longueur de cohérence de l'onde : $\delta < \ell_c$. 
+\end{itemize}
+\end{proposition}
+\begin{remark}
+	On peut remarquer que la première condition est automatiquement vérifiée si la seconde l'est. On pourrait donc la retirer de la liste, mais il est bon de se rappeler de cette condition séparément car les conditions 1 et 2 viennent de l'analyse de termes séparés dans l'équation.
+\end{remark}
+
+\section{Interférences à deux ondes}
+
+\subsection{Formule de Fresnel}
+
+Nous pouvons maintenant utiliser la notion de cohérence pour étudier de manière théorique les interférences à deux ondes.
+\begin{capex}
+En réutilisant le résultat établi en section \ref{fresnel_v1}, appliqué au cas de deux ondes cohérentes, déterminer l'intensité de chacune des deux ondes en fonction de leur intensités respectives et de leur déphasage.
+\end{capex}
+Nous obtenons la formule de Fresnel :
+\begin{theorem}[Formule de Fresnel]
+	Soient deux ondes $s_1$ et $s_2$ se superposant en un point $M$. Si ces ondes sont cohérentes, alors l'intensité de la superposition des ondes s'écrit :
+	\begin{equation}
+		I_{tot} = I_1 + I_2 + \sqrt{I_1 I_2} \cos(\varphi_1(M) - \varphi_2(M))
+	\end{equation}
+\end{theorem}
+
+Notons que nous pouvons réécrire cette formule en termes de différence de marche, en remarquant que le déphasage s'écrit $\Delta \varphi = 2 \pi \frac{\delta}{\lambda}$ :
+
+\begin{proposition}
+	Soient deux ondes $s_1$ et $s_2$ se superposant en un point $M$. Si ces ondes sont issues d'une même source primaire et ont une différence de marche $\delta < \ell_c$ où $\ell_c$ est la longueur de cohérence de la source, alors :
+	\begin{equation}
+		I_{tot}(M) = I_1 + I_2 + \sqrt{I_1 I_2} \cos(2 \pi \delta(M))
+	\end{equation}
+\end{proposition}
+
+\subsection{Interférences constructives et desctructives}
+
+On constate que la superposition de deux ondes monochromatiques d'intensité uniforme a une intensité non uniforme. En effet, $I_{tot}$ dépend de la position $M$ alors que c'est le cas, ni de $I_1$, ni de $I_2$.
+
+\begin{definition}
+Une figure d'interférences correspond au motif dessiné par des variations d'intensité lumineuse dans l'espace lorsqu'on a une superposition de deux ondes cohérentes.
+
+Dans les zones où l'intensité est plus faible que la moyenne, le termes d'interférences est négatif et on dit que les interférences sont desctructives.
+
+Au contraire, dans les zones où l'intensité est plus élevée que la moyenne, le terme d'interférences est positif et on dit que les interférences sont constructives.
+\end{definition}
+
+\begin{example}[Interférence de deux ondes sphériques]
+	Supposons que l'on a deux ondes sphériques issues de deux sources secondaires cohérentes. Un tel dispositif peut être construit, par exemple, à partir des miroirs de Fresnel : 	On suppose les deux sources placées sur l'axe $(Oy)$. Nous souhaitons étudier l'allure de la figure d'interférences sur deux écrans représentés sur la figure suivante. Nous allons étudier les propriétés de symétrie de la situation pour en déduire l'allure de la figure d'interférences.
+\begin{itemize}
+	\item Sur l'écran 1 : si l'on est suffisamment proche du plan $(xOy)$, la différence de marche est essentiellement due à la différence de chemon optique à parcourir le long de l'axe $(Oy)$, elle est donc invariante par translation selon $\vv{e_z}$. Ainsi, l'intensité est également invariante par translation delon $\vv{e_z}$ et on va observer des franges.
+	\item Sur l'écran 2 : la différence de marche est invariante par rotation autour de $(Oz)$, il en est donc de même pour l'intensité lumineuse : la figure d'interférences correspond à des anneaux centrés sur l'axe $(Oz)$.
+\end{itemize}
+\end{example}
+
+
+\begin{figure}[htbp]
     \centering
-    \includegraphics[width=1.5\linewidth,angle=270]{R134a.png}
-    \caption{Diagramme enthalpique du R134a. Source : Climalife.}
+	\includegraphics[width=\linewidth]{interferences_deux_ondes.png}
+	\caption{Interférence de deux ondes issues de deux sources ponctuelles secondaires. Source : poly de cours de Etienne Thibierge.}
 \end{figure}
+
+
+\begin{encart}[Les miroirs de Fresnel]
+	Une des premières expériences à avoir démontré le caractère ondulatoire de la lumière est celle des miroirs de Fresnel : on fait l'image d'une source primaire $S$ par deux miroirs légèrement inclinés, ce qui crée deux sources virtuelles secondaires $S_1$ et $S_2$, comme indiqué sur la figure ci-dessous.
+	On se retrouve alors dans la situation précédente, et en pratique on observe les franges lumineuses. Dans son compte rendu d'expérience, Fresnel fait les observations suivantes :
+	\begin{displayquote}
+	Nous pouvons maintenant expliquer celle des deux miroirs, dans laquelle on obtient des effets très frappants de l'influence mutuelle des rayons lumineux par la réunion de deux faisceaux réfléchis régulièrement sur leur surface. Il ne faut point employer de glaces étamées, mais noircies par derrière, afin de détruire la seconde réflexion, qui compliquerait le phénomène ; des miroirs métalliques sont encore préférables. Après avoir placé les deux miroirs l'un à côté de l'autre, et de sorte que leurs bords se touchent parfaitement, on les fait tourner jusqu'à ce qu'ils se trouvent presque dans le même plan, et forment néanmoins entre eux un angle légèrement rentrant, de manière à présenter à la fois deux images du point lumineux. On peut juger de cet angle d'après l'intervalle qui sépare les images ; il faut que cet intervalle soit petit pour que les franges aient une largeur suffisante. Mais une chose à laquelle on doit apporter le plus grand soin, c'est que les miroirs ne saillent pas l'un sur l'autre dans la ligne de contact, car une saillie d'un ou deux centièmes de millimètre suffirait souvent pour empêcher l'apparition des franges. On parvient à remplir cette condition par le tâtonnement, en pressant peu à peu celui des deux miroirs que l'on croit le plus saillant contre la cire molle au moyen de laquelle on les a fixés sur un appui commun ; et l'on juge au tact, et mieux encore en cherchant les franges à l'aide de la loupe, si la condition est remplie. On pourrait sans doute imaginer un mécanisme au moyen duquel on ferait varier à volonté l'angle des deux miroirs, en évitant toute saillie de l'un sur l'autre ; mais il faudrait qu'il fût construit avec un grand soin. Si le procédé que je viens d'indiquer est plus long par les tâtonnements qu'il nécessite, il a dit moins l'avantage de n'exiger d'autre appareil que deux petits miroirs de métal ou verre noir, et d'être ainsi à la portée de tout le monde.
+
+On ne doit employer dans cette expérience, comme dans celles de diffraction, que la lumière d'un seul point lumineux [...]
+
+Alors on cherche les franges dans l'espace où se réunissent les rayons réfléchis sur les deux miroirs, qu'il est facile de distinguer du reste du champ lumineux à la supériorité de son éclat.
+
+Ces franges présentent une série de bandes brillantes et obscures, parallèles entre elles, et à égales distances les unes des autres. Dans la lumière blanche elles sont parées des plus vives couleurs, surtout celles qui avoisinent le centre ; car, à mesure qu'elles s'en éloignent, elles s'affaiblissent graduellement, et disparaissent enfin vers le huitième ordre. Dans une lumière plus homogène, telle que celle qu'on peut obtenir au moyen d'un prisme ou de certains verres colorés en rouge on aperçoit un bien plus grand nombre de franges, qui ne présentent plus alors qu'une suite de bandes obscures et brillantes de même couleur.
+
+La direction de ces bandes est toujours perpendiculaire à la ligne droite qui joindrait les deux images du point lumineux, du moins dans l'espace éclairé par la lumière régulièrement réfléchie, quelle que soit la direction de cette ligne relativement aux bords des miroirs en contact ; ce qui prouve bien qu'elles né proviennent pas d'une influence exercée par ces bords sur les rayons lumineux qui passent dans leur voisinage. On peut d'ailleurs, en augmentant l'angle des miroirs, écarter assez l'une de l'autre les deux images du point lumineux, pour que les rayons qui concourent à la production des franges soient réfléchis à des distances telles des bords en contact, qu'on ne puisse plus supposer aucune action sensible, de leur part.
+
+La bande centrale est brillante, comme dans tes franges qui divisent l'ombre d'un corps étroit, ou celles qu'on obtient au moyen d'un écran percé de deux fentes parallèles, et suffisamment rapprochées. Cette bande brillante est placée entre deux bandes obscures du noir le plus foncé, quand un emploie, comme nous le supposons, une lumière sensiblement homogène ; chacune d'elles est suivie d'une bande brillante à laquelle succède de nouveau une bande obscure et ainsi suite. Les bandes obscures sont encore d'un noir très foncé dans les franges du deuxième et du troisième ordre ; mais, à mesure qu'on s'éloigne du centre, elles deviennent moins prononcées, ce qui tient à ce que la lumière employée n'est jamais parfaitement homogène.
+
+Il suffit, de comparer les bandes obscures des premier, deuxième et troisième ordres à la lumière donnée par un seul miroir, pour se convaincre qu'elles sont beaucoup, moins éclairées, et que, dans les positions qu'elles occupent, l'addition des rayons d'un des miroirs à ceux de l'autre, au lieu de former une lumière plus intense, produit de l'obscurité. [...] »
+	\end{displayquote}
+\end{encart}
+
+
+\begin{figure}[htbp]
+    \centering
+	\includegraphics[width=\linewidth]{fresnel_mirror.jpg} \includegraphics[width=0.5\linewidth]{fresnel_photo.jpg}
+	\caption{Les miroirs de Fresnel. En haut : schéma du dispositif. En bas : photo des interférences observées. Sources : melusine.eu.org et Leybold.}
+\end{figure}
+
+\begin{capex}
+	A partir des notions de cohérence que nous avons vues, expliquer pourquoi Fresnel observe seulement 8 franges en lumière blanche, et beaucoup plus en lumière monochromatique.
+\end{capex}
+
+\subsection{Notion de constraste}
+
+Pour caractériser la visibilité des franges d'interférence, on définit la notion de contraste :
+\begin{definition}[Contraste d'une figure d'interférences]
+	Le constraste de franges d'interférence est défini comme un rapport fonction des intensités maximale $I_{max}$ et minimale $I_{min}$ de la figure :
+	\begin{equation}
+		\mathcal{C} = \dfrac{I_{max}-I_{min}}{I_{max}+I_{min}}
+	\end{equation}
+\end{definition}
+
+Le contraste est directement relié à la visibilité des franges, comme on le voit sur la figure suivante :
+
+\begin{figure}[htbp]
+    \centering
+	\includegraphics[width=\linewidth]{contraste.png}
+	\caption{Franges d'interférences pour différents contrastes. Source : poly de cours de Etienne Thibierge.}
+\end{figure}
+
+\begin{capex}
+	Exprimer le contraste d'une interférence à deux ondes en fonction des intensités $I_1$ et $I_2$ de chacune des deux ondes. Réécrire la formule de Fresnel en faisant apparaître le contraste $\mathcal{C}$.
+\end{capex}
+On en déduit la propriété suivante :
+\begin{proposition}
+	Le contraste d'une figure d'interférence à deux ondes est maximal lorsque les deux ondes ont des intensités voisines.
+\end{proposition}
+
+\begin{remark}
+	En pratique, nous essayerons toujours de nous placer dans ce type de conditions expérimentalement. Pour les miroirs de Fresnel, ceci revien à éclairer de manière égale chacun des deux miroirs, c'est-à-dire d'avoir un faisceau lumineux bien homogène.
+\end{remark}
 
 \end{document}

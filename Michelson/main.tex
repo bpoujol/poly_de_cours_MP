@@ -192,7 +192,7 @@ L'ordre d'interférence d'une frange, noté $p$, correspond au nombre de franges
 
 Les différents ordres d'interférence correspondent alors directement à des différentes épaisseurs. Les franges dessinent les isolignes d'épaisseur du film de savon, d'huile ou d'air selon l'expérience considérée, et l'ordre d'interférence nous permet d'en déduire l'épaisseur du film, comme indiqué sur la figure ci-dessous :
 
-\begin{figure}[htbp]
+\begin{figure}[t]
 	\centering \includegraphics[width=0.8\linewidth]{bulle_monochromatique.png} \includegraphics[width=0.8\linewidth]{bulle_savon_visible.png}
 
 	\caption{En haut : demi-bulle de savon vue en lumière monochromatique. On observe des franges qui nous permettent d'estimer l'épaisseur du film en nm (à droite). En bas : photo d'un film de savon, cette fois-ci éclairé par une lumière blanche. Source : soapbubble.dk}
@@ -278,6 +278,10 @@ On peut rajouter une lentille en sortie du dispositif : si l'on se place dans le
 	On appelle lieu de localisation la portion du champ d’interférences où le contraste est maximal.
 \end{definition}
 
+\begin{theorem}[Théorème de localisation (admis)]
+	Dans un interféromètre à division d'amplitude éclairé par une source étendue, les interférences sont toujours localisées. La surface de localisation est le lieu des intersections des rayons émergeant issus du même rayon incident partant d'un point $S$ de la source.
+\end{theorem}
+
 \begin{capex}
 	Déterminer le lieu de localisation des interférences en lame d'air au vu des observations expérimentales.
 \end{capex}
@@ -303,21 +307,191 @@ On conclut les propriétés suivantes :
 	Lorsque l’on se rapproche du contact optique ($e$ diminue) : les anneaux se contractent sur l’écran jusqu’à en sortir par le centre de la figure d’interférences alors que de nouveaux anneaux entrent par le pourtour.
 \end{proposition}
 
+\begin{encart}[Détection des ondes gravitationnelles]
+	L'interféromètre de Michelson a été utilisé pour la découverte des ondes gravitationnelles, lorsque la fusion de deux trous noirs a été mesurée pour la première fois en 2016. Le principe est le suivant : lorsqu'une onde gravitationnelle passe, elle déforme l'espace. La déformation associée, appelée \textit{strain} en anglais, est de l'ordre de $h = \delta L/L \sim 10^{-21}$.
+
+	Pour mesurer cette déformation, deux interféromètres dont les bras mesurent $L=4$\,km ont été construits aux Etats-Unis, à Livingston et Hanford. Une onde gravitationnelle vient alors créer une lame d'air $e = h L \sim 4 \cdot 10^{-17}$\,m, ce qui a engendré une légère variation d'intensité lumineuse mesurable.
+
+	Cette découverte a été la première confirmation expérimentale de l'existence des trous noirs, un an après leur prédiction théorique. Elle a été récompensée par le prix Nobel l'année suivante, en 2017.
+\end{encart}
+
+\begin{figure}[p]
+	\centering \includegraphics[width=\linewidth]{LIGO.jpg} \includegraphics[width=\linewidth]{ondes_gravitationnelles.png}
+	\caption{En haut : fonctionnement de l'interféromètre LIGO. En bas : signal détecté simultanément par les deux interféromètres LIGO en 2016, et sa modélisation théorique en dessous. Il s'agit d'une onde gravitationnelle provoquée par la fusion de deux trous noirs. Source : Observation of Gravitational Waves from a Binary Black Hole Merger, LIGO collaboration, Physical Review Letters, 2016, 116, 6.}
+\end{figure}
+
 \subsection{Spectroscopie interférentielle}
 
 Bien que les propriétés des anneaux en lame d'air soient intéressantes, l'intérêt principal de l'interféromètre de Michelson en lame d'air réside dans son utilisation à l'aide de lumière non monochromatique : on peut alors utiliser les résultats expérimentaux pour obtenir des informations sur le spectre de la source lumineuse.
 
+La spectroscopie interférentielle repose sur la propriété suivante, que l'on rappelle : deux sources lumineuses ayant des fréquences différentes sont incohérentes et n'interfèrent pas. Ainsi, l'intensité lumineuse de leur figure d'interférences s'additionne. Cette propriété s'applique en particulier à une source lumineuse émettant à plusieurs longueurs d'onde :
+\begin{proposition}
+	\begin{equation}
+		I_{tot}(M) = \Sum_{\lambda \in \mathrm{spectre}} I_\lambda(M)
+	\end{equation}
+\end{proposition}
+
+Cette propriété relie directement le spectre de la source lumineuse à la figure d'interférences. Nous allons le vérifier à travers deux exemples classiques dans les paragraphes qui suivent.
+
+\subsubsection{Doublet spectral}
+
+\begin{definition}
+	On parle de doublet spectral lorsque le spectre d'une source lumineuse contient deux raies à des longueurs d'onde très proches. C'est le cas, par exemple, des spectres d'émission du sodium ou du mercure.
+\end{definition}
+
+On éclaire le Michelson à l'aide d'une lampe à vapeur de Mercure, qui émet deux raies à $\lambda_1 = 577$\,nm et $\lambda_2 = 579$\,nm. On veut mesurer plus précisément l'écart entre les deux longueurs d'onde, on note $\lambda_1 = \overline{\lambda} - \frac{\Delta \lambda}{2}$ et $\lambda_2 = \overline{\lambda} + \frac{\Delta \lambda}{2}$.
+
+\begin{capex}
+	Déterminer l'intensité lumineuse au centre de l'écran en fonction de l'épaisseur de la lame d'air $e$. Montrer qu'elle se met sous la forme :
+	\begin{equation}
+		I(e) = I_0 \left( 1 + C(e) \cos\left( \frac{4 \pi e}{\overline{\lambda}} \right) \right)
+	\end{equation}
+	En déduire l'expression du constraste $C(e)$ en fonction de $e$.
+\end{capex}
 
 
+\begin{figure}[htbp]
+	\centering \includegraphics[width=\linewidth]{doublet.png}
+	\caption{Intensité en fonction de la lame d'air $e$ au centre de la figure, pour un doublet. L'écart entre les longueurs d'onde est exagéré pour plus de visibilité.}
+\end{figure}
+
+On constate qu'on observe des maxima et des minima de contraste :
+\begin{definition}[Coïncidence et anticoïncidence]
+	On a une coïncidence lorsque les franges d'interférence liées aux deux raies se superposent, et des anticoïncidences lorsque les franges sombres d'un doublet se superposent aux franges brillantes de l'autre. On a alors une annulation de contraste.
+\end{definition}
+
+A partir de la mesure de l'écart entre deux annulation de contrastes, il est possible de mesurer l'écart entre les deux longueurs d'onde avec une très grande précision. C'est ce que nous ferons en TP.
+
+\subsubsection{Profil spectral d'une raie}
+
+En réalité, les raies ne sont pas purement monochromatiques, elles ont un profil spectral, que l'on pourrait noter $I_\lambda(\lambda)$, et l'intensité lumineuse totale émise s'écrit alors :
+\begin{equation}
+	I_{source} = \int_0^\infty I_\lambda(\lambda) \dd \lambda = \int_0^\infty I_\nu(\nu) \dd \nu
+\end{equation}
+où l'on a défini le profil spectral en fonction de la longueur d'onde ou de la fréquence. On peut alors utiliser les propriétés de superposition vues précédemment : l'intensité observée sur la figure d'interférences est la somme de toutes les intensités de chaque figure d'interférences pour une fréquence différente, à savoir :
+\begin{equation}
+	I_{tot} = \int_0^\infty I_\nu(\nu) \left( 1 + \cos\left(\frac{4\pi e}{c} \nu \right) \right) \dd \nu
+\end{equation}
+
+Connaissant la forme générale du profil de la raie (par exemple, une fonction gaussienne ou lorentzienne sont typiques), on peut alors en déduire la forme de la fonction $I_{tot}(e)$. Des mesures expérimentales permettront alors de déterminer précisément les paramètres du profil de raie.
+
+\begin{example}[Raie avec un profil exponentiel]
+	\textit{Cet exemple particulier est un complément qui n'est pas à connaître. Il permet d'appuyer théoriquement les paragraphes qui vont suivre. Pour les potentiels candidat$\cdot$e$\cdot$s à Mines/Centrale/X/ENS : il est vivement conseillé d'avoir vu cette méthode au moins une fois.}
+	Supposons pour simplifier que la raie a une forme exponentielle :
+	\begin{equation}
+		I_\nu(\nu) = \frac{I_0 \tau_c}{2} e^{-\tau_c|\nu-\nu_0|}
+	\end{equation}
+	où $\tau_c$ est le temps de cohérence de la source lumineuse ($\tau_c \Delta \nu \approx 1$). Ce profil n'est pas très réaliste, mais a l'avantage de simplifier les calculs et de retrouver des résultats qualitatifs qui peuvent être facilement généralisés. On peut vérifier qu'on a bien $\int I_\nu(\nu) \dd \nu = I_0$.
+	Alors :
+	\begin{align}
+		I_{tot} &= \int_0^\infty I_\nu(\nu) \left( 1 + \cos\left(\frac{4\pi e}{c} \nu \right) \right) \dd \nu \\
+		&= I_0 + \frac{I_0 \tau_c}{2} \Re \int_0^\infty \exp\left( j \frac{4 \pi e}{c} \nu - \tau_c |\nu-\nu_0| \right) \dd \nu 
+	\end{align}
+	On peut, avec une bonne approximation ,remplacer les bornes de la seconde intégrale par $\pm \infty$ (la fonction est quasi nulle pour les valeurs négatives de fréquence). En faisant un changement de variable, on trouve :
+	\begin{equation}
+		I_{tot} = I_0 + \frac{I_0}{2} \Re \exp\left(j\frac{4 \pi e \nu_0}{c}\right) \int_{-\infty}^\infty e^{j y x - |x|} \dd x
+	\end{equation}
+	avec $y = \frac{4 \pi e}{c \tau_c}$ et $x = \tau_c(\nu-\nu_0)$. L'intégrale peut se découper en deux parties :
+	\begin{align}
+		\int_{-\infty}^\infty e^{j y x - |x|} \dd x &= \int_{-\infty}^0 e^{j y x + x} \dd x + \int_0^\infty e^{j y x - x} \dd x \\
+		&= \frac{1}{1 + jy} + \frac{1}{1-jy} \\
+		&= \frac{2}{1 + y^2}
+	\end{align}
+	D'où, en réinjectant toutes les expressions, et en utilisant $c = \lambda_0 \nu_0$ :
+	\begin{equation}
+		I_{tot} = I_0 \left( 1 + C(e) \cos\left(\frac{4 \pi e}{\lambda_0} \right)
+	\end{equation}
+	avec un contraste :
+	\begin{equation}
+		C(e) = \dfrac{1}{1 + \left( \dfrac{4 \pi e}{c \tau_c}\right)^2} = \frac{\ell_c^2}{\ell_c^2 + (4 \pi e)^2}
+	\end{equation}
+	Autrement dit, le contraste des franges diminue au fur et à mesure que l'épaisseur de la lame d'air augmente, donc au fur et à mesure que la différence de marche augmente. On constate que l'échelle caractéristique de cette décroissance est la longueur de cohérence de la source $\ell_c = c \tau_c$.
+\end{example}
 
 
+\begin{figure}[htbp]
+	\centering \includegraphics[width=0.8\linewidth]{raie_mercure.png}
+	\caption{A gauche : profil spectral théorique de la raie étudiée. A droite : allure du contraste en fonction de l'épaisseur de la lame d'air.}
+\end{figure}
 
+\begin{capex}
+	Relier la largeur spectrale de la source, $\Delta \lambda$, à sa longueur de cohérence $\ell_c$ et sa longueur d'onde moyenne $\lambda_0$, et expliquer à partir du modèle des trains d'onde pourquoi le contraste décroît lorsque $e$ est de l'ordre de $\ell_c$. On peut s'appuyer sur la figure suivante.
+	En déduire un critère de brouillage portant sur l'ordre d'interférence $p$.
+\end{capex}
+
+
+\begin{figure}[htbp]
+	\centering \includegraphics[width=0.32\linewidth]{longueur_coherence_1.png} \includegraphics[width=0.32\linewidth]{longueur_coherence_2.png} \includegraphics[width=0.32\linewidth]{longueur_coherence_3.png}
+	\caption{Evolution de trains d'onde dans l'interféromètre de Michelson.}
+\end{figure}
+
+\begin{figure}[p]
+	\centering \includegraphics[width=\linewidth]{spectre_iasi.png} \includegraphics[width=\linewidth]{iasi_chimie.png} \includegraphics[width=\linewidth]{co2_iasi.png}
+
+	\caption{En haut : spectre obtenu à partir de l'instrument IASI. La température de brillance est une unité de mesure du rayonnement couramment utilisée en climatologie. Au milieu : estimation de la concentration en différents composés chimiques à partir de ce spectre. En bas : évolution de la concentration en dioxyde de carbone dans l'atmosphère mesurée par l'instrument IASI.} 
+\end{figure}
+
+\begin{encart}[L'interféromètre IASI]
+	IASI (Infrared Atmospheric Sounding Interferometer) est un instrument de mesure lancé à bord de trois satellites qui a révolutionné la chimie de l'atmosphère et les prévisions météorologiques. L'instrument est un interféromètre de Michelson, qui travaille dans le domaine de l'infrarouge. Il pointe vers la surface de la Terre et analyse le rayonnement infrarouge émis par la surface de la Terre, l'atmosphère et les nuages.
+
+	L'instrument réalise un chariotage complet toutes les 250\,ms, ce qui permet d'obtenir un spectre complet de la zone recherchée. On peut alors :
+	\begin{itemize}
+		\item Estimer les concentrations en gaz trace (ozone, monoxyde de carbone, méthane, dioxyde de carbone) en identifiant les raies d'émission et d'absorption de ces gaz ;
+		\item Déterminer la température et l'humidité en fonction de l'altitude (le rayonnement émis dépend de la température), pour peu qu'il n'y ait pas de nuages. Ceci a permis une nette amélioration des prévisions météorologiques.
+	\end{itemize} 
+\end{encart}
 
 
 \subsection{Configuration en coin d'air : franges d'égale épaisseur}
 
+On va maintenant, très brièvement, s'intéresser à la configuration dite en coin d'air :
+\begin{definition}
+	Un interféromètre de Michelson est dit en configuration coin d’air lorsqu’il existe un angle $\alpha \ll 1$ entre les miroirs $\mathcal{M}_1$ et $\mathcal{M}'_2$, c’est-à-dire lorsque les vrais miroirs ne sont pas parfaitement perpendiculaires.
+\end{definition}
+
+Expérimentalement, lorsqu'on utilise la configuration en coin d'air, on observe des franges sur l'écran, qui sont parallèles à l'axe autour duquel on a fait tourner l'un des deux miroirs.
+
+\subsubsection{Localisation des interférences}
+
+On admet le résultat suivant :
+\begin{proposition}
+	En coin d'air, les interférences sont localisées sur les miroirs.
+\end{proposition}
+
+\begin{capex}
+	Proposer un protocole expérimental permettant de bien observer les interférences en coin d'air : comment éclairer les miroirs ? Où placer la lentille et l'écran pour observer les interférences ?
+\end{capex}
+
+\subsubsection{Allure de la figure d'interférences}
+
+On admet l'expression de la différence de marche en fonction de la position $x$ sur les miroirs :
+\begin{proposition}
+	La différence de marche $\delta$ est fonction de la position $x$ sur les miroir, l'axe $(Ox)$ étant choisi dans le plan du miroir et perpendiculairement à l'axe autour duquel on a fait tourner le miroir d'un angle $\alpha$ :
+	\begin{equation}
+		\delta $ 2 \alpha x
+	\end{equation}
+\end{proposition}
+Ainsi, la différence de marche est directement proportionnelle à la position et on observe des franges d'interférence dites \textit{franges d'égale épaisseur}.
+
+\begin{capex}
+	Faire un schéma équivalent du dispositif avec la méthode des images, en faisant figurer les sources secondaires. Expliquer alors qualitativement la présence de franges d'interférences.
+\end{capex}
+
+On remarque que plus l'angle $\alpha$ est important, plus les franges sont resserrées. Il y a un compromis à faire, bien sûr, entre la taille des franges qui sont visibles, et le nombre total de franges sur l'écran.
+
+\subsubsection{Allure des franges en lumière blanche}
+
+La différence de marche étant directement proportionnelle à la position sur l'écran, on observe tout simplement l'intensité lumineuse en fonction de la différence de marche directement sur l'écran. En lumière blanche, on retrouve les teintes de Newton, que nous avons introduites plus haut. Ceci nous permet d'avoir une mesure précise du contact optique, qui est plus difficile à obtenir en coin d'air (la teinte plate étant relativement peu marquée). 
+
+\begin{remark}
+	Cette propriété peut être utilisée pour mesurer l'épaisseur ou l'indice optique d'une lamelle, par exemple, comme nous le verrons en TP.
+\end{remark}
 
 
+\begin{figure}[htbp]
+	\centering \includegraphics[width=0.35\linewidth]{coin_air_laser.jpeg}\includegraphics[width=0.35\linewidth]{coin_air.png}
+	\caption{Allure des franges observées en coin d'air en lumière monochromatique (à gauche) et en lumière blanche (à droite). Pour la lumière blanche, deux configurations sont montrées avec un angle $\alpha$ plus faible en haut et plus élevé en bas.} 
+\end{figure}
 
 
 

@@ -349,15 +349,231 @@ La linéarité de l'équation de Schrödinger nous permet de transposer le princ
 	Pour que cette combinaison linéaire puisse être une fonction d'onde, il convient de s'assurer qu'elle est bien normalisée (par exemple en lui appliquant un facteur multiplicatif).
 \end{remark}
 
-\section{Quantification de l'énergie}
+\section{Quantification de l'énergie dans un puits de potentiel}
+
+\subsection{L'expérience de Franck et Hertz}
+
+En 1914, Franck et Hertz ont fait une découverte surprenante. Ils bombardaient une ampoule contenant du mercure gazeux avec des électrons, dont ils pouvaient contrôler l'énergie cinétique en appliquant une tension $U$ : $E_c = \frac{1}{2} m v^2 = e U$ qui peut se mesurer en eV.
+
+\begin{definition}[Electron-Volt (rappel)]
+	En mécanique quantique, on utilise souvent l'électron-volt comme unité d'énergie. C'est l'énergie potentielle d'une particule de charge $+e$ située à un potentiel électrique $V = 1$\,V :
+	\begin{equation}
+		1\,\mathrm{eV} = 1.6 \times 10^{-19}\,\mathrm{J}
+	\end{equation}
+\end{definition}
+
+Lorsqu'ils augmentent l'énergie cinétique des électrons, Franck et Hertz constatent que l'énergie des électrons qui sort de l'ampoule augmente aussi : rien d'anormal. Cependant, lorsque l'énergie des électrons dépasse 4.9\,eV, Franck et Hertz constatent que :
+\begin{itemize}
+	\item Les électrons sortants ont perdu quasiment toute leur énergie cinétique ;
+	\item Les atomes de mercure émettent un rayonnement UV de longueur d'onde $\lambda_{\ce{Hg}} = 253.7$\,nm
+\end{itemize}
+ces observations se reproduisent à chaque multiple de 4.9\,eV : les électrons subissent alors une chute de leur énergie cinétique, et les atomes de mercure émettent une lumière plus intense.
+
+Or, on sait depuis longtemps, notamment à l'aide de la spectroscopie à réseau, que les atomes de mercure ont une raie d'émission à $\lambda_{\ce{Hg}}$. Donc, il semblerait que les électrons fournissent l'énergie nécessaire à l'atome de mercure pour émettre cette longueur d'onde. Cette expérience vient alors appuyer expérimentalement l'hypothèse formulée par Einstein pour expliquer l'effet photoélectrique : pour émettre une onde lumineuse, il faut disposer d'une quantité finie d'énergie. Et si l'on calcule cette énergie à partir de la formule d'Einstein $E = h c / \lambda$ et en utilisant la valeur de $h$ trouvée par Planck, on tombe sur : $E = hc/\lambda = 4.9$\,eV !
+
+Cette expérience est la première confirmation expérimentale que l'énergie des atomes est quantifiée : lorsque l'électron impacte un atome, il lui permet de changer de niveau d'énergie, en passant de l'état fondamental à un état excité, dont l'énergie est supérieure de 4.9\,eV. En se désexcitant, l'atome de mercure émet alors un photon : c'est le processus inverse de l'effet photoélectrique.
+
+Peut-on expliquer cette quantification de l'énergie à partir du formalisme de la mécanique quantique ondulatoire, c'est-à-àdire en utilisant la fonction d'onde d'une particule ?
 
 \subsection{Le puits de potentiel infini}
 
+Nous allons dans la suite adopter un modèle extrêmement simplifié du comportement d'un électron dans un atome. L'électron est typiquement soumis à un potentiel électrostatique $V(r)$ qui présente un minimum en $r=0$. La forme de ce potentiel étant complexe (cf exercice sur le potentiel de Yukawa ; TD d'électrostatique), on va adopter une modélisation simpliste, mais qui permet de capturer la quantification de l'énergie : le puits de potentiel infini. 
+
+\begin{definition}[Puits de potentiel infini]
+	Le modèle du puits de potentiel infini de longueur $L$ correspond à un potentiel $V(x)$ ayant la forme suivante :
+	\begin{align}
+		V(x) &= 0 \quad \mathrm{pour} 0 \le x \le L \\
+		V(x) = + \infty \quad \mathrm{sinon}
+	\end{align}
+\end{definition}
+
+Ici, $L$ va correspondre à la taille caractéristique de l'atome, de l'ordre de $10^{-10}$\,m.
+
+Nous cherchons à déterminer les solutions possibles de l'équation de Schrödinger pour une particule quantique de masse $m$ qui y est confinée.
+
 \subsection{Etats stationnaires}
+
+Nous allons chercher dans un premier temps les fonctions d'onde qui satisfont cette équation sous forme d'états stationnaires :
+\begin{definition}[Etat stationnaire]
+	On appelle état stationnaire un état quantique caractérisé par une forme factorisée de la fonction d'onde, de la forme :
+	\begin{equation}
+		\psi(x,t) = \varphi(x) f(t)
+	\end{equation}
+	où $\varphi(x)$ et $f(t)$ sont des fonctions à valeurs complexes.
+\end{definition}
+
+\textbf{Attention !} Cette définition n'est pas analogue à la définition d'une onde stationnaire en physique classique. En effet, ici, les fonctions sont à valeurs complexes, alors que pour une onde stationnaire en mécanique classique elles sont à valeurs réelles. Typiquement, considérons la vibration lumineuse :
+\begin{equation}
+	\underline{s}(x,t) = e^{i\omega (t - x/c)} = e^{i \omega t} \times e^{i \omega x / c}
+\end{equation}
+Cette vibration lumineuse correspond évidemment à une onde propagative, et pourtant elle peut se mettre sous la forme d'un produit de deux fonctions complexes du temps et de l'espace.
+
+\begin{proposition}
+	Les états stationnaires ne sont pas forcément des ondes stationnaires au sens classique du terme.
+\end{proposition}
+
+Pourquoi appelle-t-on alors ces états des états stationnaires ? Ceci est lié à leur probabilité de présence.
+
+\begin{capex}
+	En exploitant la condition de normalisation, montrer que la probabilité de présence d'une particule dans un état stationnaire est indépendante du temps : $\rho_\mathbb{P}(x,t) = \rho_\mathbb{P}(x)$.
+\end{capex}
+
+\subsection{Equation de Schrödinger indépendante du temps}
+
+Nous voulons désormais trouver les solutions de l'équation de Schrödinger qui sont des états stationnaires.
+
+\begin{capex}
+	Soit une particule dans un état stationnaire $\psi(x) = \varphi(x) f(t)$ soumise à un potentiel $V(x)$. A partir de la méthode de la séparation des variables, et en utilisant la condition de normalisation, déterminer les équations satisfaites par chacune des deux fonctions $f$ et $\varphi$.
+\end{capex}
+
+\begin{theorem}[Equation de Schrödinger indépendante du temps]
+	La fonction d'onde d'un état stationnaire est de la forme :
+	\begin{equation}
+		\psi(x,t) = \varphi(x) \exp\left(-i \frac{E}{\hbar} t\right)
+	\end{equation}
+	où $E \in \mathbb{R}^+$ est l'énergie de la particule.
+	La fonction $\varphi$ satisfait l'équation de Schrödinger indépendante du temps :
+	\begin{equation}
+		- \frac{\hbar^2}{2m} \frac{\dd^2 \varphi(x)}{\dd x^2} + V(x) \varphi(x) = E \varphi(x)
+	\end{equation}
+\end{theorem}
+
+\begin{proposition}[Interprétation physique de l'équation de chrödinger indépendante du temps]
+Il est possible d'apporter une interprétation physique à cette équation, qui indique la conservation de l'énergie :
+\begin{itemize}
+	\item $E$ correspond à l'énergie totale de la particule (analogue à l'énergie mécanique, en mécanique classique) ;
+	\item $V(x)$ correspond à l'énergie potentielle de la particule ;
+	\item Le terme $- \frac{\hbar^2}{2m} \frac{\dd^2 \varphi(x)}{\dd x^2}$ est donc relié à l'énergie cinétique de la particule.
+\end{itemize}
+\end{proposition}
+
+\begin{remark}
+	Le terme d'énergie cinétique devant être fini, la fonction $\varphi$ doit être dérivable deux fois sur $\mathbb{R}$. Ceci n'est pas le cas lorsque le potentiel $V(x)$ est infini : dans ce cas, $\varphi(x)$ est continue mais $\frac{\dd \varphi}{\dd x}$ peut être discontinue.
+\end{remark}
+
+\begin{capex}
+	A partir de la forme des états stationnaires, retrouver la relation de Planck-Einstein. Est-elle vraie uniquement pour les photons ?
+\end{capex}
+
+\subsection{Etats stationnaires du puits de potentiel infini}
+
+On cherche maintenant des états stationnaires pour une particule confinée dans un puits infini. Ils s'écrivent sous la forme :
+\begin{equation}
+        \psi(x,t) = \varphi(x) \exp\left(-i \frac{E}{\hbar} t\right)
+\end{equation}
+avec :
+\begin{equation}
+        - \frac{\hbar^2}{2m} \frac{\dd^2 \varphi(x)}{\dd x^2} + V(x) \varphi(x) = E \varphi(x)
+\end{equation}
+
+\begin{capex}
+	Déterminer les conditions aux limites en $x=0$ et $x=L$, puis résoudre l'équation de Schrödinger et montrer que l'énergie de la particule est quantifiée.
+\end{capex}
+
+\begin{proposition}[Niveaux d'énergie d'une particule confinée dans un puits infini]
+	Les états stationnaires d'une particule quantique dans un puits infini de taille $L$ sont les fonctions :
+	\begin{equation}
+		\psi_n(x,t) = \sqrt{\frac{2}{L}} \exp \left(-\frac{iE_nt}{\hbar}\right) \sin \left(\frac{n\pi}{L}\right)
+	\end{equation}
+	L'énergie est alors quantifiée :
+	\begin{equation}
+		E_n = n^2 \frac{\pi^2 \hbar^2}{2 m L^2}
+	\end{equation}
+	$n$ est appelé le nombre quantique d'un état propre, et la suite $(E_n)_{n \int \mathbb{N}^\ast}$ est appelé le spectre d'énergie de la particule quantique. Chaque valeur $E_n$ est un niveau d'énergie.
+\end{proposition}
+
+La densité de probabilité de présence $|\varphi(x)|^2$ dans les premiers états stationnaires est représentée sur la figure XXX. On peut y constater que :
+\begin{itemize}
+	\item Cette densité n'est jamais uniforme : dans un état stationnaire, on observe notamment des noeuds où la probabilité de présence de la particule est nulle.
+	\item L'état de nombre quantique $n$ présente $n+1$ noeuds, de manière générale l'énergie d'un état stationnaire augmente avec le nombre de noeuds.
+\end{itemize}
+
+\subsection{Puits de potentiel fini ou de forme quelconque}
+
+Ces propriétés sont toujours vraies dans le cas d'un puits de potentiel fini et/ou de forme quelconque, on peut notamment le vérifier à partir de simulations numériques. Dans ce cas, cependant, on observe deux différences majeures :
+\begin{itemize}
+	\item On n'a plus de condition aux limites de la forme $\varphi=0$ aux bords du puits de potentiel, donc la fonction d'onde déborde en dehors du puits de potentiel. La particule a donc une probabilité non nulle de se trouver à des endroits où son énergie est inférieure à l'énergie potentielle ! Nous aborderons cet aspect en détail dans le prochain chapitre de mécanique quantique.
+	\item Si le puits de potentiel est de taille finie, alors il existe un nombre fini d'états stationnaires. C'est notamment le cas dans les atomes : le nombre quantique principal $n$ ne peut prendre qu'un nombre fini de valeurs (qui dépend de la ligne du tableau périodique dans laquelle on se trouve).
+\end{itemize}
+
+\section{Energie de confinement}
+
+\subsection{Energie de confinement du puits infini}
+
+Intéressons-nous au niveau d'énergie le plus bas possible d'une particule confinée dans un puits de potentiel, $n=1$ :
+\begin{definition}[Etat fondamental]
+	L'état stationnaire d'une particule quantique confinée correspondant au niveau d'énergie le plus bas est appelé état fondamental.
+\end{definition}
+
+Dans le cas d'une particule quantique dans un puits de potentiel infini, on trouve :
+\begin{equation}
+	E_1 = \frac{\pi^2 \hbar^2}{2 m L^2}
+\end{equation}
+On peut remarquer que, dans le cas du puits de potentiel infini, la probabilité que la particule soit sur le segment $x \in [0,L]$ est égale à 1, dans laquelle $V(x) = 0$. Ainsi, l'énergie potentielle de la particule est nulle et $E_1$ correspond à son énergie cinétique. Ce résultat est en contradiction avec la mécanique classique qui prévoit qu'à l'équilibre, la particule est immobile, l'énergie cinétique est nulle, et la position correspond au minimum d'énergie potentielle. Autrement dit, la particule présente une énergie dite de confinement.
+
+\subsection{Principe d'indétermination de Heisenberg}
+
+\begin{capex}
+	Exploiter la relation $E \ge E_1$ pour obtenir une inégalité entre la quantité de mouvement de la particule, $p$, et la largeur $L$ du puits de potentiel.
+\end{capex}
+
+Cette inégalité traduit en fait une propriété fondamentale de la matière en mécanique quantique : on ne peut pas mesurer avec une précision arbitraire à la fois la position et la vitesse d'une particule. Autrement dit, la variance des lois de probabilité $\rho_\mathbb{P}(x)$ de la position de la particule $x$, et de l'impulsion de la particule $p$ sont reliées par une inégalité :
+\begin{theorem}[Inégalité de Heisenberg spatiale]
+	Il existe une limitation intrinsèque à la définition simultanée de la position et de la quantité de mouvement d'une particule :
+	\begin{equation}
+		\Delta x \times \Delta p \ge \frac{\hbar}{2}
+	\end{equation}
+\end{theorem}
+
+\subsection{Application à un puits de forme quelconque : l'atome d'hydrogène}
+
+Considérons désormais un puits de potentiel de forme quelconque, typiquement on peut étudier l'atome d'hydrogène dont le potentiel est de la forme :
+\begin{equation}
+	V(r) = - \frac{e^2}{4 \pi \epsilon_0 r}
+\end{equation}
+
+\begin{capex}
+	En utilisant l'inégalité de Heisenberg, déterminer l'ordre de grandeur du rayon $a_0$ de l'atome d'hydrogène dans son état fondamental.
+\end{capex}
+
+\section{Etats non stationnaires d'une particule quantique confinée}
 
 \subsection{Superposition d'états stationnaires}
 
-\section{Principe d'indétermination de Heisenberg}
+Jusqu'ici, nous avons considéré uniquement des états stationnaires dans un puits de potentiel. Que se passe-t-il si l'on étudie une combinaison linéaire d'états stationnaires ? 
+
+On reprend l'exemple du puits de potentiel infini, et on considère par une particule qui se trouve dans une superposition des états 1 et 3 :
+\begin{equation}
+	\psi(x,t) = \frac{1}{\sqrt{2}} \psi_1(x,t) + \frac{1}{\sqrt{2}} \psi_3(x,t)
+\end{equation}
+\begin{capex}
+	Etablir la densité de probabilité de présence associée à la particule. Quelle propriété remarquable constate-t-on ?
+\end{capex}
+
+Cette propriété se généralise à toute somme d'états stationnaires (pas uniquement dans le cas du puits infini).
+\begin{proposition}
+	La superposition de deux états stationnaires d'énergie $E_a$ et $E_b \neq E_a$ n'est pas un état stationnaire. La densité de probabilité de présence, en tout point de l'espace, est une fonction sinusoïdale du temps de pulsation :
+	\begin{equation}
+		\omega = \frac{|E_a - E_b|}{\hbar}
+	\end{equation}
+\end{proposition}
+\begin{demonstration}
+	\textbf{XXXXXXXX COMPLETER} Eventuellement mettre la démo ici même si hors programme ? Mais pas tres intéressante.
+\end{demonstration}
+
+\subsection{Relation temps-énergie de Heinseberg (hors-programme mais parfois utile)}
+
+On constate ainsi que, lorsqu'une indétermination $\Delta E$ est présente sur l'énergie de la particule (par exemple lors d'une superposition d'états d'énergie différente), on a des variations temporelles de la probabilité de présence de la particule avec un temps caractéristique $\tau$ de l'ordre de $\frac{\hbar}{\Delta E}$.
+
+Cette observation traduit une relation plus générale :
+\begin{proposition}[Relation temps-énergie de Heisenberg]
+	Un système quantique évoluant dans le temps avec un temps caractéristique $\tau$ a son énergie affectée d'une indétermination quantique $\Delta E$ telle que :
+	\begin{equation}
+		\tau \times \Delta E \sim \hbar
+	\end{equation}
+\end{proposition}
+
+
 
 
 

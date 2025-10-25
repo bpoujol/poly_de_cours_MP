@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.9.16)  25 OCT 2025 11:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.9.16)  22 OCT 2025 11:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1933,34 +1933,14 @@ No file main.bbl.
 Package biblatex Info: Reference section=0 on input line 130.
 Package biblatex Info: Reference segment=0 on input line 130.
 Package hyperref Info: Link coloring OFF on input line 130.
-Chapitre 11.
-
-LaTeX Warning: File `filmB.jpg' not found on input line 154.
-
-
-! Package pdftex.def Error: File `filmB.jpg' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.154 \chapter{Dualité onde-corpuscule}
-                                        
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 1
-54.
-(/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
-File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
-)
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `cmtt' (encoding: T1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
+Chapitre 9.
+<filmB.jpg, id=7, 141.4102pt x 78.24507pt>
+File: filmB.jpg Graphic file (type jpg)
+<use filmB.jpg>
+Package pdftex.def Info: filmB.jpg  used on input line 154.
+(pdftex.def)             Requested size: 597.50787pt x 330.69363pt.
 LaTeX Font Info:    Trying to load font information for T1+pag on input line 15
 4.
-
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pag.fd
 File: t1pag.fd 2001/06/04 font definitions for T1/pag.
 )
@@ -1973,9 +1953,15 @@ LaTeX Font Info:    Font shape `T1/pag/b/n' in size <20.74> not available
 LaTeX Font Info:    Font shape `T1/pag/b/n' in size <12> not available
 (Font)              Font shape `T1/pag/db/n' tried instead on input line 156.
 LaTeX Font Info:    Font shape `T1/pag/b/n' in size <10.95> not available
-(Font)              Font shape `T1/pag/db/n' tried instead on input line 164.
+(Font)              Font shape `T1/pag/db/n' tried instead on input line 158.
+Package mdframed Info: mdframed works in twoside mode on input line 163.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 163.
+LaTeX Font Info:    Font shape `T1/pag/b/n' in size <10> not available
+(Font)              Font shape `T1/pag/db/n' tried instead on input line 163.
 LaTeX Font Info:    Trying to load font information for OT1+ztmcm on input line
- 166.
+ 164.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
 File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
@@ -1985,583 +1971,325 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Trying to load font information for OML+ztmcm on input line
- 166.
+ 164.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omlztmcm.fd
 File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 )
 LaTeX Font Info:    Trying to load font information for OMS+ztmcm on input line
- 166.
+ 164.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsztmcm.fd
 File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
 )
 LaTeX Font Info:    Trying to load font information for OMX+ztmcm on input line
- 166.
+ 164.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omxztmcm.fd
 File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
 )
 LaTeX Font Info:    Trying to load font information for U+wasy on input line 16
-6.
+4.
 
 (/usr/share/texlive/texmf-dist/tex/latex/wasysym/uwasy.fd
 File: uwasy.fd 2020/01/19 v2.4 Wasy-2 symbol font definitions
 )
 LaTeX Font Info:    Trying to load font information for U+esint on input line 1
-66.
+64.
 
 (/usr/share/texlive/texmf-dist/tex/latex/esint/uesint.fd
 File: uesint.fd 
 )
 LaTeX Font Info:    Trying to load font information for U+esvect on input line 
-166.
+164.
 
 (/usr/share/texlive/texmf-dist/tex/latex/esvect/uesvect.fd
 File: uesvect.fd 
 )
 LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 1
-66.
+64.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 166.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 164.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 166.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 164.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 166.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 164.
 
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
-) [1
+)
+<lame_air_schema.png, id=8, 975.645pt x 791.95876pt>
+File: lame_air_schema.png Graphic file (type png)
+<use lame_air_schema.png>
+Package pdftex.def Info: lame_air_schema.png  used on input line 171.
+(pdftex.def)             Requested size: 341.43437pt x 277.15346pt.
+Package mdframed Info: mdframed works in twoside mode on input line 181.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 181.
+LaTeX Font Info:    Trying to load font information for U+fontawesomefree2 on i
+nput line 182.
+
+(/usr/share/texlive/texmf-dist/tex/latex/fontawesome5/ufontawesomefree2.fd)
+[1
 
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf/fonts/enc/
-dvips/cm-super/cm-super-t1.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/b
-ase/8r.enc}]
-LaTeX Font Info:    Font shape `T1/pag/b/n' in size <10> not available
-(Font)              Font shape `T1/pag/db/n' tried instead on input line 175.
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-di
+st/fonts/enc/dvips/base/8r.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/f
+ontawesome5/fa5free2.enc} <./filmB.jpg>]
+Package mdframed Info: mdframed works in twoside mode on input line 186.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 186.
+<bulle_monochromatique.png, id=26, 784.9325pt x 304.13625pt>
+File: bulle_monochromatique.png Graphic file (type png)
+<use bulle_monochromatique.png>
+Package pdftex.def Info: bulle_monochromatique.png  used on input line 196.
+(pdftex.def)             Requested size: 341.43437pt x 132.29819pt.
+<bulle_savon_visible.png, id=27, 555.9972pt x 417.2388pt>
+File: bulle_savon_visible.png Graphic file (type png)
+<use bulle_savon_visible.png>
+Package pdftex.def Info: bulle_savon_visible.png  used on input line 196.
+(pdftex.def)             Requested size: 341.43437pt x 256.23425pt.
+ [2 <./lame_air_schema.png>]
+<couleurs_newton_1.png, id=41, 851.18pt x 474.77374pt>
+File: couleurs_newton_1.png Graphic file (type png)
+<use couleurs_newton_1.png>
+Package pdftex.def Info: couleurs_newton_1.png  used on input line 209.
+(pdftex.def)             Requested size: 341.43437pt x 190.44946pt.
+<couleurs_newton_2.png, id=42, 1074.0125pt x 234.8775pt>
+File: couleurs_newton_2.png Graphic file (type png)
+<use couleurs_newton_2.png>
+Package pdftex.def Info: couleurs_newton_2.png  used on input line 209.
+(pdftex.def)             Requested size: 426.79135pt x 93.33647pt.
+<papillon.jpg, id=43, 602.25pt x 602.25pt>
+File: papillon.jpg Graphic file (type jpg)
+<use papillon.jpg>
+Package pdftex.def Info: papillon.jpg  used on input line 219.
+(pdftex.def)             Requested size: 213.39568pt x 213.4005pt.
+ [3 <./bulle_monochromatique.png> <./bulle_savon_visible.png>] [4 <./couleurs_n
+ewton_1.png> <./couleurs_newton_2.png> <./papillon.jpg>]
+<schema_michelson.png, id=59, 1024.82875pt x 697.60625pt>
+File: schema_michelson.png Graphic file (type png)
+<use schema_michelson.png>
+Package pdftex.def Info: schema_michelson.png  used on input line 232.
+(pdftex.def)             Requested size: 213.39568pt x 145.25621pt.
+<michelson_principe.png, id=60, 842.14626pt x 749.80125pt>
+File: michelson_principe.png Graphic file (type png)
+<use michelson_principe.png>
+Package pdftex.def Info: michelson_principe.png  used on input line 232.
+(pdftex.def)             Requested size: 192.0548pt x 170.9862pt.
+Package mdframed Info: mdframed works in twoside mode on input line 247.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 247.
+<schema_equivalent_michelson.png, id=61, 1018.80624pt x 709.65125pt>
+File: schema_equivalent_michelson.png Graphic file (type png)
+<use schema_equivalent_michelson.png>
+Package pdftex.def Info: schema_equivalent_michelson.png  used on input line 25
+8.
+(pdftex.def)             Requested size: 426.79135pt x 297.28267pt.
+ [5 <./schema_michelson.png> <./michelson_principe.png>]
+Package mdframed Info: mdframed works in twoside mode on input line 276.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 276.
+ [6 <./schema_equivalent_michelson.png>]
+Package mdframed Info: mdframed works in twoside mode on input line 281.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 281.
+Package mdframed Info: Not enough space on this page on input line 283.
+Package mdframed Info: mdframed works in twoside mode on input line 285.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 285.
+Package mdframed Info: mdframed works in twoside mode on input line 293.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 293.
+Package mdframed Info: mdframed works in twoside mode on input line 298.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 298.
+Package mdframed Info: mdframed works in twoside mode on input line 310.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 310.
+<LIGO.jpg, id=85, 572.8602pt x 525.162pt>
+File: LIGO.jpg Graphic file (type jpg)
+<use LIGO.jpg>
+Package pdftex.def Info: LIGO.jpg  used on input line 319.
+(pdftex.def)             Requested size: 426.79135pt x 391.2582pt.
+<ondes_gravitationnelles.png, id=86, 995.72pt x 466.74374pt>
+File: ondes_gravitationnelles.png Graphic file (type png)
+<use ondes_gravitationnelles.png>
+Package pdftex.def Info: ondes_gravitationnelles.png  used on input line 319.
+(pdftex.def)             Requested size: 426.79135pt x 200.06204pt.
+ [7] [8 <./LIGO.jpg> <./ondes_gravitationnelles.png>]
+! Undefined control sequence.
+l.330 		I_{tot}(M) = \Sum
+                         _{\lambda \in \mathrm{spectre}} I_\lambda(M)
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-Runaway argument?
-{c^3 \left ( 1 - e^{\dfrac {hc}{\lambda k_B T}} \right ) \end {equati\ETC.
-! Paragraph ended before \@genfrac was complete.
-<to be read again> 
-                   \par 
-l.182 
-      
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
+Package mdframed Info: mdframed works in twoside mode on input line 338.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 338.
+Package mdframed Info: mdframed works in twoside mode on input line 344.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 344.
+<doublet.png, id=106, 1586.92876pt x 465.74pt>
+File: doublet.png Graphic file (type png)
+<use doublet.png>
+Package pdftex.def Info: doublet.png  used on input line 354.
+(pdftex.def)             Requested size: 426.79135pt x 125.25401pt.
+Package mdframed Info: mdframed works in twoside mode on input line 359.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 359.
+[9 <./doublet.png>]
+LaTeX Font Info:    Font shape `T1/pag/b/n' in size <6> not available
+(Font)              Font shape `T1/pag/db/n' tried instead on input line 378.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 378.
 
-! Missing $ inserted.
+! Missing \right. inserted.
 <inserted text> 
-                $
-l.182 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-! LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.185 \subsubsection
-                    {L'effet photoélectrique}
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.185 \subsubsection
-                    {L'effet photoélectrique}
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.185 \subsubsection{L'effet photoélectrique}
-                                              
+                \right .
+l.403 	\end{equation}
+                     
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
 With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.185 \subsubsection{L'effet photoélectrique}
-                                              
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Display math should end with $$.
-<to be read again> 
-                   \vskip 
-l.185 \subsubsection{L'effet photoélectrique}
-                                              
-The `$' that I just saw supposedly matches a previous `$$'.
-So I shall assume that you typed `$$' both times.
-
-Package mdframed Info: mdframed works in twoside mode on input line 195.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 195.
-Package mdframed Info: Box was splittet wrong
- starting loop to iterate the splitting point
-(mdframed)              on input line 201.
-[2] [3]
-Package mdframed Info: mdframed works in twoside mode on input line 236.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 236.
-Package mdframed Info: mdframed works in twoside mode on input line 255.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 255.
-Package mdframed Info: mdframed works in twoside mode on input line 274.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 274.
-LaTeX Font Info:    Trying to load font information for U+fontawesomefree2 on i
-nput line 275.
-
-(/usr/share/texlive/texmf-dist/tex/latex/fontawesome5/ufontawesomefree2.fd)
-Package mdframed Info: mdframed works in twoside mode on input line 281.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 281.
-
-
-Package mdframed Warning: You got a bad break
-(mdframed)                because the last box will be empty
-(mdframed)                you have to change it manually
-(mdframed)                by changing the text, the space
-(mdframed)                or something else on input line 286.
-
-[4{/usr/share/texlive/texmf-dist/fonts/enc/dvips/fontawesome5/fa5free2.enc}]
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 294.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 294.
-LaTeX Font Info:    Font shape `T1/pag/b/n' in size <6> not available
-(Font)              Font shape `T1/pag/db/n' tried instead on input line 304.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 304.
-Package mdframed Info: mdframed works in twoside mode on input line 323.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 323.
-
-! Undefined control sequence.
-\hbar ->\protect \hbar  
-                        
-l.326 		i \hbar
-                \frac{\partial \psi(x,t)}{\partial t} = - \frac{\hbar^2}{2 m...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\hbar ->\protect \hbar  
-                        
-l.326 ...x,t)}{\partial t} = - \frac{\hbar^2}{2 m}
-                                                   \frac{\partial^2 \psi(x,t...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\hbar ->\protect \hbar  
-                        
-l.328 	où $\hbar
-                 $ est la constante de Planck réduite :
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\hbar ->\protect \hbar  
-                        
-l.330 		\hbar
-              = \frac{h}{2\pi} = 1.05 \times 10^{-34}\,\mathrm{J}\cdot\mathr...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-[5]
-! Undefined control sequence.
-\hbar ->\protect \hbar  
-                        
-l.337 		i \hbar
-                \frac{\partial \psi(M,t)}{\partial t} = - \frac{\hbar^2}{2 m...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\hbar ->\protect \hbar  
-                        
-l.337 ...M,t)}{\partial t} = - \frac{\hbar^2}{2 m}
-                                                   \Delta \psi(M,t) + V(M) \...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-Package mdframed Info: mdframed works in twoside mode on input line 358.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 358.
-
-LaTeX Warning: Reference `mdf@pagelabel-10' on page 6 undefined on input line 3
-63.
-
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `cmss' (encoding: OT1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
-[6]
-Package mdframed Info: mdframed works in twoside mode on input line 382.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 382.
-
-
-LaTeX Warning: Reference `mdf@pagelabel-11' on page 7 undefined on input line 3
-88.
-
-Package mdframed Info: mdframed works in twoside mode on input line 397.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 397.
-
-LaTeX Warning: Reference `mdf@pagelabel-12' on page 7 undefined on input line 4
-03.
-
-[7]
+[10]
+<raie_mercure.png, id=140, 1106.1325pt x 477.785pt>
+File: raie_mercure.png Graphic file (type png)
+<use raie_mercure.png>
+Package pdftex.def Info: raie_mercure.png  used on input line 413.
+(pdftex.def)             Requested size: 341.43437pt x 147.47755pt.
 Package mdframed Info: mdframed works in twoside mode on input line 417.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 417.
-
-
-LaTeX Warning: Reference `mdf@pagelabel-13' on page 8 undefined on input line 4
-19.
-
-Package mdframed Info: mdframed works in twoside mode on input line 425.
+<longueur_coherence_1.png, id=141, 514.92375pt x 516.93124pt>
+File: longueur_coherence_1.png Graphic file (type png)
+<use longueur_coherence_1.png>
+Package pdftex.def Info: longueur_coherence_1.png  used on input line 424.
+(pdftex.def)             Requested size: 136.57635pt x 137.10443pt.
+<longueur_coherence_2.png, id=142, 514.92375pt x 516.93124pt>
+File: longueur_coherence_2.png Graphic file (type png)
+<use longueur_coherence_2.png>
+Package pdftex.def Info: longueur_coherence_2.png  used on input line 424.
+(pdftex.def)             Requested size: 136.57635pt x 137.10443pt.
+<longueur_coherence_3.png, id=143, 514.92375pt x 624.3325pt>
+File: longueur_coherence_3.png Graphic file (type png)
+<use longueur_coherence_3.png>
+Package pdftex.def Info: longueur_coherence_3.png  used on input line 424.
+(pdftex.def)             Requested size: 136.57635pt x 165.59023pt.
+<spectre_iasi.png, id=144, 513.92pt x 189.70876pt>
+File: spectre_iasi.png Graphic file (type png)
+<use spectre_iasi.png>
+Package pdftex.def Info: spectre_iasi.png  used on input line 429.
+(pdftex.def)             Requested size: 426.79135pt x 157.54794pt.
+<iasi_chimie.png, id=145, 1308.38812pt x 971.12813pt>
+File: iasi_chimie.png Graphic file (type png)
+<use iasi_chimie.png>
+Package pdftex.def Info: iasi_chimie.png  used on input line 429.
+(pdftex.def)             Requested size: 426.79135pt x 316.76872pt.
+<co2_iasi.png, id=146, 782.925pt x 236.885pt>
+File: co2_iasi.png Graphic file (type png)
+<use co2_iasi.png>
+Package pdftex.def Info: co2_iasi.png  used on input line 429.
+(pdftex.def)             Requested size: 426.79135pt x 129.1341pt.
+Package mdframed Info: mdframed works in twoside mode on input line 434.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 425.
-
-LaTeX Warning: Reference `mdf@pagelabel-14' on page 8 undefined on input line 4
-27.
-
-Package mdframed Info: mdframed works in twoside mode on input line 429.
+(mdframed)              on input line 434.
+ [11 <./raie_mercure.png> <./longueur_coherence_1.png> <./longueur_coherence_2.
+png> <./longueur_coherence_3.png>] [12 <./spectre_iasi.png> <./iasi_chimie.png>
+ <./co2_iasi.png>]
+Package mdframed Info: mdframed works in twoside mode on input line 448.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 429.
-! Undefined control sequence.
-\hbar ->\protect \hbar  
-                        
-l.432 ...= \varphi(x) \exp\left(-i \frac{E}{\hbar}
-                                                   t\right)
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\hbar ->\protect \hbar  
-                        
-l.437 		- \frac{\hbar^2}{2m}
-                             \frac{\dd^2 \varphi(x)}{\dd x^2} + V(x) \varphi...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-LaTeX Warning: Reference `mdf@pagelabel-15' on page 8 undefined on input line 4
-39.
-
-! Undefined control sequence.
-\hbar ->\protect \hbar  
-                        
-l.446 	\item Le terme $- \frac{\hbar^2}{2m}
-                                            \frac{\dd^2 \varphi(x)}{\dd x^2}...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-Package mdframed Info: mdframed works in twoside mode on input line 454.
+(mdframed)              on input line 448.
+Package mdframed Info: mdframed works in twoside mode on input line 461.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 454.
+(mdframed)              on input line 461.
 
-LaTeX Warning: Reference `mdf@pagelabel-16' on page 8 undefined on input line 4
-56.
+! Missing $ inserted.
+<inserted text> 
+                $
+l.471 		\delta $ 2 \alpha
+                          x
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
 
-! Undefined control sequence.
-\hbar ->\protect \hbar  
-                        
-l.462 ...= \varphi(x) \exp\left(-i \frac{E}{\hbar}
-                                                   t\right)
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\hbar ->\protect \hbar  
-                        
-l.466         - \frac{\hbar^2}{2m}
-                                   \frac{\dd^2 \varphi(x)}{\dd x^2} + V(x) \...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-[8]
-Package mdframed Info: mdframed works in twoside mode on input line 469.
+Package mdframed Info: mdframed works in twoside mode on input line 476.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 469.
-Package mdframed Info: Not enough space on this page on input line 471.
-
-
-LaTeX Warning: Reference `mdf@pagelabel-17' on page 9 undefined on input line 4
-71.
-
-! Undefined control sequence.
-\hbar ->\protect \hbar  
-                        
-l.476 ...ac{2}{L}} \exp \left(-\frac{iE_nt}{\hbar}
-                                                  \right) \sin \left(\frac{n...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\hbar ->\protect \hbar  
-                        
-l.480 		E_n = n^2 \frac{\pi^2 \hbar^2}{2 m L^2}
-                                               
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Double superscript.
-<argument> \pi ^2 \hbar ^
-                         2
-l.480 		E_n = n^2 \frac{\pi^2 \hbar^2}{2 m L^2}
-                                               
-I treat `x^1^2' essentially like `x^1{}^2'.
-
-Package mdframed Info: mdframed works in twoside mode on input line 504.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 504.
-
-LaTeX Warning: Reference `mdf@pagelabel-18' on page 9 undefined on input line 5
-06.
-
-! Undefined control sequence.
-\hbar ->\protect \hbar  
-                        
-l.510 	E_1 = \frac{\pi^2 \hbar^2}{2 m L^2}
-                                          
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Double superscript.
-<argument> \pi ^2 \hbar ^
-                         2
-l.510 	E_1 = \frac{\pi^2 \hbar^2}{2 m L^2}
-                                          
-I treat `x^1^2' essentially like `x^1{}^2'.
-
-[9]
-Package mdframed Info: mdframed works in twoside mode on input line 516.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 516.
-
-
-LaTeX Warning: Reference `mdf@pagelabel-19' on page 10 undefined on input line 
-518.
-
-Package mdframed Info: mdframed works in twoside mode on input line 521.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 521.
-! Undefined control sequence.
-\hbar ->\protect \hbar  
-                        
-l.524 ...lta x \times \Delta p \ge \frac{\hbar}{2}
-                                                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-LaTeX Warning: Reference `mdf@pagelabel-20' on page 10 undefined on input line 
-526.
-
-Package mdframed Info: mdframed works in twoside mode on input line 535.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 535.
-
-LaTeX Warning: Reference `mdf@pagelabel-21' on page 10 undefined on input line 
-537.
-
-Package mdframed Info: mdframed works in twoside mode on input line 549.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 549.
-
-LaTeX Warning: Reference `mdf@pagelabel-22' on page 10 undefined on input line 
-551.
-
-! Undefined control sequence.
-\hbar ->\protect \hbar  
-                        
-l.557 		\omega = \frac{|E_a - E_b|}{\hbar}
-                                          
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-[10]
-! Undefined control sequence.
-\hbar ->\protect \hbar  
-                        
-l.566 ...au$ de l'ordre de $\frac{\hbar}{\Delta E}
-                                                  $.
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\hbar ->\protect \hbar  
-                        
-l.572 		\tau \times \Delta E \sim \hbar
-                                       
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-[11]
-
-! LaTeX Error: \begin{equation} on input line 178 ended by \end{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.582 \end{document}
-                    
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-(./main.aux)
+(mdframed)              on input line 476.
+[13]
+<coin_air_laser.jpeg, id=183, 220.825pt x 229.85875pt>
+File: coin_air_laser.jpeg Graphic file (type jpg)
+<use coin_air_laser.jpeg>
+Package pdftex.def Info: coin_air_laser.jpeg  used on input line 492.
+(pdftex.def)             Requested size: 149.37958pt x 155.49867pt.
+<coin_air.png, id=184, 459.7175pt x 460.72125pt>
+File: coin_air.png Graphic file (type png)
+<use coin_air.png>
+Package pdftex.def Info: coin_air.png  used on input line 492.
+(pdftex.def)             Requested size: 149.37958pt x 149.70451pt.
+ [14 <./coin_air_laser.jpeg> <./coin_air.png>] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
- )
-(\end occurred inside a group at level 1)
-
-### semi simple group (level 1) entered at line 178 (\begingroup)
-### bottom level 
+ ) 
 Here is how much of TeX's memory you used:
- 57850 strings out of 476080
- 1282832 string characters out of 5792744
- 2320988 words of memory out of 5000000
- 78432 multiletter control sequences out of 15000+600000
- 661941 words of font info for 389 fonts, out of 8000000 for 9000
+ 57818 strings out of 476080
+ 1283680 string characters out of 5792744
+ 2321245 words of memory out of 5000000
+ 78456 multiletter control sequences out of 15000+600000
+ 640365 words of font info for 324 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
- 102i,14n,107p,1492b,1970s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/fontawesome5/
-FontAwesome5Free-Solid.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-r10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/esint-type1/esint10.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/share/texmf/fonts/t
-ype1/public/cm-super/sftt1095.pfb></usr/share/texlive/texmf-dist/fonts/type1/ur
-w/avantgar/uagd8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/avantgar/u
-agk8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times
-/utmri8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/esvect/vect10.pf
-b>
-Output written on main.pdf (11 pages, 218091 bytes).
+ 102i,13n,107p,1173b,1786s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/fontawesome5/FontAwesome5Fr
+ee-Solid.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex
+10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/esint-type1/esint10.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/urw/avantgar/uagd8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+urw/avantgar/uagk8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/symbol/u
+syr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (14 pages, 7900218 bytes).
 PDF statistics:
- 310 PDF objects out of 1000 (max. 8388607)
- 256 compressed objects within 3 object streams
- 77 named destinations out of 1000 (max. 500000)
- 101061 words of extra memory for PDF output out of 106986 (max. 10000000)
+ 307 PDF objects out of 1000 (max. 8388607)
+ 221 compressed objects within 3 object streams
+ 85 named destinations out of 1000 (max. 500000)
+ 71891 words of extra memory for PDF output out of 74296 (max. 10000000)
 

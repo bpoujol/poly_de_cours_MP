@@ -64,6 +64,7 @@ mathfontname=mathsf]{mhchem}
 \usepackage{gensymb}
 \usepackage{tabularray}
 \usepackage{csquotes}
+\usepackage{stmaryrd}
 
 \usepackage[french]{babel}
 \usepackage{dingbat}
@@ -135,7 +136,7 @@ mathfontname=mathsf]{mhchem}
 
 %\usechapterimagefalse % If you don't want to include a chapter image, use this to toggle images off - it can be enabled later with \usechapterimagetrue
 
-\chapterimage{filmB.jpg} % Table of contents heading image
+\chapterimage{fentes_young_vagues.png} % Table of contents heading image
 
 %\pagestyle{empty} % No headers
 
@@ -149,7 +150,7 @@ mathfontname=mathsf]{mhchem}
 
 %\part{\'{E}lectromagnétisme}
 
-\setcounter{chapter}{8}
+\setcounter{chapter}{9}
 
 \chapter{Interférences par division de front d'onde}
 
@@ -164,7 +165,7 @@ Dans le chapitre précédent, nous avons étudié la possibilité d'avoir des in
 \subsection{Observations expérimentales}
 
 L'espérience des trous d'Young peut être rélisée à partir d'une source ponctuelle monochromatique (en général, un laser ou une fente source), avec laquelle on éclaire une plaque percée de deux trous. On observe alors des franges superposées à une figure de diffraction, comme cela est visible sur la figure suivante :
-\begin{figure}[htbp]
+\begin{figure}[t]
 	\centering \includegraphics[width=\linewidth]{trous_young_observations.png}
 	\caption{Observations réalisées à l'aide de l'expérience des trous d'Young. On constate un phénomène d'interférences, mais également un phénomène de diffraction. Source de cette figure et quasiment toutes les suivantes : ploy de cours de Etienne Thibierge.}
 \end{figure}
@@ -174,7 +175,7 @@ On observe alors deux phénomènes :
 \subsubsection{Diffraction}
 Le premier phénomène est un phénomène de diffraction, qui se produit également lorsue l'on n'a qu'un seul trou. En effet, le trou diffracte la lumùière dans un cône qui est d'autant plus large que le trou a un diamètre petit devant la longueur d'onde de l'onde considérée. On rappelle la propriété suivante :
 
-\begin{figure}[htbp]
+\begin{figure}[t]
 	\centering \includegraphics[width=0.3\linewidth]{diffraction.png}
 	\caption{Phénomène de diffraction.}
 \end{figure}
@@ -398,6 +399,23 @@ On en déduit la condition suivante de brouillage des interférences sur la larg
 	On peut remarquer que cet angle limite correspond à l'angle auquel la lumière serait diffractée par les trous d'Young si elle se propageait en sens inverse. De plus, on remarque aussi que le brouillage est uniforme, ce qui n'était pas le cas lorsqu'on a perte de cohérence temporelle.
 \end{remark}
 
+\begin{encart}[Mesure du diamètre de Alpha Orionis par perte de cohérence spatiale]
+	Le phénomène de brouillage des franges d'interférences est souvent vu comme un inconvénient duquel on souhaite s'affranchir. Mais certains scientifiques ont su en tirer parti pour mesurer des distances très faibles ! 
+
+	Dans l'expérience des trous d'Young, connaissant l'écart des trous $a$ à partir duquel on a brouillage des interférences, on peut directement remonter à la largeur anglulaire de la source, et donc à une estimation de la largeur de la source.
+
+	Le même protocole a été éxécuté en 1921 par Michelson et Pease pour mesurer le diamètre de l'étoile Alpha Orionis. En guise de trous d'Young, ils ont sélectionné deux rayons lumineux issus de l'étoile à l'aide de deux miroirs séparés d'une distance $a$ de plusieurs mètres, qu'ils ont ensuite recombinés pour observer les franges d'Young. Il est alors possible de déterminer l'écartement entre les miroirs pour lequel on observe le brouillage des interférences pour retrouver la largeur angulaire de la source. La distance $d$ entre l'étoile et le système solaire étant connue par des méthodes de parallaxe, on en déduit facilement la taille de l'étoile.
+
+	La prouesse technique de cette expérience doit être saluée, en effet il a fallu avoir une distance de plusieurs mètres entre les miroirs, mais s'assurer que la différence de marche entre les deux chemins optiques n'excédait pas quelques microns (la longueur de cohérence de la lumière émise par l'étoile).
+\end{encart}
+
+
+\begin{figure}[htbp]
+	\centering \includegraphics[width=0.65\linewidth]{michelson_pease.png}
+	\caption{Figure de l'article original de Michelson et Pease montrant le dispositif expérimental, installé à l'observatoire du mont Wilson. Source : Michelson, A. A., & Pease, F. G. (1921). \textit{Measurement of the diameter of Alpha-Orionis by the interferometer.} Proceedings of the National Academy of Sciences, 7(5), 143-146.}
+\end{figure}
+
+
 \subsubsection{Pour aller plus loin : calcul exact du facteur de contraste}
 
 \textit{Les propriétés et démonstrations présents dans cette partie ne sont pas exigibles.}
@@ -417,7 +435,7 @@ où le facteur de contraste est fonction de la largeur $b$ de la source :
 \begin{demonstration}
 Pour obtenir cette expression, on découpe la source étendue, émettant une intensité $I_0$ en une somme de sources de largeur $\dd X$ et d'intensité $\dd I = I_0 \frac{\dd X}{b}$. Alors comme ces sources sont toutes incohérentes, les figures d'interférences associées s'ajoutent :
 \begin{align}
-	I_{tot} &= \int_{-b/2}^{b/2} I_0 \frac{\dd X}{b} \left[ 1 + \cos( 2 \pi p_{x}(M))\right] \quad \mathrm{avec} \quad p_X(M) = \frac{aX}{\lambda d} + \frac{ax}{\lambda D}
+	I_{tot} &= \int_{-b/2}^{b/2} I_0 \frac{\dd X}{b} \left[ 1 + \cos( 2 \pi p_{x}(M))\right] \quad \mathrm{avec} \quad p_X(M) = \frac{aX}{\lambda d} + \frac{ax}{\lambda D} \\
 	&= I_0 + \frac{\lambda d}{2 \pi a b} \left[ \sin\left(\frac{2 \pi a}{\lambda} \left(\frac{X}{d} + \frac{x}{D}\right) \right) \right]_{-b/2}^{b/2}
 \end{align}
 On peut alors utiliser la formule :
@@ -441,9 +459,139 @@ pour remarquer que :
 On constate clairement que le facteur de contraste est une fonction progressive : il n'est pas égal à 1 en dessous du critère de brouillage et à 0 au-dessus de ce critère. Il diminue prograssivement (en valeur absolue), au fur et à mesure que l'on augmente la largeur de la fente. On observe des annulations de contraste (brouillage total des interférences) pour certains valeurs bien particulières de la largeur $b$ de la source lumineuse.
 
 
-\section{Réseaux}
+\section{Réseaux : interférences à $N$ ondes}
+
+\subsection{Définition}
+
+On s'intéresse maintenant à des interférences provoquées non plus par deux sources secondaires, mais par un grand nombre de source secondaires régulièrement espacées. Ceci nous permet, par exemple, d'étudier le comportement de certains objets qui présentent une périodicité spatiale lorsqu'ils sont éclairés par la lumière.
+
+\begin{definition}
+	On appelle réseau optique un instrument constitué d’une série de motifs identiques, répétés périodiquement, permettant la réflexion ou la transmission d’ondes lumineuses.
+
+	La répétition est caractérisée par la période spatiale du réseau $a$, appelée pas du réseau, ou par la fréquence spatiale $n = \frac{1}{a}$, usuellement nommée nombre de traits par millimètre.
+\end{definition}
+
+Dans ce cours, nous nous limiterons exclusivement à un réseau dit en transimission (la lumière traverse le réseau). Par ailleurs, nous allons supposer que le réseau est constitué d'un grand nombre $N \gg 1$ de trous similaires aux trous d'Young.
+
+Les réseaux étant des dispositifs d'interférences par division du front d'onde, les théorèmes précédemment vus s'appliquent et les interférences ne sont pas localisées. On peut donc observer les interférences partout. Cependant, nous nous limiterons à l'étude des interférences à l'infini en supposant que l'on a une source lumineuse à l'infini. Pour cela, nous pouvons tout simplement placer une source ponctuelle au foyer objet d'une lentille, et le dispositif d'observation au foyer image d'une autre lentille.
+
+\subsection{Formule des réseaux}
+
+On étudie donc un réseau constitué d'une série de fentes infiniment fines, espacées d'un pas $a$, éclairées par une incidence $\theta_i$. On considère les interférences se produisant entre les rayons émergents qui sont diffractés avec un angle $\theta_t$ par rapport à la normale, comme indiqué sur le schéma ci-dessous.
+\begin{remark}
+	Le calcul faisant intervenir des angles algébriques, il est toujours plus simple de les dessiner positifs sur le schéma. Ceci permet d'éviter facilement toute erreur de signe.
+\end{remark}
+
+\begin{figure}[htbp]
+	\centering \includegraphics[width=0.5\linewidth]{formule_reseaux.png}
+	\caption{Schéma de la situation.}
+\end{figure}
+
+\begin{capex}
+	Déterminer la différence de marche à l'infini $\delta$ entre les ondes diffractées par deux motifs consécutifs.
+\end{capex}
+
+On peut alors remarquer que les motifs sont régulièrement espacés, ainsi :
+\begin{proposition}
+	Soit un réseau contenant $N$ motifs. Si on numérote les motifs dans l'ordre, en un point d'observation, les phases $(\varphi_i)_{i \in \llbracket 1,N \rrbracket}$ des rayons diffractés par chacun des motifs forment une suite arithmétique de raison $\delta$ :
+	\begin{equation}
+		\varphi_{i+1} = \varphi + \delta
+	\end{equation}
+\end{proposition}
+
+On en déduit que :
+\begin{proposition}
+	Les rayons issus d'un réseau interfèrent constructivement à l'infini si et seulement si les rayons issus de deux motifs successifs interfèrent constructivement.
+\end{proposition}
+
+\begin{capex}
+	En déduire une condition d'interférences constructives sur les réseaux à l'infini.
+\end{capex}
+
+\begin{theorem}[Formule des réseaux]
+	Les raies brillantes en sortie d’un réseau apparaissent dans les directions $\theta_t$ que :
+	\begin{equation}
+		\exists p \in \mathbb{Z}, \sin \theta_{t} - \sin \theta_i = \frac{p \lambda}{a}
+	\end{equation}
+	$p$ est alors appelé l'ordre de la raie.
+\end{theorem}
+
+On peut observer une construction géométrique permettant de déterminer la position des différents ordres sur la figure suivante. On remarquera que :
+\begin{itemize}
+	\item Il existe un nombre fini de raies brillantes
+	\item Les ordres limites $p_{min}$ et $p_{max}$ ne sont pas nécessairement opposés si le réseau n'est pas éclairé en incidence normale.
+\end{itemize}
+
+\subsection{Largeur des raies brillantes}
+
+Pour l'instant, nous avons considéré exclusiement les directions pour lesquelles les interférences sont exactement constructives. Pour les interférences à deux ondes, nous avons vu qu'entre ces pics, nous avions des franges sombres de même largeur que les franges brillantes, ce qui s'expliquait par la relation :
+\begin{equation}
+	I_{tot} = I_0 \left( 1 + \cos \left(2 \pi \frac{\delta}{\lambda} \right) \right)
+\end{equation}
+(Application de la formule de Fresnel pour $I_1 = I_2 = I_0$).
+
+Qu'en est-il lorsque l'on a des interférences à $N$ ondes ?
+
+Pour le savoir, il faut calculer précisément l'intensité lorsque l'on a non plus deux ondes qui interfèrent, mais $N$ ondes avec une phase en progression arithmétique. On va adopter la modélisation complexe, en supposant que les $N$ ondes ont même amplitude :
+\begin{equation}
+	s_i = s_0 \cos(2 \pi \nu t - i \Delta \varphi)
+\end{equation}
+où $\Delta \varphi = 2 \pi \frac{\delta}{lambda}$ est le déphasage entre les deux ondes diffractées par des motifs successifs.
+On adopte alors une modélisation en complexes :
+\begin{equation}
+	\underline{s}_i = s_0 e^{j(2 \pi \nu t - i \Delta \varphi)}
+\end{equation}
+
+\begin{capex}
+	Déterminer l'expression de l'intensité totale $I_{tot}$ de la figure d'interférences en fonction de $I_0, \Delta \varphi$ et $N$.
+\end{capex}
+
+L'allure correspondante est indiquée sur la courbe ci-dessous :
+\begin{figure}[htbp]
+	\centering \includegraphics[width=\linewidth]{reseau_courbe.png}
+	\caption{Allure du numérateur et du dénominateur de la fraction, et de l'intensité $I_{tot}$ en fonction du dépĥasage, pour $N=3$ (colonne de gauche) et $N=7$ (colonne de droite).}
+\end{figure}
+
+\begin{capex}
+	Expliquer pourquoi le pic central se trouve en $\Delta \varphi = 2 \pi$, retrouver sa valeur $I_{max} = N^2 I_0$ et déterminer sa demi-largeur.
+\end{capex}
+
+On constate que la largeur des pics est d'autant plus fine que le réseau contient un grand nombre de traits : un réseau va petre sensible à des variations de phase de l'ordre de $1/N$, c'est-à-dire à des différences de marche de l'ordre de $\lambda/N$. Pour un réseau typique, on pourra avoir $N$ de l'ordre de $10^3$ ou plus : le réseau permet donc d'avoir une précision redoutable par rapport aux interférences à deux ondes.
+
+\begin{encart}[L'araignée-paon]
+	La plupart des iridescences observées sur les papillons ou les oiseaux sont dues à des interférences de couche mince, comme nous l'avons vu dans le précédent chapitre. Mais ce n'est pas le cas de l'araignée-paon \textit{Maratus splendens} dont les iridescences bleues sont dues à la présence d'un réseau à l'échelle microscopique.
+
+	Une équipe néerlandaise a en effet montré en 2016 que ces couleurs bleues provenaient d'écailles dont la structure microscopique correspond à un réseau. Le réseau diffracte préférentiellement le bleu, avec une longueur d'onde qui dépend de l'angle d'observation, comme cela est visible sur la figure suivante.
+
+	Source : Stavenga, D. G., Otto, J. C., & Wilts, B. D. (2016). \textit{Splendid coloration of the peacock spider Maratus splendens.} Journal of the Royal Society Interface, 13(121), 20160437.
+\end{encart}
+
+\begin{figure}[htbp]
+	\centering \includegraphics[width=0.5\linewidth]{araignee_paon.jpg}   \includegraphics[width=0.49\linewidth]{araignee_microscope.png} \includegraphics[width=0.5\linewidth]{araignee_MEB.png} \includegraphics[width=0.49\linewidth]{araignee_spectre.png}
+
+	\caption{Diffraction par l'araignée-paon. En haut à gauche : photo de l'araignée. En haut à droite : image des écailles bleues au microscope. Echelle 50\,µm. En bas à gauche : zoom sur une écaille au microscope électronique à balayage, permettant d'observer le réseau. Echelle 2\,µm. En bas à droite : réflectivité des écailles en fonction de la longueur d'onde, pour différents angles d'incidence. On reconnaît des pics similaires aux pics produits par la diffraction par un réseau.}
+\end{figure}
+
+\subsection{Spectroscopie à réseau}
+
+Nous aborderons en TP l'utilisation d'un réseau pour faire de la spectroscopie. Le réseau permet, en particulier, de déterminer la longueur d'onde $\lambda$ d'une source lumineuse à partir de la relation :
+\begin{equation}
+	\lambda = \frac{a}{p}(\sin \theta_t - \sin \theta_i)
+\end{equation}
+L'incertitude de la mesure n'est pas liée au phénomène d'interférences, puisqu'on vient de voir que lorsque $N \gg 1$, les interférences sont constructives dans un cône de largeur angulaire extrêmement réduite, si bien que l'incertitude sur $\theta_t$ liée aux interférences est négligeable : $u_{interferences}(\theta_t) \approx p/N \ll 1$. On pourra donc supposer que l'essentiel de l'incertitude provient des mesures directement : $u(\theta_p) \approx u_{mesures}(\theta_p)$.
+
+Afin de minimiser l'incertitude sur $\lambda$, on a donc intérêt à choisir un ordre plus élevé : pour un même écart de longueur d'onde, l'écart angulaire entre deux raies sera plus grand. L'instrument a donc une meilleure sensibilité aux ordres plus élevés. Ceci est représenté sur la figure ci-dessous.
+
+
+\begin{figure}[htbp]
+	\centering \includegraphics[width=0.4\linewidth]{ordres_et_resolution.png}
+	\caption{Diffraction par un réseau à partir d'une source dont le spectre est composé de raies (type lampe à vapeur). La dispersion du réseau est plus importante aux ordres élevés.}
+\end{figure}
+
+Nous mettrons en oeuvre expérimentalement cette méthode à l'aide d'un goniomètre, ce qui nous permettra de mesurer des longueurs d'onde de raies. Le protocole fait intervenir le minimum de déviation des rayons lumineux, que nous étudierons en TD au préalable.
 
 
 
 
 \end{document}
+

@@ -1,0 +1,366 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% The Legrand Orange Book
+% LaTeX Template
+% Version 2.1.1 (14/2/16)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Mathias Legrand (legrand.mathias@gmail.com) with modifications by:
+% Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Compiling this template:
+% This template uses biber for its bibliography and makeindex for its index.
+% When you first open the template, compile it from the command line with the 
+% commands below to make sure your LaTeX distribution is configured correctly:
+%
+% 1) pdflatex main
+% 2) makeindex main.idx -s StyleInd.ist
+% 3) biber main
+% 4) pdflatex main x 2
+%
+% After this, when you wish to update the bibliography/index use the appropriate
+% command above and make sure to compile with pdflatex several times 
+% afterwards to propagate your changes to the document.
+%
+% This template also uses a number of packages which may need to be
+% updated to the newest versions for the template to compile. It is strongly
+% recommended you update your LaTeX distribution if you have any
+% compilation errors.
+%
+% Important note:
+% Chapter heading images should have a 2:1 width:height ratio,
+% e.g. 920px width and 460px height.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt,fleqn]{book} % Default font size and left-justified equations
+
+\usepackage{ifthen} 
+\newboolean{VersionProf}
+\setboolean{VersionProf}{false}
+
+\usepackage{wasysym}
+\usepackage{esint} % various fancy integral symbols
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.17}
+\usetikzlibrary{patterns}
+\usepackage{tkz-euclide} 
+\usepackage{mathtools}
+\usepackage{xurl}
+\usepackage[version=4,arrows=pgf-filled,
+textfontname=sffamily,
+mathfontname=mathsf]{mhchem}
+\usepackage{gensymb}
+\usepackage{tabularray}
+\usepackage{csquotes}
+
+\usepackage[french]{babel}
+\usepackage{dingbat}
+
+\usepackage{environ}
+\usepackage{wrapfig}
+
+\NewEnviron{solution}{%
+    \ifthenelse{\boolean{VersionProf}}{\begin{solutionA}
+        \BODY%*
+        \end{solutionA}
+    }{%
+        \relax%
+    }%
+}%
+
+\usetikzlibrary {arrows.meta} 
+
+\newcommand{\degC}{{\degree}C}
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\div}{\mathrm{div}}
+\newcommand{\rot}{\vv{\mathrm{div}}}
+\newcommand{\grad}{\vv{\mathrm{grad}}}
+
+\tikzset{
+    support/.style={
+        pattern=north east lines,
+        draw=none,
+        minimum width=0.3,
+        minimum height=0.6
+    }
+    ,>=latex
+}
+
+\usepackage[d]{esvect}
+
+%SPECIFIC TO THIS CHAPTER
+\usepackage{physics}
+\usepackage{ifthen}
+\usepackage[outline]{contour} % glow around text
+\usetikzlibrary{calc} % for pic
+\usetikzlibrary{angles,quotes} % for pic
+\usetikzlibrary{patterns}
+\tikzset{>=latex} % for LaTeX arrow head
+\contourlength{1.2pt}
+
+\colorlet{myred}{red!65!black}
+\definecolor{myred}{RGB}{127,0,255}
+\tikzstyle{ground}=[preaction={fill,top color=black!10,bottom color=black!5,shading angle=20},
+                    fill,pattern=north east lines,draw=none,minimum width=0.3,minimum height=0.6]
+\tikzstyle{mass}=[line width=0.6,myred,fill=myred!40,rounded corners=1,
+                  top color=myred!40,bottom color=myred!20,shading angle=20]
+\tikzstyle{rope}=[myred!30,line width=1.2,line cap=round] %very thick
+
+% FORCES SWITCH
+\tikzstyle{force}=[->,myred,ultra thick,line cap=round]
+\tikzstyle{Fproj}=[force,myred!60]
+\newboolean{showforces}
+\setboolean{showforces}{true}
+%----------------------------------------------------------------------------------------
+
+\input{structure} % Insert the commands.tex file which contains the majority of the structure behind the template
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	TABLE OF CONTENTS
+%----------------------------------------------------------------------------------------
+
+%\usechapterimagefalse % If you don't want to include a chapter image, use this to toggle images off - it can be enabled later with \usechapterimagetrue
+
+\chapterimage{filmB.jpg} % Table of contents heading image
+
+%\pagestyle{empty} % No headers
+
+%\tableofcontents % Print the table of contents itself
+
+%\cleardoublepage % Forces the first chapter to start on an odd page so it's on the right
+
+%\pagestyle{fancy} % Print headers again
+
+
+
+%\part{\'{E}lectromagnétisme}
+
+\setcounter{chapter}{10}
+
+\chapter{Dualité onde-corpuscule}
+
+\section{Introduction historique}
+
+\textit{Cette introduction a pour but de vous expliquer comment la théorie de la mécanique quantique est née, et de présenter les raisons qui ont amené les scientifiques à proposer une description ondulatoire de la matière. Les parties historiques, en particulier les dispositifs expérimentaux utilisés, ne sont pas à connaître.}
+
+A la fin du XIXe siècle, en Europe, la physique se porte à merveille. Les théories de l'optique, de l'électromagnétisme, de la thermodynamique et de la mécanique newtonienne permettent de décrire un grand nombre de phénomènes naturels, et ont joué un rôle important dans la révolution industrielle. 
+
+Cependant, quelques observations viennent alors bousculer la compréhension que l'on a de certains concepts fondamentaux que l'on a en physique : la lumière, la matière, la nature d'une onde.
+
+\subsection{Découvertes de particules}
+
+Jusqu'à cette époque, la description de la matière en physique se faisait de manière exclusivement continue, à partir de variables telles que la masse volumique $\rho$, la densité volumique de charge $\rho$, la densité volumique de courant $\vv j$, la température $T$, la pression... On connaissait l'existence des atomes, mais on cherchait à leur donner une escription continue (pour plus de détails, consulter le DM d'électromagnétisme à ce sujet). Cependant, on commence à découvrir que dans les atomes, la charge n'est pas uniformément répartie, mais elle est concentrée dans une petite partie de l'espace :
+\begin{itemize}
+	\item En 1897, Thomson découvre l'électron blablabla. On découvre alors que la masse de l'électron et sa charge sont toujours les mêmes : il s'agit d'une propriété fondamentale.
+	\item Puis en 1911, Rutherford découvre le noyau des atomes, à partir de la déviation de particules $\alpha$ par des noyaux d'Hélium.
+\end{itemize}
+On comprend alors que la matière est composée de "grains" élémentaires, les \textit{particules}, qui présentent des propriétés fondamentales telles que leur masse et leur charge électrique. Cela ne pose pas de problème a priori, puisqu'il est toujours possible de se ramener à une description continue en utilisant le fait que l'on a un grand nombre de particules dans un volume mésoscopique de matière. Par ailleurs, les lois de la physique newtonienne sont parfaitement applicables à ces particules ponctuelles.
+
+\subsection{Caractère corpusculaire de la lumière}
+
+\subsubsection{Le rayonnement du corps noir}
+
+Les réelles interrogations arrivent avec d'autres résultats. Un des échecs de la physique classique, bien connu à l'époque, est son incapacité à expliquer le rayonnement produit par un corps chauffé. Comme nous l'avons vu plus tôt dans l'année, plus un corps est chaud, plus il émet un rayonnement intense, à une longueur d'onde petite. Cependant, la physique classique est incapable d'expliquer la présence de ce pic et prédit un rayonnement qui contient une énergie infinie aux faibles longueurs d'onde. C'est ce qu'on appelle la \textit{catastrophe ultraviolette}. En 1900, Planck fait une hypothèse saugrenue : il introduit une constante $h$ dans ces calculs telle que l'énergie du rayonnement lumineux est quantifiée d'une manière proportionnelle à la fréquence : $E = n h \nu$. Son but était de faire le calcul par une autre méthode, puis de faire tendre $h$ vers 0. Or, il constate que le résultat qu'il obtient, la loi de Planck, ajuste parfaitement les observations... mais sans faire tendre $h$ vers 0 ! Il obtient la loi de Planck donnant le spectre en intensité d'un corps noir chauffé :
+\begin{equation}
+	I_\nu(\nu) = \dfrac{8 \pi h \nu^3}{c^3 \left( 1 - e^{\dfrac{hc}{\lambda k_B T}} \right)
+\end{equation}
+où $\nu$ est la fréquence de l'onde, $c$ la vitesse de la lumière, $T$ la température et $k_B$ la constante de Boltzmann. L'ajustement avec les observations donne la valeur de la constante de Planck : $h = 6.63 \times 10^{-34}$\,J$\cdot$s.
+
+Cette quantification de l'énergie est curieuse. Si elle est essentiellement vue comme un artifice de calcul, son interprétation va changer avec le résultat de plusieurs expériences. 
+
+\subsubsection{L'effet photoélectrique}
+
+L'effet photoélectrique est un phénomène physique connu depuis déjà longtemps (Becquerel en 1839 puis Hertz en 1887) : certains métaux semiconducteurs libèrent des électrons lorsqu'ils sont éclairés, et sont ainsi une source de courant électrique. Nous avons d'ailleurs vu plusieurs fois en TP cet effet : il est à la base de l'utilisation d'une photodiode pour mesurer une intensité lumineuse. Ainsi, un apport sous forme énergétique permet d'extraire des électrons du métal.
+
+On pourrait s'attendre à ce que le nombtre d'électrons extraits soit proportionnel à l'énergie reçue par le métal, donc à l'intensité lumineuse appliquée. Or, on constate expérimentalement qu'il existe un effet de seuil en longueur d'onde :
+\begin{itemize}
+	\item En-dessous d'une fréquence critique $\nu_c = c/\lambda_c$, aucun électron n'est extrait ;
+	\item Au contraire, lorsque $\nu \ge \nu_c$, l'effet photoélectrique se manifeste et le nombre d'électrons extraits n'augmente pas si la fréquence est augmentée.
+\end{itemize}
+Il s'agit d'un effet "tout ou rien" : soit la fréquence de l'onde est suffisante pour extraire les électrons, soit elle ne l'est pas. C'est Einstein, en 1905\footnote{La même année, il a publié deux autres articles qui ont posé les fondements de la théorie de la relativité restreinte et de la physique statistique, respectivement. L'année 1905 est souvent qualifiée de \textit{Annus mirabilis}. Le travail d'historiens à partir de plusieurs sources de l'époque a montré que Mileva Maric a travaillé en collaboration avec Einstein à la rédaction de ces articles ; en particulier elle aurait contribué à la mise en forme mathématique des idées physiques proposées par Einstein. Il y a débat sur l'ampleur de sa contribution, mais plusieurs auteurs estiment qu'elle aurait dû être co-autrice des articles portant sur la relativité restreinte et l'effet photoélectrique.}, qui propose une interprétation de cette expérience en faisant le lien avec le calcul réalisé par Planck cinq ans plus tôt : en supposant que la lumière est transporté par des particules, les photons, dont l'énergie est proportionnelle à la fréquence : on explique directement les observations : soit l'énergie du photon est supérieure au travail à apporter pour extraire l'électron, soit elle ne l'est pas. L'hypothèse formulée dans l'article se confirme au fil des années et donne naissance à la loi de Planck-Einstein :
+\begin{theorem}[Loi de Planck-Einstein]
+	La lumière est transportée par des particules élémentaires, les photons, qui sont caractérisés par leur fréquence $\nu$ et se déplacent à la vitesse de la lumière $c$. Chaque photon transporte une énergie $E$ proportionnelle à sa fréquence :
+	\begin{equation}
+		E = h \nu = \frac{h c}{\lambda}
+	\end{equation}
+	où $h = 6.63 \times 10^{-34}$\,J$\cdot$s est la constante de Planck.
+\end{theorem}
+
+\subsubsection{Autres expériences}
+
+L'interprétation quantique de l'effet photoélectrique sera confirmée plus tard par des expériences plus sophistiquées spécifiquement conçues pour établir la nature corpusculaire de la lumière. On peut notamment citer l'expérience de Millikan (1916), et plus récemment le travail d'équipes françaises, notamment à l'Ecole Normale Supérieure de Paris, qui ont permis de mettre en évidence sans équivoque la quantification de l'énergie électromagnétique.
+
+Les résultats de toutes ces expériences sont une détonation dans le monde de la physique classique. Si la lumière était corpusculaire, elle devrait être décrite par des principes similaires à la mécanique Newtonienne, qui ne permet pas de rendre compte des phénomènes de diffraction et d'interférences en optique. Ces phénomènes, en revanche, sont bien expliqués par l'électromagnétisme et l'optique. La lumière est-elle une onde ou une particule ? Force est de constater que les deux descriptions sont nécessaires pour expliquer les observations... mais cela n'est pas réellement satisfaisant, car il n'existe aucun cadre conceptuel pour les unifier.
+
+\subsection{Caractère ondulatoire de la matière}
+
+\subsubsection{Diffraction des électrons}
+
+On sait maintenant que la lumière se décrit par une dualité onde-particule. Qu'en est-il de la matière ? On l'a toujours considérée comme une particule, mais en 1923, de Broglie remarque des analogies formelles entre les propriétés d'optique (telles que le principe de retour inverse de la lumière) et des propriétés de mécanique analytique (hors programme en MP). Ces analogies sont similaires aux analogies que l'on a pu faire entre électrostatique et gravitation au début de l'année, et elles lui permettent de définir une longueur d'onde pour une particule de masse $m$, appelée longueur d'onde de de Broglie :
+\begin{equation}
+	\lambda_{\mathrm{dB}} = \frac{h}{p}
+\end{equation}
+où $p = m v$ est la quantité de mouvement de la particule. Ses travaux sont repris en 1925 par Davisson et Germer, qui ont réussi à diffracter des électrons par un réseau cristallin. Le réseau cristallin a un pas qui est similaire à la longueur d'onde de de Broglie des électrons, et ainsi on observe des pics de diffraction dans certaines directions angulaires. C'est la première preuve expérimentale de la nature ondulatoire de la matière.
+
+\subsubsection{Vers une nouvelle description des particules}
+
+Depuis, des expériences similaires ont été reproduites avec des fentes d'Young : on observe alors des franges apparaître sur un écran où l'on mesure les impacts d'électrons (Tonomura et al, 1989).
+
+Comment interpréter ce résultat ? On pourrait penser que les interférences observées sont liées à des électrons qui ont traversé les deux fentes d'Young simultanément, puis ont interagi. Mais ce n'est pas le cas, car les électrons sont envoyés un par un dans le dispositif. Ainsi, \textbf{les interférences se produisent même lorsqu'on considère le passage d'un électron unique} : l'électron est sensible à la présence des deux fentes à la fois. L'électron ne peut donc pas être décrit pas un point matériel.
+
+\section{Fondements de la mécanique quantique ondulatoire}
+
+\subsection{Fonction d'onde}
+
+\subsubsection{Densité de probabilité de présence}
+
+
+Nous voulons adopter une description des objets matériels qui rende compte à la fois de leur aspect corpusculaire et de leur aspect ondulatoire, non localisé. Pour cela, on travaille avec la notion de densité de probabilité de présence. On distingeura le cas général, en trois dimensions, et le cas unidimensionnel, auquel nous nous restreindrons pour la plupart des applications.
+
+\paragraph{Cas général (3D)}
+
+\begin{definition}[Densité de probabilité 3D]
+	On définit la densité de probabilité de présence d'une particule, notée $\rho^{3D}_\mathbb{P}(M,t)$, comme un champ scalaire tel que la probabilité de trouver la particule dans un volume élémentaire $\dd \tau$ soit donnée par :
+	\begin{equation}
+		\dd \mathbb{P} = \rho^{3D}_\mathbb{P}(M,t) \dd \tau
+	\end{equation}
+\end{definition}
+
+On en déduit directement la propriété suivante :
+\begin{proposition}
+	La probabilité de trouver une particule dans un volume $V$ est donnée par :
+	\begin{equation}
+		\mathbb{P}(V) = \iiint_V \rho^{3D}_\mathbb{P} \dd V
+	\end{equation}
+\end{proposition}
+
+\paragraph{Cas unidimensionnel}
+
+Dans le cas unidimensionnel, la particule ne peut se déplacer que selon un axe $(Ox)$. On définit alors la densité de probabilité de manière simplifiée : 
+
+\begin{definition}[Densité de probabilité]
+	On définit la densité linéique de probabilité de présence d'une particule confinée sur un unique axe $(Ox)$, notée $\rho_\mathbb{P}(x,t)$, comme un champ scalaire tel que la probabilité de trouver la particule sur le segment élémentaire $[x,x+\dd x]$ soit donnée par :
+	\begin{equation}
+		\dd \mathbb{P} = \rho_\mathbb{P}(x,t) \dd x
+	\end{equation}
+\end{definition}
+
+On en déduit directement la propriété suivante :
+\begin{proposition}
+	La probabilité de trouver une particule dans le segment $[x_1,x_2]$ est donnée par :
+	\begin{equation}
+		\mathbb{P}([x_1,x_2]) = \int_{x_1}^{x_2} \rho_\mathbb{P} \dd x
+	\end{equation}
+\end{proposition}
+
+\paragraph{Interprétation physique}
+
+En mécanique quantique, on ne peut pas prévoir à l'avance le résultat d'une mesure. Typiquement, dans l'expérience des trous d'Young avec des électrons, on ne peut pas prédire à quel endroit un électron va impacter l'écran. On peut uniquement donner une probabilité qu'un électron touche l'écran à un endroit donné. Pour mesurer cette probabilité $\rho_\mathbb{P}$, on va répéter l'expérience un grand nombre de fois.
+
+\begin{capex}
+	Dans l'expérience des trous d'Young avec des électrons, tracer l'allure de $\rho_\mathbb{P}(x)$ sur l'écran. A quelle variable est-elle analogue en optique ?
+\end{capex}
+
+\subsubsection{Définition de la fonction d'onde}
+
+Nous avons vu, en optique, que l'intensité lumineuse observable à l'écran peut s'écrire comme le module au carré d'une vibration lumineuse complexe caractérisant l'onde. Par analogie, et à la suite des travaux de de Broglie, Schrödinger a introduit la fonction d'onde :
+\begin{theorem}[Postulat de la mécanique quantique ondulatoire]
+	On suppose que toute particule peut être décrite par un champ scalaire complexe dépendant du temps $\psi(M,t)$, appelé \textit{fonction d'onde}. Ce champ est tel que la densité de probabilité de présence de la particule au point $M$ à l'instant $t$ soit :
+	\begin{equation}
+		\rho_P(M,t) = |\psi(M,t)|^2
+	\end{equation}
+\end{theorem}
+
+Une conséquence de cette définition est que, en une dimension, la probabilité $\dd P$ de trouver une particule dans le segment $[x,x+\dd x]$ est directement reliée à la fonction d'onde :
+\begin{equation}
+	\dd P = |\psi(x,t)|^2 \dd x
+\end{equation}
+
+\begin{remark}
+	L'unité de la fonction d'onde dépend de la simension du problème. On la retrouve en remarquant que les probabilités sont toujours sans unité. Dans le cas d'un problème unidimensionnel, la fonction d'onde s'exprime en m$^{-1/2}$. 
+\end{remark}
+
+	En mécanique quantique, la fonction d'onde décrit entièrement l'état de la particule à un instant $t$. Connaître la fonction d'onde à un instant $t$ en mécanique quantique revient ainsi à connaître la position et la vitesse d'une particule à un instant $t$ en mécanique classique : dans les deux cas, on va être capable de décrire l'évolution de la particule en fonction du temps. On note cependant que la description quantique est beaucoup plus complexe : on a remplacé deux vecteurs (six nombres) par un champ scalaire complexe, soit une infinité de vecteurs !
+
+	On peut remarquer que physiquement, multiplier la fonction d'onde par un nombre complexe de module 1 ne change rien :
+\begin{proposition}
+	La fonction d'onde est définie à un fracteur de phase près : pour une phase $\varphi \in \mathbb{R}$, les fonctions d'onde $\psi_1$ et $\psi_2 = \psi_1 \times e^{i \varphi}$ représentent le même état physique.
+\end{proposition}
+\begin{demonstration}
+	Seule la densité de probabilité $\rho_\mathbb{P}$ a une signification physique. Celle-ci est insensible à la phase de la fonction d'onde à cause de la présence du module au carré.
+\end{demonstration}
+
+\subsection{Condition de normalisation}
+
+La probabilité de présence de la particule dans tout l'espace devant être de 1, on obtient la condition suivante :
+\begin{proposition}[Condition de normalisation]
+	La fonction d'onde unidimensionnelle est de carré sommable et vérifie :
+	\begin{equation}
+	\int_{-\infty}^\infty |\psi(x,t)|^2 \dd x = 1
+	\end{equation}
+\end{proposition}
+
+\subsection{Equation de Schrödinger}
+
+L'équation de Schrödinger a été obtenue à l'aide d'une analogie formelle entre la fonction d'onde quantique et la vibration lumineuse en optique. Cette analogie se fonde sur des similarités entre l'optique et la mécanique analytique, une manière de formuler la mécanique classique sous la forme de minimisation de potentiels. 
+
+On étudie ainsi une particule quantique de masse $m$, dans un référentiel $\mathcal{R}$. La particule est en interaction avec son environnement, et est donc soumise à des forces; on suppose que toutes ces forces dérivent d'un potientiel (c'est toujours le cas à l'échelle microscopique), et on note cette énergie potentielle (généralement appelée plus simplement \textit{potentiel}) $V(x)$.
+
+\begin{theorem}[Equation de Schrödinger à une dimension]
+	Soit $\psi(x,t)$ la fonction d'onde d'une particule quantique de masse $m$, soumise à un potentiel $V(x)$. Alors l'évolution temporelle de la fonction d'onde est régie par l'équation suivante :
+	\begin{equation}
+		i \hbar \frac{\partial \psi(x,t)}{\partial t} = - \frac{\hbar^2}{2 m} \frac{\partial^2 \psi(x,t)}{\partial x^2} + V(x) \psi(x,t)
+	\end{equation}
+	où $\hbar$ est la constante de Planck réduite :
+	\begin{equation}
+		\hbar = \frac{h}{2\pi} = 1.05 \times 10^{-34}\,\mathrm{J}\cdot\mathrm{s}
+	\end{equation}
+\end{theorem}
+
+\begin{remark}
+	\textit{Cette remarque ne peut pas être comprise avant d'avoir fait le chapitre 14. Elle est destinée à vos révisions.} En trois dimensions, l'équation s'écrit à l'aide d'un laplacien :
+	\begin{equation}
+		i \hbar \frac{\partial \psi(M,t)}{\partial t} = - \frac{\hbar^2}{2 m} \Delta \psi(M,t) + V(M) \psi(M,t)
+        \end{equation}
+	Attention ! Ce n'est pas une équation de diffusion à cause de la présence de $i$, qui implique que l'équation n'est pas irréversible, par exemple.
+\end{remark}
+
+L'équation de Schrödinger est un postulat qui ne se démontre pas. De la même manière que le principe fondamental de la dynamique, elle doit sa légitimité au fait qu'elle permet de rendre compte d'une diversité de résultats expérimentaux.
+
+La linéarité de l'équation de Schrödinger nous permet de transposer le principe de superposition en optique et en électromagnétisme à la mécanique quantique :
+\begin{proposition}[Principe de superposition]
+	Soient $\psi_1$ et $\psi_2$ deux fonctions d'onde solutions de l'équation de Schrödinger. Alors toute combinaison linéaire de $\psi_1$ et $\psi_2$ est également solution de l'équation. 
+\end{proposition}
+\begin{remark}
+	Pour que cette combinaison linéaire puisse être une fonction d'onde, il convient de s'assurer qu'elle est bien normalisée (par exemple en lui appliquant un facteur multiplicatif).
+\end{remark}
+
+\section{Quantification de l'énergie}
+
+\subsection{Le puits de potentiel infini}
+
+\subsection{Etats stationnaires}
+
+\subsection{Superposition d'états stationnaires}
+
+\section{Principe d'indétermination de Heisenberg}
+
+
+
+
+
+\end{document}

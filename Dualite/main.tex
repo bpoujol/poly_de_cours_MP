@@ -64,6 +64,8 @@ mathfontname=mathsf]{mhchem}
 \usepackage{gensymb}
 \usepackage{tabularray}
 \usepackage{csquotes}
+\usepackage{amsmath}
+\usepackage{amsfonts}
 
 \usepackage[french]{babel}
 \usepackage{dingbat}
@@ -87,6 +89,7 @@ mathfontname=mathsf]{mhchem}
 \newcommand{\div}{\mathrm{div}}
 \newcommand{\rot}{\vv{\mathrm{div}}}
 \newcommand{\grad}{\vv{\mathrm{grad}}}
+\NewCommandCopy{\amshbar}{\hbar}
 
 \tikzset{
     support/.style={
@@ -135,7 +138,7 @@ mathfontname=mathsf]{mhchem}
 
 %\usechapterimagefalse % If you don't want to include a chapter image, use this to toggle images off - it can be enabled later with \usechapterimagetrue
 
-\chapterimage{filmB.jpg} % Table of contents heading image
+\chapterimage{a_boy_and_his_atom.png} % Table of contents heading image
 
 %\pagestyle{empty} % No headers
 
@@ -174,11 +177,16 @@ On comprend alors que la matière est composée de "grains" élémentaires, les 
 
 \subsubsection{Le rayonnement du corps noir}
 
-Les réelles interrogations arrivent avec d'autres résultats. Un des échecs de la physique classique, bien connu à l'époque, est son incapacité à expliquer le rayonnement produit par un corps chauffé. Comme nous l'avons vu plus tôt dans l'année, plus un corps est chaud, plus il émet un rayonnement intense, à une longueur d'onde petite. Cependant, la physique classique est incapable d'expliquer la présence de ce pic et prédit un rayonnement qui contient une énergie infinie aux faibles longueurs d'onde. C'est ce qu'on appelle la \textit{catastrophe ultraviolette}. En 1900, Planck fait une hypothèse saugrenue : il introduit une constante $h$ dans ces calculs telle que l'énergie du rayonnement lumineux est quantifiée d'une manière proportionnelle à la fréquence : $E = n h \nu$. Son but était de faire le calcul par une autre méthode, puis de faire tendre $h$ vers 0. Or, il constate que le résultat qu'il obtient, la loi de Planck, ajuste parfaitement les observations... mais sans faire tendre $h$ vers 0 ! Il obtient la loi de Planck donnant le spectre en intensité d'un corps noir chauffé :
+Les réelles interrogations arrivent avec d'autres résultats. Un des échecs de la physique classique, bien connu à l'époque, est son incapacité à expliquer le rayonnement produit par un corps chauffé. Comme nous l'avons vu plus tôt dans l'année, plus un corps est chaud, plus il émet un rayonnement intense, à une longueur d'onde petite. Cependant, la physique classique est incapable d'expliquer la présence de ce pic et prédit un rayonnement qui contient une énergie infinie aux faibles longueurs d'onde. C'est ce qu'on appelle la \textit{catastrophe ultraviolette}. En 1900, Planck fait une hypothèse saugrenue : il introduit une constante $h$ dans ses calculs telle que l'énergie du rayonnement lumineux est quantifiée d'une manière proportionnelle à la fréquence : $E = n h \nu$. Son but était de faire le calcul par une autre méthode, puis de faire tendre $h$ vers 0. Or, il constate que le résultat qu'il obtient, la loi de Planck, ajuste parfaitement les observations... mais sans faire tendre $h$ vers 0 ! Il obtient la loi de Planck donnant la densité volumique d'énergie du rayonnement émis par un corps noir chauffé :
 \begin{equation}
-	I_\nu(\nu) = \dfrac{8 \pi h \nu^3}{c^3 \left( 1 - e^{\dfrac{hc}{\lambda k_B T}} \right)
+	u(\nu) = \dfrac{8 \pi \nu^2}{c^3} \cdot \dfrac{h \nu}{\left( e^{\frac{h \nu}{k_B T}}-1 \right)}
 \end{equation}
 où $\nu$ est la fréquence de l'onde, $c$ la vitesse de la lumière, $T$ la température et $k_B$ la constante de Boltzmann. L'ajustement avec les observations donne la valeur de la constante de Planck : $h = 6.63 \times 10^{-34}$\,J$\cdot$s.
+
+\begin{figure}[htbp]
+	\centering \includegraphics[width=0.5\linewidth]{loi_de_planck.png}
+	\caption{Loi de Rayleigh-Jeans (issue de l'électromagnétisme classique) et loi de Planck. Source : Physics Stackexchange.}
+\end{figure}
 
 Cette quantification de l'énergie est curieuse. Si elle est essentiellement vue comme un artifice de calcul, son interprétation va changer avec le résultat de plusieurs expériences. 
 
@@ -186,11 +194,17 @@ Cette quantification de l'énergie est curieuse. Si elle est essentiellement vue
 
 L'effet photoélectrique est un phénomène physique connu depuis déjà longtemps (Becquerel en 1839 puis Hertz en 1887) : certains métaux semiconducteurs libèrent des électrons lorsqu'ils sont éclairés, et sont ainsi une source de courant électrique. Nous avons d'ailleurs vu plusieurs fois en TP cet effet : il est à la base de l'utilisation d'une photodiode pour mesurer une intensité lumineuse. Ainsi, un apport sous forme énergétique permet d'extraire des électrons du métal.
 
-On pourrait s'attendre à ce que le nombtre d'électrons extraits soit proportionnel à l'énergie reçue par le métal, donc à l'intensité lumineuse appliquée. Or, on constate expérimentalement qu'il existe un effet de seuil en longueur d'onde :
+On pourrait s'attendre à ce que le nombre d'électrons extraits soit proportionnel à l'énergie reçue par le métal, donc à l'intensité lumineuse appliquée. Or, on constate expérimentalement qu'il existe un effet de seuil en longueur d'onde :
 \begin{itemize}
 	\item En-dessous d'une fréquence critique $\nu_c = c/\lambda_c$, aucun électron n'est extrait ;
-	\item Au contraire, lorsque $\nu \ge \nu_c$, l'effet photoélectrique se manifeste et le nombre d'électrons extraits n'augmente pas si la fréquence est augmentée.
+	\item Au contraire, lorsque $\nu \ge \nu_c$, l'effet photoélectrique se manifeste et le nombre d'électrons extraits n'augmente pas si la fréquence est augmentée. En revanche, l'énergie cinétique des électrons extraits augmente.
 \end{itemize}
+
+\begin{figure}[htbp]
+	\centering \includegraphics[width=\linewidth]{effet_photoelectrique.png}
+	\caption{Effet photoélectrique sur du potassium. Les électrons sont extraits uniquement en-dessous d'une longueur d'onde limite. Source : université du Wisconsin.}
+\end{figure}
+
 Il s'agit d'un effet "tout ou rien" : soit la fréquence de l'onde est suffisante pour extraire les électrons, soit elle ne l'est pas. C'est Einstein, en 1905\footnote{La même année, il a publié deux autres articles qui ont posé les fondements de la théorie de la relativité restreinte et de la physique statistique, respectivement. L'année 1905 est souvent qualifiée de \textit{Annus mirabilis}. Le travail d'historiens à partir de plusieurs sources de l'époque a montré que Mileva Maric a travaillé en collaboration avec Einstein à la rédaction de ces articles ; en particulier elle aurait contribué à la mise en forme mathématique des idées physiques proposées par Einstein. Il y a débat sur l'ampleur de sa contribution, mais plusieurs auteurs estiment qu'elle aurait dû être co-autrice des articles portant sur la relativité restreinte et l'effet photoélectrique.}, qui propose une interprétation de cette expérience en faisant le lien avec le calcul réalisé par Planck cinq ans plus tôt : en supposant que la lumière est transporté par des particules, les photons, dont l'énergie est proportionnelle à la fréquence : on explique directement les observations : soit l'énergie du photon est supérieure au travail à apporter pour extraire l'électron, soit elle ne l'est pas. L'hypothèse formulée dans l'article se confirme au fil des années et donne naissance à la loi de Planck-Einstein :
 \begin{theorem}[Loi de Planck-Einstein]
 	La lumière est transportée par des particules élémentaires, les photons, qui sont caractérisés par leur fréquence $\nu$ et se déplacent à la vitesse de la lumière $c$. Chaque photon transporte une énergie $E$ proportionnelle à sa fréquence :
@@ -219,6 +233,11 @@ où $p = m v$ est la quantité de mouvement de la particule. Ses travaux sont re
 \subsubsection{Vers une nouvelle description des particules}
 
 Depuis, des expériences similaires ont été reproduites avec des fentes d'Young : on observe alors des franges apparaître sur un écran où l'on mesure les impacts d'électrons (Tonomura et al, 1989).
+
+\begin{figure}{htbp}
+	\centering \includegraphics[width=0.8\linewidth]{Double_slit_Tonomura.jpg}
+	\caption{Résultats d'une expérience dans laquelle les électrons sont envoyés un à un à travers des bifentes. Source : Tonomura (1989).}
+\end{figure}
 
 Comment interpréter ce résultat ? On pourrait penser que les interférences observées sont liées à des électrons qui ont traversé les deux fentes d'Young simultanément, puis ont interagi. Mais ce n'est pas le cas, car les électrons sont envoyés un par un dans le dispositif. Ainsi, \textbf{les interférences se produisent même lorsqu'on considère le passage d'un électron unique} : l'électron est sensible à la présence des deux fentes à la fois. L'électron ne peut donc pas être décrit pas un point matériel.
 
@@ -362,6 +381,11 @@ En 1914, Franck et Hertz ont fait une découverte surprenante. Ils bombardaient 
 	\end{equation}
 \end{definition}
 
+\begin{figure}[htbp]
+	\centering \includegraphics[width=0.49\linewidth]{Franck_Hertz_dispositif.png} \includegraphics[width=0.49\linewidth]{Franck_Hertz_mesures.png}
+	\caption{Expérience de Franck et Hertz. A gauche : dispositif de mesure. A droite : résultats de l'expérience. L'intensité mesurée $i$ est proportionnelle au nombre et à la vitesse des électrons (nous avons vu en cours $\vv j = - n e \vv v$). Elle est tracée en fonction du posttentiel appliqué. Source : Froustey, Fillette et Roussille, \textit{Physique pour l'agrégation}.}
+\end{figure}
+
 Lorsqu'ils augmentent l'énergie cinétique des électrons, Franck et Hertz constatent que l'énergie des électrons qui sort de l'ampoule augmente aussi : rien d'anormal. Cependant, lorsque l'énergie des électrons dépasse 4.9\,eV, Franck et Hertz constatent que :
 \begin{itemize}
 	\item Les électrons sortants ont perdu quasiment toute leur énergie cinétique ;
@@ -382,10 +406,15 @@ Nous allons dans la suite adopter un modèle extrêmement simplifié du comporte
 \begin{definition}[Puits de potentiel infini]
 	Le modèle du puits de potentiel infini de longueur $L$ correspond à un potentiel $V(x)$ ayant la forme suivante :
 	\begin{align}
-		V(x) &= 0 \quad \mathrm{pour} 0 \le x \le L \\
-		V(x) = + \infty \quad \mathrm{sinon}
+		V(x) &= 0 \quad \mathrm{pour} \quad 0 \le x \le L \\
+		V(x) &= + \infty \quad \mathrm{sinon}
 	\end{align}
 \end{definition}
+
+\begin{figure}[htbp]
+	\centering \includegraphics[width=0.5\linewidth]{Puits_infini.png}
+	\caption{Puits de potentiel infini. Source : Froustey, Fillette et Roussille, \textit{Physique pour l'agrégation}.}
+\end{figure}
 
 Ici, $L$ va correspondre à la taille caractéristique de l'atome, de l'ordre de $10^{-10}$\,m.
 
@@ -482,7 +511,12 @@ avec :
 	$n$ est appelé le nombre quantique d'un état propre, et la suite $(E_n)_{n \int \mathbb{N}^\ast}$ est appelé le spectre d'énergie de la particule quantique. Chaque valeur $E_n$ est un niveau d'énergie.
 \end{proposition}
 
-La densité de probabilité de présence $|\varphi(x)|^2$ dans les premiers états stationnaires est représentée sur la figure XXX. On peut y constater que :
+\begin{figure}[htbp]
+	\centering \includegraphics[width=0.9\linewidth]{puits_infini.png}
+	\caption{Fonctions d'onde et probabilités de présence pour les quatre premiers états stationnaires. Conformément aux conventions habituelles en mécanique quantique, on a décalé la représentation graphique des fonctions d'onde verticalement pour faire coïncider le zéro de la fonction d'onde avec l'énergie du niveau concerné.}
+\end{figure}
+
+La densité de probabilité de présence $|\varphi(x)|^2$ dans les premiers états stationnaires est représentée sur la partie droite de la figure ci-dessus. On peut y constater que :
 \begin{itemize}
 	\item Cette densité n'est jamais uniforme : dans un état stationnaire, on observe notamment des noeuds où la probabilité de présence de la particule est nulle.
 	\item L'état de nombre quantique $n$ présente $n+1$ noeuds, de manière générale l'énergie d'un état stationnaire augmente avec le nombre de noeuds.

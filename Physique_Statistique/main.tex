@@ -153,6 +153,275 @@ mathfontname=mathsf]{mhchem}
 
 \chapter{Introduction à la physique statistique}
 
+On peut constater que les lois de la mécanique (classique ou quantique) sont toujours réversibles, autrement dit la transformation inverse de l'évolution d'un système mécanique est toujours possible. Ces lois, en principe, sont censées s'appliquer à toutes les particules élémentaires de la matière.
+
+Comment, dès lors, peut-on expliquer les lois de la thermodynamique, et en particulier le second principe qui caractérise la possibilité de transformations irréversibles à l'échelle macroscopique ?
+
+A l'aide de la physique statistique, nous allons tenter de mettre en évidence les propriétés macroscopiques de la matière à partir des lois fondamentales de la mécanique :
+\begin{definition}[Physique statistique]
+	La physique statistique a pour but de décrire les phénomènes physiques observés à l'échelle macroscopique en combinant une modélisation microscopique (classique ou quantique) avec des statistiques réalisées sur un grand nombre de particules.
+\end{definition}
+
+La physique statistique a l'avantage de pouvoir être appliquée aussi bien à partir de la mécanique classique que de la mécanique quantique : on peut alors comparer directement les lois physiques macroscopiques issues des deux modélisations. C'est en particulier par la physique statistique que la loi de Wien (et la loi de Rayleigh-Jeans qui la précédait, avec la catastrophe ultraviolette) ont été obtenues.
+
+\section{Facteur de Boltzmann}
+
+\subsection{Introduction : l'atmosphère isotherme}
+
+Nous allons commencer par un exemple simple : l'étude d'un gaz de température uniforme. En particulier, nous allons étudier l'atmosphère terrestre, dans laquelle la température varie entre environ 300\,K à la surface et jusqu'à 220\,K dans certaines couches. Les variations de température étant de l'ordre de 30\,\% de la température moyenne, on pourra, dans un premier modèle très grossier, les négliger : c'est le modèle de l'atmosphère isotherme.
+
+\subsubsection{Analyse qualitative}
+
+On considère ainsi une colonne d'air, située entre la surface de la Terre prise comme origine $z=0$ et l'espace $z \to +\infty$. Qualitativement, on peut remarquer que :
+\begin{itemize}
+	\item La gravité va avoir tendance à rassembler les molécules de gaz proche de la surface ;
+	\item Mais alors, la pression en surface sera très importante et va venir s'opposer à l'ajout de nouvelles molécules.
+\end{itemize}
+On s'attend ainsi à avoir un équilibre qui se met en place, entre le gradient vertical de la pression d'une part, et la force de gravité d'autre part.
+
+\subsubsection{Equilibre thermodynamique local}
+
+Pour rendre compte quantitativement de ce phénomène, il va falloir prendre en compte le fait que les particules ne sont pas réparties uniformément : on s'attend à avoir une atmosphère plus dense proche de la surface. Il faut donc définir une densité locale, ce qui fait appel (comme en électrostatique et en magnétostatique) à l'utilisation d'un volume élémentaire mésoscopique.
+
+Cependant, la situation ici est légèrement plus complexe. En électrostatique par exemple, on souhaitait simplement définir la densité volumique de charges, et pour cela il suffisait que le volume soit grand devant la taille moyenne des particules. Ici, c'est différent : dans le volume mésoscopique, nous allons avoir besoin de définir la température $T$ et la pression $p$. Or, ces grandeurs ne sont définies que pour un système à l'équilibre thermodynamique. Ceci nous amène à définir l'équilibre thermodynamique local :
+\begin{definition}[Equilibre thermodynamique local]
+	On peut considérer qu'un système est à l'équilibre thermodynamique local si on peut découper ce système macroscopique en éléments mésoscopiques qui sont chacun à l'équilibre thermodynamique.
+	On peut alors définir une température et une pression pour chacun de ces éléments, ce qui permet de décrire l'objet macroscopique par les champs $T(M,t)$ et $p(M,t)$.
+\end{definition}
+
+Il faut donc que l'on choisisse un élément mésoscopique de volume suffisamment grand pour que la température puisse y être définie. Pour que l'agitation thermique s'homogénéise, les particules de gaz doivent avoir la place d'avoir des chocs entre elles, ainsi :
+\begin{definition}[Volume mésoscopique en thermodynamique]
+	En thermodynamique, un volume mésoscopique $\dd \tau$ est un volume contenant un grand nombre de particules donc grand devant la distance entre les particules), mais également grand devant le libre parcours moyen $\lambda_m$ des particules. Il est petit devant la taille caractéristique du système macroscopique.
+\end{definition}
+où l'on a utilisé la notion de libre parcours moyen :
+\begin{definition}[Libre parcours moyen]
+	Le libre parcours moyen est la distance moyenne parcourue par une particule entre deux chocs.
+\end{definition}
+
+Pour un gaz parfait, à pression atmosphérique et température ambiante, le libre parcours moyen est typiquement de 100\,nm. Ainsi, une taille caractéristique de 10 à 100\,µm est habituellement adaptée pour un volume mésoscopique.
+
+Sous l'hypothèse d'équilibre thermodynamique local, on peut définir une pression et une masse volumique locales dans l'atmosphère, qui vont dépendre de $z$ : $p = p(z) , \mu = \mu(z)$. 
+
+\subsubsection{Loi du nivellement barométrique}
+
+\begin{capex}
+	En écrivant l'équilibre d'une tranche mésoscopique d'air entre $z$ et $z+\dd z$, déterminer une équation reliant le gradient vertical de pression et la masse volumique de l'air.
+\end{capex}
+
+On obtient la loi de l'hydrostatique :
+\begin{proposition}[Loi fondamentale de l'hydrostatique]
+	Soit un fluide au repos soumis à la seule force de pesanteur. On note $p$ la pression dans le fluide, $\mu$ sa masse volumique, et $g$ l'accélération de la pesanteur. Alors :
+	\begin{equation}
+		\frac{\partial p}{\partial z} = - \mu g
+	\end{equation}
+\end{proposition}
+
+\begin{capex}
+	En déduire que la pression décroît exponentiellement avec l'altitude, avec une hauteur caractéristique $H$ que l'on exprimera en fonction de $R,T,g$ et la masse molaire $M$ de l'air.
+\end{capex}
+
+Dans le cas de l'atmosphère terrestre, on peut montrer que $H \approx 8$\,km. Ce modèle très simplifié donne le bon ordre de grandeur pour la hauteur de l'atmosphère, typiquement la pression est réduire de moitié à environ 5\,km d'altitude.
+
+\subsubsection{Interprétation probabiliste}
+
+Nous allons maintenant avoir une approche de physique statistique : nous convertissons une loi macroscopique en une loi à l'échelle microscopique. Bien sûr, pour un état macroscopique donné, il est absolument impossible de savoir où se trouve chacune des molécules de gaz et quelle est sa vitesse. Mais nous pouvons interpréter la loi macroscopique en utilisant les probabilités.
+
+Nous allons, en particulier, raisonner en termes énergétique, afin de pouvoir généraliser notre résultat.
+
+\begin{capex}
+	Déterminer l'énergie potentielle de pesanteur d'une particule située à la cote $z$. En déduire la fonction densité de probabilité $\mathbb{P}(E)$ qui caractérise la probabilité d'avoir une énergie $E$ pour une molécule donnée.
+\end{capex}
+
+Cette loi nous amène à définir la constante de Boltzmann :
+\begin{definition}
+	Le constante de Boltzmann est le rapport de la constante des gaz parfaits $R$ et du nombre d'avogadro $\mathcal{N}_A$ :
+	\begin{equation}
+		k_B = \frac{R}{\mathcal{N}_A} = 1.38 \times 10^{-23}\,\mathrm{J}\cdot\mathrm{K}^{-1}
+	\end{equation}
+\end{definition}
+
+On constate que la fonction densité de probabilité de l'énergie d'une particule décroît en fonction de l'énergie avec une échelle caractéristique $k_B T$. Cette loi s'interprète physiquement :
+\begin{itemize}
+	\item Lorsque la température est proche de zéro, alors toutes les particules ont une énergie nulle ($E = 0$) : elles se trouvent dans l'état le plus stable.
+	\item En revanche, lorsque la température augmente, on a une compétition entre l'agitation thermique - qui excite les particules - et leur tendance à toujours se rapprocher de l'état fondamental. Les particules vont acquérir une énergie non nulle de l'ordre de $k_B T$.
+\end{itemize}
+
+On peut calculer l'énergie potentielle moyenne d'une particule :
+\begin{align}
+	\langle E \rangle &= \int_0^\infty E \mathbb{P}(E) \dd E \\
+	&= \int_0^\infty \frac{E}{k_B T} e^{-\frac{E}{k_B T}}  \dd E \\
+	&= k_B T \int_0^\infty u e^{-u} \dd u \\
+	&= k_B T \times 1! \\
+	&= k_B T
+\end{align}
+
+On en déduit l'interprétation physique suivante de $k_B T$ :
+\begin{proposition}
+	A la température $T$, $k_B T$ représente l'ordre de grandeur de l'énergie d'agitation thermique d'une particule.
+\end{proposition}
+
+\subsection{Généralisation}
+
+La propriété que nous avons obtenue se généralise en pratique à toute particule sous certaines hypothèses :
+\begin{theorem}[Loi de Boltzmann]
+	Soit un système à l'équilibre thermodynamique avec un thermostat de température $T$. La propbabilité pour une particule microscopique indépendante d'être dans un état d'énergie $E$ est proportionnelle au facteur de Boltzmann :
+	\begin{equation}
+		\mathbb{P}(E) \propto \exp\left(-\frac{E}{k_B T}\right) = e^{-\beta E}
+	\end{equation}
+	où l'on a utilisé la notation courante $\beta = \frac{1}{k_B T}$.
+\end{theorem}
+\begin{remark}
+	Attention ! L'analogie avec l'atmosphère isotherme n'est pas parfaite, au sens où l'on ne parle pas ici d'une fonction densité de probabilité, mais de la probabilité de se trouver dans un état unique (quantique ou classique) d'énergie $E$. La loi de Boltzmann peut se démontrer, mais la démonstration implique de nombreuses notions de physique statistique qui ne sont pas au programme.
+\end{remark}
+
+Le facteur de proportionnalité se calcule en général avec le condition de normalisation :
+\begin{proposition}[Condition de normalisation]
+	La somme des probabilités de se trouver dans chaque état est égale à 1 :
+	\begin{equation}
+		\sum_i \mathbb{P}(E_i) = 1
+	\end{equation}
+\end{proposition}
+
+Une conséquence importante de la loi de Boltzmann est que lorsque des états avec des énergies différentes sont accessibles, on va pouvoir quantifier de combien les probabilités diffèrent en fonction de l'écart entre les niveaux d'énergie :
+\begin{itemize}
+	\item Si $\Delta E \ll k_B T$ alors les états ont des probabilités similaires, autrement dit tous les états sont équiprobables et les particules vont occuper de la même manière tous les états accessibles ;
+	\item Si $\Delta E \gg k_B T$ alors seuls les états d'énergie la plus basse seront occupés. L'agitation thermique n'est pas suffisante pour en extraire les particules.
+	\item Si $\Delta E \SIM k_B T$ alors les états les moins énergétiques seront les plus occupés, mais les états plus énergétiques seront également occupés.
+\end{itemize}
+
+\begin{capex}
+	Préciser dans lequel de chacun de ces cas on se trouve pour :
+	\begin{itemize}
+		\item Un gaz dans une bouteille ;
+		\item De l'eau dans une bouteille ;
+		\item L'air dans l'atmosphère ;
+		\item L'électron de l'atome d'hydrogène.
+	\end{itemize}
+\end{capex}
+
+\section{Systèmes à spectre discret d'énergies}
+
+La loi de Boltzmann est très puissante : elle va nous permettre de décrire le comportement statistique de systèmes classiques, mais surtout de systèmes quantiques pour lesquels on sait que l'énergie est quantifiée. Elle est particulièrement adaptée, par exemple, à la description d'un électron dans un atome. Dans la suite, nous allons considérer deux types de systèmes à titre d'exemple. Les résultats que nous obtiendrons sont néanmoins généralisables à des systèmes à un grand nombre de niveaux.
+
+\subsection{Système à deux niveaux}
+
+\subsubsection{Applications}
+
+Un premier cas, le plus simple possible, est celui d'un système présentant uniquement deux niveaux d'énergie. Malgré sa simplicité, il a de très nombreuses applications en physique, et le modèle du système à deux niveaux est parfois suffisant pour décrire des phénomènes physiques observables avec une grande précision. Il permet par exemple de modéliser :
+\begin{itemize}
+	\item Le moment magnétique des électrons, qui est quantifié par le nombre quantique magnétique valant +1/2 ou -1/2. Le modèle du système à deux niveaux permet alors de décrire le magnétisme dans les solides ;
+	\item Les noyaux d'hydrogène qui ont les mêmes propriétés magnétiques, on peut alors étudier leur réponse à un champ magnétique imposé. C'est ce qui est utilisé lors d'un IRM (Imagerie par Résonance Magnétique) ;
+	\item On peut, de manière générale, assimiler un système à plusieurs niveaux à un système à deux niveaux dans le cas où seuls les deux premiers niveaux sont peuplés significativement, ce qui est fréquent lorsque la température est basse.
+\end{itemize}
+
+\subsubsection{Probabilités de présence et populations}
+
+Puisque l'on peut choisir le niveau d'énergie, on supposera que l'énergie de chacun des deux niveaux est donnée par $\pm \epsilon$ : l'état fondamental a une énergie $E_1=-\epsilon$ et l'état excité une énergie $E_2 = +\epsilon$. L'écart entre les deux niveaux est alors $\Delta E = 2 \epsilon$.
+
+\begin{capex}
+	En exploitant la loi de Boltzmann, déterminer la probabilité de présence d'un atome dans chacun des deux niveaux, notées $p_1$ et $p_2$.
+\end{capex}
+
+On considère désormais un système constitué de $N$ particules à deux niveaux. La population moyenne dans chacun des deux états s'écrit alors :
+\begin{align}
+	\langle N_1 \rangle &= N p_1 = \dfrac{N \exp\left(\frac{\epsilon}{k_B T}\right)}{2 \cosh\left(\frac{\epsilon}{k_B T}\right)} \\
+	\langle N_2 \rangle &= N p_1 = \dfrac{N \exp\left(-\frac{\epsilon}{k_B T}\right)}{2 \cosh\left(\frac{\epsilon}{k_B T}\right)}
+\end{align}
+On peut alors tracer $p_1$ et $p_2$ en fonction de la température :
+
+On constate, comme attendu, que lorsque $k_B T \ll \epsilon$, seul le niveau fondamental est occupé (l'agitation thermique est insuffisante pour exciter les atomes) alors que lorsque $k_B T \gg \epsilon$, les deux niveaux sont équiprobables.
+\begin{remark}
+	\textbf{Attention ! } A haute température, les particules ne sont pas toutes dans l'état excité. Cette affirmation est une erreur classique.
+	A haute température, on a équiprobabilité entre les niveaux car c'est la configuration qui maximise l'entropie du système, de la même manière qu'un gaz ne va pas rester d'un côté d'un récipient mais va occuper tout l'espace qui est disponible.
+\end{remark}
+
+\subsubsection{Energie moyenne et fluctuations}
+
+\begin{capex}
+	Déterminer l'énergie moyenne et son écart-type en fonction de la température $T$ et du nombre de particules $N$ dans le système. Interpréter les résultats à basse et à haute température.
+\end{capex}
+
+On remarque quelques propriétés intéressantes, tout d'abord sur l'énergie moyenne du système :
+\begin{itemize}
+	\item L'énergie moyenne est toujours négative. Ce n'est pas une propriété générale, ceci dépend de la convention adoptée pour l'origine des énergies. Mais ici, ceci indique que \textbf{le niveau fondamental est toujours plus peuplé que le niveau excité} ;
+	\item L'énergie est toujours une fonction croissante de la température.
+\end{itemize}
+
+Par ailleurs, l'écart type de cette énergie caractérise les fluctuations d'énergie du système :
+\begin{definition}[Fluctuations]
+	On appelle fluctuation d'une propriété $X$ d'un système en contact avec un thermostat, les variations de cette grandeur en fonction du temps et/ou de l'espace dues à la nature probabiliste de la présence des particules constituant le système dans les niveaux d'énergie.
+	L'amplitude caractéristique des fluctuations est mesurée par l'écart-type de la distribution de probabilité de $X$.
+\end{definition}
+
+On constate alors que les fluctuations décroissent avec $N$ :
+\begin{proposition}
+	Dans un système thermodynamique constitué de $N$ particules indépendantes en contact avec un thermostat, les fluctuations sont inversement proportionnelles à $\sqrt{N}$.
+\end{proposition}
+
+\subsubsection{Energie interne et capacité thermiqe}
+
+Dans le cas d'un système macroscopique ($N \gg 1$), les fluctuations d'énergie sont négligeables; On peut alors considérer que l'énergie est toujours égale à $\langle E \rangle$ et est une quantité fixe, ce qui nous mermet de définir l'énergie interne :
+\begin{definition}[Energie interne]
+	L'énergie interne est définie uniquement pour un système macroscopique ($N \gg 1$). Elle correspond à la moyenne de l'énergie totale de chacune des particules :
+	\begin{equation}
+		U = \langle E \rangle
+	\end{equation}
+	$E$ inclut l'énergie cinétique et l'énergie potentielle microscopique des particules.
+\end{definition}
+
+On définit alors la capacité thermique du système :
+\begin{definition}
+	La capacité thermique à volume constant d'un système thermodynamique macroscopique est la dérivée de son énergie interne par rapport à la température, lorsque l'on fait varier la température d'un thermostat avec lequel el système est à l'équilibre, et lorsque le volume du système est maintenu constant :
+	\begin{equation}
+		C = \frac{\dd U}{\dd T}
+	\end{equation}
+\end{definition}
+\begin{remark}
+	Attention, pour un gaz, cette capacité thermique diffère de la capacité thermique à pression constante.
+\end{remark}
+
+\begin{capex}
+	Déterminer la capacité thermique du système à deux niveaux, et la relier aux fluctuations d'énergie.
+\end{capex}
+
+\begin{remark}
+	Déterminer la capacité thermique est une étape importante, car il s'agit d'une grandeur mesurable par l'expérience. L'énergie interne n'est pas directement mesurable puisqu'elle est définie à une constante près.
+\end{remark}
+
+\subsection{Système de $N$ particules dans un puits infini à une dimension}
+
+On considère désormais un système plus complexe, qui correspond au puits infini étudié lors du chapitre de mécanique quantique. Ce système permet de décrire (de manière grossière) le comportement de n'importe quelle particule placée dans un puits de potentiel, comme par exemple un électron dans un atome ou un ion dans un solide cristallin.
+
+Mais l'avantage de ce modèle est qu'il nous permet aussi de décrire des systèmes beaucoup plus gros : par exemple, une particule de gaz enfermée dans une bouteille est aussi soumise à un puits de potentiel, pour lequel la forme dui puits infini carré est une excellente approximation.
+
+\subsubsection{Probabilités et occupation des niveaux d'énergie}
+
+Nous avons vu dans le cours de mécanique quantique que les niveaux d'énergie de ce système sont donnés par la relation :
+\begin{equation}
+	E_n = \frac{n^2 h^2}{8 m L^2} \quad ; \quad n \in \mathbb{N}^\ast
+\end{equation}
+où $m$ est la masse de la particule, $L$ la largeur du puits, $h$ la constante de Planck. 
+
+De la même manière que pour le système à deux niveaux, on peut calculer la probabilité de se trouver dans chacun des états en exploitant la loi de Boltzmann et en utilisant la condition de normalisation :
+\begin{equation}
+	\forall n \in \mathbb{N}^\ast, \mathbb{P}(E_n) = \frac{1}{Z} \exp\left(-\frac{E_n}{k_B T}\right)
+\end{equation}
+où $Z$ est la somme de tous les facteurs de Boltzmann, souvent appelée $fonction de partition$ du système :
+\begin{equation}
+	Z = \sum_{n=1}^\infty \exp\left(-\frac{E_n}{k_B T}\right)
+\end{equation}
+\begin{remark}
+	Ce résultat se généralise à toute particule indépendante, la somme portant alors sur l'ensemble des états du spectre en énergie de la particule. Il est essentiel de savoir retrouver cette formule très rapidement à partir de la loid e Boltzmann et la condition de normalisation.
+\end{remark}
+
+
+
+\begin{capex}
+	Interpréter le rapport des probabilités d'occupation de deux niveaux d'énergie en termes de population. Etudier les cas limites à haute et basse température. A température ambiante, dans quel cas se situe-t-on pour un atome ? Pour un gaz dans une bouteille ?
+\end{capex}
+
+Dans le cas particulier du puits infini, cette somme n'est a priori pas calculable analytiquement. 
+
 
 
 \end{document}

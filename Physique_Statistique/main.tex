@@ -286,7 +286,7 @@ Une conséquence importante de la loi de Boltzmann est que lorsque des états av
 \begin{itemize}
 	\item Si $\Delta E \ll k_B T$ alors les états ont des probabilités similaires, autrement dit tous les états sont équiprobables et les particules vont occuper de la même manière tous les états accessibles ;
 	\item Si $\Delta E \gg k_B T$ alors seuls les états d'énergie la plus basse seront occupés. L'agitation thermique n'est pas suffisante pour en extraire les particules.
-	\item Si $\Delta E \SIM k_B T$ alors les états les moins énergétiques seront les plus occupés, mais les états plus énergétiques seront également occupés.
+	\item Si $\Delta E \sim k_B T$ alors les états les moins énergétiques seront les plus occupés, mais les états plus énergétiques seront également occupés.
 \end{itemize}
 
 \begin{capex}
@@ -299,22 +299,16 @@ Une conséquence importante de la loi de Boltzmann est que lorsque des états av
 	\end{itemize}
 \end{capex}
 
-\section{Systèmes à spectre discret d'énergies}
+\section{Système à deux niveaux}
 
-La loi de Boltzmann est très puissante : elle va nous permettre de décrire le comportement statistique de systèmes classiques, mais surtout de systèmes quantiques pour lesquels on sait que l'énergie est quantifiée. Elle est particulièrement adaptée, par exemple, à la description d'un électron dans un atome. Dans la suite, nous allons considérer deux types de systèmes à titre d'exemple. Les résultats que nous obtiendrons sont néanmoins généralisables à des systèmes à un grand nombre de niveaux.
-
-\subsection{Système à deux niveaux}
-
-\subsubsection{Applications}
-
-Un premier cas, le plus simple possible, est celui d'un système présentant uniquement deux niveaux d'énergie. Malgré sa simplicité, il a de très nombreuses applications en physique, et le modèle du système à deux niveaux est parfois suffisant pour décrire des phénomènes physiques observables avec une grande précision. Il permet par exemple de modéliser :
+La loi de Boltzmann est très puissante : elle va nous permettre de décrire le comportement statistique de systèmes classiques, mais surtout de systèmes quantiques pour lesquels on sait que l'énergie est quantifiée. Elle est particulièrement adaptée, par exemple, à la description d'un électron dans un atome. Dans la suite, nous allons considérer un exemple très simple : celui d'un système présentant uniquement deux niveaux d'énergie. Malgré sa simplicité, il a de très nombreuses applications en physique, et le modèle du système à deux niveaux est parfois suffisant pour décrire des phénomènes physiques observables avec une grande précision. Il permet par exemple de modéliser :
 \begin{itemize}
 	\item Le moment magnétique des électrons, qui est quantifié par le nombre quantique magnétique valant +1/2 ou -1/2. Le modèle du système à deux niveaux permet alors de décrire le magnétisme dans les solides ;
 	\item Les noyaux d'hydrogène qui ont les mêmes propriétés magnétiques, on peut alors étudier leur réponse à un champ magnétique imposé. C'est ce qui est utilisé lors d'un IRM (Imagerie par Résonance Magnétique) ;
 	\item On peut, de manière générale, assimiler un système à plusieurs niveaux à un système à deux niveaux dans le cas où seuls les deux premiers niveaux sont peuplés significativement, ce qui est fréquent lorsque la température est basse.
 \end{itemize}
 
-\subsubsection{Probabilités de présence et populations}
+\subsection{Probabilités de présence et populations}
 
 Puisque l'on peut choisir le niveau d'énergie, on supposera que l'énergie de chacun des deux niveaux est donnée par $\pm \epsilon$ : l'état fondamental a une énergie $E_1=-\epsilon$ et l'état excité une énergie $E_2 = +\epsilon$. L'écart entre les deux niveaux est alors $\Delta E = 2 \epsilon$.
 
@@ -335,7 +329,15 @@ On constate, comme attendu, que lorsque $k_B T \ll \epsilon$, seul le niveau fon
 	A haute température, on a équiprobabilité entre les niveaux car c'est la configuration qui maximise l'entropie du système, de la même manière qu'un gaz ne va pas rester d'un côté d'un récipient mais va occuper tout l'espace qui est disponible.
 \end{remark}
 
-\subsubsection{Energie moyenne et fluctuations}
+\subsection{Energie moyenne et fluctuations}
+
+On définit, en physique statistique, les grandeurs moyennes à partir de la loi de probabilité qui leur correspond :
+\begin{definition}
+	Soit $X$ une grandeur caractérisant un système thermodynamique. En physique statistique, on définit la valeur moyenne de $X$ comme son espérance, en utilisant la loi de probabilité calculée (en général) à l'aide de la loi de Boltzmann :
+	\begin{equation}
+		\langle X \rangle = \mathbb{E}(X) = \sum_{\mathrm{Etats} n} X_i \mathbb{P}(X_i)
+	\end{equation}
+\end{definition}
 
 \begin{capex}
 	Déterminer l'énergie moyenne et son écart-type en fonction de la température $T$ et du nombre de particules $N$ dans le système. Interpréter les résultats à basse et à haute température.
@@ -350,7 +352,10 @@ On remarque quelques propriétés intéressantes, tout d'abord sur l'énergie mo
 Par ailleurs, l'écart type de cette énergie caractérise les fluctuations d'énergie du système :
 \begin{definition}[Fluctuations]
 	On appelle fluctuation d'une propriété $X$ d'un système en contact avec un thermostat, les variations de cette grandeur en fonction du temps et/ou de l'espace dues à la nature probabiliste de la présence des particules constituant le système dans les niveaux d'énergie.
-	L'amplitude caractéristique des fluctuations est mesurée par l'écart-type de la distribution de probabilité de $X$.
+	L'amplitude caractéristique des fluctuations est mesurée par l'écart-type de la distribution de probabilité de $X$ :
+	\begin{equation}
+		\Delta X = \sqrt{\left\langle (X - \langle X \rangle)^2 \right \rangle} = \sqrt{\langle X^2 \rangle - \langle X \rangle^2}
+	\end{equation}
 \end{definition}
 
 On constate alors que les fluctuations décroissent avec $N$ :
@@ -358,7 +363,7 @@ On constate alors que les fluctuations décroissent avec $N$ :
 	Dans un système thermodynamique constitué de $N$ particules indépendantes en contact avec un thermostat, les fluctuations sont inversement proportionnelles à $\sqrt{N}$.
 \end{proposition}
 
-\subsubsection{Energie interne et capacité thermiqe}
+\subsection{Energie interne et capacité thermique}
 
 Dans le cas d'un système macroscopique ($N \gg 1$), les fluctuations d'énergie sont négligeables; On peut alors considérer que l'énergie est toujours égale à $\langle E \rangle$ et est une quantité fixe, ce qui nous mermet de définir l'énergie interne :
 \begin{definition}[Energie interne]
@@ -388,11 +393,19 @@ On définit alors la capacité thermique du système :
 	Déterminer la capacité thermique est une étape importante, car il s'agit d'une grandeur mesurable par l'expérience. L'énergie interne n'est pas directement mesurable puisqu'elle est définie à une constante près.
 \end{remark}
 
+
+\section{Capacités thermiques des gaz parfaits}
+
+Nous nous intéressons désormais à l'étude d'un gaz parfait, et nous souhaitons déterminer sa capacité thermique, en s'inspirant du modèle du système à deux niveaux.
+
+Nous cherchons la capacité thermique du gaz à volume constant, ainsi on considère un gaz confiné dans un volume $V$ fixe, qui est constitué de $N$ particules indépendantes (modèle du gaz parfait). Cette configuration est très similaire au modèle du puits de potentiel infini, dans lequel des particules sont confinées selon la direction $x$. Nous allons donc nous reposer sur ce modèle pour démarrer.
+
 \subsection{Système de $N$ particules dans un puits infini à une dimension}
 
-On considère désormais un système plus complexe, qui correspond au puits infini étudié lors du chapitre de mécanique quantique. Ce système permet de décrire (de manière grossière) le comportement de n'importe quelle particule placée dans un puits de potentiel, comme par exemple un électron dans un atome ou un ion dans un solide cristallin.
 
-Mais l'avantage de ce modèle est qu'il nous permet aussi de décrire des systèmes beaucoup plus gros : par exemple, une particule de gaz enfermée dans une bouteille est aussi soumise à un puits de potentiel, pour lequel la forme dui puits infini carré est une excellente approximation.
+On considère donc un ensemble de $N$ particules dans un puits de potentiel infini de largeur $L$: il peut correspondre, par exemple, à des particules de gaz enfermées dans une bouteille de volume fixé.
+
+On peut remarquer que ce modèle simple permet de traiter également d'autres situations, en pratique toute situation dans laquelle une particule se trouve dans un puits de potentiel (si on accepte l'approximation grossière du puits infini carré), par exemple, l'étude d'électrons dans des atomes ou d'ions dans des solides cristallins. Bien sûr, comme le puits de potentiel n'est pas réellement carré, certains résultats que nous obtiendrons ne sont pas directement transposables à ces systèmes. 
 
 \subsubsection{Probabilités et occupation des niveaux d'énergie}
 
@@ -422,6 +435,195 @@ où $Z$ est la somme de tous les facteurs de Boltzmann, souvent appelée $foncti
 
 Dans le cas particulier du puits infini, cette somme n'est a priori pas calculable analytiquement. 
 
+\subsubsection{Approximation continue}
+
+On peut considérer le cas d'un gaz dans une bouteille, alors, nous avons vu que l'écart entre de xu niveaux d'énergie est très petit devant l'énergie d'agitation thermique :
+\begin{equation}
+	E_{n+1} - E_n \ll k_B T
+\end{equation}
+Ceci nous permet d'approximer le spectre discret d'énergie par un spectre continu, en découpant les énergies accessibles en éléments $\dd E$ tels que $\dd E \ll k_B T$ mais $\dd E \gg E_{n+1} - E_n$.
+
+Ce modèle ne revient pas à oublier le spectre quantique de l'atome, on va simplement le remplacer par une quantité continue qui mesure le nombre d'états entre $E$ et $E+\dd E$, et que l'on notera $\dd n(E)$.
+
+\begin{capex}
+	A partir de cette approximation, déterminer la forme de la densité de probabilité $\mathbb{P}(E)$ de l'énergie d'une particule indépendante du systèmé. En déduire que l'énergie moyenne d'une particule est donnée par :
+	\begin{equation}
+		\langle E \rangle = \frac{1}{2} k_B T
+	\end{equation}
+\end{capex}
+
+On remarque un comportement différent du système à deux niveaux. En effet, ici, la loi de probabilité de l'énergie est auto-similaire, c'est-à-dire que sa forme est toujours la même en fonction de la température. La distribution de probabilités de l'énergie a toujours la même forme, mais elle est resserrée autour des faibles énergies à basse température, et plus étendue à haute température.
+
+\subsection{Théorème d'équipartition de l'énergie}
+
+L'analyse que nous avons faite n'est vraie qu'à une dimension, et nous souhaiterions l'utiliser pour un gaz compris dans un volume à trois dimensions. Pour cela, nous allons généraliser nos résultats à l'aide du théorème d'équirépartition de l'énergie. Les hypothèses du théorème sont similaires à celles que nous avons faites dans la partie précédente. En particulier, nous supposons que les niveaux d'énergie sont très serrés ($E_{n+1}-E_n \ll k_B T$), si bien que l'on peut faire une approximation continue.
+
+\subsubsection{Degré de liberté quadratique}
+
+Nous allons également utiliser les la notion de degré de liberté comme suit (il s'agit d'une définition simplifiée) :
+\begin{definition}[Degré de liberté]
+	On appelle degré de liberté d'une particule :
+	\begin{itemize}
+		\item Une coordonnée permettant de positionner la particule dans l'espace ;
+		\item La dérivée temporelle d'une telle coordonnée.
+	\end{itemize}
+\end{definition}
+
+\begin{example}
+	En coordonnées cartésiennes, une particule libre de se déplacer dans tout l'espace a six degrés de liberté : $x,y,z$ qui décrivent sa position, et $\dot x,\dot y, \dot z$ qui décrivent sa vitesse.
+\end{example}
+
+Le théorème d'équipartirion de l'énergie concerne les degrés de liberté quadratiques :
+\begin{definition}[Degré de liberté quadratique]
+	Un degré de liberté $\xi_i$ est dit quadratique si l'énergie de la particule est une fonction quadratique de $\xi_i$, c'est-à-dire :
+	\begin{equation}
+		E = a  \xi_i^2 + b((\xi_j)_{j \neq i})
+	\end{equation}
+	où $(\xi_j)_{j \neq i}$ représente les éventuels autres degrés de liberté de la particule.
+\end{definition}
+
+\begin{capex}
+	Etablir le nombre de degrés de liberté quadratiques dans le cas de la particule située dans un puits carré infini unidimensionnel.
+\end{capex}
+
+\subsubsection{Théorème d'équipartition}
+
+Nous avons ainsi pu constater que, avec un degré quadratique d'énergie, la contribution à l'énergie moyenne d'une particule est de $\frac{1}{2} k_B T$. 
+
+Ce résultat est général :
+
+\begin{theorem}[Théorème d'équipartition de l'énergie]
+	Dans un système à l'équilibre avec un thermostat de température $T$, si les niveaux d'énergie sont suffisament serrés pour que l'on puisse faire l'approximation continue, alors l'énergie moyenne par particule associée à un degré de liberté quadratique est de $\frac{1}{2} k_B T$.
+\end{theorem}
+
+\begin{demonstration}
+
+Considérons un degré de liberté $\xi$ pour lequel on peut faire l'approximation continue. On suppose que le nombre d'états $\dd n(\xi) = n(\xi) \dd \xi$ tels que la particule ait son degré de liberté entre $\xi$ et $\xi + \dd \xi$ est constant, autrement dit, il n'y a pas plus d'états quantiques pour une valeur particulière de ce degré de liberté : $n(\xi) = n = cste$. Cette approximation est très largement vérifiée, sauf cas particuliers typiquement quantiques.
+
+Dans ce cas, on peut écrire la fonction densité de probabilité de l'énergie :
+\begin{equation}
+	\mathbb{P}(E) \propto \exp \left(-\frac{a \xi^2 + b}{k_B T}\right) \propto \exp \left(-\frac{a \xi^2}{k_B T}\right) 
+\end{equation}
+où l'on a tiré parti du fait que $b$ ne dépend pas de $\xi$. 
+On peut alors remarquer que, lorsque les autres degrés de liberté sont fixés, une variation d'énergie entre $E$ et $E+\dd E$ est équivalente à une variation de la valeur absolue du degré de liberté entre $\xi$ et $\xi + \dd \xi$, pour $\xi>0$:
+\begin{equation}
+	\mathbb{P}(E) \dd E = \mathbb{P}(\xi) \dd \xi + \mathbb{P}(-\xi) |\dd(-\xi)| = 2 \mathbb{P}(\xi) \dd \xi \quad \mathrm{donc} \quad \mathbb{P}(\xi) =\frac{1}{2} \mathbb{P}(E) \frac{\partial E}{\partial \xi}
+\end{equation}
+Or on sait que $\partial E / \partial \xi = 2 a \xi$ si bien qu'il existe une constante $A$ telle que :
+\begin{equation}
+	\mathbb{P}(\xi) = A \xi \exp\left(-\frac{a \xi^2}{k_B T}\right) \quad \mathrm{pour} \quad \xi \ge 0
+\end{equation}
+On peut calculer $A$ en utilisant la normalisation :
+\begin{equation}
+	\int_{-\infty}^\infty \mathbb{P}(\xi) \dd \xi = 2 \int_0^\infty \mathbb{P}(\xi) \dd \xi = 1
+\end{equation}
+qui devient alors :
+\begin{equation}
+	\frac{1}{2A} = \int_0^\infty \xi e^{-\frac{a \xi^2}{k_B T}} \dd \xi = \frac{k_B T}{a} \int_0^\infty u e^{-u^2} \dd u = \frac{k_B T}{a}
+\end{equation}
+ou encore $A = \frac{a}{2 k_B T}$. On calcule alors la contribution du degré de liberté $\xi$ à l'énergie moyenne :
+\begin{align}
+	\langle a \xi^2 \rangle &= 2 \int_0^{infty} a \xi^2 \mathbb{P}(\xi) \dd \xi \\
+	&= 2 \int_0^{infty} a \xi^2 \frac{a}{2 k_B T} \xi e^{-\frac{a \xi^2}{k_B T}} \dd \xi \\
+	&= \frac{1}{2} k_B T \int_0^\infty v e^{-v} \dd v \quad \left( v = \frac{a \xi^2}{k_B T} \right) \\
+	&= \frac{1}{2} k_B T
+\end{align}
+\end{demonstration}
+
+\subsubsection{Application : vitesse quadratique moyenne}
+
+\begin{capex}
+	A partir du théorème d'équipartition, retrouver la vitesse quadratique moyenne $\langle {\vv v}^2 \rangle$ des molécules ou atomes dans un gaz parfait.
+\end{capex}
+
+\subsection{Application : capacité thermique des gaz parfaits}
+
+Nous avons vu en 1e année que la capacité thermique molaire d'un gaz parfait s'écrit :
+\begin{equation}
+	C_{v,m} = \frac{nR}{\gamma-1}
+\end{equation}
+où $\gamma$ est le coefficient de Laplace du gaz. Nous allons ici démontrer cette formule et retrouver la valeur de $\gamma$ pour les gaz parfaits monoatomiques et diatomiques.
+
+\subsubsection{Gaz parfait monoatomique}
+
+\begin{capex}
+	En utilisant le théorème d'équipartition de l'énergie, retrouver la formule classique et montrer que $\gamma = \frac{5}{3}$.
+\end{capex}
+
+\subsubsection{Gaz parfait diatomique}
+
+Dans le cas d'un gaz parfait diatomique, le nombre de degrés de liberté est distinct. En effet, l'état dans lequel se trouve une particule est caractérisé non seulement par la position de son barycentre, mais également l'orientation de l'axe reliant les deux molécules (degrés de liberté de rotation). Cette orientation est repérée par deux angles ($\theta$ et $\varphi$ en coordonnées sphériques). On a alors plus de degrés de liberté quadratiques :
+\begin{itemize}
+	\item $x,y,z$ indiquent la position de la particule. Ils ne modifient pas son énergie : ce ne sont pas des degrés de liberté quadratiques.
+	\item $\theta, \varphi$, de même, n'influencent pas l'énergie de la particule.
+	\item $\dot x, \dot y, \dot z$ sont liés à l'énergie cinétique de translation et sont des degrés de liberté quadratiques :
+	\begin{equation}
+		E_{c,trans} = \frac{1}{2} m (\dot x^2 + \dot y^2 + \dot z^2)
+	\end{equation}
+	\item $\dot \theta, \dot \varphi$ sont liés à l'énergie cinétique de rotation de la molécule autour de son axe principal et de la direction perpendiculaire à son axe :
+	\begin{equation}
+		E_{c,rot} = \frac{1}{2} (J_\theta \dot \theta^2 + J_\varphi \dot \varphi^2)
+	\end{equation}
+\end{itemize}
+
+On a donc en tout 5 degrés de liberté quadratiques, ainsi, pour une particule :
+\begin{equation}
+	\langle E \rangle = \frac{5}{2} k_B T
+\end{equation}
+d'où, pour $n$ moles de gaz :
+\begin{equation}
+	U = \frac{5}{2} n R T \quad \mathrm{et} \quad C_{v,m} = \frac{5}{2} n R
+\end{equation}
+on en déduit directement que pour un gaz parfait diatomique :
+\begin{equation}
+	\gamma = \frac{7}{5}
+\end{equation}
+C'est notamment le cas de l'air, qui s'assimile bien à un gaz parfait à pression et température ambiante, et a fortiori à toutes les pressions rencontrées dans l'atmosphère qui sont nécessairement plus basses que la pression de surface.
+
+\section{Capacité thermique des solides cristallins}
+
+La capacité thermique d'un solide cristallin provient de la capacité thermique du réseau cristallin lui-même mais peut avoir d'autres contributions :
+\begin{itemize}
+	\item Dans le cas d'un métal, les électrons se déplacent librement dans le réseau et peuvent être assimilés à un gaz parfait ; ils ont donc une capacité thermique.
+	\item Dans le cas d'un solide magnétique, l'interaction entre les moments magnétiques est source d'une énergie potentielle également responsable d'une capacité thermique.
+\end{itemize}
+Dans le cadre de ce chapitre, nous nous limitons à une situation dans laquelle aucun de ces deux phénomènes n'intervient (par exemple, nous pouvons étudier un solide ionique). Dans ce cas, nous avons uniquement à décrire le réseau cristallin.
+
+\subsection{Modèle d'Einstein}
+
+Dans le modèle d'Einstein, les atomes occupent des positions précises correspondant à leur position d'équilibre, et se trouvent dans un minimum de potentiel. Considérons l'un de ces atomes, et prenons comme origine de l'espace sa position d'équilibre. Il a pour énergie cinétique :
+\begin{equation}
+	E_c = \frac{1}{2} (\dot x^2 + \dot y^2 + \dot z^2)
+\end{equation}
+Par ailleurs son énergie potentielle s'écrit, en développant à l'ordre 2 :
+\begin{align}
+	V(x,y,z) = &V_0 + \frac{\partial V}{\partial x} x + \frac{\partial V}{\partial y} y + \frac{\partial V}{\partial z} z \\
+	&+ \frac{\partial^2 V}{\partial x^2} \frac{x^2}{2} + \frac{\partial^2 V}{\partial y^2} \frac{y^2}{2} + \frac{\partial^2 V}{\partial z^2} \frac{z^2}{2} \\
+	&+ \frac{\partial^2 V}{\partial x \partial y} xy + \frac{\partial^2 V}{\partial x \partial z} xz + \frac{\partial^2 V}{\partial y \partial z} yz
+\end{align}
+Or on sait que $V$ a un minimum en $O$ donc toutes les dérivées d'ordre 1 s'annulent, et par ailleurs, on peut utiliser les symétries du problème pour établir que les fonctions $\mathbb{P}(x),\mathbb{P}(y),\mathbb{P}(z)$ doivent être paires. Les degrés de liberté étant indépendants, on a par ailleurs :
+\begin{equation}
+	\langle xy \rangle = \iint x y \mathbb{P}(x) \mathbb{P}(y) \dd x \dd y = \int_{-\infty}^\infty x \mathbb{P}(x) \dd x \times \int_{-\infty}^\infty y \mathbb{P}(y) \dd y = 0
+\end{equation}
+et de même les autres termes croisés ont une moyenne nulle. Ainsi :
+\begin{equation}
+	\langle V \rangle = \frac{1}{2} \left( \frac{\partial^2 V}{\partial x^2} \langle x^2 \rangle + \frac{\partial^2 V}{\partial y^2} \langle y^2 \rangle + \frac{\partial^2 V}{\partial z^2} \langle z^2 \rangle \right)
+\end{equation}
+Ainsi, les trois degrés de liberté de position sont également des degrés de liberté quadratiques.
+
+\begin{remark}
+	Cette forme de l'énergie potentielle est analogue à celle d'un oscillateur harmonique : en fait, dans le modèle d'Einstein, les atomes sont élastiquement liés à leur position d'équilibre avec une force de rappel proportionelle à la distance entre l'atome et sa position d'équilibre.
+\end{remark}
+
+\subsection{Loi de Dulong et Petit}
+
+\begin{capex}
+	A partie du modèle d'Einstein et du théorème d'équipartition de l'énergie, déterminer la capacité thermique d'un solide cristallin non métallique. Le résultat est connu sous le nom de \textbf{Loi de Dulong et Petit} et est à connaître.
+\end{capex}
+
+\begin{remark}
+	L'approximation continue est moins bien vérifiée pour les solides que pour les gaz. Nous verrons en TD le modèle d'Einstein quantique, qui permet d'estimer le rôle des effets quantiques sur la capacité thermique des solides.
+\end{remark}
 
 
 \end{document}

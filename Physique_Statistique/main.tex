@@ -220,21 +220,26 @@ On obtient la loi de l'hydrostatique :
 	En déduire que la pression décroît exponentiellement avec l'altitude, avec une hauteur caractéristique $H$ que l'on exprimera en fonction de $R,T,g$ et la masse molaire $M$ de l'air.
 \end{capex}
 
-Dans le cas de l'atmosphère terrestre, on peut montrer que $H \approx 8$\,km. Ce modèle très simplifié donne le bon ordre de grandeur pour la hauteur de l'atmosphère, typiquement la pression est réduire de moitié à environ 5\,km d'altitude.
+Dans le cas de l'atmosphère terrestre, on peut montrer que $H \approx 8$\,km. Ce modèle très simplifié donne le bon ordre de grandeur pour la hauteur de l'atmosphère, typiquement la pression est réduite de moitié à environ 5\,km d'altitude.
+
+\begin{figure}[htbp]
+	\centering \includegraphics[width=0.7\linewidth]{pression_altitude_macro.jpg} \includegraphics[width=0.25\linewidth]{pression_altitude_micro.png}
+	\caption{Atmosphère isotherme : variations de la pression avec l'altitude (à gauche) et interprétation en termes de densité locale de particules (à droite). Sources : Encyclopedia Britannica et tikz.net.}
+\end{figure}
 
 \subsubsection{Interprétation probabiliste}
 
 Nous allons maintenant avoir une approche de physique statistique : nous convertissons une loi macroscopique en une loi à l'échelle microscopique. Bien sûr, pour un état macroscopique donné, il est absolument impossible de savoir où se trouve chacune des molécules de gaz et quelle est sa vitesse. Mais nous pouvons interpréter la loi macroscopique en utilisant les probabilités.
 
-Nous allons, en particulier, raisonner en termes énergétique, afin de pouvoir généraliser notre résultat.
+Nous allons, en particulier, raisonner en termes énergétiques, afin de pouvoir généraliser notre résultat.
 
 \begin{capex}
-	Déterminer l'énergie potentielle de pesanteur d'une particule située à la cote $z$. En déduire la fonction densité de probabilité $\mathbb{P}(E)$ qui caractérise la probabilité d'avoir une énergie $E$ pour une molécule donnée.
+	Déterminer l'énergie potentielle de pesanteur d'une particule située à l'altitude $z$. En déduire la fonction densité de probabilité $\mathbb{P}(E)$ qui caractérise la probabilité d'avoir une énergie $E$ pour une molécule donnée.
 \end{capex}
 
 Cette loi nous amène à définir la constante de Boltzmann :
 \begin{definition}
-	Le constante de Boltzmann est le rapport de la constante des gaz parfaits $R$ et du nombre d'avogadro $\mathcal{N}_A$ :
+	La constante de Boltzmann est le rapport de la constante des gaz parfaits $R$ et du nombre d'avogadro $\mathcal{N}_A$ :
 	\begin{equation}
 		k_B = \frac{R}{\mathcal{N}_A} = 1.38 \times 10^{-23}\,\mathrm{J}\cdot\mathrm{K}^{-1}
 	\end{equation}
@@ -255,6 +260,14 @@ On peut calculer l'énergie potentielle moyenne d'une particule :
 	&= k_B T
 \end{align}
 
+\begin{remark}
+	Dans le calcul, on a utilisé la propriété suivante, que l'on admet pour l'instant et que vous démontrerez en cours de mathématiques plus tard dans l'année :
+	\begin{equation}
+		\forall n \in \mathbb{N}, \int_0^\infty u^n e^{-u} \dd u = n!
+	\end{equation}
+	(démonstration par récurrence avec une intégration par parties). Nous réutiliserons cette égalité à plusieurs reprises dans le cours et le TD de physique statistique.
+\end{remark}
+
 On en déduit l'interprétation physique suivante de $k_B T$ :
 \begin{proposition}
 	A la température $T$, $k_B T$ représente l'ordre de grandeur de l'énergie d'agitation thermique d'une particule.
@@ -263,7 +276,7 @@ On en déduit l'interprétation physique suivante de $k_B T$ :
 \subsection{Généralisation}
 
 La propriété que nous avons obtenue se généralise en pratique à toute particule sous certaines hypothèses :
-\begin{theorem}[Loi de Boltzmann]
+\begin{theorem}[Loi de Boltzmann (admise)]
 	Soit un système à l'équilibre thermodynamique avec un thermostat de température $T$. La propbabilité pour une particule microscopique indépendante d'être dans un état d'énergie $E$ est proportionnelle au facteur de Boltzmann :
 	\begin{equation}
 		\mathbb{P}(E) \propto \exp\left(-\frac{E}{k_B T}\right) = e^{-\beta E}
@@ -282,7 +295,7 @@ Le facteur de proportionnalité se calcule en général avec le condition de nor
 	\end{equation}
 \end{proposition}
 
-Une conséquence importante de la loi de Boltzmann est que lorsque des états avec des énergies différentes sont accessibles, on va pouvoir quantifier de combien les probabilités diffèrent en fonction de l'écart entre les niveaux d'énergie :
+Une conséquence importante de la loi de Boltzmann est que lorsque des états avec des énergies différentes sont accessibles, on va pouvoir quantifier les probabilités d'occupation en fonction de l'écart $\Delta E$ entre les niveaux d'énergie :
 \begin{itemize}
 	\item Si $\Delta E \ll k_B T$ alors les états ont des probabilités similaires, autrement dit tous les états sont équiprobables et les particules vont occuper de la même manière tous les états accessibles ;
 	\item Si $\Delta E \gg k_B T$ alors seuls les états d'énergie la plus basse seront occupés. L'agitation thermique n'est pas suffisante pour en extraire les particules.
@@ -323,6 +336,11 @@ On considère désormais un système constitué de $N$ particules à deux niveau
 \end{align}
 On peut alors tracer $p_1$ et $p_2$ en fonction de la température :
 
+\begin{figure}[htbp]
+	\centering \includegraphics[width=0.5\linewidth]{probas_deux_niveaux.png}
+	\caption{Probabilités d'occupation dans le système à deux niveaux.}
+\end{figure}
+
 On constate, comme attendu, que lorsque $k_B T \ll \epsilon$, seul le niveau fondamental est occupé (l'agitation thermique est insuffisante pour exciter les atomes) alors que lorsque $k_B T \gg \epsilon$, les deux niveaux sont équiprobables.
 \begin{remark}
 	\textbf{Attention ! } A haute température, les particules ne sont pas toutes dans l'état excité. Cette affirmation est une erreur classique.
@@ -335,7 +353,7 @@ On définit, en physique statistique, les grandeurs moyennes à partir de la loi
 \begin{definition}
 	Soit $X$ une grandeur caractérisant un système thermodynamique. En physique statistique, on définit la valeur moyenne de $X$ comme son espérance, en utilisant la loi de probabilité calculée (en général) à l'aide de la loi de Boltzmann :
 	\begin{equation}
-		\langle X \rangle = \mathbb{E}(X) = \sum_{\mathrm{Etats} n} X_i \mathbb{P}(X_i)
+		\langle X \rangle = \mathbb{E}(X) = \sum_{\mathrm{Etats}\,n} X_i \mathbb{P}(X_i)
 	\end{equation}
 \end{definition}
 
@@ -351,7 +369,8 @@ On remarque quelques propriétés intéressantes, tout d'abord sur l'énergie mo
 
 Par ailleurs, l'écart type de cette énergie caractérise les fluctuations d'énergie du système :
 \begin{definition}[Fluctuations]
-	On appelle fluctuation d'une propriété $X$ d'un système en contact avec un thermostat, les variations de cette grandeur en fonction du temps et/ou de l'espace dues à la nature probabiliste de la présence des particules constituant le système dans les niveaux d'énergie.
+	On appelle fluctuation d'une propriété $X$ d'un système, les variations de cette grandeur en fonction du temps et/ou de l'espace dues à la nature probabiliste de la présence des particules du système dans les niveaux d'énergie.
+	
 	L'amplitude caractéristique des fluctuations est mesurée par l'écart-type de la distribution de probabilité de $X$ :
 	\begin{equation}
 		\Delta X = \sqrt{\left\langle (X - \langle X \rangle)^2 \right \rangle} = \sqrt{\langle X^2 \rangle - \langle X \rangle^2}
@@ -365,7 +384,7 @@ On constate alors que les fluctuations décroissent avec $N$ :
 
 \subsection{Energie interne et capacité thermique}
 
-Dans le cas d'un système macroscopique ($N \gg 1$), les fluctuations d'énergie sont négligeables; On peut alors considérer que l'énergie est toujours égale à $\langle E \rangle$ et est une quantité fixe, ce qui nous mermet de définir l'énergie interne :
+Dans le cas d'un système macroscopique ($N \gg 1$), les fluctuations d'énergie sont négligeables; On peut alors considérer que l'énergie est toujours égale à $\langle E \rangle$ et est une quantité fixe, ce qui nous permet de définir l'énergie interne :
 \begin{definition}[Energie interne]
 	L'énergie interne est définie uniquement pour un système macroscopique ($N \gg 1$). Elle correspond à la moyenne de l'énergie totale de chacune des particules :
 	\begin{equation}
@@ -419,12 +438,12 @@ De la même manière que pour le système à deux niveaux, on peut calculer la p
 \begin{equation}
 	\forall n \in \mathbb{N}^\ast, \mathbb{P}(E_n) = \frac{1}{Z} \exp\left(-\frac{E_n}{k_B T}\right)
 \end{equation}
-où $Z$ est la somme de tous les facteurs de Boltzmann, souvent appelée $fonction de partition$ du système :
+où $Z$ est la somme de tous les facteurs de Boltzmann, souvent appelée \textit{fonction de partition} du système :
 \begin{equation}
 	Z = \sum_{n=1}^\infty \exp\left(-\frac{E_n}{k_B T}\right)
 \end{equation}
 \begin{remark}
-	Ce résultat se généralise à toute particule indépendante, la somme portant alors sur l'ensemble des états du spectre en énergie de la particule. Il est essentiel de savoir retrouver cette formule très rapidement à partir de la loid e Boltzmann et la condition de normalisation.
+	Ce résultat se généralise à toute particule indépendante, la somme portant alors sur l'ensemble des états du spectre en énergie de la particule. Il est essentiel de savoir retrouver cette formule très rapidement à partir de la loi de Boltzmann et la condition de normalisation.
 \end{remark}
 
 
@@ -437,7 +456,7 @@ Dans le cas particulier du puits infini, cette somme n'est a priori pas calculab
 
 \subsubsection{Approximation continue}
 
-On peut considérer le cas d'un gaz dans une bouteille, alors, nous avons vu que l'écart entre de xu niveaux d'énergie est très petit devant l'énergie d'agitation thermique :
+On peut considérer le cas d'un gaz dans une bouteille, alors, nous avons vu que l'écart entre deux niveaux d'énergie est très petit devant l'énergie d'agitation thermique :
 \begin{equation}
 	E_{n+1} - E_n \ll k_B T
 \end{equation}
@@ -446,7 +465,7 @@ Ceci nous permet d'approximer le spectre discret d'énergie par un spectre conti
 Ce modèle ne revient pas à oublier le spectre quantique de l'atome, on va simplement le remplacer par une quantité continue qui mesure le nombre d'états entre $E$ et $E+\dd E$, et que l'on notera $\dd n(E)$.
 
 \begin{capex}
-	A partir de cette approximation, déterminer la forme de la densité de probabilité $\mathbb{P}(E)$ de l'énergie d'une particule indépendante du systèmé. En déduire que l'énergie moyenne d'une particule est donnée par :
+	A partir de cette approximation, déterminer la forme de la densité de probabilité $\mathbb{P}(E)$ de l'énergie d'une particule indépendante du système. En déduire que l'énergie moyenne d'une particule est donnée par :
 	\begin{equation}
 		\langle E \rangle = \frac{1}{2} k_B T
 	\end{equation}
@@ -456,7 +475,7 @@ On remarque un comportement différent du système à deux niveaux. En effet, ic
 
 \subsection{Théorème d'équipartition de l'énergie}
 
-L'analyse que nous avons faite n'est vraie qu'à une dimension, et nous souhaiterions l'utiliser pour un gaz compris dans un volume à trois dimensions. Pour cela, nous allons généraliser nos résultats à l'aide du théorème d'équirépartition de l'énergie. Les hypothèses du théorème sont similaires à celles que nous avons faites dans la partie précédente. En particulier, nous supposons que les niveaux d'énergie sont très serrés ($E_{n+1}-E_n \ll k_B T$), si bien que l'on peut faire une approximation continue.
+L'analyse que nous avons faite n'est vraie qu'à une dimension, et nous souhaiterions l'utiliser pour un gaz compris dans un volume à trois dimensions. Pour cela, nous allons généraliser nos résultats à l'aide du théorème d'équipartition de l'énergie. Les hypothèses du théorème sont similaires à celles que nous avons faites dans la partie précédente. En particulier, nous supposons que les niveaux d'énergie sont très serrés ($E_{n+1}-E_n \ll k_B T$), si bien que l'on peut faire une approximation continue.
 
 \subsubsection{Degré de liberté quadratique}
 
@@ -473,7 +492,7 @@ Nous allons également utiliser les la notion de degré de liberté comme suit (
 	En coordonnées cartésiennes, une particule libre de se déplacer dans tout l'espace a six degrés de liberté : $x,y,z$ qui décrivent sa position, et $\dot x,\dot y, \dot z$ qui décrivent sa vitesse.
 \end{example}
 
-Le théorème d'équipartirion de l'énergie concerne les degrés de liberté quadratiques :
+Le théorème d'équipartition de l'énergie concerne les degrés de liberté quadratiques :
 \begin{definition}[Degré de liberté quadratique]
 	Un degré de liberté $\xi_i$ est dit quadratique si l'énergie de la particule est une fonction quadratique de $\xi_i$, c'est-à-dire :
 	\begin{equation}
@@ -523,12 +542,20 @@ qui devient alors :
 \end{equation}
 ou encore $A = \frac{a}{2 k_B T}$. On calcule alors la contribution du degré de liberté $\xi$ à l'énergie moyenne :
 \begin{align}
-	\langle a \xi^2 \rangle &= 2 \int_0^{infty} a \xi^2 \mathbb{P}(\xi) \dd \xi \\
-	&= 2 \int_0^{infty} a \xi^2 \frac{a}{2 k_B T} \xi e^{-\frac{a \xi^2}{k_B T}} \dd \xi \\
+	\langle a \xi^2 \rangle &= 2 \int_0^{\infty} a \xi^2 \mathbb{P}(\xi) \dd \xi \\
+	&= 2 \int_0^{\infty} a \xi^2 \frac{a}{2 k_B T} \xi e^{-\frac{a \xi^2}{k_B T}} \dd \xi \\
 	&= \frac{1}{2} k_B T \int_0^\infty v e^{-v} \dd v \quad \left( v = \frac{a \xi^2}{k_B T} \right) \\
 	&= \frac{1}{2} k_B T
 \end{align}
 \end{demonstration}
+
+\begin{encart}
+	Le théorème d'équipartition de l'énergie est souvent utilisé pour théoriquement estimer les sources de bruit dans les dispositifs de mesure de haute précision. Par exemple, les diapasons à quartz sont utilisés dans un certain nombre de capteurs en spectroscopie, mécanique des fluides ou microscopie. Ils permettent en effet une mesure du temps avec une très grande précision (facteur de qualité très élevé).
+	
+	Sous l'effet de l'agitation thermique, les branches du diapason oscollent spontanément avec une amplitude de quelques nanomètres, qui peut être suffisante pour perturber les mesures. Ce phénomène a été étudié par une équipe de recherche qui a montré un excellent accord entre les vibrations mesurées et le théorème d'équipartition de l'énergie, comme indiqué sur la figure ci-dessous (\textit{Application of the equipartition theorem to the thermal excitation of quartz tuning forks}, Welker, Elsner and Giessibl, 2018) :
+	
+	\centering \includegraphics[width=0.55\linewidth]{diapason.png}
+\end{encart}
 
 \subsubsection{Application : vitesse quadratique moyenne}
 
@@ -538,7 +565,7 @@ ou encore $A = \frac{a}{2 k_B T}$. On calcule alors la contribution du degré de
 
 \subsection{Application : capacité thermique des gaz parfaits}
 
-Nous avons vu en 1e année que la capacité thermique molaire d'un gaz parfait s'écrit :
+Vous avez vu en MPSI que la capacité thermique molaire d'un gaz parfait s'écrit :
 \begin{equation}
 	C_{v,m} = \frac{nR}{\gamma-1}
 \end{equation}
@@ -565,6 +592,11 @@ Dans le cas d'un gaz parfait diatomique, le nombre de degrés de liberté est di
 		E_{c,rot} = \frac{1}{2} (J_\theta \dot \theta^2 + J_\varphi \dot \varphi^2)
 	\end{equation}
 \end{itemize}
+
+\begin{figure}[htbp]
+	\centering \includegraphics[width=0.35\linewidth]{ddl_diatomique.png}
+	\caption{Les deux degrés de liberté de rotation pour une molécule diatomique. Source : Inspireup Education.}
+\end{figure}
 
 On a donc en tout 5 degrés de liberté quadratiques, ainsi, pour une particule :
 \begin{equation}
@@ -624,6 +656,26 @@ Ainsi, les trois degrés de liberté de position sont également des degrés de 
 \begin{remark}
 	L'approximation continue est moins bien vérifiée pour les solides que pour les gaz. Nous verrons en TD le modèle d'Einstein quantique, qui permet d'estimer le rôle des effets quantiques sur la capacité thermique des solides.
 \end{remark}
+
+\begin{encart}[Estimation de la température dans une étoile]
+	Il existe de nombreuses autres applications du théorème d'équipartition, qui existe sous une forme plus généralisée appliquée aux degrés de liberté non quadratiques.
+	
+	En particulier, le théorème a été très largement utilisé par le scientifique indien Subrahmanyan Chandrasekhar (prix Nobel 1983) pour étudier la structure des étoiles. Il est possible notamment d'estimer la température dans une étoile. Dans le cas d'une étoile naine, on a une équipartition entre l'énergie graviationnelle et l'énergie de confinement quantique (cf DM de mécanique quantique). Au contraire, dans le cas de la plupart des autres étoiles, l'équipartition se fait entre l'énergie cinétique d'agitation thermique et l'énergie de liaison gravitationnelle de l'étoile :
+	\begin{equation}
+		E_\ell = \frac{3}{5} \frac{\mathcal{G} M^2}{R} \sim N k_B T
+	\end{equation}
+	où $N$ est le nombre d'atomes dans l'étoile, $M$ sa masse et $R$ son rayon. (Il n'y a pas de facteur $\frac{1}{2}$ ici car l'énergie gravitationnelle n'a pas une forme quadratique, le théorème d'équipartition prend ainsi une forme légèrement différente.) Les étoiles étant principalement constituées d'hydrogène, on a $N \approx \frac{M}{m_p}$ où $m_p$ est la masse du proton, et on en déduit la température dans l'étoile :
+	\begin{equation}
+		T \sim \frac{3}{5} \frac{\mathcal{G} M m_p}{k_B R}
+	\end{equation}
+	Pour le soleil, on trouve $T \approx 1.4 \times 10^6$\,K, ce qui est une bonne approximation de la température au centre de l'étoile.
+	
+	De manière plus générale, on constate que si le rayon $R$ ne varie pas trop, la température de l'étoile est d'autant plus élevée que l'étoile est massive (et donc que sa luminosité est élevée) ce qui correspond très bien aux observations, comme visible sur la figure ci-dessous qui trace la luminosité des étoiles observées (reliée à leur masse) en fonction de leur température de surface (Source : \textit{Modified Orbital Elements of The Close Visual Binary Systems Hip11352, Hip70973, and Hip72479}, Tawalbeh and Al-Wardat, 2018) :
+	
+	\centering \includegraphics[width=0.75\linewidth]{sequence_principale.jpeg}
+\end{encart}
+
+
 
 
 \end{document}

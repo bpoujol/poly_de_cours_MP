@@ -159,7 +159,7 @@ mathfontname=mathsf]{mhchem}
 
 En MPSI, l'optique géométrique nous a permis d'expliquer un certain nombre de phénomènes lumineux, à partir d'une approximation simple selon laquelle la lumière se propage en ligne droite le long de rayons lumineux. Cette approche s'accorde bien avec une description corpusculaire de la lumière : la lumière correspond à un déplacement de photons transportant chacun une énergie $E = h \nu$ à la vitesse de la lumièce $c$. Néanmoins, cette approche a ses limites : elle ne permet pas de décrire tous les phénomènes associés au caractère ondulatoire de la lumière, qui sont essentiels dans un certain nombre d'instruments d'optique tels que les télescopes.
 
-Le fait que la lumière est une onde a été découvert avant que l'on connaisse la nature de cette onde : il s'agit en fait de perturbations du champ électrique $\vv E$ et du champ magnétique $\vv B$. Plutôt que de décrire complètement la structure des champs $\vv E$ et $\vv B$, ce qui s'avérerait lour mathématiquement, nous allons en optique adopter le modèle scalaire des ondes lumineuses, modèle qui a été proposé pour interpréter les expériences d'optique réalisées avant la découverte de l'électromagnétisme.
+Le fait que la lumière est une onde a été découvert avant que l'on connaisse la nature de cette onde : il s'agit en fait de perturbations du champ électrique $\vv E$ et du champ magnétique $\vv B$. Plutôt que de décrire complètement la structure des champs $\vv E$ et $\vv B$, ce qui s'avérerait lourd mathématiquement, nous allons en optique adopter le modèle scalaire des ondes lumineuses, modèle qui a été proposé pour interpréter les expériences d'optique réalisées avant la découverte de l'électromagnétisme.
 
 \subsection{La vibration lumineuse}
 
@@ -169,7 +169,7 @@ Dans ce modèle, nous considérons que la lumière peut être décrite par une g
 	Le modèle scalaire consiste à décrire l’onde lumineuse par un champ scalaire $s(M,t)$ appelé onde scalaire, vibration scalaire ou encore vibration lumineuse.
 \end{definition}
 
-Nous n'avons pas d'\textit{a priori} sur la forme de la vibration lumineuse. Une onde lumineuse va typiquement être générée par une source et se déplacer dans l'espace en suivant une équation d'onde, à savoir l'équation de d'Alembert.
+Nous n'avons pas d'\textit{a priori} sur la forme de la vibration lumineuse. Une onde lumineuse va typiquement être générée par une source et se déplacer dans l'espace en suivant une équation d'onde.
 
 
 \subsection{Récepteurs et intensité}
@@ -177,21 +177,24 @@ Nous n'avons pas d'\textit{a priori} sur la forme de la vibration lumineuse. Une
 En pratique, la présence d'une onde lumineuse est mise en évidence expérimentalement par l'utilisation de photorécepteurs : des instruments capables de détecter la présence de lumière. L'oeil humain en est un, mais il existe d'autres récepteurs tels que la photodiode, ou encore les réseaux de CCD (grille constituée d'un ensemble de photorécepteurs formant des pixels).
 
 \begin{figure}[htbp]
-	\centering \includegraphics[width=0.3\linewidth]{CCD.png}
+	\centering \includegraphics[width=0.4\linewidth]{CCD.png}
 	\caption{Schéma d'une CCD : il s'agit d'un tableau de photodiodes (formant les pixels). Ici, on a placé des filtres colorés RVB permettant d'imiter les cônes de l'oeil humain. Source : Florida State University.}
 \end{figure}
 
-Ces récepteurs sont sensibles à l'énergie transportée par l'onde lumineuse. Cette énergie est proportionnelle au carré de la vibration lumineuse (nous le démontrerons en électromagnétiqme). Par ailleurs, ces capteurs ne sont pas sensibles à la période des oscillations, qui est de l'ordre de $10^{-14}$\,s pour une onde visible. Ils mesurent une moyenne de cette énergie lumineuse sur un grand nombre de périodes. On définit ainsi l'intensité lumineuse :
+Ces récepteurs sont sensibles à l'énergie transportée par l'onde lumineuse. Cette énergie est proportionnelle au carré de la vibration lumineuse (nous le démontrerons en électromagnétisme). Par ailleurs, ces capteurs ne sont pas sensibles à la période des oscillations, qui est de l'ordre de $10^{-14}$\,s pour une onde visible. Ils mesurent une moyenne de cette énergie lumineuse sur un grand nombre de périodes. On définit ainsi l'intensité lumineuse :
 \begin{definition}
 	L'intensité d'une onde lumineuse est définie comme la moyenne du carré de la vibration lumineuse sur un grand nombre de périodes :
 	\begin{equation}
 		I(\vv r) = \langle s(\vv r,t)^2 \rangle
 	\end{equation}
 \end{definition}
+\begin{remark}
+	On définit parfois aussi l'éclairement $\mathcal{E}$. Ces grandeurs ne sont pas tout à fait identiques, mais elles sont toutes deux proportionnelles à la moyenne du carré de la vibration lumineuse, seule chose à retenir en MP.
+\end{remark}
 
 En pratique, la moyenne est réalisée sur une période $\tau$ qui dépend du capteur utilisé. Des valeurs de temps caractéristiques sont indiquées dans le tableau suivant :
 \begin{table}[h]
-	\begin{tabular}{ccc}
+	\centering \begin{tabular}{ccc}
 		\toprule
 		Oeil & CCD & Photodiode \\
 		\midrule
@@ -212,7 +215,7 @@ Dans ce cas, nous pouvons établir qu'en tout point de l'espace, l'onde va s'éc
 \end{equation}
 
 \begin{remark}
-Dans ce cours, nous utilisons le retard de phase avec un signe $-$. Il s'agit d'une convention et de nombreuses autres références utilisent un signe $+$. Dans un sujet de concours, soyez attentifs à la convention choisie, et, si elle n'est pas explicitée dans l'énoncé, choisissez une convention et explicitez-la sur votre copie.
+Dans ce cours, nous utilisons le retard de phase avec un signe $-$. Il s'agit d'une convention et de nombreuses autres références utilisent plutôt l'avance de phase avec un signe $+$. Dans un sujet de concours, soyez attentifs à la convention choisie, et, si elle n'est pas explicitée dans l'énoncé, choisissez une convention et explicitez-la sur votre copie.
 \end{remark}
 
 \begin{definition}[Phase]
@@ -242,18 +245,18 @@ On constate expérimentalement que l'énergie reçue par un capteur est maximale
 	En fin d'année, nous définirons le vecteur de Poynting $\vv \Pi(\vv r,t)$, qui indique la densité volumique de flux énergétique électromagnétique. Les rayons lumineux sont les lignes de champ du vecteur de Poynting, c'est-à-dire qu'elles sont en tout point tangentes à ce champ.
 \end{remark}
 
-Pour une onde sphérique, nous venons de voir que l'expérience montre que les rayons lumieux sont radiaux (orientés selon $\vv{e_r}$). Ils sont ainsi perpendiculaires aux surfaces d'onde, déquation $r = c^{ste}$. Cette propriété se généralise à toutes les ondes lumineuses monochromatiques :
+Pour une onde sphérique, nous venons de voir que l'expérience montre que les rayons lumieux sont radiaux (orientés selon $\vv{e_r}$). Ils sont ainsi perpendiculaires aux surfaces d'onde, d'équation $r = c^{ste}$. Cette propriété se généralise à toutes les ondes lumineuses monochromatiques :
 \begin{theorem}[Théorème de Malus (admis)]
 Les fronts d'ondes et les rayons d'une onde lumineuse monochromatique sont perpendiculaires en tout point de l'espace.
 \end{theorem}
 
-Ce théorème est très important car il permet de faire le lien entre les aspects ondulatoire de la lumière et l'optique géométrique. Pour mieux le comprendre, on rappelle la définition de deux points conjugués par un système optique :
+Ce théorème est très important car il permet de faire le lien entre l'aspect ondulatoire de la lumière et l'optique géométrique. Pour mieux le comprendre, on rappelle la définition de deux points conjugués par un système optique :
 \begin{definition}[Stigmatisme et conjgaison (révisions)]
 Un système optique est dit stigmatique lorsque tous les rayons issus d'un point $A$ et ayant traversé le système optique passent par un point $A'$. $A'$ est alors l'image de $A$ par le système optique et on dit que les points $A$ et $A'$ sont conjugués. Si le prolongement des rayons émergents passe par $A'$, on dit que $A'$ est une image virtuelle de $A$.
 \end{definition}
 A partir de cette définition, on peut alors représenter l'effet de divers instruments d'optique sur les surfaces et fronts d'onde.
 
-Par exemple, on peut considérer une lentille convergente, qui fait d'un objet réel $AB$ une image réelle $A'B'$. Le théorème de Malus nous permet directement de représenter les surfaces d'onde sont perpendiculaires aux rayons :
+Par exemple, on peut considérer une lentille convergente, qui fait d'un objet réel $AB$ une image réelle $A'B'$. Le théorème de Malus nous permet directement de représenter les surfaces d'onde qui sont perpendiculaires aux rayons :
 
 \begin{figure}[htbp]
     \centering
@@ -261,11 +264,13 @@ Par exemple, on peut considérer une lentille convergente, qui fait d'un objet r
     \caption{Effet d'une lentille sur les surfaces d'onde. Source : poly de cours de Etienne Thibierge.}
 \label{fig:lentille}
 \end{figure}
+
 \begin{remark}
-	Plus d'exemples de ce type avec des lentilles minces seront traités en TD.
+D'autres d'exemples de ce type avec des lentilles minces seront traités en TD.
 \end{remark}
+
 \begin{capex}
-	Représenter l'action d'un miroir plan sur les rayons et les plans d'onde d'une onde plane en incidence oblique. Faire de même pour une onde sphérique. En déduire l'interprétation de la formation d'une image en termes de surface d'onde.
+	Représenter l'action d'un miroir plan sur les rayons et les sufaces d'onde d'une onde plane en incidence oblique. Faire de même pour une onde sphérique. En déduire l'interprétation de la formation d'une image en termes de surface d'onde.
 \end{capex}
 
 
@@ -276,12 +281,7 @@ Par exemple, on peut considérer une lentille convergente, qui fait d'un objet r
 
 \subsection{Onde plane monochromatique, vecteur d'onde}
 
-Nous allons maintenant nous intéresser plus particulièrement à une onde plane afin de mieux comprendre sa structure. Si l'on suppose que l'onde se propage dans la direction $+\vv{e_x}$, on s'attend à ce qu'elle vérifie l'équation d'onde de d'Alembert :
- \begin{equation}
-\frac{\partial^2 s}{\partial x^2} = \frac{n^2}{c^2} \frac{\partial^2 s}{\partial t^2}
- \end{equation}
- La vitesse de propagation de l'once est $c_{onde} = \frac{c}{n}$ où $c$ est la vitesse de la lumière dans le vide. 
- L'onde est alors de la forme :
+Nous allons maintenant nous intéresser plus particulièrement à une onde plane afin de mieux comprendre sa structure. La vitesse de propagation de l'once est $c_{onde} = \frac{c}{n}$ où $c$ est la vitesse de la lumière dans le vide, et $n$ l'indice optique du milieu. Si l'on suppose que l'onde se propage dans la direction $+\vv{e_x}$, on s'attend à ce qu'elle soit de la forme :
  \begin{equation}
 	 s = f(x - c_{onde}t) = g \left(t-\frac{n x}{c}\right)
 \end{equation}
@@ -316,14 +316,14 @@ Dans le cas d'une onde sphérique, nous avons pu montrer expérimentalement que 
 \begin{proposition}[Forme d'une onde sphérique (admise)]
 Une onde sphérique monochromatique peur s'écrire sous la forme :
 \begin{equation}
-	s(r,t) = s_0 \cos\left(\omega\left(t-\frac{n r}{c}\right) - \varphi_0\right)
+	s(r,t) = \frac{s_0}{r} \cos\left(\omega\left(t-\frac{n r}{c}\right) - \varphi_0\right)
 \end{equation}
 \end{proposition}
 On constate qu'à l'intérieur du cosinus, la phase de l'onde $\phi$ a exactement la même expression que la phase d'une onde plane, pour peu que l'on remplace la coordonnée linéaire $x$ par le rayon $r$.
 
 \subsection{Chemin optique}
 
-L'analyse de l'onde sphérique comme de l'onde plane nous montre que la forme générale de la phase de l'onde $\phi$ ne dépend pas de la nature de l'onde. Pour exprimer cette phase, nous définisssons le chemin optique :
+L'analyse de l'onde sphérique comme de l'onde plane nous montre que la forme générale de la phase de l'onde $\phi$ ne dépend pas de la nature de l'onde (plane ou sphérique). Pour exprimer cette phase, nous définisssons le chemin optique :
 \begin{definition}
 	Le chemin optique entre deux points $A$ et $B$, calculé le long d'un rayon lumineux, est donné par :
 	\begin{equation}
@@ -336,7 +336,7 @@ L'analyse de l'onde sphérique comme de l'onde plane nous montre que la forme g�
 \end{remark}
 
 \begin{capex}
-	Déterminer la phase d'une onde monochromatique issue d'une source $S$ en un point de l'espace $A$ en fonction du chemin optique $(SA)$ parcouru le long d'un premier rayon. En déduire la propriété suivante.
+	Déterminer la phase d'une onde monochromatique issue d'une source $S$ en un point de l'espace $A$ en fonction du chemin optique $(SA)$ parcouru le long d'un rayon. En déduire la propriété suivante.
 \end{capex}
 \begin{proposition}
 Le déphasage d’une onde entre deux points $M$ et $M'$ se trouvant sur un même rayon lumineux est relié au chemin optique entre ces deux points :
@@ -380,7 +380,7 @@ Que peut-on dire du chemin optique entre une source lumineuse et deux points d'u
 	Le chemin optique séparant deux points conjugués par un système optique est indépendant du rayon lumineux choisi.
 \end{proposition}
 
-Cette propriété est bien visible, par exemple, sur la figure \ref{fig:lentille} : les rayons pour lesquels la distance géométrique est la plus courte ont un parcours plus long dans le verre de la lentille. Comme le verre a un indice optique $n>1$, ceci contribue à augmenter le chemin optique total.
+Cette propriété est bien visible, par exemple, sur la figure \ref{fig:lentille} : les rayons pour lesquels la distance géométrique est la plus courte ont un parcours plus long dans le verre de la lentille. Comme le verre a un indice optique $n>1$, ceci contribue à augmenter le chemin optique total, et donc à compenser la longueur plus courte du trajet lumineux.
 
 
 
@@ -427,37 +427,51 @@ En pratique, le spectre d’une onde lumineuse ne peut jamais être parfaitement
 	On appelle temps de cohérence $\tau_c$ d’une source lumineuse le temps caractéristique de variation des propriétés de l’onde lumineuse. On définit également la longueur de cohérence $\ell_c = c \tau_c$, qui correspond à la distance parcourue par l'onde pendant le temps de cohérence.
 \end{definition}
 
-Le temps de cohérence d'une onde lumineuse peut être relié au spectre d'émission. On sait que par le théorème de Parseval, l'intensité d'une onde lumineuse, égale à la moyenne de son carré, peut être reliée à son spectre énergétique :
+Le temps de cohérence d'une onde lumineuse peut être relié au spectre d'émission de la source $I_\nu(\nu)$, qui indique l'intensité lumineuse de la source en fonction de la fréquence :
 \begin{equation}
-	\int_0^\infty |\hat{s}(\omega)|^2 \dd \omega = \int_0^\infty |\underline{s}(t)|^2 \dd t
+	I = \int_0^\infty I_\nu(\nu) \dd \nu
 \end{equation}
-Autrement dit, l'intensité lumineuse peut se décomposer comme une intégrale sur la fréquence, et on appellera $S(\omega) = |\hat{s}(\omega)|^2$ le spectre d'émission d'une source lumineuse.
+
+\begin{remark}
+	Le théorème de Parseval (hors programme) permet de décomposer l'intensité d'une onde lumineuse, égale à la moyenne de son carré, en un spectre énergétique :
+	\begin{equation}
+		\int_{-\infty}^\infty |\underline{s}(t)|^2 \dd t = \int_0^\infty |\hat{s}(\nu)|^2 \dd \nu
+	\end{equation}
+	où $\hat{s}(\nu)$ est la transformée de Fourier continue du signal :
+	\begin{equation}
+		\hat{s}(\nu) = \int_{-\infty}^\infty s(t) e^{-j 2 \pi \nu t} \dd t
+	\end{equation}
+	Autrement dit, l'intensité lumineuse peut se décomposer comme une intégrale sur la fréquence, et on appellera $I_\nu(\nu) = |\hat{s}(\nu)|^2$ le spectre d'émission d'une source lumineuse.
+\end{remark}
 
 \begin{example}
 \textit{La connaissance de cet exemple n'est pas exigible, mais est vivement recommandée aux personnes qui envisagent de passer les concours les plus difficiles (Mines/Centrale/X/ENS).}
 Considérons une onde sinusoïdale amortie dans le temps :
 	\begin{equation}
-		s(t) = s_0 e^{-t/\tau_c} \cos(\omega_0 t)
+		s(t) = s_0 e^{-t/\tau_c} \cos(2 \pi \nu_0 t)
 	\end{equation}
 	qui se modélise par l'onde complexe :
 	\begin{equation}
-		\underline{s}(t) = s_0 e^{j \omega t - t/\tau_c}
+		\underline{s}(t) = s_0 e^{j 2 \pi \nu_0 t - t/\tau_c}
 	\end{equation}
 $\tau_c$ est alors le temps de cohérence de cette onde (en l'occurence, ici, c'est le temps caractéristique de variation de son amplitude).
 Quel est le spectre de cette onde ? Pour le savoir, nous pouvons en faire la transformée de Fourier :
 	\begin{align}
-		\hat{s}(\omega) &= \int_0^\infty s(t) e^{-j \omega t} \dd t  \\
-		&= s_0 \int_0^\infty  \exp\left( \left(j(\omega_0-\omega)-\frac{1}{\tau_c}\right)t \right)  \\
-		&= \frac{s_0}{\frac{1}{\tau_c} + j(\omega-\omega_0)}
+		\hat{s}(\nu) &= \int_0^\infty s(t) e^{-j 2 \pi \nu t} \dd t  \\
+		&= s_0 \int_0^\infty  \exp\left( \left(j 2 \pi(\nu_0-\nu)-\frac{1}{\tau_c}\right)t \right)  \\
+		&= \frac{s_0}{\frac{1}{\tau_c} + 2 \pi j(\nu-\nu_0)}
 	\end{align}
 On obtient ainsi l'expression du spectre :
 	\begin{equation}
-		S(\omega) = \frac{s_0^2 \tau_c^2}{1 + \tau_c^2 (\omega-\omega_0)^2}
+		I_\nu(\nu) = \frac{s_0^2 \tau_c^2}{1 + 4 \pi^2 \tau_c^2 (\nu-\nu_0)^2}
 	\end{equation}
-On constate que la largeur spectrale de la courbe à mi-hauteur est de l'ordre de $\Delta \omega = 2 \tau_c$ soit $\Delta \nu = \tau_c/\pi$. 
+On constate que la largeur spectrale de la courbe à mi-hauteur est telle que $4 \pi^2 \tau_c^2 (\Delta \nu / 2)^2 = 1$ soit :
+\begin{equation}
+	\Delta \nu \times \tau_c = \frac{1}{\pi}
+\end{equation} 
 \end{example}
 
-De manière générale, on retiendra la propriété suivante :
+De manière générale, on admettra et on retiendra la propriété suivante :
 \begin{proposition}
 	La largeur spectrale d'une source, $\Delta \nu$, est reliée à son temps de cohérence $\tau_c$ par la relation :
 	\begin{equation}
@@ -493,7 +507,7 @@ La longueur des trains d'onde correspond à la longueur de cohérence $\ell_c$ d
 
 Nous allons maintenant nous intéresser à quelques sources lumineuses.
 
-Les sources thermiques (comme une ampoule à incandescence) émettent un spectre donné qui satisfait la loi de Wien, vue au lycée. Il s'agit d'un spectre très large, dont la largeur est du même ordre de grandeur que la longueur d'onde centrale. On a ainsi $\Delta \nu \sim \nu_0$, ce qui implique que le temps de cohérence est du même ordre de grandeur que la péruiode de l'onde : $\tau_c \sim 10^{-14}$\,Hz. La longueur de cohérence est de l'ordre d'une longueur d'onde ($10^{-6}$\,m)
+Les sources thermiques (comme une ampoule à incandescence) émettent un spectre donné qui satisfait la loi de Wien, vue au lycée. Il s'agit d'un spectre très large, dont la largeur est du même ordre de grandeur que la longueur d'onde centrale. On a ainsi $\Delta \nu \sim \nu_0$, ce qui implique que le temps de cohérence est du même ordre de grandeur que la péruiode de l'onde : $\tau_c \sim 10^{-14}$\,s. La longueur de cohérence est de l'ordre d'une longueur d'onde ($10^{-6}$\,m)
 
 Les lampes à vapeur, en revanche, émettent une lumière avec un spectre très piqué, si bien que leur longueur de cohérence est nettement plus importante. Pour une lampe à vapeur de mercure classique, on aura $\lambda = 546.07$\,nm et $\Delta \lambda = 0.02$\,nm. Ceci implique un temps de cohérence :
 \begin{equation}
@@ -504,7 +518,7 @@ Enfin, le laser présente un temps de cohérence encore plus long que les source
 
 Voici quelques ordres de grandeurs de temps et de longueurs de cohérence pour différents trains d'onde :
 \begin{table}[h]
-	\begin{tabular}{cccc}
+	\centering \begin{tabular}{cccc}
 		\toprule
 		&Lumière blanche & Raie spectrale & Laser \\
 		\midrule
@@ -517,7 +531,10 @@ Voici quelques ordres de grandeurs de temps et de longueurs de cohérence pour d
 
 \subsubsection{Interférences, trains d'onde et longueur de cohérence}
 
-Nous pouvons désormais revenir sur notre seconde condition pour que les ondes soient cohérentes : il faut que $\varphi_1(M,t) - \varphi_2(M,t)$ soit constant. Sachant que le déphasage entre deux trains d'onde différent est aléatoire, il faut que les deux vibrations lumineuses au point $M$ appartiennent au \textbf{même train d'onde}.
+Nous pouvons désormais revenir sur notre seconde condition pour que les ondes soient cohérentes : il faut que $\varphi_1(M,t) - \varphi_2(M,t)$ soit constant. Sachant que le déphasage entre deux trains d'onde différent est aléatoire, il faut que les deux vibrations lumineuses au point $M$ appartiennent au \textbf{même train d'onde} :
+\begin{proposition}
+	Pour que deux vibrations lumineuses soient cohérentes, elles doivent appartenir au même train d'onde.
+\end{proposition}
 
 Cela est évidemment impossible pour des sources physiquement différentes. Ainsi, pour faire interférer deux ondes, il est nécessaire de crééer deux sources secondaires à partir d'une source primaire. Pour cela, nous verrons deux types de dispositifs : les dispositifs à division d'amplitude et les dispositifs à division de front d'onde. Dans les deux cas, les deux ondes $s_1$ et $s_2$ sont issues de la même source primaire, mais n'ont pas parcouru les mêmes rayons lumineux. Elles ont donc un chemin optique différent, ce qui induit un déphasage.
 
@@ -573,20 +590,22 @@ Notons que nous pouvons réécrire cette formule en termes de différence de mar
 
 \subsection{Interférences constructives et desctructives}
 
-On constate que la superposition de deux ondes monochromatiques d'intensité uniforme a une intensité non uniforme. En effet, $I_{tot}$ dépend de la position $M$ alors que c'est le cas, ni de $I_1$, ni de $I_2$.
+On constate que la superposition de deux ondes monochromatiques d'intensité uniforme a une intensité non uniforme. En effet, $I_{tot}$ dépend de la position $M$ alors que ce n'est le cas ni de $I_1$, ni de $I_2$.
 
 \begin{definition}
-Une figure d'interférences correspond au motif dessiné par des variations d'intensité lumineuse dans l'espace lorsqu'on a une superposition de deux ondes cohérentes.
+Une \textbf{figure d'interférences} correspond au motif dessiné par des variations d'intensité lumineuse dans l'espace lorsqu'on a une superposition de deux ondes cohérentes.
 
-Dans les zones où l'intensité est plus faible que la moyenne, le termes d'interférences est négatif et on dit que les interférences sont desctructives.
+On appelle \textbf{champ d'interférences} la région de l'espace dans laquelle les deux ondes se superpose, où on peut observer la figure d'interférences.
 
-Au contraire, dans les zones où l'intensité est plus élevée que la moyenne, le terme d'interférences est positif et on dit que les interférences sont constructives.
+Dans les zones où l'intensité est plus faible que la moyenne, le termes d'interférences est négatif et on dit que les interférences sont \textbf{desctructives}.
+
+Au contraire, dans les zones où l'intensité est plus élevée que la moyenne, le terme d'interférences est positif et on dit que les interférences sont \textbf{constructives}.
 \end{definition}
 
 \begin{example}[Interférence de deux ondes sphériques]
 	Supposons que l'on a deux ondes sphériques issues de deux sources secondaires cohérentes. Un tel dispositif peut être construit, par exemple, à partir des miroirs de Fresnel : 	On suppose les deux sources placées sur l'axe $(Oy)$. Nous souhaitons étudier l'allure de la figure d'interférences sur deux écrans représentés sur la figure suivante. Nous allons étudier les propriétés de symétrie de la situation pour en déduire l'allure de la figure d'interférences.
 \begin{itemize}
-	\item Sur l'écran 1 : si l'on est suffisamment proche du plan $(xOy)$, la différence de marche est essentiellement due à la différence de chemon optique à parcourir le long de l'axe $(Oy)$, elle est donc invariante par translation selon $\vv{e_z}$. Ainsi, l'intensité est également invariante par translation delon $\vv{e_z}$ et on va observer des franges.
+	\item Sur l'écran 1 : si l'on est suffisamment proche du plan $(xOy)$, la différence de marche est essentiellement due à la différence de chemin optique à parcourir le long de l'axe $(Oy)$, elle est donc invariante par translation selon $\vv{e_z}$. Ainsi, l'intensité est également invariante par translation delon $\vv{e_z}$ et on va observer des franges.
 	\item Sur l'écran 2 : la différence de marche est invariante par rotation autour de $(Oz)$, il en est donc de même pour l'intensité lumineuse : la figure d'interférences correspond à des anneaux centrés sur l'axe $(Oz)$.
 \end{itemize}
 \end{example}
@@ -599,11 +618,19 @@ Au contraire, dans les zones où l'intensité est plus élevée que la moyenne, 
 \end{figure}
 
 
+\begin{figure}[t]
+	\centering
+	\includegraphics[width=\linewidth]{fresnel_mirror.jpg} \includegraphics[width=0.65\linewidth]{fresnel_photo.jpg}
+	\caption{Les miroirs de Fresnel. En haut : schéma du dispositif. En bas : photo des interférences observées. Sources : melusine.eu.org et Leybold.}
+\end{figure}
+
+
+
 \begin{encart}[Les miroirs de Fresnel]
 	Une des premières expériences à avoir démontré le caractère ondulatoire de la lumière est celle des miroirs de Fresnel : on fait l'image d'une source primaire $S$ par deux miroirs légèrement inclinés, ce qui crée deux sources virtuelles secondaires $S_1$ et $S_2$, comme indiqué sur la figure ci-dessous.
 	On se retrouve alors dans la situation précédente, et en pratique on observe les franges lumineuses. Dans son compte rendu d'expérience, Fresnel fait les observations suivantes :
 	\begin{displayquote}
-	Nous pouvons maintenant expliquer celle des deux miroirs, dans laquelle on obtient des effets très frappants de l'influence mutuelle des rayons lumineux par la réunion de deux faisceaux réfléchis régulièrement sur leur surface. Il ne faut point employer de glaces étamées, mais noircies par derrière, afin de détruire la seconde réflexion, qui compliquerait le phénomène ; des miroirs métalliques sont encore préférables. Après avoir placé les deux miroirs l'un à côté de l'autre, et de sorte que leurs bords se touchent parfaitement, on les fait tourner jusqu'à ce qu'ils se trouvent presque dans le même plan, et forment néanmoins entre eux un angle légèrement rentrant, de manière à présenter à la fois deux images du point lumineux. On peut juger de cet angle d'après l'intervalle qui sépare les images ; il faut que cet intervalle soit petit pour que les franges aient une largeur suffisante. Mais une chose à laquelle on doit apporter le plus grand soin, c'est que les miroirs ne saillent pas l'un sur l'autre dans la ligne de contact, car une saillie d'un ou deux centièmes de millimètre suffirait souvent pour empêcher l'apparition des franges. On parvient à remplir cette condition par le tâtonnement, en pressant peu à peu celui des deux miroirs que l'on croit le plus saillant contre la cire molle au moyen de laquelle on les a fixés sur un appui commun ; et l'on juge au tact, et mieux encore en cherchant les franges à l'aide de la loupe, si la condition est remplie. On pourrait sans doute imaginer un mécanisme au moyen duquel on ferait varier à volonté l'angle des deux miroirs, en évitant toute saillie de l'un sur l'autre ; mais il faudrait qu'il fût construit avec un grand soin. Si le procédé que je viens d'indiquer est plus long par les tâtonnements qu'il nécessite, il a dit moins l'avantage de n'exiger d'autre appareil que deux petits miroirs de métal ou verre noir, et d'être ainsi à la portée de tout le monde.
+	{\small Nous pouvons maintenant expliquer celle des deux miroirs, dans laquelle on obtient des effets très frappants de l'influence mutuelle des rayons lumineux par la réunion de deux faisceaux réfléchis régulièrement sur leur surface. Il ne faut point employer de glaces étamées, mais noircies par derrière, afin de détruire la seconde réflexion, qui compliquerait le phénomène ; des miroirs métalliques sont encore préférables. Après avoir placé les deux miroirs l'un à côté de l'autre, et de sorte que leurs bords se touchent parfaitement, on les fait tourner jusqu'à ce qu'ils se trouvent presque dans le même plan, et forment néanmoins entre eux un angle légèrement rentrant, de manière à présenter à la fois deux images du point lumineux. On peut juger de cet angle d'après l'intervalle qui sépare les images ; il faut que cet intervalle soit petit pour que les franges aient une largeur suffisante. Mais une chose à laquelle on doit apporter le plus grand soin, c'est que les miroirs ne saillent pas l'un sur l'autre dans la ligne de contact, car une saillie d'un ou deux centièmes de millimètre suffirait souvent pour empêcher l'apparition des franges. On parvient à remplir cette condition par le tâtonnement, en pressant peu à peu celui des deux miroirs que l'on croit le plus saillant contre la cire molle au moyen de laquelle on les a fixés sur un appui commun ; et l'on juge au tact, et mieux encore en cherchant les franges à l'aide de la loupe, si la condition est remplie. On pourrait sans doute imaginer un mécanisme au moyen duquel on ferait varier à volonté l'angle des deux miroirs, en évitant toute saillie de l'un sur l'autre ; mais il faudrait qu'il fût construit avec un grand soin. Si le procédé que je viens d'indiquer est plus long par les tâtonnements qu'il nécessite, il a dit moins l'avantage de n'exiger d'autre appareil que deux petits miroirs de métal ou verre noir, et d'être ainsi à la portée de tout le monde.
 
 On ne doit employer dans cette expérience, comme dans celles de diffraction, que la lumière d'un seul point lumineux [...]
 
@@ -615,16 +642,9 @@ La direction de ces bandes est toujours perpendiculaire à la ligne droite qui j
 
 La bande centrale est brillante, comme dans tes franges qui divisent l'ombre d'un corps étroit, ou celles qu'on obtient au moyen d'un écran percé de deux fentes parallèles, et suffisamment rapprochées. Cette bande brillante est placée entre deux bandes obscures du noir le plus foncé, quand un emploie, comme nous le supposons, une lumière sensiblement homogène ; chacune d'elles est suivie d'une bande brillante à laquelle succède de nouveau une bande obscure et ainsi suite. Les bandes obscures sont encore d'un noir très foncé dans les franges du deuxième et du troisième ordre ; mais, à mesure qu'on s'éloigne du centre, elles deviennent moins prononcées, ce qui tient à ce que la lumière employée n'est jamais parfaitement homogène.
 
-Il suffit, de comparer les bandes obscures des premier, deuxième et troisième ordres à la lumière donnée par un seul miroir, pour se convaincre qu'elles sont beaucoup, moins éclairées, et que, dans les positions qu'elles occupent, l'addition des rayons d'un des miroirs à ceux de l'autre, au lieu de former une lumière plus intense, produit de l'obscurité. [...] »
+Il suffit, de comparer les bandes obscures des premier, deuxième et troisième ordres à la lumière donnée par un seul miroir, pour se convaincre qu'elles sont beaucoup, moins éclairées, et que, dans les positions qu'elles occupent, l'addition des rayons d'un des miroirs à ceux de l'autre, au lieu de former une lumière plus intense, produit de l'obscurité.}
 	\end{displayquote}
 \end{encart}
-
-
-\begin{figure}[htbp]
-    \centering
-	\includegraphics[width=\linewidth]{fresnel_mirror.jpg} \includegraphics[width=0.5\linewidth]{fresnel_photo.jpg}
-	\caption{Les miroirs de Fresnel. En haut : schéma du dispositif. En bas : photo des interférences observées. Sources : melusine.eu.org et Leybold.}
-\end{figure}
 
 \begin{capex}
 	A partir des notions de cohérence que nous avons vues, expliquer pourquoi Fresnel observe seulement 8 franges en lumière blanche, et beaucoup plus en lumière monochromatique.
@@ -639,6 +659,10 @@ Pour caractériser la visibilité des franges d'interférence, on définit la no
 		\mathcal{C} = \dfrac{I_{max}-I_{min}}{I_{max}+I_{min}}
 	\end{equation}
 \end{definition}
+
+\begin{remark}
+	Le contraste est parfois appelé \textit{visibilité} et noté $\mathcal{V}$. Attention à ne pas confondre une figure d'interférences mal contrastée avec des interférences destructives ! Le contraste est relié, ici, à une différence d'intensité entre les deux ondes.
+\end{remark}
 
 Le contraste est directement relié à la visibilité des franges, comme on le voit sur la figure suivante :
 
@@ -657,7 +681,13 @@ On en déduit la propriété suivante :
 \end{proposition}
 
 \begin{remark}
-	En pratique, nous essayerons toujours de nous placer dans ce type de conditions expérimentalement. Pour les miroirs de Fresnel, ceci revien à éclairer de manière égale chacun des deux miroirs, c'est-à-dire d'avoir un faisceau lumineux bien homogène.
+	En pratique, nous essayerons toujours de nous placer dans ce type de conditions expérimentalement. Pour les miroirs de Fresnel, ceci revient à éclairer de manière égale chacun des deux miroirs, c'est-à-dire d'avoir un faisceau lumineux bien homogène.
 \end{remark}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.5\linewidth]{contraste_fct.png}
+	\caption{Contraste de la figure d'interférences en fonction du rapport d'intensité des deux ondes qui interfèrent.}
+\end{figure}
 
 \end{document}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.9.16)  22 OCT 2025 11:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.9.16)  4 NOV 2025 18:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2090,23 +2090,18 @@ Package mdframed Info: mdframed works in twoside mode on input line 247.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 247.
-<schema_equivalent_michelson.png, id=61, 1018.80624pt x 709.65125pt>
+ [5 <./schema_michelson.png> <./michelson_principe.png>]
+<schema_equivalent_michelson.png, id=74, 1018.80624pt x 709.65125pt>
 File: schema_equivalent_michelson.png Graphic file (type png)
 <use schema_equivalent_michelson.png>
 Package pdftex.def Info: schema_equivalent_michelson.png  used on input line 25
 8.
 (pdftex.def)             Requested size: 426.79135pt x 297.28267pt.
- [5 <./schema_michelson.png> <./michelson_principe.png>]
+ [6 <./schema_equivalent_michelson.png>]
 Package mdframed Info: mdframed works in twoside mode on input line 276.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 276.
- [6 <./schema_equivalent_michelson.png>]
-Package mdframed Info: mdframed works in twoside mode on input line 281.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 281.
-Package mdframed Info: Not enough space on this page on input line 283.
 Package mdframed Info: mdframed works in twoside mode on input line 285.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
@@ -2123,138 +2118,113 @@ Package mdframed Info: mdframed works in twoside mode on input line 310.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 310.
-<LIGO.jpg, id=85, 572.8602pt x 525.162pt>
+<LIGO.jpg, id=84, 572.8602pt x 525.162pt>
 File: LIGO.jpg Graphic file (type jpg)
 <use LIGO.jpg>
 Package pdftex.def Info: LIGO.jpg  used on input line 319.
 (pdftex.def)             Requested size: 426.79135pt x 391.2582pt.
-<ondes_gravitationnelles.png, id=86, 995.72pt x 466.74374pt>
+<ondes_gravitationnelles.png, id=85, 995.72pt x 466.74374pt>
 File: ondes_gravitationnelles.png Graphic file (type png)
 <use ondes_gravitationnelles.png>
 Package pdftex.def Info: ondes_gravitationnelles.png  used on input line 319.
 (pdftex.def)             Requested size: 426.79135pt x 200.06204pt.
  [7] [8 <./LIGO.jpg> <./ondes_gravitationnelles.png>]
-! Undefined control sequence.
-l.330 		I_{tot}(M) = \Sum
-                         _{\lambda \in \mathrm{spectre}} I_\lambda(M)
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-Package mdframed Info: mdframed works in twoside mode on input line 338.
+Package mdframed Info: mdframed works in twoside mode on input line 339.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 338.
-Package mdframed Info: mdframed works in twoside mode on input line 344.
+(mdframed)              on input line 339.
+Package mdframed Info: mdframed works in twoside mode on input line 345.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 344.
+(mdframed)              on input line 345.
 <doublet.png, id=106, 1586.92876pt x 465.74pt>
 File: doublet.png Graphic file (type png)
 <use doublet.png>
-Package pdftex.def Info: doublet.png  used on input line 354.
+Package pdftex.def Info: doublet.png  used on input line 355.
 (pdftex.def)             Requested size: 426.79135pt x 125.25401pt.
-Package mdframed Info: mdframed works in twoside mode on input line 359.
+Package mdframed Info: mdframed works in twoside mode on input line 360.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 359.
-[9 <./doublet.png>]
+(mdframed)              on input line 360.
+ [9 <./doublet.png>]
 LaTeX Font Info:    Font shape `T1/pag/b/n' in size <6> not available
-(Font)              Font shape `T1/pag/db/n' tried instead on input line 378.
+(Font)              Font shape `T1/pag/db/n' tried instead on input line 379.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 378.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 379.
 
-! Missing \right. inserted.
-<inserted text> 
-                \right .
-l.403 	\end{equation}
-                     
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-euf.cfg
+File: mt-euf.cfg 2006/07/03 v1.1 microtype config. file: AMS Euler Fraktur (RS)
 
-[10]
+) [10]
 <raie_mercure.png, id=140, 1106.1325pt x 477.785pt>
 File: raie_mercure.png Graphic file (type png)
 <use raie_mercure.png>
-Package pdftex.def Info: raie_mercure.png  used on input line 413.
+Package pdftex.def Info: raie_mercure.png  used on input line 415.
 (pdftex.def)             Requested size: 341.43437pt x 147.47755pt.
-Package mdframed Info: mdframed works in twoside mode on input line 417.
+Package mdframed Info: mdframed works in twoside mode on input line 419.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 417.
+(mdframed)              on input line 419.
 <longueur_coherence_1.png, id=141, 514.92375pt x 516.93124pt>
 File: longueur_coherence_1.png Graphic file (type png)
 <use longueur_coherence_1.png>
-Package pdftex.def Info: longueur_coherence_1.png  used on input line 424.
+Package pdftex.def Info: longueur_coherence_1.png  used on input line 426.
 (pdftex.def)             Requested size: 136.57635pt x 137.10443pt.
 <longueur_coherence_2.png, id=142, 514.92375pt x 516.93124pt>
 File: longueur_coherence_2.png Graphic file (type png)
 <use longueur_coherence_2.png>
-Package pdftex.def Info: longueur_coherence_2.png  used on input line 424.
+Package pdftex.def Info: longueur_coherence_2.png  used on input line 426.
 (pdftex.def)             Requested size: 136.57635pt x 137.10443pt.
 <longueur_coherence_3.png, id=143, 514.92375pt x 624.3325pt>
 File: longueur_coherence_3.png Graphic file (type png)
 <use longueur_coherence_3.png>
-Package pdftex.def Info: longueur_coherence_3.png  used on input line 424.
+Package pdftex.def Info: longueur_coherence_3.png  used on input line 426.
 (pdftex.def)             Requested size: 136.57635pt x 165.59023pt.
 <spectre_iasi.png, id=144, 513.92pt x 189.70876pt>
 File: spectre_iasi.png Graphic file (type png)
 <use spectre_iasi.png>
-Package pdftex.def Info: spectre_iasi.png  used on input line 429.
+Package pdftex.def Info: spectre_iasi.png  used on input line 431.
 (pdftex.def)             Requested size: 426.79135pt x 157.54794pt.
 <iasi_chimie.png, id=145, 1308.38812pt x 971.12813pt>
 File: iasi_chimie.png Graphic file (type png)
 <use iasi_chimie.png>
-Package pdftex.def Info: iasi_chimie.png  used on input line 429.
+Package pdftex.def Info: iasi_chimie.png  used on input line 431.
 (pdftex.def)             Requested size: 426.79135pt x 316.76872pt.
 <co2_iasi.png, id=146, 782.925pt x 236.885pt>
 File: co2_iasi.png Graphic file (type png)
 <use co2_iasi.png>
-Package pdftex.def Info: co2_iasi.png  used on input line 429.
+Package pdftex.def Info: co2_iasi.png  used on input line 431.
 (pdftex.def)             Requested size: 426.79135pt x 129.1341pt.
-Package mdframed Info: mdframed works in twoside mode on input line 434.
+Package mdframed Info: mdframed works in twoside mode on input line 436.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 434.
+(mdframed)              on input line 436.
  [11 <./raie_mercure.png> <./longueur_coherence_1.png> <./longueur_coherence_2.
 png> <./longueur_coherence_3.png>] [12 <./spectre_iasi.png> <./iasi_chimie.png>
  <./co2_iasi.png>]
-Package mdframed Info: mdframed works in twoside mode on input line 448.
+Package mdframed Info: Not enough space on this page on input line 444.
+Package mdframed Info: mdframed works in twoside mode on input line 450.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 448.
-Package mdframed Info: mdframed works in twoside mode on input line 461.
+(mdframed)              on input line 450.
+Package mdframed Info: mdframed works in twoside mode on input line 463.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 461.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.471 		\delta $ 2 \alpha
-                          x
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-Package mdframed Info: mdframed works in twoside mode on input line 476.
+(mdframed)              on input line 463.
+Package mdframed Info: mdframed works in twoside mode on input line 478.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 476.
-[13]
+(mdframed)              on input line 478.
+ [13]
 <coin_air_laser.jpeg, id=183, 220.825pt x 229.85875pt>
 File: coin_air_laser.jpeg Graphic file (type jpg)
 <use coin_air_laser.jpeg>
-Package pdftex.def Info: coin_air_laser.jpeg  used on input line 492.
+Package pdftex.def Info: coin_air_laser.jpeg  used on input line 494.
 (pdftex.def)             Requested size: 149.37958pt x 155.49867pt.
 <coin_air.png, id=184, 459.7175pt x 460.72125pt>
 File: coin_air.png Graphic file (type png)
 <use coin_air.png>
-Package pdftex.def Info: coin_air.png  used on input line 492.
+Package pdftex.def Info: coin_air.png  used on input line 494.
 (pdftex.def)             Requested size: 149.37958pt x 149.70451pt.
  [14 <./coin_air_laser.jpeg> <./coin_air.png>] (./main.aux)
  ***********
@@ -2266,11 +2236,11 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 57818 strings out of 476080
- 1283680 string characters out of 5792744
- 2321245 words of memory out of 5000000
- 78456 multiletter control sequences out of 15000+600000
- 640365 words of font info for 324 fonts, out of 8000000 for 9000
+ 57834 strings out of 476080
+ 1283926 string characters out of 5792744
+ 2321223 words of memory out of 5000000
+ 78465 multiletter control sequences out of 15000+600000
+ 641412 words of font info for 329 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
  102i,13n,107p,1173b,1786s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/fontawesome5/FontAwesome5Fr
@@ -2279,17 +2249,18 @@ ee-Solid.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex
 ></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/
 share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/
 texlive/texmf-dist/fonts/type1/public/esint-type1/esint10.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/urw/avantgar/uagd8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-urw/avantgar/uagk8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/symbol/u
-syr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (14 pages, 7900218 bytes).
+ve/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/urw/avantgar/uagd8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
+/avantgar/uagk8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/symbol/usyr
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (14 pages, 7904161 bytes).
 PDF statistics:
- 307 PDF objects out of 1000 (max. 8388607)
- 221 compressed objects within 3 object streams
+ 312 PDF objects out of 1000 (max. 8388607)
+ 224 compressed objects within 3 object streams
  85 named destinations out of 1000 (max. 500000)
  71891 words of extra memory for PDF output out of 74296 (max. 10000000)
 

@@ -154,7 +154,7 @@ mathfontname=mathsf]{mhchem}
 
 \chapter{Transferts thermiques}
 
-Dans les chapitres précédents, nous nous sommes uniquement intéressés à la description des états d'équilibre initiaux et finaux au cours d'une transformation thermodynamique. Mais il y a plusieurs aspects que nous n'avons pas étudiés :
+Dans les chapitres précédents de thermodynamique, nous nous sommes uniquement intéressés à la description des états d'équilibre initiaux et finaux au cours d'une transformation thermodynamique, que ce soit pour un système fermé ou ouvert. Nous avons également décrit les systèmes non homogènes à l'équilibre dans le cours de thermodynamique statistique. Mais il y a plusieurs aspects que nous n'avons pas étudiés :
 \begin{itemize}
 	\item A quelle vitesse se fait la transformation thermodynamique ?
 	\item Comment se fait la transformation ? L'évolution de la température est elle uniforme ?
@@ -168,18 +168,23 @@ Ces questions appellent à une modélisation des systèmes thermodynamiques hors
 
 Lorsqu'on se trouve hors équilibre en thermodynamique, certaines variables intensives telles que la température $T$ ou la pression $p$ ne sont plus définies pour un échantillon macroscopique. Pour décrire l'évolution d'un système, on préférera donc une description continue, dans laquelle la température et la pression deviennent des champs scalaires qui dépendent de l'espace et du temps $T = T(M,t)$ et $p = p(M,t)$. Cette description n'est possible que si l'on suppose que l'on se trouve à l'équilibre thermodynamique local, que nous avons introduit au chapitre précédent.
 
-Ainsi, on choisit une échelle mésoscopique intermédiaire $\ell$ grande devant la taille d'une modélcule ou d'un atome et devant son libre parcours moyen, et petite devant la taille macroscopique du système, et on suppose que les temps caractéristiques d'évolution de la température sont suffisamment lents pour que l'on puisse considérer que des petits volume de taille $\dd \tau \sim \ell^3$ soient à tout instant à l'équilibre thermodynamique.
+Ainsi, on choisit une échelle mésoscopique intermédiaire $\ell$ grande devant la taille d'une molélcule ou d'un atome et devant son libre parcours moyen, et petite devant la taille macroscopique du système, et on suppose que les temps caractéristiques d'évolution de la température sont suffisamment lents pour que l'on puisse considérer que des petits volumes de taille $\dd \tau \sim \ell^3$ soient à tout instant à l'équilibre thermodynamique.
 
-\subsection{Vecteur densité de courant thermique}
+\subsection{Vecteur densité de flux thermique}
 
-Puisque le système thermodynamique que l'on considère n'est pas à l'équilibre, il est le siège de transferts thermiques : de l'énergie thermique est transportée au sein du système. Ce transport se fait généralement depuis les régions les plus chaudes vers les plus froides (c'est le sens qui contribue à faire augmenter l'entropie). Pour le modéliser, on utilise le vecteur densité de courant thermique :
-\begin{definition}[Vecteur densité de courant thermique]
-	On appelle vecteur densité de courant thermique $\vv{j_th}$ le vecteur tel que la puissance thermique traversant une surface élémentaire orientée $\vv{\dd S}$ soit donnée par :
+Puisque le système thermodynamique que l'on considère n'est pas à l'équilibre, il est le siège de transferts thermiques : de l'énergie thermique est transportée au sein du système.
+
+Pour le modéliser, on utilise le vecteur densité de courant thermique :
+\begin{definition}[Vecteur densité de flux thermique]
+	On appelle vecteur densité de flux thermique $\vv{j_th}$ le vecteur tel que la puissance thermique traversant une surface élémentaire orientée $\vv{\dd S}$ soit donnée par :
 	\begin{equation}
 		\dd \Phi = \vv{j_th} \cdot \vv{\dd S}
 	\end{equation}
 	Il s'exprime en W$\cdot$m$^{-2}$.
 \end{definition}
+\begin{remark}
+	$\vv{j_{th}$ est parfois également appelé \textit{densité de courant thermique}.
+\end{remark}
 De cette définition découle directement l'expression de la puissance thermique traversant une surface macroscopique :
 \begin{proposition}[Flux thermique à travers une surface]
 	Soit une surface orientée $\Sigma$, alors la puissance thermique traversant $\Sigma$ est égale au flux du vecteur densité de courant thermique à travers cette surface :

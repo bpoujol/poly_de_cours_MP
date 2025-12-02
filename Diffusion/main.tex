@@ -183,23 +183,33 @@ Pour le modéliser, on utilise le vecteur densité de courant thermique :
 	Il s'exprime en W$\cdot$m$^{-2}$.
 \end{definition}
 \begin{remark}
-	$\vv{j_{th}$ est parfois également appelé \textit{densité de courant thermique}.
+	$\vv{j_{th}}$ est parfois également appelé \textit{densité de courant thermique}.
 \end{remark}
 De cette définition découle directement l'expression de la puissance thermique traversant une surface macroscopique :
 \begin{proposition}[Flux thermique à travers une surface]
 	Soit une surface orientée $\Sigma$, alors la puissance thermique traversant $\Sigma$ est égale au flux du vecteur densité de courant thermique à travers cette surface :
 	\begin{equation}
-		\mathcal{P}_{th} = \Phi = \iint_\Sigma \vv{j_th} \cdot \vv{\dd S}
+		\mathcal{P}_{th} = \Phi_\Sigma = \iint_{\Sigma} \vv{j_{th}} \cdot \vv{\dd S}
 	\end{equation}
 \end{proposition}
 
+On rappelle qu'une puissance est homogène à une énergie par unité de temps, ainsi, l'énergie $\dd E$ transportée par les transferts thermiques à travers une surface $\Sigma$ pendant une durée $\dd t$ est donnée par :
+\begin{equation}
+	\dd E = \mathcal{P}_{th} \dd t = \Phi_\Sigma \dd t
+\end{equation}
+
 \begin{remark}
-	On utilisera indifféremment les termes \textit{flux thermique} et \textit{puissance thermique}, puisque l'on vient de montrer qu'ils sont équivalents.
+	On utilisera indifféremment les termes \textit{flux thermique} et \textit{puissance thermique}, puisque l'on vient de montrer qu'ils sont équivalents : le flux thermique est la puissance thermique transportée à travers une surface.
 \end{remark}
 
 \subsection{Modélisation des transferts thermiques}
 
-Dans la nature, il existe trois types de transferts thermiques :
+Dans la nature, il existe trois types de transferts thermiques, qui sont représentés sur cette figure :
+
+\begin{figure}[htbp]
+	\centering \includegraphics[width=0.4\linewidth]{modes_de_transfert.png}
+	\caption{Différents modes de transfert thermique dans une maison. Source : poly de cours de Etienne Thibierge.}
+\end{figure}
 
 \subsubsection{Rayonnement}
 \begin{definition}[Transfert thermique par rayonnement]
@@ -207,10 +217,10 @@ Dans la nature, il existe trois types de transferts thermiques :
 \end{definition}
 C'est le cas, par exemple, d'un corps chaud qui perd de l'énergie en émettant un rayonnement conformément à la loi de Wien. Tous les corps perdent de l'énergie par rayonnement, mais les corps les plus chauds en perdent plus qu'ils n'en reçoivent, et c'est l'inverse pour les corps les plus froids. On en déduit que le transfert net d'énergie se fait bien des corps les plus chauds vers les corps les plus froids.
 
-Le rayonnement d'un corps se fait en général dans le domaine de longueur d'onde de l'infrarouge thermique, autour de 10\,µm, sauf pour les corps très chauds comme le soleil ou une flamme, pour lesquels un rayonnement visible peut être émis.
+Le rayonnement d'un corps se fait en général dans le domaine de longueur d'onde de l'infrarouge thermique, autour de 10\,µm, sauf pour les corps très chauds comme le soleil ou une flamme, pour lesquels un rayonnement visible peut être émis (cf figure sur la température de flamme dans le cours de thermochimie).
 
 \begin{remark}
-	Ces transferts thermiques sont quantifiés par la loi de Stefan-Boltzmann (hors programme), qui correspond à l'intégrale spectrale de la loi de Planck. Ce sont eux qui sont responsables de l'effet de serre et permettent d'expliquer le réchauffement climatique d'origine humaine.
+	Ces transferts thermiques peuvent être quantifiés théoriquement à partir de l'intégrale spectrale de la loi de Planck, qui fournit la loi dite de Stefan-Boltzmann (cette loi n'est pas à connaître). Ce sont eux qui sont responsables de l'effet de serre et permettent d'expliquer le réchauffement climatique d'origine humaine.
 \end{remark}
 
 \subsubsection{Conduction}
@@ -219,13 +229,29 @@ Le rayonnement d'un corps se fait en général dans le domaine de longueur d'ond
 	La conduction traduit un transfert thermique à travers un milieu matériel sans transport macroscopique de matière. Elle se fait de proche en proche par agitation thermique des particules.
 \end{definition}
 
+\begin{remark}
+	Dans les solides cristallins, le phénomène de conduction peut être compris qualitativement à partir du modèle d'Einstein que nous avons vu dans le cours de thermodynamique statistique : lorsqu'un atome vibre, il va transmettre ses vibrations à ses voisins, ce qui va finir par agiter l'ensemble du solide cristallin et homogénéiser la température.
+\end{remark}
+
+\begin{figure}[htbp]
+	\includegraphics[width=0.8\linewidth]{conductivite_thermique_ressorts.png}
+	\caption{Illustration du phénomène de conduction thermique dans un solide cristallin initialement à basse température, que l'on réchauffe par le côté droit. Source : Indian Institute of Technology Delhi.}
+\end{figure}
+
 La conduction est le mode de transfert thermique dominant dans les solides. Elle peut être décrite de manière locale, à travers une loi phénoménologique, appelée loi de Fourier :
-\begin{theorem}
+\begin{theorem}[Loi de Fourier]
 	Dans un milieu matériel, le vecteur densité de courant thermique par conduction est opposé et proportionnel au gradient de température :
 	\begin{equation}
-		\vv{j_th} = - \lambda \grad T
+		\vv{j_{th,conduction}} = - \lambda \grad T
 	\end{equation}
 	où $\lambda$ est appelée la conductivité thermique du matériau. Elle se mesure en W$\cdot$m$^{-2} \cdot$K$^{-1}$.
+	
+	La loi de Fourier est valable uniquement :
+	\begin{itemize}
+		\item dans un solide isotrope (pas de direction privilégiée)
+		\item si les gradients de température ne sont pas trop importants
+		\item si les gradients de température ne varient pas trop rapidement
+	\end{itemize} 
 \end{theorem}
 
 La loi de Fourier ne se démontre pas : il s'agit d'une loi phénoménologique fondée sur l'expérience. On peut citer quelques ordres de grandeur de conductivité thermique :
@@ -240,8 +266,16 @@ La loi de Fourier ne se démontre pas : il s'agit d'une loi phénoménologique f
 \end{table}
 
 \begin{capex}
-	Interpréter la loi de Fourier à partir de cas limites (gradient faible ou fort) et commenter le signe du vecteur densité de courant thermique.
+	Interpréter la loi de Fourier à partir de cas limites (gradient faible ou fort). Comment est orienté le vecteur densité de flux thermique par rapport aux isothermes ? Commenter le signe $-$ présent dans la loi de Fourier.
 \end{capex}
+
+\begin{encart}[Matériaux très isolants]
+	Afin d'optimiser la consommation énergétique des bâtiments, on cherche à construire des matériaux les plus isolants possibles sans être trop encombrants. Les solides cristallins ont l'avantage d'être résistants mais ils ont généralement une conductivité thermique trop élevée.
+	
+	Une équipe de recherche de l'université de Liverpool a récemment conçu un matériau très peu conducteur en exploitant sa structure cristalline : ils ont ajouté des couches d'atomes qui empêchent les vibrations de se propager dans le réseau cristallin, notamment en agissant sur la raideur des ressorts qui sont équivalents aux liaisons ioniques entre les différents ions. 
+	
+	Le solide obtenu, $\ce{Bi4O4SeCl2}$ a ainsi une conductivité thermique de seulement $0.1$\,W$\cdot$m$^{-1}\cdot$K$^{-1}$.
+\end{encart}
 
 \subsubsection{Convection}
 
@@ -249,9 +283,22 @@ La loi de Fourier ne se démontre pas : il s'agit d'une loi phénoménologique f
 	Un transfert thermique par convection correspond à un transport net d'énergie thermique associé à un déplacement macroscopique de matière. Ce transfert est prédominant dans les fluides et généralement absent dans les solides.
 \end{definition}
 
+Très souvent, la convection trouve son origine dans les différences de densité induites par les différences de température dans un fluide : plus le fluide est chaud et plus sa densité est faible. Pour un gaz parfait, on a notamment l'expression suivante de la masse volumique : $\rho = \dfrac{M P}{RT}$ où $M$ est la masse molaire. Ainsi $\rho$ est bien une fonction décroissante de la température. Une bulle de gaz plus chaude va donc avoir tendance à s'élever, et une bulle de gaz plus froide à descendre. Des gradients de température vont donc se traduire par un déplacement macroscopique de matière.
+
+\begin{proposition}
+	Lorsqu'on a un transfert d'énergie thermique par convection dans un fluide, le fluide est en général bien mélangé si bien que la température y est relativement homogène.
+\end{proposition}
+
+\begin{figure}[htbp]
+	\includegraphics[width=0.8\linewidth]{convection.png}
+	\caption{Simulation numérique de la convection dans un fluide chauffé par le bas (par exemple, cela pourrait être de l'eau dans une casserole). Les zones rouges indiquent des panaches chauds ascendants, et les zones bleues des panaches froids descendants. Source : Doering, C. R. (2020). \textit{Turning up the heat in turbulent thermal convection.} Proceedings of the National Academy of Sciences.}
+\end{figure}
+
 La convection joue par exemple un rôle important pour les transferts thermiques dans l'océan et dans l'atmosphère, ou bien à l'intérieur d'une maison. Elle permet aussi des transferts thermiques dans le manteau terrestre : bien que celui-ci soit solide, les échelles de temps sont suffisamment longues pour que les roches puissent se déplacer en raison de leur plasticité.
 
-La convection joue aussi un rôle à l'interface entre un solide et un fluide : si le fluide est plus froid que le solide, il va extraire de l'énergie thermique du solide, et inversement. On a continuité du flux thermique à une interface :
+\paragraph{Transfert thermique conducto-convectif}
+
+La convection joue aussi un rôle à l'interface entre un solide et un fluide : si le fluide est plus froid que le solide, il va extraire de l'énergie thermique du solide, et inversement. Par conservation de l'énergie, on a nécessairement continuité du flux thermique à une interface :
 \begin{proposition}
 	Le vecteur densité de courant thermique est une fonction continue de l'espace, y compris au niveau d'une interface.
 \end{proposition}
@@ -264,13 +311,16 @@ Le vecteur densité de courant thermique à l'interface est décrit phénoménol
 		\vv{j_{th}} = h (T_{solide} - T_{fluide}) \vv n
 	\end{equation}
 	où $T_{fluide}$ et $T_{solide}$ sont les températures du fluide et du solide à l'interface, respectivement.
+	$h$ est appelé le coefficient de transfert de la surface.
 \end{theorem}
 \begin{remark}
 	En pratique, on constate que la valeur de $h$ dépend de nombreux paramètres, et en particulier de la vitesse d'écoulement du fluide, de l'état de surface du solide, de la nature du fluide et du solide.
 \end{remark}
 
 \begin{capex}
-	En déduire l'expression du flux thermique $\Phi$ qui traverse une interface de surface $S$.
+	On considère une interface de surface $S$ entre un fluide ($z>0$) et un solide ($z<0$). Quel est le mode de transfert thermique dans chacun des deux milieux ? Quelle est l'allure de la courbe de température $T(z)$ ?
+	
+	Déterminer l'expression du flux thermique $\Phi$ qui traverse l'interface de surface $S$, et relier le gradient de température $\frac{\dd T}{\dd z}(z=0^-)$ à la différence de température $T(z=0^+)-T(z=0^-)$.
 \end{capex}
 
 

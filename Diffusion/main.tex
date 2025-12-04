@@ -124,7 +124,7 @@ mathfontname=mathsf]{mhchem}
 
 \newcommand{\degC}{{\degree}C}
 \newcommand{\dd}{\mathrm{d}}
-\newcommand{\div}{\mathrm{div}}
+\renewcommand{\div}{\mathrm{div}}
 \newcommand{\rot}{\vv{\mathrm{rot}}}
 \newcommand{\grad}{\vv{\mathrm{grad}}}
 
@@ -136,7 +136,7 @@ mathfontname=mathsf]{mhchem}
 
 %\usechapterimagefalse % If you don't want to include a chapter image, use this to toggle images off - it can be enabled later with \usechapterimagetrue
 
-\chapterimage{filmB.jpg} % Table of contents heading image
+\chapterimage{thermographie.png} % Table of contents heading image
 
 %\pagestyle{empty} % No headers
 
@@ -150,7 +150,7 @@ mathfontname=mathsf]{mhchem}
 
 %\part{\'{E}lectromagnétisme}
 
-\setcounter{chapter}{8}
+\setcounter{chapter}{12}
 
 \chapter{Transferts thermiques}
 
@@ -174,7 +174,7 @@ Ainsi, on choisit une échelle mésoscopique intermédiaire $\ell$ grande devant
 
 Puisque le système thermodynamique que l'on considère n'est pas à l'équilibre, il est le siège de transferts thermiques : de l'énergie thermique est transportée au sein du système.
 
-Pour le modéliser, on utilise le vecteur densité de courant thermique :
+Pour le modéliser, on utilise le vecteur densité de flux thermique :
 \begin{definition}[Vecteur densité de flux thermique]
 	On appelle vecteur densité de flux thermique $\vv{j_th}$ le vecteur tel que la puissance thermique traversant une surface élémentaire orientée $\vv{\dd S}$ soit donnée par :
 	\begin{equation}
@@ -187,7 +187,7 @@ Pour le modéliser, on utilise le vecteur densité de courant thermique :
 \end{remark}
 De cette définition découle directement l'expression de la puissance thermique traversant une surface macroscopique :
 \begin{proposition}[Flux thermique à travers une surface]
-	Soit une surface orientée $\Sigma$, alors la puissance thermique traversant $\Sigma$ est égale au flux du vecteur densité de courant thermique à travers cette surface :
+	Soit une surface orientée $\Sigma$, alors la puissance thermique traversant $\Sigma$ est égale au flux du vecteur densité de flux thermique à travers cette surface :
 	\begin{equation}
 		\mathcal{P}_{th} = \Phi_\Sigma = \iint_{\Sigma} \vv{j_{th}} \cdot \vv{\dd S}
 	\end{equation}
@@ -204,10 +204,10 @@ On rappelle qu'une puissance est homogène à une énergie par unité de temps, 
 
 \subsection{Modélisation des transferts thermiques}
 
-Dans la nature, il existe trois types de transferts thermiques, qui sont représentés sur cette figure :
+On peut distinguer trois grands types de transferts thermiques, qui sont représentés sur cette figure :
 
 \begin{figure}[htbp]
-	\centering \includegraphics[width=0.4\linewidth]{modes_de_transfert.png}
+	\centering \includegraphics[width=0.5\linewidth]{modes_de_transfert.png}
 	\caption{Différents modes de transfert thermique dans une maison. Source : poly de cours de Etienne Thibierge.}
 \end{figure}
 
@@ -220,7 +220,11 @@ C'est le cas, par exemple, d'un corps chaud qui perd de l'énergie en émettant 
 Le rayonnement d'un corps se fait en général dans le domaine de longueur d'onde de l'infrarouge thermique, autour de 10\,µm, sauf pour les corps très chauds comme le soleil ou une flamme, pour lesquels un rayonnement visible peut être émis (cf figure sur la température de flamme dans le cours de thermochimie).
 
 \begin{remark}
-	Ces transferts thermiques peuvent être quantifiés théoriquement à partir de l'intégrale spectrale de la loi de Planck, qui fournit la loi dite de Stefan-Boltzmann (cette loi n'est pas à connaître). Ce sont eux qui sont responsables de l'effet de serre et permettent d'expliquer le réchauffement climatique d'origine humaine.
+	Ces transferts thermiques peuvent être quantifiés théoriquement à partir notamment :
+	\begin{itemize}
+		\item de la loi de Planck, qui fournit le rayonnement émis par un corps chauffé (comme évoqué en mécanique quantique) ;
+		\item du vecteur de Poynting, que nous verrons en cours d'électromagnétisme en février, et qui caractérise l'énergie transportée par une onde électromagnétique.
+	\end{itemize} 
 \end{remark}
 
 \subsubsection{Conduction}
@@ -234,17 +238,17 @@ Le rayonnement d'un corps se fait en général dans le domaine de longueur d'ond
 \end{remark}
 
 \begin{figure}[htbp]
-	\includegraphics[width=0.8\linewidth]{conductivite_thermique_ressorts.png}
+	\centering \includegraphics[width=0.8\linewidth]{conductivite_thermique_ressorts.png}
 	\caption{Illustration du phénomène de conduction thermique dans un solide cristallin initialement à basse température, que l'on réchauffe par le côté droit. Source : Indian Institute of Technology Delhi.}
 \end{figure}
 
 La conduction est le mode de transfert thermique dominant dans les solides. Elle peut être décrite de manière locale, à travers une loi phénoménologique, appelée loi de Fourier :
 \begin{theorem}[Loi de Fourier]
-	Dans un milieu matériel, le vecteur densité de courant thermique par conduction est opposé et proportionnel au gradient de température :
+	Dans un milieu matériel, le vecteur densité de flux thermique par conduction est opposé et proportionnel au gradient de température :
 	\begin{equation}
-		\vv{j_{th,conduction}} = - \lambda \grad T
+		\vv{j_{th}} = - \lambda \grad T
 	\end{equation}
-	où $\lambda$ est appelée la conductivité thermique du matériau. Elle se mesure en W$\cdot$m$^{-2} \cdot$K$^{-1}$.
+	où $\lambda$ est appelée la conductivité thermique du matériau. Elle se mesure en W$\cdot$m$^{-1} \cdot$K$^{-1}$.
 	
 	La loi de Fourier est valable uniquement :
 	\begin{itemize}
@@ -254,13 +258,17 @@ La conduction est le mode de transfert thermique dominant dans les solides. Elle
 	\end{itemize} 
 \end{theorem}
 
+\begin{remark}
+	Attention, la loi de Fourier n'est valable que pour les transferts thermiques par conduction. Elle ne s'applique généralement pas aux autres types de transferts thermiques.
+\end{remark}
+
 La loi de Fourier ne se démontre pas : il s'agit d'une loi phénoménologique fondée sur l'expérience. On peut citer quelques ordres de grandeur de conductivité thermique :
 \begin{table}[htbp]
 	\centering \begin{tabular}{lccccccc}
 		\toprule
 		Matériau & Cuivre & Zinc & Béton & Verre & Laine de verre & Eau & Air \\
 		\midrule
-		$\lambda$\,[W$\cdot$m$^{-2} \cdot$K$^{-1}$] & 400 & 100 & 1 & 0.9 & 0.05 & 0.6 & 0.03 \\
+		$\lambda$\,[W$\cdot$m$^{-1} \cdot$K$^{-1}$] & 400 & 100 & 1 & 0.9 & 0.05 & 0.6 & 0.03 \\
 		\bottomrule
 	\end{tabular}
 \end{table}
@@ -277,6 +285,11 @@ La loi de Fourier ne se démontre pas : il s'agit d'une loi phénoménologique f
 	Le solide obtenu, $\ce{Bi4O4SeCl2}$ a ainsi une conductivité thermique de seulement $0.1$\,W$\cdot$m$^{-1}\cdot$K$^{-1}$.
 \end{encart}
 
+\begin{figure}[htbp]
+	\centering \includegraphics[width=0.8\linewidth]{cristal_peu_conducteur.png}
+	\caption{Schéma du solide $\ce{Bi4O4SeCl2}$ conçu par les équipes de recherche. Les zones jaunes et bleues permettent d'empêcher la propagation des vibrations dans le réseau cristallin et ainsi réduisent la conductivité thermique du solide. Source : Gibson, et al. (2021). \textit{Low thermal conductivity in a modular inorganic material with bonding anisotropy and mismatch.} Science, 373(6558), 1017-1022.}
+\end{figure}
+
 \subsubsection{Convection}
 
 \begin{definition}[Convection]
@@ -290,7 +303,7 @@ Très souvent, la convection trouve son origine dans les différences de densit�
 \end{proposition}
 
 \begin{figure}[htbp]
-	\includegraphics[width=0.8\linewidth]{convection.png}
+	\centering \includegraphics[width=0.8\linewidth]{convection.png}
 	\caption{Simulation numérique de la convection dans un fluide chauffé par le bas (par exemple, cela pourrait être de l'eau dans une casserole). Les zones rouges indiquent des panaches chauds ascendants, et les zones bleues des panaches froids descendants. Source : Doering, C. R. (2020). \textit{Turning up the heat in turbulent thermal convection.} Proceedings of the National Academy of Sciences.}
 \end{figure}
 
@@ -300,18 +313,18 @@ La convection joue par exemple un rôle important pour les transferts thermiques
 
 La convection joue aussi un rôle à l'interface entre un solide et un fluide : si le fluide est plus froid que le solide, il va extraire de l'énergie thermique du solide, et inversement. Par conservation de l'énergie, on a nécessairement continuité du flux thermique à une interface :
 \begin{proposition}
-	Le vecteur densité de courant thermique est une fonction continue de l'espace, y compris au niveau d'une interface.
+	Le vecteur densité de flux thermique est une fonction continue de l'espace, y compris au niveau d'une interface.
 \end{proposition}
 En effet, on ne peut pas avoir une accumulation d'énergie au niveau de l'interface.
 
-Le vecteur densité de courant thermique à l'interface est décrit phénoménologiquement par la loi de Newton :
+Le vecteur densité de flux thermique à l'interface est décrit phénoménologiquement par la loi de Newton :
 \begin{theorem}
 	Considérons une interface entre un solide et un fluide. On définit le vecteur unitaire $\vv n$ normal à la surface et orienté du solide vers le fluide. Alors à l'interface :
 	\begin{equation}
 		\vv{j_{th}} = h (T_{solide} - T_{fluide}) \vv n
 	\end{equation}
 	où $T_{fluide}$ et $T_{solide}$ sont les températures du fluide et du solide à l'interface, respectivement.
-	$h$ est appelé le coefficient de transfert de la surface.
+	$h$ est appelé le coefficient de transfert thermique de la surface.
 \end{theorem}
 \begin{remark}
 	En pratique, on constate que la valeur de $h$ dépend de nombreux paramètres, et en particulier de la vitesse d'écoulement du fluide, de l'état de surface du solide, de la nature du fluide et du solide.
@@ -326,7 +339,7 @@ Le vecteur densité de courant thermique à l'interface est décrit phénoménol
 
 \section{Premier principe local dans un solide}
 
-Nous avons décrit des lois locales permettant de décrire les transferts thermiques qui se produisent pour un champ de température donnée $T(M,t)$ à un instant $t$. Maintenant, nous souhaitons, en retour, savoir comment la température va varier en réponse au vecteur densité de courant thermique $\vv{j_{th}}$. Pour cela, nous avons besoin d'appliquer le premier principe.
+Nous avons décrit des lois locales permettant de décrire les transferts thermiques qui se produisent pour un champ de température donnée $T(M,t)$ à un instant $t$. Maintenant, nous souhaitons, en retour, savoir comment la température va varier en réponse au vecteur densité de flux thermique $\vv{j_{th}}$. Pour cela, nous avons besoin d'appliquer le premier principe.
 
 \subsection{Cas d'un solide à une dimension}
 
@@ -350,7 +363,7 @@ Ou encore, après simplification :
 	\delta Q = \dd t \dd \tau \left( \frac{\partial j_{th}^x}{\partial x} + \frac{\partial j_{th}^y}{\partial y} + \frac{\partial j_{th}^z}{\partial z} \right)
 \end{equation}
 
-On constate que la puissance thermique volumique reçue par un élément du solide est proporionnelle à une fonction du vecteur densité de courant thermique que l'on appelle divergence :
+On constate que la puissance thermique volumique reçue par un élément du solide est proporionnelle à une fonction du vecteur densité de flux thermique que l'on appelle divergence :
 
 \begin{definition}[Divergence]
 	La divergence est un opérateur scalaire qui agit sur un champ vectoriel. Ainsi, en coordonnées cartésiennes, la divergence d'un champ $\vv A = (A_x,A_y,A_z)$ est définie par :
@@ -366,14 +379,14 @@ On constate que la puissance thermique volumique reçue par un élément du soli
 Nous pouvons alors en déduire la forme générale du premier principe sous forme locale, en admettant l'effet d'un terme source de chaleur.
 
 \begin{proposition}
-	Considérons un solide de capacité thermique massique à pression constante $c_p$, siège de transferts thermiques caractérisés par une densité de courant thermique $\vv{j_{th}}$. Le premier principe de la thermodynamique sous sa forme locale peut alors s'écrire :
+	Considérons un solide de capacité thermique massique à pression constante $c_p$, siège de transferts thermiques caractérisés par une densité de flux thermique $\vv{j_{th}}$. Le premier principe de la thermodynamique sous sa forme locale peut alors s'écrire :
 	\begin{equation}
 		\mu c_p \frac{\partial T}{\partial t} + \div \vv{j_{th}} = 0
 	\end{equation}
 \end{proposition}
 
 \begin{remark}
-	On constate bien sur cette équation qu'une convergence de la densité de courant thermique ($\div \vv{j_{th}} <0$) va causer l'augmentation de la température, alors qu'une divergence de la densité de courant thermique ($\div \vv{j_{th}} > 0$) va causer une augmentation de la température.
+	On constate bien sur cette équation qu'une convergence de la densité de flux thermique ($\div \vv{j_{th}} <0$) va causer l'augmentation de la température, alors qu'une divergence de la densité de flux thermique ($\div \vv{j_{th}} > 0$) va causer une augmentation de la température.
 \end{remark}
 
 \subsection{Bilan macroscopique et théorème d'Ostrogradski}
@@ -400,8 +413,8 @@ On constate que les deux lois obtenues ne sont pas tout à fait similaires, pour
 
 Nous avons maintenant :
 \begin{itemize}
-	\item Une description phénoménologique des transferts thermiques, qui nous donne la densité de courant thermique pour un champ de température donné ;
-	\item Et la forme locale du premier principe, qui nous donne la variation temporelle de la température en réponse au champ de densité de courant thermique.
+	\item Une description phénoménologique des transferts thermiques, qui nous donne la densité de flux thermique pour un champ de température donné ;
+	\item Et la forme locale du premier principe, qui nous donne la variation temporelle de la température en réponse au champ de densité de flux thermique.
 \end{itemize}
 
 La combinaison de ces deux méthodes va nous permettre de déterminer l'équation d'évolution de la température dans le solide.
@@ -419,10 +432,10 @@ Cette équation est une équation aux dérivées partielles d'ordre 1 en temps e
 
 Pour le comprendre, nous pouvons remarquer que :
 \begin{itemize}
-	\item Dans les zones où la température est une fonction convexe de l'espace, on a tendance à avoir un minimum local de température. La température va avoir tendance à augmenter ;
-	\item Au contraire, dans les zones où la température est une fonction concave de l'espace, on a un maximum local et la température va diminuer.
+	\item Dans les zones où la température est une fonction convexe de l'espace ($\frac{\partial^2 T}{\partial x^2} < 0$), on a tendance à avoir un minimum local de température. La température va avoir tendance à augmenter ;
+	\item Au contraire, dans les zones où la température est une fonction concave de l'espace ($\frac{\partial^2 T}{\partial x^2} > 0$), on a un maximum local et la température va diminuer.
 \end{itemize}
-L'effet de cette équation est donc d'homogénéiser la température : on parle de diffusion thermique. Ceci est une conséquence directe du second principe de la thermodynamique, qui implique que les transferts thermiques se font spontanément du chaud vers le froid.
+L'effet de cette équation est donc d'homogénéiser la température : c'est la raison pour laquelle on parle de diffusion thermique. Ceci est une conséquence directe du second principe de la thermodynamique, qui implique que les transferts thermiques se font spontanément du chaud vers le froid.
 
 \subsection{Généralisation. Opérateur Laplacien.}
 
@@ -443,17 +456,18 @@ Nous pouvons alors définir le laplacien d'une fonction :
 	\begin{equation}
 		\Delta A = \frac{\partial^2 A_x}{\partial x^2} + \frac{\partial^2 A_y}{\partial y^2} + \frac{\partial^2 A_z}{\partial z^2}
 	\end{equation}
+	Proposer une interprétation physique simple de cette expression.
 \end{capex}
 
 Le laplacien d'un champ est une dérivée seconde de ce champ par rapport à l'espace, et est une mesure de sa convexité à plusieurs dimensions. Ainsi, on retrouve les mêmes propriétés que l'équation de diffusion à une dimension.
 
-\begin{proposition}
-	Dans un solide de capacité thermiqe massique $c_p$, de conductivité thermique $\lambda$ et de masse volumique $\mu$, la température obéti à l'équation de diffusion thermique :
+\begin{theorem}[Equation de diffusion thermique]
+	Dans un solide de capacité thermique massique $c_p$, de conductivité thermique $\lambda$ et de masse volumique $\mu$ supposées uniformes, la température obéit à l'équation de diffusion thermique :
 	\begin{equation}
 		\frac{\partial T}{\partial t} = D \Delta T
 	\end{equation}
 	où $D = \frac{\lambda}{\mu c_p}$.
-\end{proposition}
+\end{theorem}
 
 \subsection{Diffusivité thermique}
 
@@ -473,8 +487,28 @@ Quelques valeurs caractéristiques sont données dans le tableau ci-dessous (ell
 \end{table}
 
 \begin{capex}
-	A partir d'une analyse dimensionnelle de l'équation de diffusion, déterminer le temps caractéristique nécessaire pour atteindre l'équilibre thermique en fonction de la taille de l'échantillon.
+	A partir d'une analyse dimensionnelle de l'équation de diffusion, déterminer :
+	\begin{itemize}
+		\item le temps caractéristique $\tau(L)$ nécessaire pour atteindre l'équilibre thermique dans un échantillon de taille $L$ ;
+		\item la distance $\ell(t)$ à laquelle une perturbation thermique peut pénétrer dans un solide par conduction au bout d'un temps $t$.
+	\end{itemize}
 \end{capex}
+
+\begin{encart}[Brûlures thermiques et diffusion]
+	Une analyse dimensionnelle de l'équation de diffusion thermique permet également de comprendre les différents facteurs qui contrôlent la formation de brûlures thermiques : lors d'une brûlure, la peau est en contact avec un matériau chaud.
+	
+	\includegraphics[width=0.7\linewidth]{brulures.png}
+	
+	Comme le montre la figure ci-dessus, le degré de la brûlure n'est pas directement relié à la température du matériau chaud, mais plutôt à la profondeur de pénétration de la perturbation thermique dans la peau : si la perturbation atteint les couches inférieures de la peau, la brûlure sera plus grave. Cette distance est donnée par : $L = \sqrt{D_{th} t}$. Ainsi, le temps de contact joue un rôle déterminant sur la gravité de la brûlure.
+	
+	La figure suivante montre une simulation numérique de l'évolution de la température après la mise en contact de différents matériaux chauds (plaqtisue ou métal de différentes épaisseurs) avec la peau. Cette simulation est fondée sur une résolution numérique de l'équation de diffusion. On y constate bien que le temps de contact est le facteur principal qui contrôle la profondeur de la brûlure, et le matériau ou la taille de l'objet chaud jouent un rôle moins important.
+	
+	\begin{center}
+		\includegraphics[width=0.5\linewidth]{brulures_courbes.png}
+	\end{center}
+	
+	Source : Yen, M. et al (2020). \textit{Contact Burn Injuries: Part I: The influence of object thermal mass.} IEEE. 
+\end{encart}
 
 \section{Régime stationnaire unidimensionnel}
 
@@ -492,16 +526,20 @@ On considère une paroi solide, d'épaisseur $e$ selon $\vv{e_x}$ et de section 
 		T_1 - T_2 = R_{th} \Phi_{1 \to 2}
 	\end{equation}
 	Elle s'exprime en k$\cdot$W$^{-1}$.
-	
-	On définit également la conductance thermique $G_{th}$ par la relation inverse :
-	\begin{equation}
-		\Phi_{1 \to 2} = G_{th} (T_1 - T_2)
-	\end{equation}
-	On a alors :
-	\begin{equation}
-		G_{th} = \frac{1}{R_{th}}
-	\end{equation}
 \end{definition}
+
+La notion de résistance thermique est utile pour étudier tous les phénomènes de fuite thermique. Ainsi, si l'on considère une différence de température fixe entre l'extérieur et l'intérieur d'une maison climatisée, le flux thermique sera plus important à travers une fenêtre de faible résistance thermique. On cherche donc à maximiser la résistance thermique de la fenêtre en augmentant son épaisseur, ou bien en diminuant sa conductivité thermique.
+
+\begin{encart}[Flux thermique à la surface du globe]
+	Les deux figures ci-dessous indiquent, à gauche, la densité de flux thermique par conduction $j_{th}$ à travers la surface de la Terre, et à droite, l'épaisseur $e$ de la lithosphère (couche rigide à la surface de la Terre). En dessous de la lithosphère, les transferts thermiques se font par convection.
+	\begin{center}
+		\includegraphics[width=0.45\linewidth]{flux_terre.png} \includegraphics[width=0.45\linewidth]{epaisseur_lithosphere.png}
+	\end{center}
+	
+	
+	On constate une analogie presque parfaite entre les deux cartes. Ceci n'est pas surprenant, puisque la résistance thermique de la lithosphère est de la forme $R_{th} =e/(\lambda S)$. Ici, la variabilité du flux géothermique est principalement expliquée par une variabilité de l'épaisseur de la lithosphère.
+\end{encart}
+
 
 \begin{proposition}
 	Pour un solide d'épaisseur $e$ et de section $S$ perpendiculaire à la direction du transfert thermique, on a :
@@ -509,6 +547,17 @@ On considère une paroi solide, d'épaisseur $e$ selon $\vv{e_x}$ et de section 
 		R_{th} = \frac{e}{\lambda S}
 	\end{equation}
 \end{proposition}
+
+\begin{remark}
+	On définit parfois également la conductance thermique $G_{th}$ par la relation inverse :
+	\begin{equation}
+		\Phi_{1 \to 2} = G_{th} (T_1 - T_2)
+	\end{equation}
+	On a alors :
+	\begin{equation}
+		G_{th} = \frac{1}{R_{th}}
+	\end{equation}
+\end{remark}
 
 \subsection{Analogie avec l'électrocinétique}
 

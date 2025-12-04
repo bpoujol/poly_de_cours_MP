@@ -517,36 +517,28 @@ Ce résultat est général :
 
 \begin{demonstration}
 
-Considérons un degré de liberté $\xi$ pour lequel on peut faire l'approximation continue. On suppose que le nombre d'états $\dd n(\xi) = n(\xi) \dd \xi$ tels que la particule ait son degré de liberté entre $\xi$ et $\xi + \dd \xi$ est constant, autrement dit, il n'y a pas plus d'états quantiques pour une valeur particulière de ce degré de liberté : $n(\xi) = n = cste$. Cette approximation est très largement vérifiée, sauf cas particuliers typiquement quantiques.
+Considérons un degré de liberté $\xi$ pour lequel on peut faire l'approximation continue. On suppose que le nombre d'états $\dd n(\xi) = n(\xi) \dd \xi$ tels que la particule ait son degré de liberté entre $\xi$ et $\xi + \dd \xi$ est constant, autrement dit, il n'y a pas plus d'états quantiques pour une valeur particulière de ce degré de liberté : $\dd n(\xi) = n \dd \xi$ avec $n$ constant. Cette approximation est très largement vérifiée, sauf cas particuliers typiquement quantiques.
 
-Dans ce cas, on peut écrire la fonction densité de probabilité de l'énergie :
+Dans ce cas, on peut écrire la fonction densité de probabilité du degré de liberté $\xi$ :
 \begin{equation}
-	\mathbb{P}(E) \propto \exp \left(-\frac{a \xi^2 + b}{k_B T}\right) \propto \exp \left(-\frac{a \xi^2}{k_B T}\right) 
+	\mathbb{P}(\xi) \dd \xi \propto \dd n(\xi) \exp \left(-\frac{a \xi^2 + b}{k_B T}\right) \propto \exp \left(-\frac{a \xi^2}{k_B T}\right) \dd \xi
 \end{equation}
-où l'on a tiré parti du fait que $b$ ne dépend pas de $\xi$. 
-On peut alors remarquer que, lorsque les autres degrés de liberté sont fixés, une variation d'énergie entre $E$ et $E+\dd E$ est équivalente à une variation de la valeur absolue du degré de liberté entre $\xi$ et $\xi + \dd \xi$, pour $\xi>0$:
+où l'on a tiré parti du fait que $b$ ne dépend pas de $\xi$ et que $\dd n = n \dd \xi$. 
+Il existe donc une constante $A$ telle que :
 \begin{equation}
-	\mathbb{P}(E) \dd E = \mathbb{P}(\xi) \dd \xi + \mathbb{P}(-\xi) |\dd(-\xi)| = 2 \mathbb{P}(\xi) \dd \xi \quad \mathrm{donc} \quad \mathbb{P}(\xi) =\frac{1}{2} \mathbb{P}(E) \frac{\partial E}{\partial \xi}
-\end{equation}
-Or on sait que $\partial E / \partial \xi = 2 a \xi$ si bien qu'il existe une constante $A$ telle que :
-\begin{equation}
-	\mathbb{P}(\xi) = A \xi \exp\left(-\frac{a \xi^2}{k_B T}\right) \quad \mathrm{pour} \quad \xi \ge 0
+	\mathbb{P}(\xi) = A \exp\left(-\frac{a \xi^2}{k_B T}\right) \quad \mathrm{pour} \quad \xi \ge 0
 \end{equation}
 On peut calculer $A$ en utilisant la normalisation :
 \begin{equation}
-	\int_{-\infty}^\infty \mathbb{P}(\xi) \dd \xi = 2 \int_0^\infty \mathbb{P}(\xi) \dd \xi = 1
+	\int_{-\infty}^\infty \mathbb{P}(\xi) \dd \xeai = A \sqrt{ \dfrac{\pi k_B T}{a}}
 \end{equation}
-qui devient alors :
-\begin{equation}
-	\frac{1}{2A} = \int_0^\infty \xi e^{-\frac{a \xi^2}{k_B T}} \dd \xi = \frac{k_B T}{a} \int_0^\infty u e^{-u^2} \dd u = \frac{k_B T}{a}
-\end{equation}
-ou encore $A = \frac{a}{2 k_B T}$. On calcule alors la contribution du degré de liberté $\xi$ à l'énergie moyenne :
+d'où $A = \sqrt{\dfrac{a}{\pi k_B T}}$. On calcule alors la contribution du degré de liberté $\xi$ à l'énergie moyenne :
 \begin{align}
-	\langle a \xi^2 \rangle &= 2 \int_0^{\infty} a \xi^2 \mathbb{P}(\xi) \dd \xi \\
-	&= 2 \int_0^{\infty} a \xi^2 \frac{a}{2 k_B T} \xi e^{-\frac{a \xi^2}{k_B T}} \dd \xi \\
-	&= \frac{1}{2} k_B T \int_0^\infty v e^{-v} \dd v \quad \left( v = \frac{a \xi^2}{k_B T} \right) \\
+	\langle a \xi^2 \rangle &= \int_{-\infty}^{\infty} a \xi^2 \mathbb{P}(\xi) \dd \xi \\
+	&= \frac{k_B T}{\sqrt{\pi}} \int_{-\infty}^{\infty} u^2 e^{-u^2} \dd u \quad \left( u = \xi \sqrt{\frac{a}{k_B T}} \right) \\
 	&= \frac{1}{2} k_B T
 \end{align}
+où l'on a réutilisé l'intégrale que nous avons déjà calculée dans la résolution de la CE9.
 \end{demonstration}
 
 \begin{encart}
@@ -622,6 +614,12 @@ La capacité thermique d'un solide cristallin provient de la capacité thermique
 Dans le cadre de ce chapitre, nous nous limitons à une situation dans laquelle aucun de ces deux phénomènes n'intervient (par exemple, nous pouvons étudier un solide ionique). Dans ce cas, nous avons uniquement à décrire le réseau cristallin.
 
 \subsection{Modèle d'Einstein}
+
+\begin{figure}[htbp]
+	\centering \includegraphics[width=0.5\linewidth]{solide_einstein.png}
+	\caption{Modèle d'Einstein du solide cristallin. Source : université de Richmond.}
+\end{figure}
+
 
 Dans le modèle d'Einstein, les atomes occupent des positions précises correspondant à leur position d'équilibre, et se trouvent dans un minimum de potentiel. Considérons l'un de ces atomes, et prenons comme origine de l'espace sa position d'équilibre. Il a pour énergie cinétique :
 \begin{equation}

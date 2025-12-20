@@ -105,7 +105,7 @@ mathfontname=mathsf]{mhchem}
 \contourlength{1.2pt}
 
 \colorlet{myred}{red!65!black}
-\definecolor{myred}{RGB}{127,0,255}
+\definecolor{myred}{RGB}{0,153,76}
 \tikzstyle{ground}=[preaction={fill,top color=black!10,bottom color=black!5,shading angle=20},
                     fill,pattern=north east lines,draw=none,minimum width=0.3,minimum height=0.6]
 \tikzstyle{mass}=[line width=0.6,myred,fill=myred!40,rounded corners=1,
@@ -126,7 +126,7 @@ mathfontname=mathsf]{mhchem}
 \newcommand{\dd}{\mathrm{d}}
 \renewcommand{\div}{\mathrm{div}}
 \newcommand{\rot}{\vv{\mathrm{rot}}}
-\newcommand{\grad}{\vv{\mathrm{grad}}}
+\renewcommand{\grad}{\vv{\mathrm{grad}}}
 
 \begin{document}
 
@@ -176,9 +176,9 @@ Puisque le système thermodynamique que l'on considère n'est pas à l'équilibr
 
 Pour le modéliser, on utilise le vecteur densité de flux thermique :
 \begin{definition}[Vecteur densité de flux thermique]
-	On appelle vecteur densité de flux thermique $\vv{j_th}$ le vecteur tel que la puissance thermique traversant une surface élémentaire orientée $\vv{\dd S}$ soit donnée par :
+	On appelle vecteur densité de flux thermique $\vv{j_{th}}$ le vecteur tel que la puissance thermique traversant une surface élémentaire orientée $\vv{\dd S}$ soit donnée par :
 	\begin{equation}
-		\dd \Phi = \vv{j_th} \cdot \vv{\dd S}
+		\dd \Phi = \vv{j_{th}} \cdot \vv{\dd S}
 	\end{equation}
 	Il s'exprime en W$\cdot$m$^{-2}$.
 \end{definition}
@@ -204,10 +204,10 @@ On rappelle qu'une puissance est homogène à une énergie par unité de temps, 
 
 \subsection{Modélisation des transferts thermiques}
 
-On peut distinguer trois grands types de transferts thermiques, qui sont représentés sur cette figure :
+On peut distinguer trois grands types de transferts thermiques (figure 1).
 
 \begin{figure}[htbp]
-	\centering \includegraphics[width=0.5\linewidth]{modes_de_transfert.png}
+	\centering \includegraphics[width=0.55\linewidth]{modes_de_transfert.png}
 	\caption{Différents modes de transfert thermique dans une maison. Source : poly de cours de Etienne Thibierge.}
 \end{figure}
 
@@ -243,10 +243,11 @@ Le rayonnement d'un corps se fait en général dans le domaine de longueur d'ond
 \end{figure}
 
 La conduction est le mode de transfert thermique dominant dans les solides. Elle peut être décrite de manière locale, à travers une loi phénoménologique, appelée loi de Fourier :
+\newpage
 \begin{theorem}[Loi de Fourier]
 	Dans un milieu matériel, le vecteur densité de flux thermique par conduction est opposé et proportionnel au gradient de température :
 	\begin{equation}
-		\vv{j_{th}} = - \lambda \grad T
+		\vv{j_{th}} = - \lambda \cdot \grad(T)
 	\end{equation}
 	où $\lambda$ est appelée la conductivité thermique du matériau. Elle se mesure en W$\cdot$m$^{-1} \cdot$K$^{-1}$.
 	
@@ -286,7 +287,7 @@ La loi de Fourier ne se démontre pas : il s'agit d'une loi phénoménologique f
 \end{encart}
 
 \begin{figure}[htbp]
-	\centering \includegraphics[width=0.8\linewidth]{cristal_peu_conducteur.png}
+	\centering \includegraphics[width=0.55\linewidth]{cristal_peu_conducteur.png}
 	\caption{Schéma du solide $\ce{Bi4O4SeCl2}$ conçu par les équipes de recherche. Les zones jaunes et bleues permettent d'empêcher la propagation des vibrations dans le réseau cristallin et ainsi réduisent la conductivité thermique du solide. Source : Gibson, et al. (2021). \textit{Low thermal conductivity in a modular inorganic material with bonding anisotropy and mismatch.} Science, 373(6558), 1017-1022.}
 \end{figure}
 
@@ -327,7 +328,7 @@ Le vecteur densité de flux thermique à l'interface est décrit phénoménologi
 	$h$ est appelé le coefficient de transfert thermique de la surface.
 \end{theorem}
 \begin{remark}
-	En pratique, on constate que la valeur de $h$ dépend de nombreux paramètres, et en particulier de la vitesse d'écoulement du fluide, de l'état de surface du solide, de la nature du fluide et du solide.
+	En pratique, on constate expérimentalement que la valeur de $h$ dépend de nombreux paramètres, et en particulier de la vitesse d'écoulement du fluide, de l'état de surface du solide, de la nature du fluide et du solide.
 \end{remark}
 
 \begin{capex}
@@ -344,6 +345,11 @@ Nous avons décrit des lois locales permettant de décrire les transferts thermi
 \subsection{Cas d'un solide à une dimension}
 
 Considérons le cas d'un solide de capacité thermique à pression constante $c_p$, dans lequel la température n'est fonction que d'une seule coordonnée cartésienne $x$. Nous appliquons le premier principe de la thermodynamique à un système fermé situé entre les coordonnées $x$ et $x+\dd x$, comme indiqué sur le schéma suivant :
+
+\begin{figure}[htbp]
+	\centering \includegraphics[width=0.6\linewidth]{premier_principe_1D.png}
+	\caption{Modélisation unidimensionnelle de la conduction thermique dans un solide. Source : poly de cours de Etienne Thibierge.}
+\end{figure}
 
 
 \begin{capex}
@@ -378,16 +384,22 @@ On constate que la puissance thermique volumique reçue par un élément du soli
 
 Nous pouvons alors en déduire la forme générale du premier principe sous forme locale, en admettant l'effet d'un terme source de chaleur.
 
-\begin{proposition}
-	Considérons un solide de capacité thermique massique à pression constante $c_p$, siège de transferts thermiques caractérisés par une densité de flux thermique $\vv{j_{th}}$. Le premier principe de la thermodynamique sous sa forme locale peut alors s'écrire :
+\begin{theorem}[Premier principe local dans un solide]
+	Considérons un solide de capacité thermique massique à pression constante $c_p$, siège de transferts thermiques caractérisés par une densité de flux thermique $\vv{j_{th}}$. En l'absence de sources locales d'énergie, le premier principe de la thermodynamique sous sa forme locale peut alors s'écrire :
 	\begin{equation}
 		\mu c_p \frac{\partial T}{\partial t} + \div \vv{j_{th}} = 0
-	\end{equation}
-\end{proposition}
+	\end{equation}ou de puits
+\end{theorem}
 
 \begin{remark}
 	On constate bien sur cette équation qu'une convergence de la densité de flux thermique ($\div \vv{j_{th}} <0$) va causer l'augmentation de la température, alors qu'une divergence de la densité de flux thermique ($\div \vv{j_{th}} > 0$) va causer une augmentation de la température.
 \end{remark}
+
+\textbf{Attention !} Cette version du premier principe local n'est valable qu'en l'absence de source locale d'énergie. En présence d'un terme de source (par exemple issue de phénomènes radioactifs, ou bien d'une transformation chimique exothermique), l'équation sera modifiée et un terme supplémentaire va apparaître :
+\begin{equation}
+		\mu c_p \frac{\partial T}{\partial t} + \div \vv{j_{th}} = \mathcal{P}_v
+\end{equation}
+où $\mathcal{P}_v$ est la puissance volumique libérée au sein du solide. Ce cas sera étudié en TD.
 
 \subsection{Bilan macroscopique et théorème d'Ostrogradski}
 
@@ -441,7 +453,7 @@ L'effet de cette équation est donc d'homogénéiser la température : c'est la 
 
 Nous pouvons désormais déterminer l'équation en trois dimensions. Pour cela, nous combinons la forme locale du permier principe avec la loi de Fourier pour obtenir l'équation suivante :
 \begin{equation}
-	\frac{\partial T}{\partial t} = D \div(\grad(T))
+	\frac{\partial T}{\partial t} = D \cdot \div(\grad(T))
 \end{equation}
 Nous pouvons alors définir le laplacien d'une fonction :
 \begin{definition}
@@ -462,12 +474,15 @@ Nous pouvons alors définir le laplacien d'une fonction :
 Le laplacien d'un champ est une dérivée seconde de ce champ par rapport à l'espace, et est une mesure de sa convexité à plusieurs dimensions. Ainsi, on retrouve les mêmes propriétés que l'équation de diffusion à une dimension.
 
 \begin{theorem}[Equation de diffusion thermique]
-	Dans un solide de capacité thermique massique $c_p$, de conductivité thermique $\lambda$ et de masse volumique $\mu$ supposées uniformes, la température obéit à l'équation de diffusion thermique :
+	Dans un solide de capacité thermique massique $c_p$, de conductivité thermique $\lambda$ et de masse volumique $\mu$ supposées uniformes, en l'absence de terme source d'énergie, la température obéit à l'équation de diffusion thermique :
 	\begin{equation}
-		\frac{\partial T}{\partial t} = D \Delta T
+		\frac{\partial T}{\partial t} = D \Delta T \quad \mathrm{avec} \quad D = \frac{\lambda}{\mu c_p}
 	\end{equation}
-	où $D = \frac{\lambda}{\mu c_p}$.
 \end{theorem}
+
+\begin{remark}
+	Lorsqu'une source locale d'énergie est présente, un terme supplémentaire apparaît. Ce cas sera traité dans le TD.
+\end{remark}
 
 \subsection{Diffusivité thermique}
 
@@ -475,7 +490,7 @@ Le laplacien d'un champ est une dérivée seconde de ce champ par rapport à l'e
 	$D$ est appelée la diffusivité thermique du matériau. Elle se mesure en m$^2 \cdot$s$^{-1}$.
 \end{definition}
 
-Quelques valeurs caractéristiques sont données dans le tableau ci-dessous (elles ne sont pas à connaître) :
+Quelques valeurs caractéristiques de diffusivité thermique sont données dans le tableau ci-dessous :
 \begin{table}[htbp]
 	\centering \begin{tabular}{lccccccc}
 		\toprule
@@ -497,11 +512,13 @@ Quelques valeurs caractéristiques sont données dans le tableau ci-dessous (ell
 \begin{encart}[Brûlures thermiques et diffusion]
 	Une analyse dimensionnelle de l'équation de diffusion thermique permet également de comprendre les différents facteurs qui contrôlent la formation de brûlures thermiques : lors d'une brûlure, la peau est en contact avec un matériau chaud.
 	
-	\includegraphics[width=0.7\linewidth]{brulures.png}
+	\begin{center}
+		\includegraphics[width=0.7\linewidth]{brulures.png}
+	\end{center}
 	
 	Comme le montre la figure ci-dessus, le degré de la brûlure n'est pas directement relié à la température du matériau chaud, mais plutôt à la profondeur de pénétration de la perturbation thermique dans la peau : si la perturbation atteint les couches inférieures de la peau, la brûlure sera plus grave. Cette distance est donnée par : $L = \sqrt{D_{th} t}$. Ainsi, le temps de contact joue un rôle déterminant sur la gravité de la brûlure.
 	
-	La figure suivante montre une simulation numérique de l'évolution de la température après la mise en contact de différents matériaux chauds (plaqtisue ou métal de différentes épaisseurs) avec la peau. Cette simulation est fondée sur une résolution numérique de l'équation de diffusion. On y constate bien que le temps de contact est le facteur principal qui contrôle la profondeur de la brûlure, et le matériau ou la taille de l'objet chaud jouent un rôle moins important.
+	La figure ci-dessous montre une simulation numérique de l'évolution de la température après la mise en contact de différents matériaux chauds (plaqtisue ou métal de différentes épaisseurs) avec la peau. Cette simulation est fondée sur une résolution numérique de l'équation de diffusion. On y constate bien que le temps de contact est le facteur principal qui contrôle la profondeur de la brûlure, et le matériau ou la taille de l'objet chaud jouent un rôle moins important.
 	
 	\begin{center}
 		\includegraphics[width=0.5\linewidth]{brulures_courbes.png}
@@ -530,17 +547,6 @@ On considère une paroi solide, d'épaisseur $e$ selon $\vv{e_x}$ et de section 
 
 La notion de résistance thermique est utile pour étudier tous les phénomènes de fuite thermique. Ainsi, si l'on considère une différence de température fixe entre l'extérieur et l'intérieur d'une maison climatisée, le flux thermique sera plus important à travers une fenêtre de faible résistance thermique. On cherche donc à maximiser la résistance thermique de la fenêtre en augmentant son épaisseur, ou bien en diminuant sa conductivité thermique.
 
-\begin{encart}[Flux thermique à la surface du globe]
-	Les deux figures ci-dessous indiquent, à gauche, la densité de flux thermique par conduction $j_{th}$ à travers la surface de la Terre, et à droite, l'épaisseur $e$ de la lithosphère (couche rigide à la surface de la Terre). En dessous de la lithosphère, les transferts thermiques se font par convection.
-	\begin{center}
-		\includegraphics[width=0.45\linewidth]{flux_terre.png} \includegraphics[width=0.45\linewidth]{epaisseur_lithosphere.png}
-	\end{center}
-	
-	
-	On constate une analogie presque parfaite entre les deux cartes. Ceci n'est pas surprenant, puisque la résistance thermique de la lithosphère est de la forme $R_{th} =e/(\lambda S)$. Ici, la variabilité du flux géothermique est principalement expliquée par une variabilité de l'épaisseur de la lithosphère.
-\end{encart}
-
-
 \begin{proposition}
 	Pour un solide d'épaisseur $e$ et de section $S$ perpendiculaire à la direction du transfert thermique, on a :
 	\begin{equation}
@@ -559,14 +565,26 @@ La notion de résistance thermique est utile pour étudier tous les phénomènes
 	\end{equation}
 \end{remark}
 
+On constate que la résistance thermique dépend certes des propriétés d'un matériau, mais surtout de la géométrie du dispositif : on peut ainsi jouer sur l'épaisseur $e$ et la surface $S$ pour modifier la résistance thermique.
+
+\begin{encart}[Flux thermique à la surface du globe]
+	Les deux figures ci-dessous indiquent, à gauche, la densité de flux thermique par conduction $j_{th}$ à travers la surface de la Terre, et à droite, l'épaisseur $e$ de la lithosphère (couche rigide à la surface de la Terre). En dessous de la lithosphère, les transferts thermiques se font par convection.
+	\begin{center}
+		\includegraphics[width=0.45\linewidth]{flux_terre.png} \includegraphics[width=0.45\linewidth]{epaisseur_lithosphere.png}
+	\end{center}
+	
+	
+	On constate une analogie presque parfaite entre les deux cartes. Ceci n'est pas surprenant, puisque la résistance thermique de la lithosphère est de la forme $R_{th} =e/(\lambda S)$. Ici, la variabilité du flux géothermique est principalement expliquée par une variabilité de l'épaisseur de la lithosphère.
+\end{encart}
+
 \subsection{Analogie avec l'électrocinétique}
 
 \begin{capex}
 	Proposer une analogie avec la loi d'Ohm en électrocinétique.
 	Parmi ces deux situations, lesquelles correspondent à des résistances thermiques en série et en parallèle ?
 	\begin{itemize}
-		\item Double vitrage.
-		\item Deux vitres sur le même mur.
+		\item Double vitrage (deux vitres d'épaisseur $e_v$ séparées par une couche d'air d'épaisseur $e_a$, le tout sur une surface $S$).
+		\item Deux vitres de surface $S_1$ et $S_2$, et d'épaisseur $e$ sur le même mur.
 	\end{itemize}
 	En déduire les lois d'association de résistances thermiques correspondantes.
 \end{capex}

@@ -163,6 +163,11 @@ Dans ce premier chapitre, nous nous intéresserons ainsi aux aspects thermodynam
 
 \subsection{Rappels : anode, cathode, équation bilan}
 
+\begin{figure}[htbp]
+	\centering \includegraphics[width=0.8\linewidth]{pile_daniell.png}
+	\caption{Schéma de la pile Daniell. Source : poly de cours de Etienne Thibierge.}
+\end{figure}
+
 Considérons la pile Daniell, l'une des piles les plus simples qui puissent être construites : elle fait intervenir les deux couples d'oxydoréduction $\ce{Fe^{2+}(aq)/Fe(s)}$ et $\ce{Cu^{2+}/Cu(s)}$. Nous définissons les deux électrodes par la nature de la demi-réaction qui s'y produit :
 \begin{definition}
 	L'anode est une électrode sur laquelle se produit une oxydation. La cathode est l'électrode sur laquelle se produit une réduction.
@@ -196,6 +201,12 @@ Il est également possible de réaliser le procédé inverse : il s'agit de l'é
 \begin{equation}
 	\ce{2 H2O(l) = 2 H2(g) + O2 (g)}
 \end{equation}
+
+\begin{remark}
+	Cette réaction est une réaction dite de \textbf{dismutation} : l'eau réagit comme oxydant d'un premier couple $\ce{H2O / H2}$ et réducteur d'un second couple $\ce{O2 / H2O}$ pour former ces deux espèces chimiques.
+	
+	La réaction opposée est appelée réaction de \textbf{médiamutation}.
+\end{remark}
 
 \begin{capex}
 	A l'aide d'un bilan de quantité de matière, relier la durée $\Delta t$ de l'électrolyse au courant imposé pour réaliser l'électrolyse, noté $i$, et à la masse de dihydrogène produite par électrolyse $m_{\ce{H2}}$.
@@ -269,7 +280,7 @@ Nous avons ici démontré (pour un cas particulier) la loi de Nernst que vous av
 	où on a fait l'application numérique $R T/\mathcal{F} \times  \ln 10 \approx 0.06$\,V.
 \end{theorem}
 
-\textbf{Attention !} Dans le cas où la demi-équation électronique fait intervenir d'autres espèces (par exemple de l'eau, des ions hydrohyde ou oxonium) il convient de toujours équilibrer la demi-équation électronique avec des protons. En effet, le potentiel dépend du pH de la solution et les potentiels standard sont par convention tabulés à $pH = 0$ (il est ensuite possible de calculer le potentiel standard pour d'autres valeurs de pH à partir de la formule de Nernst).
+\textbf{Attention !} Dans le cas où la demi-équation électronique fait intervenir d'autres espèces (par exemple de l'eau, des ions hydrohyde ou oxonium) il convient de toujours équilibrer la demi-équation électronique avec des protons $\ce{H^+}$. En effet, le potentiel dépend du pH de la solution et les potentiels standard sont par convention tabulés à $pH = 0$ (il est ensuite possible de calculer le potentiel standard pour d'autres valeurs de pH à partir de la formule de Nernst). On peut alors utiliser la formule de Nernst en prenant soin d'inclure l'activité des protons à l'intérieur du logarithme, comme pour un quotient réactionnel.
 
 \subsection{Lien entre potentiel et constante de réaction}
 
@@ -317,7 +328,8 @@ Il est possible de combiner les informations sur le potentiel et le pH afin d'é
 \end{itemize}
 
 \begin{capex}
-	On étudie le fer, qui forme les composés suivants : $\ce{Fe(s), Fe^{3+}(aq), Fe^{2+}(aq), Fe(OH)2(s), Fe(OH)3(s)}$. Etablir le diagramme de situation du fer. 
+	On étudie le fer, qui forme les composés suivants :\\
+	$\ce{Fe(s), Fe^{3+}(aq), Fe^{2+}(aq), Fe(OH)2(s), Fe(OH)3(s)}$. Etablir le diagramme de situation du fer. 
 \end{capex}
 
 \subsection{Equation de frontière}
@@ -333,6 +345,11 @@ Pour cela, on a souvent besoin de définir une concentration minimale au-delà d
 \end{capex}
 
 \subsection{Diagramme de l'eau}
+
+\begin{figure}[htbp]
+	\centering \includegraphics[width=0.54\linewidth]{diagramme_H2O.png}
+	\caption{Diagramme E-pH de l'eau pour une pression de tracé de 1\,bar et de $10^{-6}$\,bar. Source : Université de Batna 2.}
+\end{figure}
 
 Le diagramme potentiel-pH de l'eau est à connaître par coeur. Il fait intervenir deux couples d'oxydoréduction :
 \begin{align}
@@ -376,7 +393,10 @@ On donne le diagramme potentiel-pH de l'aluminium. Lorsqu'il est en contact avec
 	On parle de passivation lorsqu'un métal subit une oxydation menant à la formation d'une couche superficielle de solide qui vient protéger le métal de la solution. Le métal est alors protégé de la corrosion à long terme.
 \end{definition}
 
-\textbf{Attention !} Le degré de protection dépend de la structure microscopique du solide formé. Dans le cas du fer, le composé $\ce{Fe(OH)3(s)}$ a une structure poreuse, si bien qu'il ne protège pas le métal de la solution. La réaction d'oxydation continue à se produire de plus en plus profond dans le solide jusqu'à l'attaquer complètement : c'est la rouille.
+\begin{figure}[htbp]
+	\centering \includegraphics[width=0.45\linewidth]{E_pH_Al.png} \includegraphics[width=0.54\linewidth]{oxyde_aluminium.jpg}
+	\caption{A gauche : diagramme potentiel-pH de l'aluminium, avec les domaines d'immunité, de corrosion et de passivation. A droite : Image d'une couche d'oxyde d'aluminium observée au microscope. Sources : Namitha, K., Rao, P., \& Rao, S. A. (2022). \textit{A brief insight into the use of plant products as green inhibitors for corrosion mitigation of aluminium and aluminium alloys.} Canadian Metallurgical Quarterly, 61(4), 429-441. Niedźwiedź, M., Bara, M., Skoneczny, W., Kaptacz, S., \& Dercz, G. (2022). \textit{Influence of anodizing parameters on tribological properties and wettability of Al2O3 layers produced on the EN AW-5251 aluminum alloy.} Materials, 15(21), 7732.}
+\end{figure}
 
 Nous pouvons alors définir trois domaines : le domaine d'immunité, le domaine de corrosion, et le domaine de passivation :
 \begin{definition}
@@ -387,6 +407,18 @@ Dans cette zone, il est thermodynamiquement stable et ne peut pas être oxydé.
 
 	Le domaine de passivation est le domaine de stabilité des oxydes et hydroxydes solides.
 \end{definition}
+
+
+\begin{figure}[p]
+	\centering \includegraphics[width=0.85\linewidth]{rouille_microscope_guyane.png} \includegraphics[width=0.85\linewidth]{rouille_guyane_2.png}
+	\caption{Images de plaques de fer corrodées par la pluie (en haut, grossissement $\times 3000$) et l'eau de mer (en bas, grossissement $\times 1000$). Source : Laboratoire des Matériaux et molécules en milieu amazonien, Cayenne.}
+\end{figure}
+
+\begin{encart}[La rouille en milieu tropical]
+	Dans le cas du fer, l'action de l'eau et du dioxygène de l'air conduisent à la formation de la rouille $\ce{Fe(OH)3}$. On pourrait alors penser qu'un phénomène de passivation va protéger le fer, qui ne sera attaqué qu'en surface. Ce n'est pas du tout ce que l'on observe : sans action protectrice, le métal est rapidement entièrement corrodé. Ceci s'explique par la structure microscopique de la rouille, qui est organisé par des microorganismes et forme des structures fractales poreuses à travers lesquelles le dioxygène de l'air et la solution aqueuse peuvent s'infiltrer, permettant à la corrosion de toujours se produire plus en profondeur.
+	
+	En Guyane, le laboratoire des Matériaux et molécules en milieu amazonien s'intéresse à des méthodes naturelles (notamment à partir de la biodiversité amazonienne) afin de ralentir les phénomènes de corrosion en milieu tropical.	
+\end{encart}
 
 
 

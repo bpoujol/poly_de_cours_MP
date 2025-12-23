@@ -182,7 +182,7 @@ Pour mesurer le courant $i$, on utilise un montage particulier appelé le montag
 \end{itemize}
 
 \begin{figure}[htbp]
-	\centering \includegraphics[width=0.75\linewidth]{montage_3_electrodes.png}
+	\centering \includegraphics[width=0.62\linewidth]{montage_3_electrodes.png}
 	\caption{Montage à trois électrodes. Source : ploy de cours de Etienne Thibierge.}
 \end{figure}
 
@@ -308,9 +308,11 @@ On constate que s'il n'y a pas de palier de diffusion, la formation des oxydants
 	Le mur du solvant correspond aux deux vagues d'oxydation et de réduction de l'eau. Le domaine compris entre ces deux vagues est appelé domaine d'inertie électrochimique ; il n'est pas possible de porter la solution à un potentiel en dehors de ce domaine.
 \end{definition}
 
-\section{Application à la corrosion humide}
+\section{Application à la corrosion humide des métaux}
 
-\subsection{Notion de potentiel mixte}
+\subsection{Courbes courant-potentiel pour la corrosion}
+
+\subsubsection{Notion de potentiel mixte}
 
 \begin{capex}
 	On considère un clou en fer solide situé dans une solution acide. Tracer l'allure des courbes intensité-potentiel au niveau du clou, ainsi que l'intensité totale.
@@ -325,7 +327,7 @@ Dans un système naturel, le montage à trois électrodes n'existe pas, et un ob
 	A partir de l'allure des courbes courant-potentiel, interpréter ce qui se passe dans la solution. Quels facteurs vont favoriser la corrosion du métal ?
 \end{capex}
 
-\subsection{Blocage cinétique}
+\subsubsection{Blocage cinétique}
 
 Parfois, une réaction qui devrait se produire thermodynamiquement ne se produit pas pour des raisons cinétiques, c'est ce que l'on appelle le blocage cinétique. On peut prendre l'exemple de la corrosion du zinc en milieu acide. Les courbes $i(E)$ ci-dessous indiquent que si le zlinc est pur, le surpotentiel nécessaire pour oxyder le zinc est tel que la réaction avec l'eau ne peut plus se produire, et le zinc reste alors sous état solide. Si le zinc est impur en revanche, le surpotentiel à vide est plus faible et la réaction de corrosion peut se produire.
 
@@ -338,6 +340,134 @@ Parfois, une réaction qui devrait se produire thermodynamiquement ne se produit
 	\centering \includegraphics[width=0.55\linewidth]{corrosion_zinc.png}
 	\caption{Courbes courant-potentiel associées à la corrosion du zinc pur et impur. Source : poly de cours de Etienne Thibierge.}
 \end{figure}
+
+
+\subsubsection{Passivation}
+
+La passivation a un impact sur les courbes courant-potentiel. En effet, lorsqu'un métal est protégé par la couche de passivation, la corrosion ne se produit plus (par exemple, dans le cas de l'aluminium protégé par $\ce{Al2O3}$) ou bien se produit à une vitesse bien plus lente qu'en l'absence de couche protectrice (dans le cas où celle-ci est poreuse). 
+
+Ceci implique que la courbe $i(E)$ peut être localement décroissante (ce qui n'était pas possible dans une configuration classique où les intensités s'ajoutent).
+
+
+\begin{figure}[htbp]
+	\centering \includegraphics[width=0.95\linewidth]{passivation.png}
+	\caption{Courbes courant-potentiel associées à la corrosion du fer. Source : poly de cours de Etienne Thibierge.}
+\end{figure}
+
+\begin{capex}
+	Interpréter l'allure de la courbe $i(E)$ associée à la corrosion du fer à $pH = 4$. Dans quelle zone se produit le phénomène de passivation ?
+\end{capex}
+
+\subsection{Corrosion d'un système de deux métaux}
+
+\subsubsection{Pile de corrosion}
+
+Considérons un système de deux métaux en contact, par exemple du fer et du zinc. Ces deux métaux ont tendance à être corrodés sous l'action de l'eau. Cependant, si les métaux sont reliés électriquement, ils ne forment qu'une seule et même électrode, à la surface de laquelle le zinc et le fer peuvent tous les deux êtres corrodés.
+
+\begin{figure}[htbp]
+	\centering \includegraphics[width=0.95\linewidth]{corrosion_differentielle_exp.png}
+	\caption{Courbes courant-potentiel obtenues expérimentalement dans de l'eau sur une électrode de fer et une électrode de zinc. Source : poly de TP de Frédéric Legrand.}
+\end{figure}
+
+\begin{capex}
+	Indiquer les réactions se produisant sur chacune des courbes intensité-potentiel obtenues expérimentalement sur le fer et le cuivre. Que se passe-t-il quand les deux métaux sont en contact dans l'eau ? Indiquer le potentiel mixte et écrire l'équation bilan de la réaction en milieu naturel (pH neutre).
+\end{capex}
+
+On constate que les deux métaux viennent former une \textbf{pile de corrosion} : le zinc joue le rôle d'anode (il est corrodé) et le fer joue le rôle de cathode : l'eau y est réduite en dihydrogène. Ce phénomène protège le fer de la corrosion.
+
+\subsubsection{Protection par anode sacrificielle}
+
+Le principe de la pile de corrosion par contact entre deux métaux est largement utilisé dans l'industrie. En particulier, il est courant pour protéger les coques de bateaux :
+
+\begin{definition}
+	On parle de protection par anode sacrificielle lorsqu'une ou plusieurs pièces de métal très réductrices sont mises en contact avec le métal à protéger. L'ensemble des métaux forme alors une pile de corrosion, et ce les pièces de métal qui subissent la corrosion. Elles doivent être changées régulièrement.
+\end{definition}
+
+\begin{figure}[htbp]
+	\centering \includegraphics[width=0.95\linewidth]{anode_sacrificielle.png}
+	\caption{A gauche : anodes sacrificielles sur l'hélice d'un bateau. A droite : anode sacrificielle en fin de vie. Source : poly de cours de Etienne Thibierge.}
+\end{figure}
+
+\subsubsection{Protection par revêtement}
+
+Une autre solution courante est de protéger les métaux de la corrosion en utilisant un revêtement. Si le revêtement est non métallique, la qualité de la protection dépendra de sa solidité : à la moindre rayure, la corrosion pourra reprendre.
+
+On utilise également parfois des revêtements métalliques. Dans ce cas, deux cas de figure se présentent :
+\begin{itemize}
+	\item Soit le revêtement est plus réducteur que le métal à protéger (ex : revêtement de zinc sur du fer). Alors, si une rayure se forme, une pile de corrosion se crée et c'est le revêtement qui est attaqué. Le métal reste protégé (jusqu'à corrosion totale du revêtement).
+	\item Soit le revêtement est moins réducteur que le métal à protéger, et dans ce cas la pile de corrosion est inversée : une corrosion particulièrement forte du métal se produit au niveau de la protection. C'est le cas notamment des revêtements en chrome ou en étain, qui sont particulièrement sensible à la présence de rayures. 
+\end{itemize}
+
+\begin{figure}[htbp]
+	\centering \includegraphics[width=0.49\linewidth]{revetement_Zn.png} \includegraphics[width=0.49\linewidth]{revetement_Cr.png}
+	\caption{Evolution d'un échantillon de fer protégé par un revêtement de zinc (à gauche) et de chrome (à droite), au niveau d'une rayure dans le revêtement. Une pile de corrosion se forme, dont la polarité est inversée dans les deux cas.}
+\end{figure}
+
+\subsection{Protection par courant imposé}
+
+Une dernière méthode possible est d'imposer un courant non nul au niveau du métal pour empêcher toute corrosion : c'est la protection par courant imposé. L'idée est qu'au lieu d'utiliser une anode sacrificielle, on force l'objet à protéger à se comporter comme une cathode en imposant un courant $i<0$. Cela est réalisé à l'aide d'un générateur.
+
+Cette méthode est coûteuse aussi bien en termes d'installation que de fonctionnement mais permet de protéger des installation telles que des conduites d'eau potable. 
+
+\begin{capex}
+	Reprendre le schéma permettant d'établir le potentiel mixte de corrosion du fer dans l'eau, mais dans le cas d'un courant imposé $i<0$. Quel est l'effet sur la vitesse de la réaction de corrosion ?
+\end{capex}
+
+\begin{figure}[htbp]
+	\centering \includegraphics[width=\linewidth]{protection_canalisation.png}
+	\caption{Protection d'une canalisation par anode sacrificielle et par courant imposé. Source : poly de cours de Alain Favier.}
+\end{figure}
+
+
+\section{Stockage et conversion d'énergie chimique}
+
+\subsection{Etude cinétique d'une pile}
+
+Nous avons déjà vu comment un système de deux métaux peut être décrit à l'aide des courbes intensité-potentiel. Cependant, dans le cas de la corrosion, les deux métaux étaient en contact, et donc avaient un unique potentiel. 
+
+Dans le cas d'une pile, comme la pile Daniell, les deux métaux ont un potentiel différent (ce qui crée la force électromotrice de la pile). Lorsque la pile ne débite pas, on est à l'équilibre thermodynamique et on peut appliquer la formule de Nernst : la différence de potentiel aux bornes de la pile est égale à la différence entre les deux potentiels de Nernst de chacune des électrodes :
+
+\begin{definition}
+	On appelle force électromotrice d'une pile la différence entre les potentiels de Nernst de chacune des électrodes.
+\end{definition}
+
+En pratique, il existe dans la pile une chute ohmique (qui n'est pas visible sur les courbes courant-potentiel) :
+\begin{definition}
+	La chute ohmique $u = r i$ est une chute de tension liée aux pertes d'énergie par effet Joule dans la pile (notamment dans le pont salin et l'électrolyte).
+\end{definition}
+
+\begin{capex}
+	Quelle relation existe-t-il entre le courant $i_C$ à la cathode et $i_A$ à l'anode de la pile ? A partir des courbes courant-potentiel, en déduire comment la tension aux bornes de la pile varie en fonction de l'intensité débitée et lister les phénomènes responsables de cette variation. Cette courbe est appelée la caractéristique de la pile.
+\end{capex}
+
+\begin{figure}[htbp]
+	\centering \includegraphics[width=\linewidth]{courbe_iE_pile.png}
+	\caption{Courbes courant-potentiel associées à une pile et différentes sources de la chute de tension. Source : poly de cours de Etienne Thibierge.}
+\end{figure}
+
+On constate que plus l'intensité débitée est importante et plus la tension aux bornes de la pile est faible : il y a un compromis à faire entre le rendement de la pile et la puissance délivrée (pour un rendement de 1, la puissance est nulle donc l'intensité aussi).
+
+\subsection{Electrolyse}
+
+Il est possible de réaliser le processus inverse, en reliant les deux électrodes non plus par un circuir qui va consommer de l'énergie, mais par un générateur : on va alors imposer une tension qui sera orientée dans le même sens que le courant et l'anode pourra avoir un potentiel plus élevé que la cathode.
+
+Ceci permet de forcer une réaction chimique non spontanée en consommant de l'énergie. Lorsque l'on réalise une électrolyse, la tension à imposer est plus élevée que la différence des potentiels de Nernst, pour les mêmes raisons que celles énoncées plus haut :
+\begin{itemize}
+	\item Présence de surpotentiels à vide ;
+	\item Surpotentiels cinétiques ;
+	\item Chute ohmique dans l'électrolyseur.
+\end{itemize}
+
+\begin{figure}[htbp]
+	\centering \includegraphics[width=\linewidth]{courbe_iE_electrolyse.png}
+	\caption{Courbes courant-potentiel associées à une cellule électrolytique et différentes sources de la chute de tension. Source : poly de cours de Etienne Thibierge.}
+\end{figure}
+
+\begin{capex}
+	Quelle est la tension minimale à imposer pour que l'électrolyse puisse avoir lieu ? Comment choisir les électrodes pour minimiser l'énergie à consommer afin de réaliser l'électrolyse ?
+\end{capex}
+
+\subsection{Accumulateur ; notion de rendement énergétique et faradique}
 
 
 

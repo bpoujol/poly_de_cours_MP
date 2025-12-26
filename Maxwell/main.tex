@@ -1,0 +1,585 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% The Legrand Orange Book
+% LaTeX Template
+% Version 2.1.1 (14/2/16)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Mathias Legrand (legrand.mathias@gmail.com) with modifications by:
+% Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Compiling this template:
+% This template uses biber for its bibliography and makeindex for its index.
+% When you first open the template, compile it from the command line with the 
+% commands below to make sure your LaTeX distribution is configured correctly:
+%
+% 1) pdflatex main
+% 2) makeindex main.idx -s StyleInd.ist
+% 3) biber main
+% 4) pdflatex main x 2
+%
+% After this, when you wish to update the bibliography/index use the appropriate
+% command above and make sure to compile with pdflatex several times 
+% afterwards to propagate your changes to the document.
+%
+% This template also uses a number of packages which may need to be
+% updated to the newest versions for the template to compile. It is strongly
+% recommended you update your LaTeX distribution if you have any
+% compilation errors.
+%
+% Important note:
+% Chapter heading images should have a 2:1 width:height ratio,
+% e.g. 920px width and 460px height.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt,fleqn]{book} % Default font size and left-justified equations
+
+\usepackage{ifthen} 
+\newboolean{VersionProf}
+\setboolean{VersionProf}{false}
+
+\usepackage{wasysym}
+\usepackage{esint} % various fancy integral symbols
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.17}
+\usetikzlibrary{patterns}
+\usepackage{tkz-euclide} 
+\usepackage{mathtools}
+\usepackage{xurl}
+\usepackage[version=4,arrows=pgf-filled,
+textfontname=sffamily,
+mathfontname=mathsf]{mhchem}
+\usepackage{gensymb}
+\usepackage{tabularray}
+\usepackage{csquotes}
+
+\usepackage[french]{babel}
+\usepackage{dingbat}
+
+\usepackage{environ}
+\usepackage{wrapfig}
+
+\NewEnviron{solution}{%
+    \ifthenelse{\boolean{VersionProf}}{\begin{solutionA}
+        \BODY%*
+        \end{solutionA}
+    }{%
+        \relax%
+    }%
+}%
+
+\usetikzlibrary {arrows.meta} 
+
+\newcommand{\degC}{{\degree}C}
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\div}{\mathrm{div}}
+\newcommand{\rot}{\vv{\mathrm{div}}}
+\newcommand{\grad}{\vv{\mathrm{grad}}}
+
+\tikzset{
+    support/.style={
+        pattern=north east lines,
+        draw=none,
+        minimum width=0.3,
+        minimum height=0.6
+    }
+    ,>=latex
+}
+
+\usepackage[d]{esvect}
+
+%SPECIFIC TO THIS CHAPTER
+\usepackage{physics}
+\usepackage{ifthen}
+\usepackage[outline]{contour} % glow around text
+\usetikzlibrary{calc} % for pic
+\usetikzlibrary{angles,quotes} % for pic
+\usetikzlibrary{patterns}
+\tikzset{>=latex} % for LaTeX arrow head
+\contourlength{1.2pt}
+
+\colorlet{myred}{red!65!black}
+\definecolor{myred}{RGB}{127,0,255}
+\tikzstyle{ground}=[preaction={fill,top color=black!10,bottom color=black!5,shading angle=20},
+                    fill,pattern=north east lines,draw=none,minimum width=0.3,minimum height=0.6]
+\tikzstyle{mass}=[line width=0.6,myred,fill=myred!40,rounded corners=1,
+                  top color=myred!40,bottom color=myred!20,shading angle=20]
+\tikzstyle{rope}=[myred!30,line width=1.2,line cap=round] %very thick
+
+% FORCES SWITCH
+\tikzstyle{force}=[->,myred,ultra thick,line cap=round]
+\tikzstyle{Fproj}=[force,myred!60]
+\newboolean{showforces}
+\setboolean{showforces}{true}
+%----------------------------------------------------------------------------------------
+
+\input{structure} % Insert the commands.tex file which contains the majority of the structure behind the template
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	TABLE OF CONTENTS
+%----------------------------------------------------------------------------------------
+
+%\usechapterimagefalse % If you don't want to include a chapter image, use this to toggle images off - it can be enabled later with \usechapterimagetrue
+
+\chapterimage{filmB.jpg} % Table of contents heading image
+
+%\pagestyle{empty} % No headers
+
+%\tableofcontents % Print the table of contents itself
+
+%\cleardoublepage % Forces the first chapter to start on an odd page so it's on the right
+
+%\pagestyle{fancy} % Print headers again
+
+
+
+%\part{\'{E}lectromagnétisme}
+
+\setcounter{chapter}{16}
+
+\chapter{Formalisme local de l'électromagnétisme}
+
+Nous avons défini la notion de champs électrique et magnétique pour décrire les phénomènes électromagnétiques. Bien que ces champs soient continus dans le temps et dans l'espace, les lois physiques que nous avons établies et utilisées jusqu'ici n'exploitent pas directement le continuité de ces champs : elles s'appliquent à des objets macroscopiques (intégrale le long d'un circuit pour la magnétostation, ou sur une surface pour l'électrostatique).
+
+En particulier, le théorème de Gauss et le théorème d'Ampère ne nous ont permis d'établir clairement le champ électrique ou magnétique uniquement dans le cas où la distribution de charges et de courants était à haute symétrie. Enfin, nous ne disposons pas à ce stade d'équations nous renseignant sur l'évolution temporelle des champs électriques et magnétiques.
+
+L'objectif de ce chapitre est de compléter le formalisme de l'électromagnétisme, en établissant des équations locales décrivant l'évolution des champs électromagnétiques. Nous avons vu, à travers la thermodynamique, l'intérêt que peut avoir une formulation locale : l'équation de la chaleur permet la description d'un grand nombre de situations physiques, y compris hors équilibre, telles que la propagation d'une onde de chaleur, l'évolution de la température en fonction de la position dans un barreau, ou encore les lois d'associations de résistances thermiques, autant de phénomènes qui ne peuvent pas être décrits par la thermodynamique macroscopique.
+
+En thermodynamique, nous sommes partis du premier principe macroscopique pour établir une loi locale de conservation de l'énergie. Nous allons faire de même ici : nous allons partir des lois macroscopiques de l'électromagnétisme et établir des lois locales pour les champs électrique et magnétique.
+
+\section{Lois locales de l'électrostatique}
+
+\subsection{Equation de Maxwell-Gauss}
+
+Commençons par l'électrostatique : le théorème de Gauss, que nous connaissons, permet de décrire le champ électrique $\vv E(M)$ créé par une distribution de charges $\rho(M)$ en régime permanent. Nous souhaitons établir une loi locale traduisant ce principe. Pour cela, nous considérons un volume $\mathcal{V}$ quelconque délimité par une surface fermée $\Sigma$. Notons $Q_{\rm int}$ la charge contenue dans $\mathcal{V}$. Par le théorème de Gauss :
+\begin{equation}
+	\oiint_{\Sigma} \vv E \cdot \vv{\dd S} = \frac{Q_{\rm int}}{\epsilon_0}
+\end{equation}
+Or, nous pouvons utiliser d'une part la définition de la densité volumique de charges :
+\begin{equation}
+	Q_{\rm int} = \iiint_{\mathcal{V}} \rho \dd \tau
+\end{equation}
+et d'autre part le théorème de Green-Ostrogradski :
+\begin{equation}
+	\oiint_{\Sigma} \vv E \cdot \vv{\dd S} = \iiint_\mathcal{V} \div(\vv E) \dd \tau
+\end{equation}
+Nous obtenons alors :
+\begin{equation}
+	\iiint_\mathcal{V} \div(\vv E) \dd \tau = \iiint_{\mathcal{V}} \frac{\rho}{\epsilon_0} \dd \tau 
+\end{equation}
+ou encore :
+\begin{equation}
+	\iiint_\mathcal{V} \left( \div (\vv E) - \frac{\rho}{\epsilon_0} \right) \dd \tau = 0
+\end{equation}
+Cette intégrale est nulle quel que soit le volume $\mathcal{V}$ considéré, donc la fonction intégrée est identiquement nulle et on obtient l'équation locale de l'électristatique :
+\begin{proposition}[Equation de Maxwell-Gauss]
+	Le champ électrostatique $\vv E(M)$ est relié à la distribution de charges $\rho(M)$ par la relation :
+	\begin{equation}
+		\div ( \vv E) = \frac{\rho}{\epsilon_0}
+	\end{equation}
+\end{proposition}
+
+Nous pouvons interpréter cette équation comme suit : le champ électrique diverge autour des charges positives et converge vers les charges négatives.
+
+\begin{capex}
+	Proposer une analogie formelle entre l'équation de Maxwell-Gauss et la gravitation.
+\end{capex}
+
+\subsection{Equations de Laplace et de Poisson}
+
+Parfois, il est plus utile d'étudier le potentiel électrostatique, $V$, que le champ électrique. 
+
+\begin{capex}
+	Traduire l'équation de Maxwell-Gauss en termes de potentiel. Proposer une analogie formelle avec la gravitation. Interpréter l'équation obtenue en termes de géométrie des surfaces équipotentielles.
+\end{capex}
+
+Nous obtenons les équations suivantes :
+\begin{theorem}[Equation de Poisson]
+	En régime stationnaire, le potentiel électrostatique $V$ satisfait l'équation de Laplace :
+	\begin{equation}
+		\Delta V + \frac{\rho}{\epsilon_0} = 0
+	\end{equation}
+	où $\rho$ est la densité volumique de charges.
+
+	\textit{Analogie avec la gravitation :} le potentiel gravitationnel satisfait l'équation :
+	\begin{equation}
+		\Delta \Phi = 4 \pi G \mu
+	\end{equation}
+	où $\mu$ est la masse volumique.
+\end{theorem}
+
+L'équation de Laplace est formellement équivalent à l'équation de Maxwell-Gauss, elle ne traduit aucun phénomène physique supplémentaire mais est parfois une formulation plus pratique lorsque l'on travaille à l'aide de potentiels. Dans une région vide de charges, on obtient le cas particulier de l'équation de Poisson :
+\begin{theorem}[Equation de Poisson]
+	En régime stationnaire, dans une région vide de charges, le potentiel électrostatique $V(M)$ vérifie :
+	\begin{equation}
+		\Delta V = 0
+	\end{equation}
+	
+	\textit{Analogie avec la gravitation :} dans une région vide de matière, le potentiel gravitationnel $\Phi$ satisfait l'équation :
+	\begin{equation}
+		\Delta \Phi = 0
+	\end{equation}
+\end{theorem}
+
+\section{Lois locales de la magnétostatique}
+
+Dans le cadre de la magnétostatique, nous avons vu le théorème d'Ampère selon lequel les sources de champ magnétique sont les courants électriques. En particulier, la circulation du champ magnétique le long d'un contour fermé est reliée au courant qui traverse ce contour. Pour pouvoir décrire ce phénomène à l'échelle locale, il est nécessaire d'avoir une description locale de la circulation.
+
+\subsection{Opérateur rotationnel. Théorème de Stokes.}
+
+Considérons, en coordonnées cartésiennes, un élément de surface cartésien situé dans un plant $z = c^{ste}$. Nous cherchons à calculer la circulation du champ magnétique $\vv B(M)$ le long du contour enlaçant cet élément de surface dans le sens trigonométrique. Cette circulation élémentaire, $\dd \mathcal{C}$, est donnée par :
+\begin{align}
+	\dd \mathcal{C} &= B_x(x,y) \dd x + B_y(x+\dd x,y) \dd y \dd y + B_x(x,y+\dd y)\times (- \dd x) + B_y(x,y) \times (- \dd y) \\
+	&= \dd x \dd y \left( \frac{\partial B_y}{\partial x} - \frac{\partial B_x}{\partial y} \right) \\
+	&= \left( \frac{\partial B_y}{\partial x} - \frac{\partial B_x}{\partial y} \right) \vv{e_z} \cdot \vv{\dd S}
+\end{align}
+Ainsi, la circulation le long de ce contour élémentaire est directement liée aux dérivées spatiales croisées des composantes du champ magnétique. Il est possible de répéter le même calcul dans le cas d'éléments de surface situés dans des plans $x = c^{ste}$ et $y=c^{ste}$. Ceci nous amène à définir l'opérateur rotationnel :
+\begin{definition}[Opérateur rotationnel]
+	Le rotationnel est un opérateur vectoriel qui agit sur un champ vectoriel. En coordonnées cartésiennes, le rotationnel d'un champ $\vv A$ s'écrit :
+	\begin{equation}
+		\rot (\vv A) = \begin{pmatrix} \frac{\partial}{\partial x} \\  \frac{\partial}{\partial y} \\\frac{\partial}{\partial z} \end{pmatrix} \wedge \begin{pmatrix} A_x \\ A_y \\ A_z \end{pmatrix} = \begin{pmatrix} \frac{\partial A_z}{\partial y} - \frac{\partial A_y}{\partial z} \\ \frac{\partial A_x}{\partial z} - \frac{\partial A_z}{\partial x} \\ \frac{\partial A_y}{\partial x} - \frac{\partial A_x}{\partial y} \end{pmatrix}
+	\end{equation}
+\end{definition}
+
+Par construction, nous avons fait en sorte que le rotationnel vérifie la propriété suivante :
+\begin{proposition}
+	La circulation élémentaire $\dd \mathcal{C}$ d'un champ vectoriel $\vv A$ le long d'un contour délimitant une surface élémentaire orientée $\vv{\dd S}$ est donné par :
+	\begin{equation}
+		\dd \mathcal{C} = \rot(\vv A) \cdot \vv{\dd S}
+	\end{equation}
+\end{proposition}
+Nous avons, en pratique, vu uniquement cette propriété dans le cadre d'un contour rectangulaire en coordonnées cartésiennes, et nous admettons que le résultat est vrai quel que soit le contour.
+
+Par intégration, on obtient alors le théorème de Stokes, qui relie la circulation le long d'un contour fermé macroscopique au rotationnel d'un vecteur :
+\begin{theorem}[Théorème de Stokes]
+	Soit $\vv A$ un champ vectoriel, alors la circulation de ce champ le long d'un contour $\Gamma$ délimitant une surface $\mathcal{S}$ est donnée par :
+	\begin{equation}
+		\oint_{\Gamma} \vv A \cdot \vv{\dd \ell} = \iint_{\mathcal{S}} \rot(\vv A) \cdot \vv{\dd S}
+	\end{equation}
+	où le contour et la surface sont orientés conformément à la règle de la main droite.
+\end{theorem}
+
+Nous admettons également les deux propriétés suivantes qui sont propres au rotationnel :
+\begin{proposition}
+	Soit $\vv A$ un champ vectoriel. Alors :
+	\begin{equation}
+		\div (\rot (\vv A)) = 0
+	\end{equation}
+\end{proposition}
+\begin{demonstration}
+	On se place en coordonnées cartésiennes. En combinant la définition de la divergence et du gradient on obtient :
+	\begin{equation}
+		\div(\rot(\vv A)) = \frac{\partial}{\partial x} \left( \frac{\partial A_z}{\partial y} - \frac{\partial A_y}{\partial z} \right) + \frac{\partial}{\partial y} \left(  \frac{\partial A_x}{\partial z} - \frac{\partial A_z}{\partial x} \right) + \frac{\partial}{\partial z} \left(  \frac{\partial A_y}{\partial x} - \frac{\partial A_x}{\partial y} \right)
+	\end{equation}
+	Par théorème de Schwarz, les dérivées se simplifient deux à deux et on obtient le résultat.
+\end{demonstration}
+
+\begin{proposition}
+	Soit $A$ un champ scalaire. Alors :
+	\begin{equation}
+		\rot(\grad(A)) = \vv 0
+	\end{equation}
+\end{proposition}
+\begin{demonstration}
+	Considérons un contour $\Gamma$ délimitant une surface $\mathcal{S}$, alors par le théorème de Stokes appliqué au vecteur $\grad(A)$ :
+	\begin{equation}
+		\oint_{\Gamma} \grad(A) \cdot \vv{\dd \ell} = \iint_{\mathcal{S}} \rot(\grad(A)) \cdot \vv{\dd S}
+	\end{equation}
+	Or le premier terme est nul car la circulation d'un gradient le long d'un contour fermé est nulle. La seconde intégrale est donc nulle quelle que soit la surface $\mathcal{S}$ considérée, ainsi le vecteur $\rot(\grad(A))$ est identiquement nul.
+\end{demonstration}
+
+\subsection{Forme locale du théorème d'Ampère}
+
+\begin{capex}
+	A partir du théorème de Stokes, établir la forme locale du théorème d'Ampère.
+\end{capex}
+
+Nous avons montré l'équation locale suivante, qui relie les sources de courant au champ magnétostatique :
+\begin{proposition}
+	En régime stationnaire, le champ magnétique $\vv B(M)$ est relié à la densité volumique de courant $\vv j(M)$ par la relation :
+	\begin{equation}
+		\rot (\vv B) = \mu_0 \vv j
+	\end{equation}
+\end{proposition}
+
+Cette équation est une forme locale du théorème d'Ampère, elle montre que la densité volumique de courant est reliée aux dérivées spatiales du champ magnétique.
+
+\subsection{Forme locale de la conservation du flux}
+
+\begin{capex}
+	Rappeler la propriété de conservation du flux du champ magnétique et établir l'équation locale de conservation du flux.
+\end{capex}
+
+On obtient l'équation dite de Maxwell-Flux (dénomination courant mais non conventionnelle) :
+\begin{proposition}[Equation de Maxwell-Flux]
+	La conservation du flux du champ magnétique implique que :
+	\begin{equation}
+		\div ( \vv B) = 0
+	\end{equation}
+\end{proposition}
+
+\section{Lois locales de l'induction}
+
+L'électrostatique et la magnétostatique décrivent comment les champs (électrique ou magnétique) sont produits par des sources (charges ou courants) en régime stationnaire. Cependant, on sait que certains phénomènes électromagnétiques ne se manifestent qu'en régime instationnaire, c'est le cas notamment des phénomènes inductifs, que nous allons traduire localement dans cette partie.
+
+\subsection{Rappels sur l'induction}
+
+On rappelle ici quelques résultats vus sur l'induction en première année. Lorsqu'un circuir électrique est plongé dans un champ magnétique $\vv B$, si le champ magnétique est variable ou si le circuit électrique se déplace, une force électromotrice est générée dans le circuit. Cette force est donnée par la loi de Faraday :
+\begin{theorem}[Loi de Faraday]
+	Soit un circuit électrique matérialisé par un contour orienté $\Gamma$ délimitant une surface $\mathcal{S}$. On définit la force électromotrice $e$ le long de ce circuit comme la circulation du champ électrique le long du contour :
+	\begin{equation}
+		e = \oint_{\Gamma} \vv E \cdot \vv{\dd \ell}
+	\end{equation}
+	ainsi que le flux du champ magnétique à travers le contour par :
+	\begin{equation}
+		\Phi = \iint_{\mathcal{S}} \vv B \cdot \vv{\dd S}
+	\end{equation}
+	Alors, la variation de flux magnétique à travers le circuit génère par induction une force électromotrice non nulle :
+	\begin{equation}
+		e = - \frac{\dd \Phi}{\dd t}
+	\end{equation}
+\end{theorem}
+
+
+Dans la loi de Faraday, la variation de flux peut être causée par une variation temporelle du champ magnétique, ou encore par un déplacement ou une déformation du circuit électrique. En particulier, la loi de Faraday permet de décrire des situations aussi variées que le déplacement d'un circuit dans un champ variables (principe de fonctionnement de certains teslamètres) ; la production d'énergie par un champ variables (principe des plaques à induction) ou encore l'apparition d'une force électromotrice dans l'expérience des rails de Laplace (circuit déformable).
+
+Les effets de l'induction se résument bien dans la loi de modération de Lenz :
+\begin{proposition}[Loi de modération de Lenz]
+	Les effets de l'induction tendent à s'opposer aux causes qui leur ont donné naissance.
+\end{proposition}
+Cette loi peut se vérifier qualitativement dans chacun des exemples mentionnés ci-dessus (cf TD).
+
+\subsection{Equation de Maxwell-Faraday}
+
+Dans le cadre de ce chapitre, nous ne sommes pas intéressés par le comportement de la force électromotrice dans un circuit électrique mais plutôt du champ électrique en général, en réponse à une variation temporelle du champ magnétique.
+
+\begin{capex}
+	En exploitant la loi de Faraday, établir une loi locale de l'induction.
+\end{capex}
+
+Nous obtenons l'équation de Maxwell-Faraday :
+\begin{proposition}[Equation de Maxwell-Faraday]
+	Le champ électrique $\vv E(M,t)$ est affecté par les variations temporelles du champ magnétique $\vv B(M,t)$ via le phénomène d'induction, qui se traduit localement par :
+	\begin{equation}
+		\rot(\vv E) = - \frac{\partial \vv B}{\partial t}
+	\end{equation}
+\end{proposition}
+
+\section{Conservation de la charge}
+
+Nous avons désormais établi quatre équations locales. Cependant, deux d'entre elles ont été établies à partir des lois de l'électrostatique et de la magnétostatique et ne sont donc valables qu'en régime stationnaire. En régime instationnaire, nous devons prendre en compte des phénomènes supplémentaires, et notamment la conservation de la charge électrique
+
+\subsection{Conservation de la charge en géométrie cartésienne à une dimension}
+
+\begin{capex}
+	En s'inspirant de la démonstration du premier principe local et de l'analogie entre électromagnétisme et thermodynamique, établir la forme locale de la conservation de la charge en géométrie cartésienne 1D.
+\end{capex}
+
+\subsection{Bilan macroscopique}
+
+On souhaite désormais écrire la forme macroscopique de la conservation de la charge.
+
+\begin{capex}
+	On s'intéresse à un volume $\marhcal{V}$ délimité par une surface fermée $\Sigma$. Ecrire la forme macroscopique de la conservation de la charge.
+\end{capex}
+
+\subsection{Forme locale de la conservation de la charge}
+
+En trois dimension, la conservation de la charge peut s'écrire de la manière suivante :
+\begin{theorem}[Loi locale de conservation de la charge]
+	Soient $\rho(M,t)$ la densité volumique de charge et $\vv j(M,t)$ la densité volumique de courant, alors :
+	\begin{equation}
+		\frac{\partial \rho}{\partial t} + \div (\vv j) = 0
+	\end{equation}
+\end{theorem}
+Il est possible de faire une démonstration similaire à celle qui a été faite dans le cours de thermodynamique, en considérant un cube en coordonnées cartésiennes. Cette démon,stration nous avait permis de définir la divergence. Cependant, maintenant que cet opérateur est connu, nous pouvons faire une démonstration plus rapide :
+\begin{capex}
+	A partir du bilan macroscopique, établir l'équation locale de conservation de la charge.
+\end{capex}
+
+\section{\'{E}quations de Maxwell}
+
+\subsection{Forme locale}
+
+Nous avons maintenant déterminé un ensemble d'équations locales :
+\begin{itemize}
+	\item Deux équations toujours valables : équations de Maxwell-Faraday et Maxwell-Flux
+	\item Deux équations valables uniquement en régime stationnaire : l'équation de Maxwell-Gauss et la forme locale du théorème d'Ampère
+	\item Et l'équation de conservation de la charge, toujours valable mais qui ne fait pas intervenir directement les champs $\vv E$ et $\vv B$.
+\end{itemize}
+
+Pour obtenir un système d'équations qui caractérise entièrement le champ électromagnétique, nous avons besoin d'équations qui sont toujours valables, même en régime instationnaire. C'est le cas de la conservation de la charge. Or, si nous prenons la divergence de la forme locale du théorème d'Ampère, nous obtenons en régime permanent :
+\begin{equation}
+	\div(\vv j) = \frac{1}{\mu_0} \div(\rot(\vv B)) = 0
+\end{equation}
+par protpriété du premier principe. Comme nous sommes en régime stationnaire ceci est compatible avec le premier principeL Or en régime instationnaire, on s'attend à ce que la conservation de la charge soit vérifiée, on doit donc avoir :
+\begin{equation}
+	\div(\vv j) = - \frac{\partial \rho}{\partial t}
+\end{equation}
+Pour que cette équation soit satisfaite, il n'est pas possible de garder les deux équations valables en régime stationnaire telles qu'elles sont. Il est nécessaire de les modifier. On ne sait pas \textit{a priori} comment les équations doivent être modifiées, mais une modification qui convient est la suivante : on suppose que l'équation de Maxwell-Gauss reste valable en régime stationnaire, et on rajoute un terme instationnaire à la forme locale du théorème d'Ampère pour obtenir l'équation dite de Maxwell-Ampère :
+\begin{proposition}[Equation de Maxwell-Ampère]
+On postule que le champ magnétique est relié au champ électrique et à la densité volumique de courants par la relation suivante :
+\begin{equation}
+	\rot(\vv B) = \mu_0 \left( \vv j + \epsilon_0 \frac{\partial \vv E}{\partial t} \right)
+\end{equation}
+\end{proposition}
+
+\begin{capex}
+	Vérifier que les équations de Maxwell-Gauss et Maxwell-Ampère sont bien compatibles avec la conservation de la charge.
+\end{capex}
+
+Nous obtenons alors les quatre équations de Maxwell. Ces équations sont considérées comme un postulat, en effet :
+\begin{itemize}
+	\item Nous avons établi les lois locales à partir de lois macroscopiques phénoménologiques (théorème d'Ampère, théorème de Gauss, loi de Faraday) qui reposent sur l'expérience et non pas sur des fondements théoriques ;
+	\item Nous avons postulé, sans aucune démonstration, que l'équation de Maxwell-Gauss reste valable en régime instationnaire et nous avons postulé la forme de l'équation de Maxwell-Ampère pour qu'elle satisfasse le principe de conservation de la charge.
+\end{itemize}
+Les équations sont les suivantes :
+
+\begin{theorem}[\'{E}quations de Maxwell]
+	Les champs magnétique $\vv B(M,t)$ et électrique $\vv E(M,t)$ satisfont aux équations suivantes :
+	\begin{equation}
+		\begin{dcases}
+			\div (\vv E) &= \dfrac{\rho}{\epsilon_0} \quad \mathrm{(Maxwell-Gauss)} \\
+			\rot (\vv E) &= -\frac{\partial \vv B}{\partial t} \quad \mathrm{(Maxwell-Faraday)} \\
+			\rot (\vv B) &= \mu_0 \left( \vv j + \epsilon_0 \dfrac{\partial \vv E}{\partial t} \right) \quad \mathrm{(Maxwell-Ampère)} \\
+			\div (\vv B) &= 0 \quad \mathrm{("Maxwell-Flux")}
+		\end{dcases}
+	\end{equation}
+	où $\rho(M,t)$ est la densité volumique de charges, et $\vv j(M,t)$ est la densité volumique de courant.
+\end{theorem}
+
+\begin{capex}
+	Proposer une interprétation physique du terme $\vv j_D = \epsilon_0 \dfrac{\partial \vv E}{\partial t}$ dans l'équation de Maxwell-Faraday, souvent appelé "courant de déplacement".
+\end{capex}
+
+\subsection{Forme intégrale des équations de Maxwell}
+
+\begin{capex}
+	Donner la forme intégrale des équations de Maxwell, appliquées à des volumes, surfaces ou contours macroscopiques. 
+\end{capex}
+
+\section{Energie électromagnétique}
+
+\subsection{Force locale électromagnétique}
+
+On rappelle l'expression de la force de Lorentz appliquée à une particule chargée qui a été admise en première année (il s'agit d'une loi empirique qui se justifie par l'expérience) :
+\begin{theorem}[Force de Lorentz]
+	Une particule chargée, de charge $q$, et de vitesse $\vv v$, est soumise dans un champ électromagnétique $(\vv E, \vv B)$ à la force de Lorentz :
+	\begin{equation}
+		\vv F = q ( \vv E + \vv v \wedge \vv B)
+	\end{equation}
+\end{theorem}
+
+Considérons un élément de volume $\dd \tau$. Nous souhaitons établir l'équivalent volumique de cette force. Pour cela, nous pouvons remarquer que, si l'on note $n_i$ le nombre de porteurs de charges de l'espèce $i$ par unité de volume, $q_i$ leur charge et $\vv v_i$ leur vitesse :
+\begin{equation}
+	\rho = \sum_i n_i q_i \quad \mathrm{et} \quad \vv j = \sum_i n_i q_i \vv v_i
+\end{equation}
+La force qui s'applique au volume correspond, par ailleurs, à la somme des forces qui s'appliquent su chacun des porteurs, sachant que le nombre total de porteurs de l'espèce $i$ dans le volume $\dd \tau$ est donné par $n_i \dd \tau$. Ainsi :
+\begin{align}
+	\dd \vv F &= \sum_i n_i \dd \tau q_i (\vv E + \vv v_i \wedge \vv B )
+	&= \left( \sum_i q_i n_i \right) \vv E \dd \tau  + \left( \sum_i q_i n_i \vv v_i \right) \wedge \vv B \dd \tau \\
+	&= (\rho \vv E + \vv j \wedge \vv B) \dd \tau
+\end{align}
+On en déduit la force électromagnétique par unité de volume :
+\begin{theorem}
+	L'équivalent volumique des forces de Lorentz est donné par :
+	\begin{equation}
+		\vv f = \rho \vv E + \vv j \wedge \vv B
+	\end{equation}
+	où $\rho$ est la densité volumique de charges et $\vv j$ est la densité volumique de courant.
+\end{theorem}
+
+\begin{capex}
+	Par un raisonnement analogue, établir l'expression de la puissance cédée aux porteurs de charge par la force volumique de Lorentz.
+\end{capex}
+
+\begin{theorem}[Puissance volumique de la force de Lorentz]
+	La puissance fournie par la force de Lorentz aux porteurs de charge par unité de volume, notée $\mathcal{P}_v$, est donnée par :
+	\begin{equation}
+		\mathcal{P}_v = \vv j \cdot \vv E
+	\end{equation}
+\end{theorem}
+
+\subsection{Equation locale de conservation de l'énergie}
+
+Nous souhaitons désormais faire un bilan énergétique local. Pour cela, nous allons calculer la puissance $\mathcal{P}_v$.
+
+Nous pouvons calculer cette puissance en réinjectant l'équation de Maxwell-Ampère dans l'expression de $\mathcal{P}_v$ :
+\begin{equation}
+	\mathcal{P}_v = \vv E \cdot \left( \frac{1}{\mu_0} \rot(\vv B) - \epsilon_0 \frac{\partial \vv E}{\partial t} \right)
+\end{equation}
+Par ailleurs nous allons utiliser la propriété suivante (qui n'est pas à connaître) : pour deux champs de vecteurs $\vv A$ et $\vv B$ on a :
+\begin{equation}
+	\div(\vv A \wedge \vv B) = \vv B \cdot \rot(\vv A) - \vv A \cdot \rot(\vv B)
+\end{equation}
+Ainsi :
+\begin{align}
+	\vv E \cdot \rot(\vv B) &= \div(\vv B \wedge \vv E) + \vv B \cdot \rot(\vv E) \\
+	&= \div(\vv B \wedge \vv E) - \vv B \cdot \dfrac{\partial \vv B}{\partial t}
+\end{align}
+où on a utilisé l'équation de Maxwell-Faraday. Nous obtenons alors :
+\begin{equation}
+	\mathcal{P}_v = \div \left( \frac{\vv B \wedge \vv E}{\mu_0} \right) - \epsilon_0 \vv E \frac{\partial \vv E}{\partial t} - \frac{1}{\mu_0} \vv B \cdot \dfrac{\partial \vv B}{\partial t}
+\end{equation}
+En remarquant que les deux derniers termes peuvent s'écrire comme une dérivé temporelle, on obtient :
+\begin{equation}
+	\frac{\partial}{\partial t} \left( \frac{1}{2} \epsilon_0 \vv E^2 + \frac{\vv B^2}{2 \mu_0} \right) + \div \left(  \frac{\vv E \wedge \vv B}{\mu_0} \right) + \vv j \cdot \vv E = 0
+\end{equation}
+Nous voyons apparaître la divergence d'un vecteur, ce qui est classique dans les équations de conservation. Nous définissons ainsi le vecteur de Poynting :
+\begin{definition}[Vecteur de Poynting]
+	Nous définissons le vecteur de Poynting :
+	\begin{equation}
+		\vv \Pi = \frac{\vv E \wedge \vv B}{\mu_0}
+	\end{equation}
+	Ce vecteur correspond à la densité volumique de flux dénergie électromagnétique. Il s'exprime en W$\cdot$m$^-2$. $\vv \Pi$ est analogue au vecteur densité de flux thermique (il correspond à un trasnfert d'énergie par rayonnement électromagnétique).
+\end{definition}
+et nous identifions alors l'énergie électromagnétique volumique :
+\begin{proposition}
+	L'énergie électromagnétique par unité de volume est donnée par :
+	\begin{equation}
+		e = \frac{1}{2} \epsilon_0 \vv E^2 + \frac{\vv B^2}{2 \mu_0}
+	\end{equation}
+\end{proposition}
+
+On obtient alors l'équation locale de conservation de l'énergie :
+\begin{theorem}[Equation locale de conservation de l'énergie]
+	La conservation de l'énergie s'écrit :
+	\begin{equation}
+		\frac{\partial e}{\partial t} + \div(\vv \Pi) + \mathcal{P}_v = 0
+	\end{equation}
+	où $e$ est la densité volumique d'énergie électromagnétique, $\vv \Pi$ le vecteur de Poynting, et $\mathcal{P}_v$ la puissance volumique cédée aux porteurs de charge.
+\end{theorem}
+
+\begin{capex}
+	Interpréter les différents termes de cette équation, et les deux termes de la densité volumique d'énergie électromagnétique.
+\end{capex}
+
+\subsection{Energie électrique}
+
+Pour mieux comprendre à quoi correspond la densité volumique d'néergie électromagnétique, nous pouvons nous intéresser au condensateur parfait, que nous avons étudié dans le cours d'électrostatique. Blablabla
+
+\subsection{Energie magnétique}
+
+\section{Loi d'Ohm locale}
+
+\subsection{Modélisation d'une résistance}
+
+\subsection{Conductivité électrique}
+
+
+
+\end{document}

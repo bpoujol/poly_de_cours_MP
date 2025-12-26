@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.9.16)  21 DEC 2025 09:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.9.16)  23 DEC 2025 08:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2060,34 +2060,49 @@ LaTeX Font Info:    Font shape `T1/pag/b/n' in size <10> not available
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf/fonts/enc/
 dvips/cm-super/cm-super-t1.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/b
 ase/8r.enc}]
-Package mdframed Info: mdframed works in twoside mode on input line 196.
+Package mdframed Info: mdframed works in twoside mode on input line 198.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 196.
+(mdframed)              on input line 198.
 LaTeX Font Info:    Trying to load font information for U+fontawesomefree2 on i
-nput line 197.
+nput line 199.
 
 (/usr/share/texlive/texmf-dist/tex/latex/fontawesome5/ufontawesomefree2.fd)
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 206.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 210.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 206.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 210.
 
 [2{/usr/share/texlive/texmf-dist/fonts/enc/dvips/fontawesome5/fa5free2.enc} <./
 pile_daniell.png>]
-Package mdframed Info: mdframed works in twoside mode on input line 211.
+Package mdframed Info: mdframed works in twoside mode on input line 215.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 211.
-Package mdframed Info: mdframed works in twoside mode on input line 223.
+(mdframed)              on input line 215.
+Package mdframed Info: mdframed works in twoside mode on input line 219.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 223.
+(mdframed)              on input line 219.
+Package mdframed Info: mdframed works in twoside mode on input line 234.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 234.
+<li_ion.jpg, id=44, 1141.26375pt x 1037.8775pt>
+File: li_ion.jpg Graphic file (type jpg)
+<use li_ion.jpg>
+Package pdftex.def Info: li_ion.jpg  used on input line 244.
+(pdftex.def)             Requested size: 426.79135pt x 388.12622pt.
+Package mdframed Info: mdframed works in twoside mode on input line 256.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 256.
+ [3] [4 <./li_ion.jpg>]
+Package mdframed Info: Not enough space on this page on input line 258.
 
 ! Undefined control sequence.
 <argument> ...d V - T \dd S \\ &= \delta W_{\elec 
                                                   } \\ &= -E \dd q 
-l.238 \end{align}
+l.271 \end{align}
                  
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2098,7 +2113,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument> ...d V - T \dd S \\ &= \delta W_{\elec 
                                                   } \\ &= -E \dd q 
-l.238 \end{align}
+l.271 \end{align}
                  
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2106,89 +2121,103 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-Package mdframed Info: mdframed works in twoside mode on input line 241.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 241.
-Package mdframed Info: mdframed works in twoside mode on input line 246.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 246.
-Package mdframed Info: Not enough space on this page on input line 251.
-[3]
-Package mdframed Info: Not enough space on this page on input line 251.
 Package mdframed Info: mdframed works in twoside mode on input line 274.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 274.
-Package mdframed Info: mdframed works in twoside mode on input line 287.
+Package mdframed Info: mdframed works in twoside mode on input line 279.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 287.
- [4]
-Package mdframed Info: mdframed works in twoside mode on input line 318.
+(mdframed)              on input line 279.
+[5]
+Package mdframed Info: mdframed works in twoside mode on input line 307.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 318.
- [5]
-Package mdframed Info: mdframed works in twoside mode on input line 330.
+(mdframed)              on input line 307.
+Package mdframed Info: mdframed works in twoside mode on input line 320.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 330.
-Package mdframed Info: mdframed works in twoside mode on input line 341.
+(mdframed)              on input line 320.
+ [6]
+Package mdframed Info: mdframed works in twoside mode on input line 351.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 341.
-<diagramme_H2O.png, id=89, 920.43875pt x 648.4225pt>
+(mdframed)              on input line 351.
+Package mdframed Info: mdframed works in twoside mode on input line 363.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 363.
+Package mdframed Info: mdframed works in twoside mode on input line 374.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 374.
+
+
+Package mdframed Warning: You got a bad break
+(mdframed)                because the last box will be empty
+(mdframed)                you have to change it manually
+(mdframed)                by changing the text, the space
+(mdframed)                or something else on input line 378.
+
+[7]
+<diagramme_H2O.png, id=111, 920.43875pt x 648.4225pt>
 File: diagramme_H2O.png Graphic file (type png)
 <use diagramme_H2O.png>
-Package pdftex.def Info: diagramme_H2O.png  used on input line 350.
+Package pdftex.def Info: diagramme_H2O.png  used on input line 383.
 (pdftex.def)             Requested size: 230.46446pt x 162.35257pt.
- [6 <./diagramme_H2O.png>]
-Package mdframed Info: mdframed works in twoside mode on input line 375.
+Package mdframed Info: mdframed works in twoside mode on input line 408.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 375.
-Package mdframed Info: mdframed works in twoside mode on input line 379.
+(mdframed)              on input line 408.
+
+
+Package mdframed Warning: You got a bad break
+(mdframed)                because the last box will be empty
+(mdframed)                you have to change it manually
+(mdframed)                by changing the text, the space
+(mdframed)                or something else on input line 410.
+
+[8 <./diagramme_H2O.png>]
+Package mdframed Info: mdframed works in twoside mode on input line 412.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 379.
-Package mdframed Info: mdframed works in twoside mode on input line 392.
+(mdframed)              on input line 412.
+Package mdframed Info: mdframed works in twoside mode on input line 425.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 392.
-<E_pH_Al.png, id=102, 853.1875pt x 778.91pt>
+(mdframed)              on input line 425.
+<E_pH_Al.png, id=126, 853.1875pt x 778.91pt>
 File: E_pH_Al.png Graphic file (type png)
 <use E_pH_Al.png>
-Package pdftex.def Info: E_pH_Al.png  used on input line 397.
+Package pdftex.def Info: E_pH_Al.png  used on input line 430.
 (pdftex.def)             Requested size: 192.0548pt x 175.33038pt.
-<oxyde_aluminium.jpg, id=103, 432.04892pt x 283.58119pt>
+<oxyde_aluminium.jpg, id=127, 432.04892pt x 283.58119pt>
 File: oxyde_aluminium.jpg Graphic file (type jpg)
 <use oxyde_aluminium.jpg>
-Package pdftex.def Info: oxyde_aluminium.jpg  used on input line 397.
+Package pdftex.def Info: oxyde_aluminium.jpg  used on input line 430.
 (pdftex.def)             Requested size: 230.46446pt x 151.26657pt.
-Package mdframed Info: mdframed works in twoside mode on input line 402.
+Package mdframed Info: mdframed works in twoside mode on input line 435.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 402.
-<rouille_microscope_guyane.png, id=104, 1159.33125pt x 929.4725pt>
+(mdframed)              on input line 435.
+ [9 <./E_pH_Al.png> <./oxyde_aluminium.jpg>]
+<rouille_microscope_guyane.png, id=138, 1159.33125pt x 929.4725pt>
 File: rouille_microscope_guyane.png Graphic file (type png)
 <use rouille_microscope_guyane.png>
-Package pdftex.def Info: rouille_microscope_guyane.png  used on input line 413.
+Package pdftex.def Info: rouille_microscope_guyane.png  used on input line 446.
 
 (pdftex.def)             Requested size: 362.77525pt x 290.84238pt.
-<rouille_guyane_2.png, id=105, 1159.33125pt x 929.4725pt>
+<rouille_guyane_2.png, id=139, 1159.33125pt x 929.4725pt>
 File: rouille_guyane_2.png Graphic file (type png)
 <use rouille_guyane_2.png>
-Package pdftex.def Info: rouille_guyane_2.png  used on input line 413.
+Package pdftex.def Info: rouille_guyane_2.png  used on input line 446.
 (pdftex.def)             Requested size: 362.77525pt x 290.84238pt.
-Package mdframed Info: mdframed works in twoside mode on input line 417.
+Package mdframed Info: mdframed works in twoside mode on input line 450.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 417.
- [7] [8 <./E_pH_Al.png> <./oxyde_aluminium.jpg>] [9 <./rouille_microscope_guyan
-e.png> <./rouille_guyane_2.png>]
-(./main.aux)
+(mdframed)              on input line 450.
+ [10]
+[11 <./rouille_microscope_guyane.png> <./rouille_guyane_2.png>] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
@@ -2198,11 +2227,11 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 57747 strings out of 476080
- 1282412 string characters out of 5792744
- 2324176 words of memory out of 5000000
- 78432 multiletter control sequences out of 15000+600000
- 643763 words of font info for 312 fonts, out of 8000000 for 9000
+ 57791 strings out of 476080
+ 1282943 string characters out of 5792744
+ 2324276 words of memory out of 5000000
+ 78443 multiletter control sequences out of 15000+600000
+ 644932 words of font info for 327 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
  102i,15n,107p,1173b,1786s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/fontawesome5/FontAwesome5Fr
@@ -2220,10 +2249,10 @@ sr/share/texlive/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/share/texlive
 s/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/tim
 es/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
 
-Output written on main.pdf (9 pages, 2921197 bytes).
+Output written on main.pdf (11 pages, 3181462 bytes).
 PDF statistics:
- 268 PDF objects out of 1000 (max. 8388607)
- 211 compressed objects within 3 object streams
- 71 named destinations out of 1000 (max. 500000)
- 81571 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 289 PDF objects out of 1000 (max. 8388607)
+ 229 compressed objects within 3 object streams
+ 82 named destinations out of 1000 (max. 500000)
+ 81576 words of extra memory for PDF output out of 89155 (max. 10000000)
 

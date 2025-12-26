@@ -469,8 +469,40 @@ Ceci permet de forcer une réaction chimique non spontanée en consommant de l'�
 
 \subsection{Accumulateur ; notion de rendement énergétique et faradique}
 
+Considérons désormais le cas d'un accumulateur : on rappelle qu'il s'agit d'un système pouvant être utilisé à la fois comme électrolyseur (lors de la recharge) et comme pile (lors de la décharge).
 
+En raison du phénomène de chute ohmique et des surpotentiels présents dans le cas de l'électrolyse et de la pile, pour un même courant $i$, la tension à appliquer sera nettement plus importante pour rechercger que pour décharger l'accumulateur. Il faudra ainsi plus d'énergie pour recharger l'accumulateur que l'énergie restituée lors de sa décharge.
 
+Nous avons vu que la travail maximal récupérable est donné par :
+\begin{equation}
+	W_{e,\rm th} = - \Delta G =  |\Delta E_{\rm Nernst}| q_{tot}
+\end{equation}
+où $q_{tot}$ est la charge totale échangée lors de la décharge de la pile. Comme nous avons démontré ce résultat en supposant la transformation réversible, l'expression est la même dans le cas d'une électrolyse.  
+
+\begin{definition}
+	On définit le rendement énergétique d'une pile (ou d'une électrolyse) comme le rapport entre le travail électrique fourni par la pile (consommé par l'électrolyse) et le travail électrique théorique en l'absence de pertes :
+	\begin{equation}
+		\eta_E = \frac{W_{e,\rm exp}}{W_{e,\rm th}}
+	\end{equation}
+\end{definition}
+
+\begin{remark}
+	En pratique, les rendements énergétiques peuvent être très faibles comme dans le cas de l'électrolyse de l'eau. Cela est lié à la dissipation d'énergie par effet Joule dans la solution, ainsi qu'aux phénomènes de surpotentiel qui se trouvent aux électrodes. 
+\end{remark}
+
+\begin{figure}[htbp]
+	\centering \includegraphics[width=\linewidth]{green_hydrogen.jpg}
+	\caption{Les différentes étapes de production et utilisation de l'hydrogène vert. Source : vecteezy.com.}
+\end{figure}
+
+\begin{encart}[L'hydrogène vert]
+	Le dihydrogène est souvent présenté comme un carburant d'avenir car sa combustion, en plus d'être très exothermique, ne libère pas de dioxyde de carbone et ne contribue donc pas à l'effet de serre. Plusieurs problèmes se posent néanmoins :
+	\begin{itemize}
+		\item La production conventionnelle de dihydrogène se fait à partir de méthane et est donc très émettrice de gaz à effet de serre. Pour contourner ce problème, il faut produire le dihydrogène par électrolyse de l'eau à l'aide d'une source d'énergie renouvelable ;
+		\item Les phénomènes de surtension importants conduisent à un rendement énergétique d'électrolyse faible, typiquement de l'ordre de 40\% ;
+		\item Le stockage du dihydrogène est très complexe puisque ce gaz ne peut pas être stocké à l'état liquide (comme dans une bouteille classique de gaz) et doit donc être stocké sous forme gazeuse à haute pression ce qui pose des problèmes de sécurité.
+	\end{itemize}
+\end{encart}
 
 
 

@@ -190,14 +190,18 @@ On obtient alors l'équation bilan de la pile :
 Le dispositif de la pile, en séparant physiquement les deux réactifs, permet de canaliser les électrons à travers un circuit électrique extérieur et ainsi de récupérer de l'énergie électrique à partir de la réaction chimique.
 
 
-\subsection{Bilan électrique d'une pile ou d'un électrolyseur}
+\subsection{Bilan électrique}
+
+\subsubsection{Bilan électrique d'une pile}
 
 La pile Daniell est un exemple d'une catégorie plus large de systèmes correspondant aux piles électrochimiques, utilisées pour convertir de l'énergie chimique en énergie électrique : une réaction chimique se fait spontanément et libère une énergie $-W_e >0$ qui peut être utilisée pour alimenter un appareil électrique. L'énergie totale pouvant être utilisée est limitée par la variation d'enthalpie libre $\Delta G$ comme nous l'avons déjà vu. Mais nous pouvons également faire un bilan électrique :
 \begin{capex}
 	A partir de l'exemple de la pile Daniell, établir la charge maximale $q_{\rm max}$ qui peut être débitée par la pile en fonction du volume $V_0$ des solutions et de la concentration initiale $c_0$ en ions $\ce{Cu^{2+}}$ et $\ce{Zn^{2+}}$. 
 \end{capex}
 
-Il est également possible de réaliser le procédé inverse : il s'agit de l'électrolyse. Une réaction chimique non spontanée est forcée en imposant une différence de potentiel entre deux électrodes suffisante pour que la réaction chimique puisse se faire spontanément. C'est le cas, par exemple, de l'électrolyse de l'eau qui sert à former le dihydrogène :
+\subsubsection{Bialn électrique d'une électrolyse}
+
+Il est également possible de réaliser le procédé inverse : il s'agit de l'électrolyse. Une réaction chimique non spontanée est forcée en imposant une différence de potentiel entre deux électrodes suffisante pour que la réaction chimique puisse se faire spontanément. En pratique, le générateur force les électrons à aller dans le sens opposé du sens dans lequel ils iraient spontanément. C'est le cas, par exemple, de l'électrolyse de l'eau qui sert à former le dihydrogène :
 \begin{equation}
 	\ce{2 H2O(l) = 2 H2(g) + O2 (g)}
 \end{equation}
@@ -209,8 +213,37 @@ Il est également possible de réaliser le procédé inverse : il s'agit de l'é
 \end{remark}
 
 \begin{capex}
-	A l'aide d'un bilan de quantité de matière, relier la durée $\Delta t$ de l'électrolyse au courant imposé pour réaliser l'électrolyse, noté $i$, et à la masse de dihydrogène produite par électrolyse $m_{\ce{H2}}$.
+	A l'aide d'un bilan de quantité de matière, relier la durée $\Delta t$ de l'électrolyse au courant imposé pour réaliser l'électrolyse, noté $i$, et à la masse de dihydrogène théorique produite par électrolyse $m_{\ce{H2}, \rm th}$.
 \end{capex}
+
+\begin{definition}
+	On appelle rendement faradique d'une électrolyse le rapport entre la masse théoriquement produite si tous les électrons servaient à former le produit, et la masse de effectivement produite expérimentalement :
+	\begin{equation}
+		\eta_F = \frac{m_{\rm produit,exp}}{m_{\rm produit,th}} 
+	\end{equation}
+\end{definition}
+
+\begin{remark}
+	En pratique, le rendement faradique est souvent inférieur à 1 car des réactions d'oxydation ou de réduction parasites peuvent se produire au niveau de l'électrode, impliquant des ions présents en solution ou les métaux constituants des électrodes.
+\end{remark}
+
+\subsubsection{Les accumulateurs}
+
+Il est possible de faire fonctionner un système à la fois en pile et en électrolyseur : c'est ce que l'on appelle un accumulateur. On peut alors brancher les deux électrodes sur un circuit consommateur d'énergie (on décharge alors l'accumulateur), ou bien on les branche sur un générateur et on récupère alors de l'énergie en rechargeant l'accumulateur.
+
+\begin{encart}[Les batteries lithium-ion]
+	La plupart des batteries présentes aujourd'hui dans les appareils électroniques sont des batteries lithium-ion. Elles sont constituées de deux électrodes en graphite $\ce{LiC6}$ et en oxyde de coubalt $\ce{LiCoO2}$, qui sont enrichis en lithium. Les électrodes sont séparées par un électrolyte qui conduit les ions lithium $\ce{Li^+}$ et les deux demi-équations se produisant lors de la phase de recharge de la batterie sont :
+	\begin{align}
+		&\ce{LiCoO2 = CoO2 + Li^+ + e^-} \\
+		&\ce{C6 + Li^+ + e^- = LiC6}
+	\end{align}
+	Lors de la décharge, les réactions inverses se font spontanément et le courant électrique qui en résulte peut servir à alimenter un appareil électrique.
+\end{encart}
+
+\begin{figure}[htbp]
+	\centering \includegraphics[width=\linewidth]{li_ion.jpg}
+	\caption{Schéma simplifié d'une batterie lithium-ion. Source : C.Schultz (2016). \textit{Anti-aging for batteries? LC-MS method development for battery electrolytes.} Shimadzu News.}
+\end{figure}
 
 \subsection{Bilan énergétique}
 

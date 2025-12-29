@@ -209,7 +209,7 @@ Parfois, il est plus utile d'étudier le potentiel électrostatique, $V$, que le
 
 Nous obtenons les équations suivantes :
 \begin{theorem}[Equation de Poisson]
-	En régime stationnaire, le potentiel électrostatique $V$ satisfait l'équation de Poisson :
+	En régime stationnaire, le potentiel électrostatique $V$ satisfait l'équation de Laplace :
 	\begin{equation}
 		\Delta V + \frac{\rho}{\epsilon_0} = 0
 	\end{equation}
@@ -222,8 +222,8 @@ Nous obtenons les équations suivantes :
 	où $\mu$ est la masse volumique.
 \end{theorem}
 
-L'équation de Laplace est formellement équivalent à l'équation de Maxwell-Gauss, elle ne traduit aucun phénomène physique supplémentaire mais est parfois une formulation plus pratique lorsque l'on travaille à l'aide de potentiels. Dans une région vide de charges, on obtient le cas particulier de l'équation de Laplace :
-\begin{theorem}[Equation de Laplace]
+L'équation de Laplace est formellement équivalent à l'équation de Maxwell-Gauss, elle ne traduit aucun phénomène physique supplémentaire mais est parfois une formulation plus pratique lorsque l'on travaille à l'aide de potentiels. Dans une région vide de charges, on obtient le cas particulier de l'équation de Poisson :
+\begin{theorem}[Equation de Poisson]
 	En régime stationnaire, dans une région vide de charges, le potentiel électrostatique $V(M)$ vérifie :
 	\begin{equation}
 		\Delta V = 0
@@ -235,21 +235,11 @@ L'équation de Laplace est formellement équivalent à l'équation de Maxwell-Ga
 	\end{equation}
 \end{theorem}
 
-\begin{figure}[htbp]
-\centering \includegraphics[width=\linewidth]{potentiels_electrostatiques_2D.png}
-\caption{Allure de potentiels électrostatiques autour de boules uniformément chargées positivement et négativement en volume. Les surfaces sont convexes dans les régions de charge négative et convexes dans les régions de charge positive. Dans les régions vides de charge, le laplacien du potentiel est nul et les courbures dans les différentes directions se compensent exactement. Source : xaktly.com.}
-\end{figure}
-
 \section{Lois locales de la magnétostatique}
 
 Dans le cadre de la magnétostatique, nous avons vu le théorème d'Ampère selon lequel les sources de champ magnétique sont les courants électriques. En particulier, la circulation du champ magnétique le long d'un contour fermé est reliée au courant qui traverse ce contour. Pour pouvoir décrire ce phénomène à l'échelle locale, il est nécessaire d'avoir une description locale de la circulation.
 
 \subsection{Opérateur rotationnel. Théorème de Stokes.}
-
-\begin{figure}[htbp]
-	\centering \includegraphics[width=0.5\linewidth]{calcul_circulation.png}
-	\caption{Contour mésoscopique utilisé pour calculer la circulation du champ magnétique. Source : poly de cours de Maxime Champion.}
-\end{figure}
 
 Considérons, en coordonnées cartésiennes, un élément de surface cartésien situé dans un plant $z = c^{ste}$. Nous cherchons à calculer la circulation du champ magnétique $\vv B(M)$ le long du contour enlaçant cet élément de surface dans le sens trigonométrique. Cette circulation élémentaire, $\dd \mathcal{C}$, est donnée par :
 \begin{align}
@@ -334,8 +324,8 @@ Cette équation est une forme locale du théorème d'Ampère, elle montre que la
 	Rappeler la propriété de conservation du flux du champ magnétique et établir l'équation locale de conservation du flux.
 \end{capex}
 
-On obtient l'équation dite de Maxwell-Thomson :
-\begin{proposition}[Equation de Maxwell-Thomson]
+On obtient l'équation dite de Maxwell-Flux (dénomination courant mais non conventionnelle) :
+\begin{proposition}[Equation de Maxwell-Flux]
 	La conservation du flux du champ magnétique implique que :
 	\begin{equation}
 		\div ( \vv B) = 0
@@ -395,11 +385,6 @@ Nous avons désormais établi quatre équations locales. Cependant, deux d'entre
 
 \subsection{Conservation de la charge en géométrie cartésienne à une dimension}
 
-\begin{figure}[htbp]
-	\centering \includegraphics[width=0.75\linewidth]{bilan_charge_1D.png}
-	\caption{Schéma pour le bilan de charge à une dimension. Source : poly de cours de Etienne Thibierge.}
-\end{figure}
-
 \begin{capex}
 	En s'inspirant de la démonstration du premier principe local et de l'analogie entre électromagnétisme et thermodynamique, établir la forme locale de la conservation de la charge en géométrie cartésienne 1D.
 \end{capex}
@@ -409,7 +394,7 @@ Nous avons désormais établi quatre équations locales. Cependant, deux d'entre
 On souhaite désormais écrire la forme macroscopique de la conservation de la charge.
 
 \begin{capex}
-	On s'intéresse à un volume $\mathcal{V}$ délimité par une surface fermée $\Sigma$. Ecrire la forme macroscopique de la conservation de la charge.
+	On s'intéresse à un volume $\marhcal{V}$ délimité par une surface fermée $\Sigma$. Ecrire la forme macroscopique de la conservation de la charge.
 \end{capex}
 
 \subsection{Forme locale de la conservation de la charge}
@@ -432,7 +417,7 @@ Il est possible de faire une démonstration similaire à celle qui a été faite
 
 Nous avons maintenant déterminé un ensemble d'équations locales :
 \begin{itemize}
-	\item Deux équations toujours valables : équations de Maxwell-Faraday et Maxwell-Thomson
+	\item Deux équations toujours valables : équations de Maxwell-Faraday et Maxwell-Flux
 	\item Deux équations valables uniquement en régime stationnaire : l'équation de Maxwell-Gauss et la forme locale du théorème d'Ampère
 	\item Et l'équation de conservation de la charge, toujours valable mais qui ne fait pas intervenir directement les champs $\vv E$ et $\vv B$.
 \end{itemize}
@@ -471,7 +456,7 @@ Les équations sont les suivantes :
 			\div (\vv E) &= \dfrac{\rho}{\epsilon_0} \quad \mathrm{(Maxwell-Gauss)} \\
 			\rot (\vv E) &= -\frac{\partial \vv B}{\partial t} \quad \mathrm{(Maxwell-Faraday)} \\
 			\rot (\vv B) &= \mu_0 \left( \vv j + \epsilon_0 \dfrac{\partial \vv E}{\partial t} \right) \quad \mathrm{(Maxwell-Ampère)} \\
-			\div (\vv B) &= 0 \quad \mathrm{(Maxwell-Thomson)}
+			\div (\vv B) &= 0 \quad \mathrm{("Maxwell-Flux")}
 		\end{dcases}
 	\end{equation}
 	où $\rho(M,t)$ est la densité volumique de charges, et $\vv j(M,t)$ est la densité volumique de courant.
@@ -566,7 +551,7 @@ et nous identifions alors l'énergie électromagnétique volumique :
 \begin{proposition}
 	L'énergie électromagnétique par unité de volume est donnée par :
 	\begin{equation}
-		u_{\rm em} = \frac{1}{2} \epsilon_0 \vv E^2 + \frac{\vv B^2}{2 \mu_0}
+		e = \frac{1}{2} \epsilon_0 \vv E^2 + \frac{\vv B^2}{2 \mu_0}
 	\end{equation}
 \end{proposition}
 
@@ -574,7 +559,7 @@ On obtient alors l'équation locale de conservation de l'énergie :
 \begin{theorem}[Equation locale de conservation de l'énergie]
 	La conservation de l'énergie s'écrit :
 	\begin{equation}
-		\frac{\partial u_{\rm em}}{\partial t} + \div(\vv \Pi) + \mathcal{P}_v = 0
+		\frac{\partial e}{\partial t} + \div(\vv \Pi) + \mathcal{P}_v = 0
 	\end{equation}
 	où $e$ est la densité volumique d'énergie électromagnétique, $\vv \Pi$ le vecteur de Poynting, et $\mathcal{P}_v$ la puissance volumique cédée aux porteurs de charge.
 \end{theorem}
@@ -585,101 +570,16 @@ On obtient alors l'équation locale de conservation de l'énergie :
 
 \subsection{Energie électrique}
 
-Pour mieux comprendre à quoi correspond la densité volumique d'énergie électromagnétique, nous pouvons nous intéresser au condensateur parfait, que nous avons étudié dans le cours d'électrostatique.
-
-Considérons un condensateur parfait constitué de deux armatures de surface $S$ et séparées d'une épaisseur $e \ll S$. On note $\pm Q = \pm \sigma S$ la charge portée par chacune des armatures, où $\sigma$ est la densité surfacique de charges. Nous avons vu dans le cours d'électrostatique que dans ce condensateur règne un champ électrique :
-\begin{equation}
-	\vv E = \frac{\sigma}{\epsilon_0} \vv{e_z}
-\end{equation}
-Alors, la densité volumique d'énergie électromagnétique est donnée par :
-\begin{equation}
-	u_{\rm em} = \frac{1}{2} \epsilon_0 \vv E^2 = \frac{\sigma^2}{2 \epsilon_0}
-\end{equation}
-Comme le champ électrique est nul à l'extérieur des armatures, l'énergie électromagnétique totale stockée dans le condensateur s'obtient en intégrant la densité volumique d'énergie sur le volume $V = eS$ entre les armatures :
-\begin{equation}
-	\mathcal{E}_{\rm em} = \iiint_V u_{\rm em} \dd \tau = \frac{\sigma^2}{2 \epsilon_0} \times eS = \frac{Q^2 e}{2 S \epsilon_0}
-\end{equation}
-Nous pouvons alors reconnaître l'expression de la capacité du condensateur :
-\begin{equation}
-	C = \frac{\epsilon_0 S}{e}
-\end{equation}
-et en remplaçant, nous retrouvons la formule d'électrostatique que nous avions déduite des lois macroscopiques :
-\begin{equation}
-	\mathcal{E}_{\rm em} = \frac{1}{2} \frac{Q^2}{C}
-\end{equation}
+Pour mieux comprendre à quoi correspond la densité volumique d'néergie électromagnétique, nous pouvons nous intéresser au condensateur parfait, que nous avons étudié dans le cours d'électrostatique. Blablabla
 
 \subsection{Energie magnétique}
 
-\begin{capex}
-	Mener un raisonnement similaire pour retrouver l'expression de l'énergie stockée dans une bobine, dans le cadre du modèle du solénoïde infini.
-\end{capex}
+\section{Loi d'Ohm locale}
+
+\subsection{Modélisation d'une résistance}
+
+\subsection{Conductivité électrique}
+
 
 
 \end{document}
-
-% Chapitre Ondes électromagnétiques dans les milieux dilués
-
-\section{Equation de propagation dans le vide}
-
-\subsection{Equation de d'Alembert}
-
-\subsection{Forme générale des solutions à une dimension}
-
-\section{Onde plane progressive monochromatique}
-
-\subsection{Définition et interprétation}
-
-\subsection{Bilan énergétique}
-
-\subsection{Polarisation}
-
-\section{Propagation dans un plasma}
-
-\subsection{Définition}
-
-\subsection{Onde évanescente}
-
-\section{Relation de dispersion}
-
-\subsection{Définition}
-
-\subsection{Propagation d'un paquet d'ondes}
-
-\subsection{Vitesse de phase, vitesse de groupe}
-
-
-%Chapitre conducteurs
-
-\section{Ondes électromagnétiques et milieux conducteurs}
-
-\section{Conduction électrique}
-
-\subsection{Loi d'Ohm locale}
-
-+Bilan d'énergie dans une résistance
-
-\subsection{Conductivité équivalente d'un plasma}
-
-\subsection{Conducteur parfait et relations de passage}
-
-\section{Propagation dans un conducteur}
-
-\subsection{ARQS}
-
-inclure Loi des noeuds
-
-\subsection{Réflexion d'une OEM sur un conducteur, effet de peau}
-
-\section{Conducteur parfait}
-
-\subsection{Réflexion sur un conducteur parfait}
-
-\subsection{Cavité à une dimension}
-
-%Chapitre rayonnement dipolaire
-
-\section{Champ rayonné par un dipôle oscillant}
-
-\section{Diffusion du rayonnement par une molécule}
-
-

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.9.16)  26 DEC 2025 18:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.9.16)  28 DEC 2025 20:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2078,219 +2078,155 @@ Package mdframed Info: mdframed works in twoside mode on input line 226.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 226.
-Package mdframed Info: mdframed works in twoside mode on input line 251.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 251.
+<potentiels_electrostatiques_2D.png, id=46, 590.205pt x 201.75375pt>
+File: potentiels_electrostatiques_2D.png Graphic file (type png)
+<use potentiels_electrostatiques_2D.png>
+Package pdftex.def Info: potentiels_electrostatiques_2D.png  used on input line
+ 239.
+(pdftex.def)             Requested size: 426.79135pt x 145.89676pt.
+<calcul_circulation.png, id=47, 440.64626pt x 401.5pt>
+File: calcul_circulation.png Graphic file (type png)
+<use calcul_circulation.png>
+Package pdftex.def Info: calcul_circulation.png  used on input line 250.
+(pdftex.def)             Requested size: 213.39568pt x 194.43932pt.
 
-[3]
-Package mdframed Info: mdframed works in twoside mode on input line 268.
+Underfull \vbox (badness 1331) has occurred while \output is active []
+
+ [3 <./potentiels_electrostatiques_2D.png>]
+Package mdframed Info: mdframed works in twoside mode on input line 261.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 268.
+(mdframed)              on input line 261.
+Package mdframed Info: mdframed works in twoside mode on input line 278.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 278.
+Package mdframed Info: Not enough space on this page on input line 284.
+ [4 <./calcul_circulation.png>]
+Package mdframed Info: Not enough space on this page on input line 284.
 LaTeX Font Info:    Font shape `T1/pag/b/n' in size <6> not available
-(Font)              Font shape `T1/pag/db/n' tried instead on input line 284.
+(Font)              Font shape `T1/pag/db/n' tried instead on input line 294.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 284.
-Package mdframed Info: mdframed works in twoside mode on input line 307.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 294.
+Package mdframed Info: mdframed works in twoside mode on input line 317.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 307.
- [4]
-Package mdframed Info: mdframed works in twoside mode on input line 323.
+(mdframed)              on input line 317.
+Package mdframed Info: mdframed works in twoside mode on input line 333.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 323.
-Package mdframed Info: mdframed works in twoside mode on input line 342.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 342.
+(mdframed)              on input line 333.
+Package mdframed Info: Not enough space on this page on input line 335.
  [5]
-Package mdframed Info: mdframed works in twoside mode on input line 370.
+Package mdframed Info: Not enough space on this page on input line 335.
+Package mdframed Info: mdframed works in twoside mode on input line 352.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 370.
-Package mdframed Info: mdframed works in twoside mode on input line 388.
+(mdframed)              on input line 352.
+ [6]
+Package mdframed Info: mdframed works in twoside mode on input line 380.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 388.
-
-
-LaTeX Warning: Reference `mdf@pagelabel-12' on page 6 undefined on input line 3
-90.
-
-Package mdframed Info: mdframed works in twoside mode on input line 396.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 396.
-! Undefined control sequence.
-<recently read> \marhcal 
-                         
-l.397 	On s'intéresse à un volume $\marhcal
-                                             {V}$ délimité par une surface...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-LaTeX Warning: Reference `mdf@pagelabel-13' on page 6 undefined on input line 3
-98.
-
+(mdframed)              on input line 380.
+<bilan_charge_1D.png, id=108, 889.3225pt x 245.91875pt>
+File: bilan_charge_1D.png Graphic file (type png)
+<use bilan_charge_1D.png>
+Package pdftex.def Info: bilan_charge_1D.png  used on input line 399.
+(pdftex.def)             Requested size: 320.0935pt x 88.51192pt.
 Package mdframed Info: mdframed works in twoside mode on input line 403.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 403.
-
-LaTeX Warning: Reference `mdf@pagelabel-14' on page 6 undefined on input line 4
-08.
-
-Package mdframed Info: mdframed works in twoside mode on input line 410.
+Package mdframed Info: mdframed works in twoside mode on input line 411.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 410.
-[6]
-Package mdframed Info: Not enough space on this page on input line 412.
-
-
-LaTeX Warning: Reference `mdf@pagelabel-15' on page 7 undefined on input line 4
-12.
-
-Package mdframed Info: mdframed works in twoside mode on input line 441.
+(mdframed)              on input line 411.
+Package mdframed Info: mdframed works in twoside mode on input line 418.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 441.
-
-LaTeX Warning: Reference `mdf@pagelabel-16' on page 7 undefined on input line 4
-43.
-
-Package mdframed Info: mdframed works in twoside mode on input line 452.
+(mdframed)              on input line 418.
+ [7 <./bilan_charge_1D.png>]
+Package mdframed Info: Not enough space on this page on input line 423.
+Package mdframed Info: mdframed works in twoside mode on input line 425.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 452.
+(mdframed)              on input line 425.
+Package mdframed Info: mdframed works in twoside mode on input line 456.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 456.
+Package mdframed Info: Not enough space on this page on input line 458.
+ [8]
+Package mdframed Info: Not enough space on this page on input line 458.
+Package mdframed Info: mdframed works in twoside mode on input line 467.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 467.
 
-LaTeX Warning: Command \` invalid in math mode on input line 458.
+
+LaTeX Warning: Command \` invalid in math mode on input line 473.
 
 Missing character: There is no � in font zptmcm7t!
-
-Package fancyhdr Warning: \headheight is too small (14.5pt): 
-(fancyhdr)                Make it at least 14.57007pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.57007pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-0.07007pt}.
-
-[7]
-Package mdframed Info: Not enough space on this page on input line 463.
-
-
-LaTeX Warning: Reference `mdf@pagelabel-17' on page 8 undefined on input line 4
-63.
-
-Package mdframed Info: mdframed works in twoside mode on input line 465.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 465.
-
-LaTeX Warning: Reference `mdf@pagelabel-18' on page 8 undefined on input line 4
-67.
-
-Package mdframed Info: mdframed works in twoside mode on input line 471.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 471.
-
-LaTeX Warning: Reference `mdf@pagelabel-19' on page 8 undefined on input line 4
-73.
-
 Package mdframed Info: mdframed works in twoside mode on input line 480.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 480.
-
-LaTeX Warning: Reference `mdf@pagelabel-20' on page 8 undefined on input line 4
-85.
-
-Package mdframed Info: mdframed works in twoside mode on input line 498.
+Package mdframed Info: mdframed works in twoside mode on input line 486.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 498.
-[8]
-Package mdframed Info: Not enough space on this page on input line 504.
-
-
-LaTeX Warning: Reference `mdf@pagelabel-21' on page 9 undefined on input line 5
-04.
-
-Package mdframed Info: mdframed works in twoside mode on input line 506.
+(mdframed)              on input line 486.
+Package mdframed Info: mdframed works in twoside mode on input line 495.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 506.
-
-LaTeX Warning: Reference `mdf@pagelabel-22' on page 9 undefined on input line 5
-08.
-
-Package mdframed Info: mdframed works in twoside mode on input line 510.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 510.
-
-LaTeX Warning: Reference `mdf@pagelabel-23' on page 9 undefined on input line 5
-15.
-
-Package mdframed Info: mdframed works in twoside mode on input line 543.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 543.
-Package mdframed Info: Not enough space on this page on input line 549.
+(mdframed)              on input line 495.
 [9]
-Package mdframed Info: Not enough space on this page on input line 549.
-
-
-LaTeX Warning: Reference `mdf@pagelabel-24' on page 10 undefined on input line 
-549.
-
-Package mdframed Info: mdframed works in twoside mode on input line 559.
+Package mdframed Info: mdframed works in twoside mode on input line 513.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 559.
-
-LaTeX Warning: Reference `mdf@pagelabel-25' on page 10 undefined on input line 
-565.
-
-Package mdframed Info: mdframed works in twoside mode on input line 567.
+(mdframed)              on input line 513.
+Package mdframed Info: mdframed works in twoside mode on input line 521.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 567.
-
-LaTeX Warning: Reference `mdf@pagelabel-26' on page 10 undefined on input line 
-569.
-
-[10] (./main.aux)
+(mdframed)              on input line 521.
+Package mdframed Info: mdframed works in twoside mode on input line 525.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 525.
+ [10]
+Package mdframed Info: mdframed works in twoside mode on input line 558.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 558.
+Package mdframed Info: mdframed works in twoside mode on input line 574.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 574.
+Package mdframed Info: mdframed works in twoside mode on input line 582.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 582.
+ [11]
+Package mdframed Info: mdframed works in twoside mode on input line 613.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 613.
+ [12] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 57713 strings out of 476080
- 1281079 string characters out of 5792744
- 2343038 words of memory out of 5000000
- 78352 multiletter control sequences out of 15000+600000
- 631105 words of font info for 294 fonts, out of 8000000 for 9000
+ 57764 strings out of 476080
+ 1282129 string characters out of 5792744
+ 2346429 words of memory out of 5000000
+ 78376 multiletter control sequences out of 15000+600000
+ 637089 words of font info for 307 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
- 102i,25n,107p,1173b,1800s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,25n,107p,1173b,1786s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/fontawesome5/FontAwesome5Fr
 ee-Solid.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex
 10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
@@ -2306,10 +2242,10 @@ texlive/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 urw/times/utmri8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/esvect/
 vect10.pfb>
-Output written on main.pdf (10 pages, 189786 bytes).
+Output written on main.pdf (12 pages, 234102 bytes).
 PDF statistics:
- 352 PDF objects out of 1000 (max. 8388607)
- 304 compressed objects within 4 object streams
- 120 named destinations out of 1000 (max. 500000)
- 66269 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 366 PDF objects out of 1000 (max. 8388607)
+ 310 compressed objects within 4 object streams
+ 128 named destinations out of 1000 (max. 500000)
+ 70356 words of extra memory for PDF output out of 74296 (max. 10000000)
 

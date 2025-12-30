@@ -64,6 +64,8 @@ mathfontname=mathsf]{mhchem}
 \usepackage{gensymb}
 \usepackage{tabularray}
 \usepackage{csquotes}
+\usepackage{amsmath}
+\usepackage{amsfonts}
 
 \usepackage[french]{babel}
 \usepackage{dingbat}
@@ -81,12 +83,6 @@ mathfontname=mathsf]{mhchem}
 }%
 
 \usetikzlibrary {arrows.meta} 
-
-\newcommand{\degC}{{\degree}C}
-\newcommand{\dd}{\mathrm{d}}
-\newcommand{\div}{\mathrm{div}}
-\newcommand{\rot}{\vv{\mathrm{div}}}
-\newcommand{\grad}{\vv{\mathrm{grad}}}
 
 \tikzset{
     support/.style={
@@ -126,6 +122,12 @@ mathfontname=mathsf]{mhchem}
 %----------------------------------------------------------------------------------------
 
 \input{structure} % Insert the commands.tex file which contains the majority of the structure behind the template
+
+\newcommand{\degC}{{\degree}C}
+\newcommand{\dd}{\mathrm{d}}
+\renewcommand{\div}{\mathrm{div}}
+\newcommand{\rot}{\vv{\mathrm{rot}}}
+\renewcommand{\grad}{\vv{\mathrm{grad}}}
 
 \begin{document}
 
@@ -196,7 +198,7 @@ Cette intégrale est nulle quel que soit le volume $\mathcal{V}$ considéré, do
 Nous pouvons interpréter cette équation comme suit : le champ électrique diverge autour des charges positives et converge vers les charges négatives.
 
 \begin{capex}
-	Proposer une analogie formelle entre l'équation de Maxwell-Gauss et la gravitation.
+	A l'aide d'une analogie formelle, proposer un analogue de l'équation de Maxwell-Gauss pour la gravitation.
 \end{capex}
 
 \subsection{Equations de Laplace et de Poisson}
@@ -236,9 +238,53 @@ L'équation de Laplace est formellement équivalent à l'équation de Maxwell-Ga
 \end{theorem}
 
 \begin{figure}[htbp]
-\centering \includegraphics[width=\linewidth]{potentiels_electrostatiques_2D.png}
+\centering \includegraphics[width=0.85\linewidth]{potentiels_electrostatiques_2D.png}
 \caption{Allure de potentiels électrostatiques autour de boules uniformément chargées positivement et négativement en volume. Les surfaces sont convexes dans les régions de charge négative et convexes dans les régions de charge positive. Dans les régions vides de charge, le laplacien du potentiel est nul et les courbures dans les différentes directions se compensent exactement. Source : xaktly.com.}
 \end{figure}
+
+\begin{figure}[t]
+	\centering \includegraphics[width=0.85\linewidth]{harmoniques_spheriques.png}
+	\caption{Les harmoniques sphériques, solutions de l'équation de Poisson qui intervient lors de la résolution de l'équation de Schrödinger pour l'atome d'hydrogène. Le symbole $P_\ell^m$ indique un polynôme de Legendre. Le nombre $\ell$ indique la sous-couche électronique. Chaque fonction d'onde peut contenir deux électrons (moment magnétique positif ou négatif). Source : Wikimedia Commons.}
+\end{figure}
+
+\begin{encart}[Equation de Poisson et atome d'hydrogène]
+	L'équation de Poisson n'est pas spécifique à l'électrostatique ou la graviatation. Elle se retrouve dans de nombreux domaines de la physique, en particulier en mécanique des fluides, mais aussi en thermodynamique : c'est l'équation de diffusion thermique en régime stationnaire et en présence d'un terme source d'énergie.
+	
+	Sa résolution numérique est plus délicate que celle des équations différentielles temporelles, car c'est une équation implicite : connaître les conditions aux limites au bord du domaine suffit mathématiquement à déduire entièrement la solution. On ne peut donc pas utiliser la méthode d'Euler en intégrant l'équation de proche en proche à partir d'un unique point du bord du domaine : il faut résoudre l'équation en une seule étape (qui se fait souvent par une inversion de matrice).
+	
+	\textit{Pour aller plus loin :}
+	
+	L'équation de Poisson joue un rôle important dans la résolution des états stationnaires de l'atome d'hydrogène. En effet, dans l'atome d'hydrogène, pour un état stationnaire, l'équation de Schrödinger stationnaire $\psi(M,t) = \varphi(M) \exp(-\frac{i E t}{\hbar})$ s'écrit :
+	\begin{equation}
+		- \frac{\hbar^2}{2 m_e} \Delta \varphi(M) = (E - V(r)) \varphi(M)
+	\end{equation}
+	On cherche des solutions sous forme de variables séparées en coordonnées sphériques $(r,\theta,\phi)$. On a alors $\varphi(M) = f(r)g(\theta,\phi)$. De plus le laplacien en coordonnées sphériques s'écrit :
+	\begin{equation}
+		\Delta \varphi = \frac{1}{r^2}\frac{\partial}{\partial r}
+		\left(
+		r^2 \frac{\partial \varphi}{\partial r}
+		\right)
+		+
+		\frac{1}{r^2 \sin\theta}\frac{\partial}{\partial \theta}
+		\left(
+		\sin\theta \frac{\partial \varphi}{\partial \theta}
+		\right)
+		+
+		\frac{1}{r^2 \sin^2\theta}
+		\frac{\partial^2 \varphi}{\partial \phi^2}
+	\end{equation}
+	 et il vient par séparation des variables :
+	\begin{equation}
+			\frac{1}{r^2 f(r)} \frac{\partial}{\partial r} \left( r^2 f''(r) \right) + V(r) - E = \Delta g
+	\end{equation}
+		où $\Delta g$ est un laplacien 2D uniquement en fonction des coordonnées d'angle. Les deux membres sont égaux à une constante  $K$ car le premier membre ne dépend que de $r$ alors que le second ne dépend que de $\theta$ et $\phi$.
+		
+		On obtient alors une équation de Poisson :
+		\begin{equation}
+			\Delta g = K
+		\end{equation}
+		Les solutions de cette équation sont connues et appelées les harmoniques sphériques (ce sont des fonctions sinusoïdales de $\varphi$ et des polynômes de Legendre en fonction de $\cos \theta$). Ces solutions correspondent à la structure des fonctions d'onde de l'électron dans l'atome d'hydrogène. 
+\end{encart}
 
 \section{Lois locales de la magnétostatique}
 
@@ -251,7 +297,7 @@ Dans le cadre de la magnétostatique, nous avons vu le théorème d'Ampère selo
 	\caption{Contour mésoscopique utilisé pour calculer la circulation du champ magnétique. Source : poly de cours de Maxime Champion.}
 \end{figure}
 
-Considérons, en coordonnées cartésiennes, un élément de surface cartésien situé dans un plant $z = c^{ste}$. Nous cherchons à calculer la circulation du champ magnétique $\vv B(M)$ le long du contour enlaçant cet élément de surface dans le sens trigonométrique. Cette circulation élémentaire, $\dd \mathcal{C}$, est donnée par :
+Considérons, en coordonnées cartésiennes, un élément de surface cartésien situé dans un plan $z = c^{ste}$. Nous cherchons à calculer la circulation du champ magnétique $\vv B(M)$ le long du contour enlaçant cet élément de surface dans le sens trigonométrique. Cette circulation élémentaire, $\dd \mathcal{C}$, est donnée par :
 \begin{align}
 	\dd \mathcal{C} &= B_x(x,y) \dd x + B_y(x+\dd x,y) \dd y \dd y + B_x(x,y+\dd y)\times (- \dd x) + B_y(x,y) \times (- \dd y) \\
 	&= \dd x \dd y \left( \frac{\partial B_y}{\partial x} - \frac{\partial B_x}{\partial y} \right) \\
@@ -261,7 +307,7 @@ Ainsi, la circulation le long de ce contour élémentaire est directement liée 
 \begin{definition}[Opérateur rotationnel]
 	Le rotationnel est un opérateur vectoriel qui agit sur un champ vectoriel. En coordonnées cartésiennes, le rotationnel d'un champ $\vv A$ s'écrit :
 	\begin{equation}
-		\rot (\vv A) = \begin{pmatrix} \frac{\partial}{\partial x} \\  \frac{\partial}{\partial y} \\\frac{\partial}{\partial z} \end{pmatrix} \wedge \begin{pmatrix} A_x \\ A_y \\ A_z \end{pmatrix} = \begin{pmatrix} \frac{\partial A_z}{\partial y} - \frac{\partial A_y}{\partial z} \\ \frac{\partial A_x}{\partial z} - \frac{\partial A_z}{\partial x} \\ \frac{\partial A_y}{\partial x} - \frac{\partial A_x}{\partial y} \end{pmatrix}
+		\rot (\vv A) = \begin{pmatrix} \dfrac{\partial}{\partial x} \\[9pt]  \dfrac{\partial}{\partial y} \\[9pt] \dfrac{\partial}{\partial z} \end{pmatrix} \wedge \begin{pmatrix} A_x \\[5pt] A_y \\[5pt] A_z \end{pmatrix} = \begin{pmatrix} \dfrac{\partial A_z}{\partial y} - \dfrac{\partial A_y}{\partial z} \\[9pt] \dfrac{\partial A_x}{\partial z} - \dfrac{\partial A_z}{\partial x} \\[9pt] \dfrac{\partial A_y}{\partial x} - \dfrac{\partial A_x}{\partial y} \end{pmatrix}
 	\end{equation}
 \end{definition}
 
@@ -350,20 +396,24 @@ L'électrostatique et la magnétostatique décrivent comment les champs (électr
 
 On rappelle ici quelques résultats vus sur l'induction en première année. Lorsqu'un circuir électrique est plongé dans un champ magnétique $\vv B$, si le champ magnétique est variable ou si le circuit électrique se déplace, une force électromotrice est générée dans le circuit. Cette force est donnée par la loi de Faraday :
 \begin{theorem}[Loi de Faraday]
-	Soit un circuit électrique matérialisé par un contour orienté $\Gamma$ délimitant une surface $\mathcal{S}$. On définit la force électromotrice $e$ le long de ce circuit comme la circulation du champ électrique le long du contour :
+	Soit un circuit électrique matérialisé par un contour orienté $\Gamma$ délimitant une surface $\mathcal{S}$. On définit la force électromotrice $e_{\rm ind}$ le long de ce circuit comme la circulation du champ électrique le long du contour :
 	\begin{equation}
-		e = \oint_{\Gamma} \vv E \cdot \vv{\dd \ell}
+		e_{\rm ind} = \oint_{\Gamma} \vv E \cdot \vv{\dd \ell}
 	\end{equation}
 	ainsi que le flux du champ magnétique à travers le contour par :
 	\begin{equation}
 		\Phi = \iint_{\mathcal{S}} \vv B \cdot \vv{\dd S}
 	\end{equation}
-	Alors, la variation de flux magnétique à travers le circuit génère par induction une force électromotrice non nulle :
+	Alors, la variation de flux magnétique à travers le circuit génère par induction une force électromotrice induite non nulle :
 	\begin{equation}
-		e = - \frac{\dd \Phi}{\dd t}
+		e_{\rm ind} = - \frac{\dd \Phi}{\dd t}
 	\end{equation}
 \end{theorem}
 
+\begin{figure}[htbp]
+	\centering \includegraphics[width=0.85\linewidth]{induction.png}
+	\caption{Représentation d'un circuit électrique siège d'un phénomène d'induction. A gauche : flux du champ magnétique à travers le circuit. A droite : schéma électrique équivalent. Source : poly de cours de Etienne Thibierge.}
+\end{figure}
 
 Dans la loi de Faraday, la variation de flux peut être causée par une variation temporelle du champ magnétique, ou encore par un déplacement ou une déformation du circuit électrique. En particulier, la loi de Faraday permet de décrire des situations aussi variées que le déplacement d'un circuit dans un champ variables (principe de fonctionnement de certains teslamètres) ; la production d'énergie par un champ variables (principe des plaques à induction) ou encore l'apparition d'une force électromotrice dans l'expérience des rails de Laplace (circuit déformable).
 
@@ -388,6 +438,22 @@ Nous obtenons l'équation de Maxwell-Faraday :
 		\rot(\vv E) = - \frac{\partial \vv B}{\partial t}
 	\end{equation}
 \end{proposition}
+
+\begin{figure}[t]
+	\centering \includegraphics[width=0.75\linewidth]{solar_wind.png}
+	\caption{Lignes de champ du champ magnétique terrestre en l'absence de vent solaire (en pointillés) et déformées par le vent solaire (en trait plein). Le soleil se trouve à gauche. Source : université de Stanford.}
+\end{figure}
+
+
+\begin{encart}[Tempêtes géomagnétiques]
+	Les tempêtes géomagnétiques sont une excellente illustration de la forme locale du théorème d'Ampère, et des équations de Maxwell-Thomson et Maxwell-Faraday.
+	
+	Le vent solaire est un flux de particules chargées dirigées vers la Terre. Ces particules subissent une force $\vv F_{\rm mag} = q \vv v \wedge \vv B$ et sont déviées par le champ magnétique terrestre (cf encart sur les aurores polaires dans le cours de magnétostatique). Cette déviation crée un courant électrique $\vv j = - \sum_i n_i q_i \vv v_i$. Par le théorème d'Ampère local vient influencer le champ magnétique en retour. A l'équilibre, les lignes du champ magnétique terrestre sont ainsi déformées par le vent solaire.
+	
+	Lorsqu'une éruption solaire se produit, le vent solaire augmente fortement et la déformation des lignes de champ est plus importante. On observe alors que les lignes de champ magnétique sont plus resserrées. Par conservation du flux (équation de Maxwell-Thomson), le champ magnétique $\vv B$ devient plus intense au voisinage de la Terre.
+	
+	Cette variation brutale du champ magnétique, par induction, vient générer un champ électrique $\vv E$ (équation de Maxwell-Faraday). Ce champ est susceptible de perturber les réseaux de télécommunications ou même les grilles électriques de pays entiers. Les régions polaires sont les plus vulnérables, mais parfois ces effets peuvent également toucher des latitudes plus basses : en 2003, 11 transformateurs ont été mis hors d'usage par une tempête solaire en Afrique du Sud. 
+\end{encart}
 
 \section{Conservation de la charge}
 
@@ -470,7 +536,7 @@ Les équations sont les suivantes :
 		\begin{dcases}
 			\div (\vv E) &= \dfrac{\rho}{\epsilon_0} \quad \mathrm{(Maxwell-Gauss)} \\
 			\rot (\vv E) &= -\frac{\partial \vv B}{\partial t} \quad \mathrm{(Maxwell-Faraday)} \\
-			\rot (\vv B) &= \mu_0 \left( \vv j + \epsilon_0 \dfrac{\partial \vv E}{\partial t} \right) \quad \mathrm{(Maxwell-Ampère)} \\
+			\rot (\vv B) &= \mu_0 \left( \vv j + \epsilon_0 \dfrac{\partial \vv E}{\partial t} \right) \quad \mathrm{(Maxwell-Amp\`{e}re)} \\
 			\div (\vv B) &= 0 \quad \mathrm{(Maxwell-Thomson)}
 		\end{dcases}
 	\end{equation}
@@ -505,7 +571,7 @@ Considérons un élément de volume $\dd \tau$. Nous souhaitons établir l'équi
 \end{equation}
 La force qui s'applique au volume correspond, par ailleurs, à la somme des forces qui s'appliquent su chacun des porteurs, sachant que le nombre total de porteurs de l'espèce $i$ dans le volume $\dd \tau$ est donné par $n_i \dd \tau$. Ainsi :
 \begin{align}
-	\dd \vv F &= \sum_i n_i \dd \tau q_i (\vv E + \vv v_i \wedge \vv B )
+	\dd \vv F &= \sum_i n_i \dd \tau q_i (\vv E + \vv v_i \wedge \vv B ) \\
 	&= \left( \sum_i q_i n_i \right) \vv E \dd \tau  + \left( \sum_i q_i n_i \vv v_i \right) \wedge \vv B \dd \tau \\
 	&= (\rho \vv E + \vv j \wedge \vv B) \dd \tau
 \end{align}
@@ -560,7 +626,7 @@ Nous voyons apparaître la divergence d'un vecteur, ce qui est classique dans le
 	\begin{equation}
 		\vv \Pi = \frac{\vv E \wedge \vv B}{\mu_0}
 	\end{equation}
-	Ce vecteur correspond à la densité volumique de flux dénergie électromagnétique. Il s'exprime en W$\cdot$m$^-2$. $\vv \Pi$ est analogue au vecteur densité de flux thermique (il correspond à un trasnfert d'énergie par rayonnement électromagnétique).
+	Ce vecteur correspond à la densité volumique de flux dénergie électromagnétique. Il s'exprime en W$\cdot$m$^{-2}$. $\vv \Pi$ est analogue au vecteur densité de flux thermique (il correspond à un trasnfert d'énergie par rayonnement électromagnétique).
 \end{definition}
 et nous identifions alors l'énergie électromagnétique volumique :
 \begin{proposition}
@@ -576,7 +642,7 @@ On obtient alors l'équation locale de conservation de l'énergie :
 	\begin{equation}
 		\frac{\partial u_{\rm em}}{\partial t} + \div(\vv \Pi) + \mathcal{P}_v = 0
 	\end{equation}
-	où $e$ est la densité volumique d'énergie électromagnétique, $\vv \Pi$ le vecteur de Poynting, et $\mathcal{P}_v$ la puissance volumique cédée aux porteurs de charge.
+	où $u_{\rm em}$ est la densité volumique d'énergie électromagnétique, $\vv \Pi$ le vecteur de Poynting, et $\mathcal{P}_v$ la puissance volumique cédée aux porteurs de charge.
 \end{theorem}
 
 \begin{capex}
@@ -586,6 +652,37 @@ On obtient alors l'équation locale de conservation de l'énergie :
 \subsection{Energie électrique}
 
 Pour mieux comprendre à quoi correspond la densité volumique d'énergie électromagnétique, nous pouvons nous intéresser au condensateur parfait, que nous avons étudié dans le cours d'électrostatique.
+
+\begin{figure}[htbp]
+	\centering
+	
+	\begin{tikzpicture}
+		
+		\draw[->,thick] (0,-0.5) -- (0,2.5) node[anchor=south]{$z$};
+		
+		\draw[ultra thick] (1,1) -- (7,1) node[anchor=west]{$-\sigma$};
+		\draw[ultra thick] (1,2) -- (7,2) node[anchor=west]{$+\sigma$};
+		\draw[dotted] (0,1) -- (1,1);
+		\draw[dotted] (0,2) -- (1,2);
+		
+		\draw[black] (0.2,1) -- (-0.2,1) node[anchor=east]{$-e/2$};
+		\draw[black] (0.2,2) -- (-0.2,2) node[anchor=east]{$e/2$};
+		
+		
+	\end{tikzpicture} \hspace{1cm} \begin{tikzpicture}
+		\draw[thick] (0,1) -- (1.5,1) node[anchor=west]{$-q$};
+		\draw[thick] (0,1.5) -- (1.5,1.5) node[anchor=west]{$+q$};
+		\draw[thick] (0.75,0) -- (0.75,0.5);
+		\draw[thick,->] (0.75,1) -- (0.75,0.5) node[anchor=west]{$i$};
+		\draw[thick] (0.75,1.5) -- (0.75,2);
+		\draw[thick,->] (0.75,2.5) -- (0.75,2) node[anchor=west]{$i$};
+		\draw[thick,->] (-0.5,0.75) -- (-0.5,1.75) node[midway,anchor=east]{$u$};
+		\filldraw[black] (0,-1) circle (0pt);
+	\end{tikzpicture}
+	
+	\caption{Modèle du condensateur plan. A gauche : modèle électrostatique. A droite : modèle simplifié utilisé en électronique.}
+	\label{fig:condensateur}
+\end{figure}
 
 Considérons un condensateur parfait constitué de deux armatures de surface $S$ et séparées d'une épaisseur $e \ll S$. On note $\pm Q = \pm \sigma S$ la charge portée par chacune des armatures, où $\sigma$ est la densité surfacique de charges. Nous avons vu dans le cours d'électrostatique que dans ce condensateur règne un champ électrique :
 \begin{equation}
@@ -609,6 +706,11 @@ et en remplaçant, nous retrouvons la formule d'électrostatique que nous avions
 \end{equation}
 
 \subsection{Energie magnétique}
+
+\begin{figure}[htbp]
+	\centering \includegraphics[width=0.85\linewidth]{solenoide.png}
+	\caption{Le solénoïde infini}
+\end{figure}
 
 \begin{capex}
 	Mener un raisonnement similaire pour retrouver l'expression de l'énergie stockée dans une bobine, dans le cadre du modèle du solénoïde infini.

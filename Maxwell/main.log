@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.9.16)  29 DEC 2025 21:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.9.16)  30 DEC 2025 10:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1948,7 +1948,7 @@ No file main.bbl.
 Package biblatex Info: Reference section=0 on input line 132.
 Package biblatex Info: Reference segment=0 on input line 132.
 Package hyperref Info: Link coloring OFF on input line 132.
-Chapitre 17.
+Chapitre 16.
 
 LaTeX Warning: File `filmB.jpg' not found on input line 156.
 
@@ -2103,19 +2103,21 @@ Package mdframed Info: mdframed detected package amsthm
 (mdframed)              on input line 250.
 
 [3 <./potentiels_electrostatiques_2D.png>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
+Package mdframed Info: Box was splittet wrong
+ starting loop to iterate the splitting point
+(mdframed)              on input line 287.
  [4 <./harmoniques_spheriques.png>]
 <calcul_circulation.png, id=70, 440.64626pt x 401.5pt>
 File: calcul_circulation.png Graphic file (type png)
 <use calcul_circulation.png>
 Package pdftex.def Info: calcul_circulation.png  used on input line 296.
-(pdftex.def)             Requested size: 213.39568pt x 194.43932pt.
+(pdftex.def)             Requested size: 149.37958pt x 136.10997pt.
 Package mdframed Info: mdframed works in twoside mode on input line 307.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 307.
- [5 <./calcul_circulation.png>]
+
+[5 <./calcul_circulation.png>]
 Package mdframed Info: mdframed works in twoside mode on input line 324.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
@@ -2276,10 +2278,10 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 57837 strings out of 476080
- 1283597 string characters out of 5792744
- 2342794 words of memory out of 5000000
- 78427 multiletter control sequences out of 15000+600000
+ 57838 strings out of 476080
+ 1283617 string characters out of 5792744
+ 2342817 words of memory out of 5000000
+ 78428 multiletter control sequences out of 15000+600000
  635540 words of font info for 311 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
  102i,25n,107p,1173b,1786s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2298,7 +2300,7 @@ texlive/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 urw/times/utmri8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/esvect/
 vect10.pfb>
-Output written on main.pdf (15 pages, 616880 bytes).
+Output written on main.pdf (15 pages, 617154 bytes).
 PDF statistics:
  401 PDF objects out of 1000 (max. 8388607)
  334 compressed objects within 4 object streams

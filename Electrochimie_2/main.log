@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.9.16)  23 DEC 2025 08:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.9.16)  30 DEC 2025 11:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2125,127 +2125,140 @@ Package mdframed Info: mdframed works in twoside mode on input line 307.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 307.
-
-Underfull \vbox (badness 3291) has occurred while \output is active []
-
+Package mdframed Info: mdframed works in twoside mode on input line 311.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 311.
+Package mdframed Info: Not enough space on this page on input line 313.
  [6 <./palier_diffusion.png>]
-Package mdframed Info: mdframed works in twoside mode on input line 317.
+Package mdframed Info: Not enough space on this page on input line 313.
+Package mdframed Info: mdframed works in twoside mode on input line 315.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 317.
-Package mdframed Info: mdframed works in twoside mode on input line 322.
+(mdframed)              on input line 315.
+<domaine_inertie_electrochimique.png, id=85, 700.6175pt x 313.17pt>
+File: domaine_inertie_electrochimique.png Graphic file (type png)
+<use domaine_inertie_electrochimique.png>
+Package pdftex.def Info: domaine_inertie_electrochimique.png  used on input lin
+e 322.
+(pdftex.def)             Requested size: 298.75264pt x 133.54228pt.
+Package mdframed Info: mdframed works in twoside mode on input line 332.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 322.
-Package mdframed Info: mdframed works in twoside mode on input line 326.
+(mdframed)              on input line 332.
+Package mdframed Info: mdframed works in twoside mode on input line 337.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 326.
+(mdframed)              on input line 337.
+Package mdframed Info: mdframed works in twoside mode on input line 341.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 341.
+
+[7 <./domaine_inertie_electrochimique.png>]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 335.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 350.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 335.
-<corrosion_zinc.png, id=85, 485.815pt x 538.01pt>
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 350.
+<corrosion_zinc.png, id=102, 485.815pt x 538.01pt>
 File: corrosion_zinc.png Graphic file (type png)
 <use corrosion_zinc.png>
-Package pdftex.def Info: corrosion_zinc.png  used on input line 340.
-(pdftex.def)             Requested size: 234.73654pt x 259.9494pt.
-<passivation.png, id=86, 1300.86pt x 364.36125pt>
+Package pdftex.def Info: corrosion_zinc.png  used on input line 355.
+(pdftex.def)             Requested size: 170.71393pt x 189.05336pt.
+<passivation.png, id=103, 1300.86pt x 364.36125pt>
 File: passivation.png Graphic file (type png)
 <use passivation.png>
-Package pdftex.def Info: passivation.png  used on input line 353.
-(pdftex.def)             Requested size: 405.45047pt x 113.56238pt.
-Package mdframed Info: mdframed works in twoside mode on input line 357.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 357.
-<corrosion_differentielle_exp.png, id=87, 755.82375pt x 570.13pt>
-File: corrosion_differentielle_exp.png Graphic file (type png)
-<use corrosion_differentielle_exp.png>
-Package pdftex.def Info: corrosion_differentielle_exp.png  used on input line 3
-68.
-(pdftex.def)             Requested size: 405.45047pt x 305.83864pt.
+Package pdftex.def Info: passivation.png  used on input line 368.
+(pdftex.def)             Requested size: 426.79135pt x 119.53905pt.
 Package mdframed Info: mdframed works in twoside mode on input line 372.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 372.
- [7] [8 <./corrosion_zinc.png> <./passivation.png>] [9 <./corrosion_differentie
-lle_exp.png>]
-Package mdframed Info: mdframed works in twoside mode on input line 382.
+ [8 <./corrosion_zinc.png> <./passivation.png>]
+<corrosion_differentielle_exp.png, id=113, 755.82375pt x 570.13pt>
+File: corrosion_differentielle_exp.png Graphic file (type png)
+<use corrosion_differentielle_exp.png>
+Package pdftex.def Info: corrosion_differentielle_exp.png  used on input line 3
+83.
+(pdftex.def)             Requested size: 405.45047pt x 305.83864pt.
+Package mdframed Info: mdframed works in twoside mode on input line 387.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 382.
-<anode_sacrificielle.png, id=119, 1361.085pt x 412.54124pt>
+(mdframed)              on input line 387.
+Package mdframed Info: mdframed works in twoside mode on input line 397.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 397.
+ [9 <./corrosion_differentielle_exp.png>]
+Package mdframed Info: Not enough space on this page on input line 399.
+<anode_sacrificielle.png, id=126, 1361.085pt x 412.54124pt>
 File: anode_sacrificielle.png Graphic file (type png)
 <use anode_sacrificielle.png>
-Package pdftex.def Info: anode_sacrificielle.png  used on input line 387.
-(pdftex.def)             Requested size: 405.45047pt x 122.88834pt.
-<revetement_Zn.png, id=120, 828.09375pt x 238.8925pt>
+Package pdftex.def Info: anode_sacrificielle.png  used on input line 402.
+(pdftex.def)             Requested size: 426.79135pt x 129.35945pt.
+<revetement_Zn.png, id=127, 828.09375pt x 238.8925pt>
 File: revetement_Zn.png Graphic file (type png)
 <use revetement_Zn.png>
-Package pdftex.def Info: revetement_Zn.png  used on input line 402.
+Package pdftex.def Info: revetement_Zn.png  used on input line 417.
 (pdftex.def)             Requested size: 209.1301pt x 60.33171pt.
-<revetement_Cr.png, id=121, 828.09375pt x 238.8925pt>
+<revetement_Cr.png, id=128, 828.09375pt x 238.8925pt>
 File: revetement_Cr.png Graphic file (type png)
 <use revetement_Cr.png>
-Package pdftex.def Info: revetement_Cr.png  used on input line 402.
+Package pdftex.def Info: revetement_Cr.png  used on input line 417.
 (pdftex.def)             Requested size: 209.1301pt x 60.33171pt.
-Package mdframed Info: mdframed works in twoside mode on input line 412.
+ [10 <./anode_sacrificielle.png> <./revetement_Zn.png> <./revetement_Cr.png>]
+Package mdframed Info: mdframed works in twoside mode on input line 427.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 412.
- [10 <./anode_sacrificielle.png>]
-Package mdframed Info: Not enough space on this page on input line 414.
-<protection_canalisation.png, id=133, 1601.985pt x 554.07pt>
+(mdframed)              on input line 427.
+<protection_canalisation.png, id=141, 1601.985pt x 554.07pt>
 File: protection_canalisation.png Graphic file (type png)
 <use protection_canalisation.png>
-Package pdftex.def Info: protection_canalisation.png  used on input line 417.
+Package pdftex.def Info: protection_canalisation.png  used on input line 432.
 (pdftex.def)             Requested size: 426.79135pt x 147.60565pt.
-Package mdframed Info: mdframed works in twoside mode on input line 430.
+Package mdframed Info: mdframed works in twoside mode on input line 445.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 430.
-Package mdframed Info: mdframed works in twoside mode on input line 435.
+(mdframed)              on input line 445.
+Package mdframed Info: mdframed works in twoside mode on input line 450.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 435.
-Package mdframed Info: mdframed works in twoside mode on input line 439.
+(mdframed)              on input line 450.
+Package mdframed Info: mdframed works in twoside mode on input line 454.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 439.
- [11 <./revetement_Zn.png> <./revetement_Cr.png> <./protection_canalisation.png
->]
-Package mdframed Info: Not enough space on this page on input line 441.
-<courbe_iE_pile.png, id=148, 1322.9425pt x 522.95375pt>
+(mdframed)              on input line 454.
+<courbe_iE_pile.png, id=142, 1322.9425pt x 522.95375pt>
 File: courbe_iE_pile.png Graphic file (type png)
 <use courbe_iE_pile.png>
-Package pdftex.def Info: courbe_iE_pile.png  used on input line 444.
+Package pdftex.def Info: courbe_iE_pile.png  used on input line 459.
 (pdftex.def)             Requested size: 426.79135pt x 168.70515pt.
-<courbe_iE_electrolyse.png, id=149, 1322.9425pt x 696.6025pt>
+ [11 <./protection_canalisation.png>]
+<courbe_iE_electrolyse.png, id=155, 1322.9425pt x 696.6025pt>
 File: courbe_iE_electrolyse.png Graphic file (type png)
 <use courbe_iE_electrolyse.png>
-Package pdftex.def Info: courbe_iE_electrolyse.png  used on input line 462.
+Package pdftex.def Info: courbe_iE_electrolyse.png  used on input line 477.
 (pdftex.def)             Requested size: 426.79135pt x 224.72433pt.
-Package mdframed Info: mdframed works in twoside mode on input line 466.
+Package mdframed Info: mdframed works in twoside mode on input line 481.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 466.
- [12 <./courbe_iE_pile.png>]
-Package mdframed Info: mdframed works in twoside mode on input line 482.
+(mdframed)              on input line 481.
+ [12 <./courbe_iE_pile.png> <./courbe_iE_electrolyse.png>]
+Package mdframed Info: Not enough space on this page on input line 483.
+Package mdframed Info: mdframed works in twoside mode on input line 497.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 482.
-<green_hydrogen.jpg, id=160, 1927.2pt x 722.7pt>
+(mdframed)              on input line 497.
+<green_hydrogen.jpg, id=166, 1927.2pt x 722.7pt>
 File: green_hydrogen.jpg Graphic file (type jpg)
 <use green_hydrogen.jpg>
-Package pdftex.def Info: green_hydrogen.jpg  used on input line 494.
+Package pdftex.def Info: green_hydrogen.jpg  used on input line 509.
 (pdftex.def)             Requested size: 426.79135pt x 160.0421pt.
-Package mdframed Info: mdframed works in twoside mode on input line 498.
+Package mdframed Info: mdframed works in twoside mode on input line 513.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 498.
- [13 <./courbe_iE_electrolyse.png>] [14 <./green_hydrogen.jpg>]
-(./main.aux)
+(mdframed)              on input line 513.
+ [13 <./green_hydrogen.jpg>] [14] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
@@ -2255,11 +2268,11 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 57852 strings out of 476080
- 1284660 string characters out of 5792744
- 2323323 words of memory out of 5000000
- 78497 multiletter control sequences out of 15000+600000
- 640596 words of font info for 332 fonts, out of 8000000 for 9000
+ 57864 strings out of 476080
+ 1285021 string characters out of 5792744
+ 2319343 words of memory out of 5000000
+ 78505 multiletter control sequences out of 15000+600000
+ 640638 words of font info for 333 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
  102i,13n,107p,1173b,1786s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/fontawesome5/FontAwesome5Fr
@@ -2276,10 +2289,10 @@ share/texlive/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/share/texlive/te
 xmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times
 /utmri8a.pfb>
-Output written on main.pdf (14 pages, 3069643 bytes).
+Output written on main.pdf (14 pages, 3131318 bytes).
 PDF statistics:
- 317 PDF objects out of 1000 (max. 8388607)
- 238 compressed objects within 3 object streams
- 81 named destinations out of 1000 (max. 500000)
- 75493 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 322 PDF objects out of 1000 (max. 8388607)
+ 241 compressed objects within 3 object streams
+ 84 named destinations out of 1000 (max. 500000)
+ 75498 words of extra memory for PDF output out of 89155 (max. 10000000)
 

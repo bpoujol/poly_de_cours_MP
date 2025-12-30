@@ -212,8 +212,13 @@ Il est également possible de réaliser le procédé inverse : il s'agit de l'é
 	La réaction opposée est appelée réaction de \textbf{médiamutation}.
 \end{remark}
 
+\begin{figure}[htbp]
+	\centering \includegraphics[width=0.8\linewidth]{electrolyse_eau.png}
+	\caption{Electrolyse de l'eau. Source : theory.labster.com.}
+\end{figure}
+
 \begin{capex}
-	A l'aide d'un bilan de quantité de matière, relier la durée $\Delta t$ de l'électrolyse au courant imposé pour réaliser l'électrolyse, noté $i$, et à la masse de dihydrogène théorique produite par électrolyse $m_{\ce{H2}, \rm th}$.
+	Ecrire les demi-équations électroniques se produisant à la cathode et à l'anode. \`{A} l'aide d'un bilan de quantité de matière, relier la durée $\Delta t$ de l'électrolyse au courant imposé pour réaliser l'électrolyse, noté $i$, et à la masse de dihydrogène théorique produite par électrolyse $m_{\ce{H2}, \rm th}$.
 \end{capex}
 
 \begin{definition}
@@ -231,19 +236,19 @@ Il est également possible de réaliser le procédé inverse : il s'agit de l'é
 
 Il est possible de faire fonctionner un système à la fois en pile et en électrolyseur : c'est ce que l'on appelle un accumulateur. On peut alors brancher les deux électrodes sur un circuit consommateur d'énergie (on décharge alors l'accumulateur), ou bien on les branche sur un générateur et on récupère alors de l'énergie en rechargeant l'accumulateur.
 
+\begin{figure}[t]
+	\centering \includegraphics[width=0.8\linewidth]{li_ion.jpg}
+	\caption{Schéma simplifié d'une batterie lithium-ion. Source : C.Schultz (2016). \textit{Anti-aging for batteries? LC-MS method development for battery electrolytes.} Shimadzu News.}
+\end{figure}
+
 \begin{encart}[Les batteries lithium-ion]
-	La plupart des batteries présentes aujourd'hui dans les appareils électroniques sont des batteries lithium-ion. Elles sont constituées de deux électrodes en graphite $\ce{LiC6}$ et en oxyde de coubalt $\ce{LiCoO2}$, qui sont enrichis en lithium. Les électrodes sont séparées par un électrolyte qui conduit les ions lithium $\ce{Li^+}$ et les deux demi-équations se produisant lors de la phase de recharge de la batterie sont :
+	La plupart des batteries présentes aujourd'hui dans les appareils électroniques sont des batteries lithium-ion. Elles sont constituées de deux électrodes en graphite $\ce{LiC6}$ et en oxyde de cobalt $\ce{LiCoO2}$, qui sont enrichis en lithium. Les électrodes sont séparées par un électrolyte qui conduit les ions lithium $\ce{Li^+}$ et les deux demi-équations se produisant lors de la phase de recharge de la batterie sont :
 	\begin{align}
 		&\ce{LiCoO2 = CoO2 + Li^+ + e^-} \\
 		&\ce{C6 + Li^+ + e^- = LiC6}
 	\end{align}
 	Lors de la décharge, les réactions inverses se font spontanément et le courant électrique qui en résulte peut servir à alimenter un appareil électrique.
 \end{encart}
-
-\begin{figure}[htbp]
-	\centering \includegraphics[width=\linewidth]{li_ion.jpg}
-	\caption{Schéma simplifié d'une batterie lithium-ion. Source : C.Schultz (2016). \textit{Anti-aging for batteries? LC-MS method development for battery electrolytes.} Shimadzu News.}
-\end{figure}
 
 \subsection{Bilan énergétique}
 
@@ -340,12 +345,10 @@ Pour établir la composition du système chimique à l'équilibre, on utilise la
 \subsection{Diagramme de prédominance}
 
 Nous pouvons remarquer une analogie formelle entre la formule de Nernst et l'équation qui relie le pH d'une solution au rapport entre les concentrations d'un acide et de sa base conjuguée :
-\begin{equation}
-	\mathrm{pH} = pK_a + \log \frac{[\mathrm{base}]}{[{\rm acide}]}
-\end{equation}
-\begin{equation}
-	E = E^\circ(Ox/Red) + \frac{0.06}{n} \log \frac{ a(Ox)^\alpha}{a(Red)^\beta}
-\end{equation}
+\begin{align}
+	\mathrm{pH} &= pK_a + \log \frac{[\mathrm{base}]}{[{\rm acide}]} \\
+	E &= E^\circ(Ox/Red) + \frac{0.06}{n} \log \frac{ a(Ox)^\alpha}{a(Red)^\beta}
+\end{align}
 Ces deux relations nous permettent de définir des diagrammes de prédominance ou déexistence de différentes espèces en fonction du potentiel ou du pH : les acides sont favorisés pour les pH faibles, les bases pour les pH élevés. De même, les oxydants sont favorisés aux potentiels élevés, et les réducteurs aux potentiels faibles.
 
 \begin{capex}

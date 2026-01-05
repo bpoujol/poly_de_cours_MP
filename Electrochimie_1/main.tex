@@ -111,7 +111,7 @@ mathfontname=mathsf]{mhchem}
 \contourlength{1.2pt}
 
 \colorlet{myred}{red!65!black}
-\definecolor{myred}{RGB}{127,0,255}
+\definecolor{myred}{RGB}{153,153,0}
 \tikzstyle{ground}=[preaction={fill,top color=black!10,bottom color=black!5,shading angle=20},
                     fill,pattern=north east lines,draw=none,minimum width=0.3,minimum height=0.6]
 \tikzstyle{mass}=[line width=0.6,myred,fill=myred!40,rounded corners=1,
@@ -135,7 +135,7 @@ mathfontname=mathsf]{mhchem}
 
 %\usechapterimagefalse % If you don't want to include a chapter image, use this to toggle images off - it can be enabled later with \usechapterimagetrue
 
-\chapterimage{filmB.jpg} % Table of contents heading image
+\chapterimage{cristaux_electrodes.png} % Table of contents heading image
 
 %\pagestyle{empty} % No headers
 
@@ -222,7 +222,7 @@ Il est également possible de réaliser le procédé inverse : il s'agit de l'é
 \end{capex}
 
 \begin{definition}
-	On appelle rendement faradique d'une électrolyse le rapport entre la masse théoriquement produite si tous les électrons servaient à former le produit, et la masse de effectivement produite expérimentalement :
+	On appelle rendement faradique d'une électrolyse le rapport entre la masse théoriquement produite si tous les électrons servaient à former le produit, et la masse effectivement produite expérimentalement :
 	\begin{equation}
 		\eta_F = \frac{m_{\rm produit,exp}}{m_{\rm produit,th}} 
 	\end{equation}
@@ -269,9 +269,9 @@ Considérons maintenant une transformation quelconque infinitésimale, nous savo
 Par ailleurs, nous savons également que nous pouvons calculer la variation d'enthalpie libre sur un chemin réversible :
 \begin{align}
 	\dd G &= \dd (U + PV - TS) \\
-	&= \dd U + P \dd V - T \dd S \quad \mathrm{(monotherme et monobare)} \\
+	&= \dd U + P \dd V - T \dd S \quad \mathrm{(monotherme\,\,et\,\,monobare)} \\
 	&= \delta W_{\rm pression} + \delta W_{\rm elec} + \delta Q_{\rm rev} + P \dd V - T \dd S \\
-	&= \delta W_{\elec} \\
+	&= \delta W_{\rm elec} \\
 	&= -E \dd q
 \end{align}
 car $\delta Q_{\rm rev} = T \dd S$ et $\delta W_{\rm pression} = - P \dd V$.
@@ -281,7 +281,7 @@ car $\delta Q_{\rm rev} = T \dd S$ et $\delta W_{\rm pression} = - P \dd V$.
 \end{capex}
 
 On définit ainsi le Faraday, charge d'une mole d'électrons en valeur absolue :
-\begin{definition}{Faraday}
+\begin{definition}[Faraday]
 	Le Faraday est l'opposé de la charge d'une mole d'électrons :
 	\begin{equation}
 		\mathcal{F} = \mathcal{N}_A e = 96\,500\,\mathrm{C}\cdot\mathrm{mol}^{-1}
@@ -294,17 +294,18 @@ Nous pouvons alors réinjecter dans cette relation l'expression de l'enthalpie l
 \end{equation}
 En combinant avec la loi précédente, nous obtenons alors :
 \begin{equation}
-	E = E_{+} - E_{-} = \frac{1}{n \mathcal{F}} \left( \mu_i^\circ(T) + R T \ln(a_i) \right)
+	E = E_{+} - E_{-} = \frac{1}{n \mathcal{F}} \sum_i \nu_i \left( \mu_i^\circ(T) + R T \ln(a_i) \right) = \frac{1}{n \mathcal{F}} \left( \sum_i \nu_i \mu_i^\circ(T) + \ln \left( \prod_i a_i^{\nu_i} \right) \right)
 \end{equation}
 Nous pouvons remarquer que, a priori, le potentiel de la cathode ne dépend que des propriétés des constituants de la cathode, et pareillement pour l'anode. Ainsi nous pouvons identifier les termes correspondant à $E_{+}$ et $E_{-}$ dans l'équation et nous obtenons :
 \begin{align}
 	E_{\rm cathode} &= E^\circ(\ce{Cu^{2+}/Cu}) + \frac{R T}{n \mathcal{F}} \ln \left( \frac{a(\ce{Cu^{2+}})}{a(\ce{Cu})}  \right)\\
 	E_{\rm anode} &= E^\circ(\ce{Zn^{2+}/Zn}) + \frac{R T}{n \mathcal{F}} \ln \left( \frac{a(\ce{Zn^{2+}})}{a(\ce{Zn})}  \right)
 \end{align}
+où les potentiels standard $E^\circ(\ce{Cu^{2+}/Cu})$ et $E^\circ(\ce{Zn^{2+}/Zn})$ sont des constantes.
 \begin{remark}
 	Il pourrait être tentant de définir $E^\circ(\ce{Cu^{2+}/Cu}) = \dfrac{\mu^\circ(\ce{Cu^{2+}})-\mu^\circ(\ce{Cu^{2+}})}{n \mathcal{F}}$, mais en réalité les potentiels de référence sont définis à une constante près puisque seule la différence de potentiel apparaît dans l'équation finale. On prend pour référence le potentiel standard du couple $\ce{H+/H2}$ :
 	\begin{equation}
-		E^\circ(H+/H2) = 0\,\mathrm{V}
+		E^\circ(\ce{H+(aq)/H2(g)}) = 0\,\mathrm{V}
 	\end{equation}
 \end{remark}
 
@@ -323,7 +324,7 @@ Nous avons ici démontré (pour un cas particulier) la loi de Nernst que vous av
 \subsection{Lien entre potentiel et constante de réaction}
 
 \begin{capex}
-	A partir de la formule de Nernst, retrouver l'expression entre l'enthalpie libre de réaction et les potentiels standard des couples dans le cas de la pile Daniell. En déduire une relation entre l'enthalpie libre standard de réaction et les potentiels standard. Exprimer la constante de réaction en fonction des potneitles standard des couples mis en jeu.
+	A partir de la formule de Nernst, retrouver l'expression entre l'enthalpie libre de réaction et les potentiels standard des couples dans le cas de la pile Daniell. En déduire une relation entre l'enthalpie libre standard de réaction et les potentiels standard. Exprimer la constante de réaction en fonction des potentiels standard des couples mis en jeu.
 \end{capex}
 
 On en déduit que, de manière plus générale, pour une réaction chimique de la forme : $Ox_1 + Red_2 = Ox_2 + Red_1$ correspondant à un échange de $n$ électrons, la constante de réaction s'écrit :
@@ -349,7 +350,7 @@ Nous pouvons remarquer une analogie formelle entre la formule de Nernst et l'éq
 	\mathrm{pH} &= pK_a + \log \frac{[\mathrm{base}]}{[{\rm acide}]} \\
 	E &= E^\circ(Ox/Red) + \frac{0.06}{n} \log \frac{ a(Ox)^\alpha}{a(Red)^\beta}
 \end{align}
-Ces deux relations nous permettent de définir des diagrammes de prédominance ou déexistence de différentes espèces en fonction du potentiel ou du pH : les acides sont favorisés pour les pH faibles, les bases pour les pH élevés. De même, les oxydants sont favorisés aux potentiels élevés, et les réducteurs aux potentiels faibles.
+Ces deux relations nous permettent de définir des diagrammes de prédominance ou d'existence de différentes espèces en fonction du potentiel ou du pH : les acides sont favorisés pour les pH faibles, les bases pour les pH élevés. De même, les oxydants sont favorisés aux potentiels élevés, et les réducteurs aux potentiels faibles.
 
 \begin{capex}
 	On considère le couple $\ce{Fe^{3+}}/\ce{Fe^{2+}}$, et on suppose la concentration totale en fer égale à $c_0$. Tracer la concentration en chacune des espèces en fonction du potentiel $E$ de la solution, et en déduire le diagramme de prédominance des espèces.
@@ -375,8 +376,8 @@ Il est alors possible d'établir les équations des frontières entre les diffé
 Pour cela, on a souvent besoin de définir une concentration minimale au-delà de laquelle on considérera qu'une espèce est prédominante, on l'appelle la concentration de tracé du diagramme potentiel-pH. Elle doit être choisie proche de l'ordre de grandeur de la concentration totale de l'élément chimique étudié dans la solution (sa valeur exacte n'a en général que peu d'influence sur la position des frontières du diagramme).
 
 \begin{capex}
-	On donne les $pK_a$ et potentiels standard des couples intervenant dans le diagramme du fer :
-	$E^\circ(\ce{Fe^{3+}/Fe^{2+}}) = 0.75$\,V ; $E^\circ(\ce{Fe^{2+}/Fe(s)}) = -0.4$\,V ; $pK_s(\ce{Fe(OH)2}) = -15.1$ ; $pK_s(\ce{Fe(OH)3}) = -38.5$
+	On donne les $pK_s$ et potentiels standard des couples intervenant dans le diagramme du fer :
+	$E^\circ(\ce{Fe^{3+}/Fe^{2+}}) = 0.75$\,V ; $E^\circ(\ce{Fe^{2+}/Fe(s)}) = -0.4$\,V ; $pK_s(\ce{Fe(OH)2}) = -15.1$ ; $pK_s(\ce{Fe(OH)3}) = -38.5$.
 	Déterminer l'équation des frontières du diagramme potentiel-pH du fer et tracer son allure.
 \end{capex}
 
@@ -392,8 +393,14 @@ Le diagramme potentiel-pH de l'eau est à connaître par coeur. Il fait interven
 	&\ce{2 H^+(aq) + 2 e^- = H2(g)} \quad \mathrm{avec} \quad E^\circ(\ce{H^+ / H2}) = 0\,{\rm V} \\
 	&\ce{O2(g) +4 H^+(aq) + 4 e^- = 2 H2O(l)} \quad \mathrm{avec} \quad E^\circ(\ce{O2 / H2O}) = 1.23\,{\rm V} 
 \end{align}
-
-Ce diagramme est toujours à prendre en compte en solution aqueuse, car l'eau y est toujours présente. Le dioxygène est une espèce présente car elle se dissout naturellement dans l'eau, à moins que le réacteur ne soit protégé de l'atmosphère.
+Les courbes associées ont les équations suivantes :
+\begin{equation}
+	\begin{dcases}
+		E(\ce{H^+ / H2}) - -0.06 pH \\
+		E(\ce{O2 / H2O}) = 1.23 - 0.06pH
+	\end{dcases}
+\end{equation}
+Ce diagramme est toujours à prendre en compte en solution aqueuse, car l'eau y est toujours présente. Le dioxygène est une espèce présente car elle se dissout naturellement dans l'eau, à moins que la solution ne soit protégée de l'atmosphère.
 
 \subsection{Evolution spontanée d'un mélange}
 
@@ -404,7 +411,7 @@ Nous avons vu qu'une réaction est généralement quantitative lorsque le potent
 
 \section{Corrosion}
 
-Les diagrammes potentiel-pH et le concept de pile nous permettent d'interpréter les phénomènes de corrosion, qui posent problème pour un certain npmbre de dispositifs. 
+Les diagrammes potentiel-pH et le concept de pile nous permettent d'interpréter les phénomènes de corrosion, qui posent problème pour un certain nombre de dispositifs. 
 
 \subsection{Définition}
 
@@ -424,7 +431,7 @@ Les diagrammes potentiel-pH et le concept de pile nous permettent d'interpréter
 
 \subsection{Phénomène de passivation}
 
-On donne le diagramme potentiel-pH de l'aluminium. Lorsqu'il est en contact avec de l'eau, son oxydation mène à la formation de l'oxyde $\ce{Al2O3(s)}$. Ce composé est solide et suffisamment résistant pour protéger l'aluminium de la solution aqueuse. AInsi, une fois qu'une fine couche d'oxyde d'aluminium s'est formée, le métal ne subit plus aucune corrosion :
+On donne le diagramme potentiel-pH de l'aluminium. Lorsqu'il est en contact avec de l'eau, son oxydation mène à la formation de l'oxyde $\ce{Al2O3(s)}$. Ce composé est solide et suffisamment résistant pour protéger l'aluminium de la solution aqueuse. Ainsi, une fois qu'une fine couche d'oxyde d'aluminium s'est formée, le métal ne subit plus aucune corrosion :
 \begin{definition}
 	On parle de passivation lorsqu'un métal subit une oxydation menant à la formation d'une couche superficielle de solide qui vient protéger le métal de la solution. Le métal est alors protégé de la corrosion à long terme.
 \end{definition}

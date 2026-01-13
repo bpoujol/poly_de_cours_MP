@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.9.16)  3 JAN 2026 11:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.9.16)  13 JAN 2026 12:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1046,18 +1046,16 @@ Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 Package: wrapfig 2003/01/31  v 3.6
 )
 
-! LaTeX Error: Command \div already defined.
-               Or name \end... illegal, see p.192 of the manual.
+! LaTeX Error: Command \grad undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.87 \newcommand{\div}{\mathrm{div}}
-                                    
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
+l.89 \renewcommand{\grad}
+                         {\vv{\mathrm{grad}}}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
 
 (/usr/share/texlive/texmf-dist/tex/latex/esvect/esvect.sty
 Package: esvect 
@@ -2119,70 +2117,219 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 285.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 285.
-Package mdframed Info: mdframed works in twoside mode on input line 305.
+<onde_plane.png, id=71, 1039.885pt x 883.3pt>
+File: onde_plane.png Graphic file (type png)
+<use onde_plane.png>
+Package pdftex.def Info: onde_plane.png  used on input line 293.
+(pdftex.def)             Requested size: 426.79135pt x 362.51926pt.
+ [4 <./onde_plane.png>]
+Package mdframed Info: mdframed works in twoside mode on input line 310.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 305.
- [4]
-Package mdframed Info: mdframed works in twoside mode on input line 339.
+(mdframed)              on input line 310.
+Package mdframed Info: mdframed works in twoside mode on input line 344.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 339.
-Package mdframed Info: mdframed works in twoside mode on input line 349.
+(mdframed)              on input line 344.
+ [5]
+Package mdframed Info: mdframed works in twoside mode on input line 354.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 349.
-<ondes_EM_domaines.jpg, id=87, 1670.24pt x 1082.0425pt>
+(mdframed)              on input line 354.
+<ondes_EM_domaines.jpg, id=99, 1670.24pt x 1082.0425pt>
 File: ondes_EM_domaines.jpg Graphic file (type jpg)
 <use ondes_EM_domaines.jpg>
-Package pdftex.def Info: ondes_EM_domaines.jpg  used on input line 367.
+Package pdftex.def Info: ondes_EM_domaines.jpg  used on input line 372.
 (pdftex.def)             Requested size: 658.78186pt x 426.79135pt.
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 3
-74.
- (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd
+79.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-) [5] [6 <./ondes_EM_domaines.jpg>]
-Package mdframed Info: mdframed works in twoside mode on input line 384.
+)
+Package mdframed Info: mdframed works in twoside mode on input line 389.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 384.
-Package mdframed Info: mdframed works in twoside mode on input line 403.
+(mdframed)              on input line 389.
+Package mdframed Info: mdframed works in twoside mode on input line 408.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 403.
-
-
-LaTeX Warning: Reference `mdf@pagelabel-12' on page 7 undefined on input line 4
-05.
-
-Package mdframed Info: mdframed works in twoside mode on input line 419.
+(mdframed)              on input line 408.
+ [6] [7 <./ondes_EM_domaines.jpg>]
+Package mdframed Info: Not enough space on this page on input line 410.
+Package mdframed Info: mdframed works in twoside mode on input line 424.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 419.
-
-LaTeX Warning: Reference `mdf@pagelabel-13' on page 7 undefined on input line 4
-21.
-
-Package mdframed Info: mdframed works in twoside mode on input line 429.
+(mdframed)              on input line 424.
+Package mdframed Info: mdframed works in twoside mode on input line 434.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 429.
-[7]
-Package mdframed Info: Not enough space on this page on input line 435.
-
-
-LaTeX Warning: Reference `mdf@pagelabel-14' on page 8 undefined on input line 4
-35.
-
-Package mdframed Info: mdframed works in twoside mode on input line 449.
+(mdframed)              on input line 434.
+Package mdframed Info: mdframed works in twoside mode on input line 454.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 449.
+(mdframed)              on input line 454.
 
-LaTeX Warning: Reference `mdf@pagelabel-15' on page 8 undefined on input line 4
-55.
 
-[8] (./main.aux)
+Package mdframed Warning: You got a bad break
+(mdframed)                because the last box will be empty
+(mdframed)                you have to change it manually
+(mdframed)                by changing the text, the space
+(mdframed)                or something else on input line 460.
+
+[8]
+Package mdframed Info: mdframed works in twoside mode on input line 472.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 472.
+Package mdframed Info: mdframed works in twoside mode on input line 481.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 481.
+<polarisation_rectiligne.png, id=141, 1272.755pt x 345.29pt>
+File: polarisation_rectiligne.png Graphic file (type png)
+<use polarisation_rectiligne.png>
+Package pdftex.def Info: polarisation_rectiligne.png  used on input line 486.
+(pdftex.def)             Requested size: 426.79135pt x 115.78482pt.
+Package mdframed Info: mdframed works in twoside mode on input line 493.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 493.
+ [9 <./polarisation_rectiligne.png>]
+Package mdframed Info: mdframed works in twoside mode on input line 497.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 497.
+<polarisation_circulaire.png, id=155, 876.876pt x 720.291pt>
+File: polarisation_circulaire.png Graphic file (type png)
+<use polarisation_circulaire.png>
+Package pdftex.def Info: polarisation_circulaire.png  used on input line 503.
+(pdftex.def)             Requested size: 298.75264pt x 245.41226pt.
+<polariseur.png, id=156, 1027.84pt x 526.96875pt>
+File: polariseur.png Graphic file (type png)
+<use polariseur.png>
+Package pdftex.def Info: polariseur.png  used on input line 522.
+(pdftex.def)             Requested size: 341.43437pt x 175.05006pt.
+Package mdframed Info: mdframed works in twoside mode on input line 526.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 526.
+ [10 <./polarisation_circulaire.png>]
+Package mdframed Info: mdframed works in twoside mode on input line 537.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 537.
+<plasma.jpg, id=167, 324.89522pt x 140.70265pt>
+File: plasma.jpg Graphic file (type jpg)
+<use plasma.jpg>
+Package pdftex.def Info: plasma.jpg  used on input line 544.
+(pdftex.def)             Requested size: 213.39568pt x 92.4153pt.
+
+! Undefined control sequence.
+l.544 ...5\linewidth]{plasma.jpg} \includegraphice
+                                                  [width=0.49\linewidth]{pla...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   ]
+l.544 ...g} \includegraphice[width=0.49\linewidth]
+                                                  {plasmas_in_nature.jpg}
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   ]
+l.544 ...g} \includegraphice[width=0.49\linewidth]
+                                                  {plasmas_in_nature.jpg}
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.544 ...degraphice[width=0.49\linewidth]{plasmas_
+                                                  in_nature.jpg}
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+l.544 ...th=0.49\linewidth]{plasmas_in_nature.jpg}
+                                                  
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.545 ...} et Wigner Research Center for Physics.}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.546 \end{figure}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+[11 <./polariseur.png (PNG copy)>]
+Package mdframed Info: mdframed works in twoside mode on input line 564.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 564.
+Package mdframed Info: mdframed works in twoside mode on input line 572.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 572.
+<relation_dispersion_plasma.png, id=176, 1023.825pt x 666.49pt>
+File: relation_dispersion_plasma.png Graphic file (type png)
+<use relation_dispersion_plasma.png>
+Package pdftex.def Info: relation_dispersion_plasma.png  used on input line 593
+.
+(pdftex.def)             Requested size: 256.07741pt x 166.69327pt.
+ [12 <./plasma.jpg>] [13 <./relation_dispersion_plasma.png>]
+Package mdframed Info: mdframed works in twoside mode on input line 643.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 643.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-27' on page 14 undefined on input line 
+645.
+
+Package mdframed Info: mdframed works in twoside mode on input line 648.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 648.
+
+LaTeX Warning: Reference `mdf@pagelabel-28' on page 14 undefined on input line 
+655.
+
+<onde_evanescente.png, id=207, 934.49126pt x 572.1375pt>
+File: onde_evanescente.png Graphic file (type png)
+<use onde_evanescente.png>
+Package pdftex.def Info: onde_evanescente.png  used on input line 661.
+(pdftex.def)             Requested size: 256.07741pt x 156.78394pt.
+[14 <./onde_evanescente.png>] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
@@ -2199,13 +2346,13 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 57767 strings out of 476080
- 1282485 string characters out of 5792744
- 2344038 words of memory out of 5000000
- 78432 multiletter control sequences out of 15000+600000
- 643190 words of font info for 319 fonts, out of 8000000 for 9000
+ 57971 strings out of 476080
+ 1285583 string characters out of 5792744
+ 2340409 words of memory out of 5000000
+ 78505 multiletter control sequences out of 15000+600000
+ 656009 words of font info for 375 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
- 102i,24n,107p,1173b,1790s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,24n,107p,1173b,1788s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/fontawesome5/FontAwesome5Fr
 ee-Solid.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex
 10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
@@ -2221,10 +2368,10 @@ live/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/ur
 w/times/utmri8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/esvect/ve
 ct10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/esvect/vect8.pfb>
-Output written on main.pdf (8 pages, 809351 bytes).
+Output written on main.pdf (14 pages, 2322369 bytes).
 PDF statistics:
- 275 PDF objects out of 1000 (max. 8388607)
- 227 compressed objects within 3 object streams
- 86 named destinations out of 1000 (max. 500000)
- 79490 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 383 PDF objects out of 1000 (max. 8388607)
+ 316 compressed objects within 4 object streams
+ 137 named destinations out of 1000 (max. 500000)
+ 87757 words of extra memory for PDF output out of 89155 (max. 10000000)
 

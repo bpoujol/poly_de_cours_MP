@@ -222,7 +222,7 @@ Dans ce cas, nous pouvons étudier une onde se propageant selon $\vv{e_x}$. Les 
 \end{theorem}
 
 \begin{demonstration}
-	Considérons une fonction $f(x,t)$ solution de l'équation de d'Alembert à une dimension : $\frac{\partial^2 f}{\partial x^2} - \frac{1}{c^2} \frac{\partial^2 f}{\partial t^2} = 0$. Nous pouvons faire le changement de variable suivant :
+	Considérons une fonction $f(x,t)$ solution de l'équation de d'Alembert à une dimension : $\dfrac{\partial^2 f}{\partial x^2} - \dfrac{1}{c^2} \dfrac{\partial^2 f}{\partial t^2} = 0$. Nous pouvons faire le changement de variable suivant :
 	\begin{equation}
 		\begin{cases}
 			u = x-ct \\
@@ -288,6 +288,11 @@ Nous pouvons alors constater que les solutions sont des perturbations se propage
 
 	La valeur de $\epsilon_0$ est une valeur approchée issue de mesures expérimentales.
 \end{remark}
+
+\begin{figure}[htbp]
+	\centering \includegraphics[width=\linewidth]{onde_plane.png}
+	\caption{Structure d'une onde plane, en prenant l'exemple d'une vague sur un plan d'eau. Source : poly de cours de Etienne Thibierge.}
+\end{figure}
 
 Ainsi, les équations de Maxwell permettent la propagation d'ondes dans le vide à une vitesse $c$ bien précise : il s'agit des ondes électromagnétiques.
 
@@ -442,9 +447,9 @@ On constate la propriété suivante, très importante :
 	\end{equation}
 \end{proposition}
 
-\section{Polarisation des ondes électromagnétiques}
+\subsection{Polarisation}
 
-\subsection{Relation de structure}
+\subsubsection{Relation de structure pour une onde monochromatique}
 
 \begin{capex}
 	Retrouver la relation de structure dans le cas des ondes planes progressives monochromatiques, et montrer qu'elle peut se mettre sous la forme :
@@ -454,9 +459,227 @@ On constate la propriété suivante, très importante :
 	Cette relation est à connaître.
 \end{capex}
 
+Nous avons vu que la relation de structure caractérise la structure géométrique de l'onde électromagnétique. L'onde plane progressive monochromatique n'en est qu'un cas particulier. Pour aller plus loin dans la caractérisation de la géométrie des ondes, nous pouvons nous intéresser à quelques cas particuliers de géométrie, que l'on étudiera à travers ce que l'on nomme la polarisation.
+
+Pour cela, nous pouvons étudier la structure du champ électromagnétique pour une onde plane progressive monochromatique. Supposons que l'onde se propage selon la direction $\vv u = \vv{e_z}$, alors par la relation de structure, le champ électrique est perpendiculaire à $\vv{e_z}$ et nous pouvons écrire :
+\begin{equation}
+	\vv E(M,t) = E_{0x} \cos(\omega t - k z + \phi_E^x) \vv{e_x} + E_{0y} \cos(\omega t - k z + \phi_E^y) \vv{e_y}
+\end{equation}
+En un point $M$ de l'espace, le vecteur $\vv E(M,t)$ aura donc une évolution bien particulière en fonction du temps : il va décrire une ellipse dans le plan $(M,\vv{e_x},\vv{e_y})$. Selon le déphasage entre les deux composantes du champ électrique, l'allure de cette ellipse sera différente. 
+
+\subsubsection{Polarisation rectiligne}
+
+\begin{definition}[Polarisation rectiligne]
+	Une onde électromagnétique est dite polarisée rectilignement si, en tout point $M$ de l'espace, le champ électrique $\vv E(M,t)$ garde une direction fixe au cours du temps. Cette direction est alors appelée la direction de polarisation.
+\end{definition}
+
+Cette situation se produit lorsque le déphasage $\Delta \phi_E = \phi_E^x - \phi_E^y$ est tel que $\phi = 0[\pi]$. On a alors $e^{j \Delta \phi_E} = \pm 1$ et :
+\begin{equation}
+	\vv E(M,t) = (E_{0x} \vv{e_x} \pm E_{0y} \vv{e_y}) \cos(\omega t - k z + \phi_E^x)
+\end{equation}
+
+\begin{capex}
+	On considère une onde plane progressive monochromatique polarisée rectilignement selon $\vv{e_x}$ et se propageant selon $\vv{e_z}$. Que peut-on dire de la direction du champ magnétique ? Y a-t-il un déphasage entre les maxima d'amplitude du champ électrique et du champ magnétique ?
+\end{capex}
+
+\begin{figure}[htbp]
+	\centering \includegraphics[width=\linewidth]{polarisation_rectiligne.png}
+	\caption{Onde électromangétique plane progressive monochromatique polarisée rectilignement dans deux directions. Source : physicsopenlab.org.}
+\end{figure}
+
+\subsubsection{Polarisation circulaire}
+
+Un autre cas particulier est celui dans lequel l'ellipse dessinée par le vecteur champ électrique est un cercle, on parle alors de polarisation circulaire :
+\begin{definition}
+	Une onde électromagnétique est dite polarisée circulairement si, en tout point $M$ de l'espace, le champ électrique $\vv E(M,t)$ garde une norme constante au cours du temps. La polarisation est dire cticulaire droite (respectivement circulaire gauche) si un observateur qui voit l'onde arriver vers lui voit le champ électrique tourner dans le sens horaire (respectivement trigonométrique).
+\end{definition}
+
+\begin{capex}
+	Quel doit être le déphasage $\Delta \phi_E$ pour que l'onde soit polarisée circulairement ? Que peut-on dire de la densité d'énergie électromagnétique pour une onde polarisée circulairement ? 
+\end{capex}
 
 
+\begin{figure}[htbp]
+	\centering \includegraphics[width=0.7\linewidth]{polarisation_circulaire.png}
+	\caption{Ondes planes progressives monochromatiques avec une polarisation circulaire droite (en haut) et gauche (en bas). Source : Wikimedia Commons.}
+\end{figure}
 
+\subsubsection{Polarisation de la lumière}
+
+Dans la nature, la lumière est parfois polarisée et parfois non. La lumière produite par le soleil ou par la plupart des lampes, par exemple, est dite non polarisée. En effet, il s'agit d'une superposition de trains d'onde incohérents entre eux qui ont chacun une polarisation aléatoire, celle-ci n'étant pas frocément circulaire ou rectiligne.
+
+\begin{remark}
+	C'est parce que la lumière naturelle est non polarisée que le modèle scalaire de la lumière fonctione en optique : on n'a pas besoin de prendre en compte le caractère vectoriel des ondes électromagnétiques.
+\end{remark}
+
+Plusieurs objets sont capables de polariser la lumière. En pariculier, les polariseurs (ou polaroïds) utilisés en TP et dans les verres polarisants des lunettes de soleil permettent de sélectionner l'une des directions du champ électrique :
+\begin{proposition}
+	Un polariseur orienté selon la direction $\vv{e_x}$ absorbe les composantes du champ électrique orientées perpendiculairement à $\vv{e_x}$ et transmet les composantes parallèles à $\vv{e_x}$. Ainsi, il transforme une onde incidente quelconque en onde polarisée rectilignement selon $\vv{e_x}$.
+\end{proposition}
+
+
+\begin{figure}[htbp]
+	\centering \includegraphics[width=0.8\linewidth]{polariseur.png}
+	\caption{Fonctionnement d'un polariseur. La lumière non polarisée est convertie en lumière polarisée (avec absorption d'énergie au niveau du polariseur). Source : Wikimedia Commons.}
+\end{figure}
+
+\begin{capex}
+	On place deux polariseurs l'un derrière l'autre, inclinés d'un angle $\alpha$. Quel est le rapport entre l'énergie transportée par l'onde après et avant le second polariseur ? Le résultat, connu sous le nom de Loi de Malus, est à connaître.
+\end{capex}
+
+Nous verrons dans le dernier chapitre d'électromagnétisme que des phénomènes naturels peuvent également polairser la lumière, par exemple la diffusion d'une onde lumineuse par les atomes de l'atmosphère.
+
+\section{Propagation dans un plasma}
+
+L'équation de d'Alembert caractérise la propagation des ondes électromagnétiques dans le vide. Néanmoins, il peut également être intéressant d'étudier la propoagation de ces ondes dans des milieux différents, afin de bien distinguer les propriétés qui sont spécifiques à la propagation dans le vide, et celles qui se généralisent à toutes les ondes électromagnétiques.
+
+Pour cela, nous allons nos intéresser aux plasmas : c'est un quatrième état de la matière, en plus des états solide, liquide et gazeux :
+\begin{definition}
+	Un plasma est un état dans lequel la matière est partiellement ou totalement ionisée : des électrons sont arrachés aux atomes et libres de circuler. Un plasma est électriquement neutre.
+\end{definition}
+Les astrophysiciens estiment qu'environ 99\,\% de la matière de l'univers se trouve sous forme de plasma, et l'étude de la propagation des ondes électromagnétiques dans les plasmas est cruciale pour la compréhension de divers phénomènes naturels tels que les aurores boréales, les éruptions solaires ou l'étude à distance des atmosphères stellaires. De nombreuses applications industrielles exploitent également les plasmas. 
+
+
+\begin{figure}[htbp]
+	\centering \includegraphics[width=0.5\linewidth]{plasma.jpg} \includegraphics[width=0.49\linewidth]{plasmas_in_nature.jpg}
+	\caption{A gauche : les différents états de la matière, incluant le plasma. A droite : les différents plasmas observés dans la nature, classés par température et par densité de particules chargées $n$. Sources : Mehdizadeh, M. (2015). \textit{Microwave/RF applicators and probes: for material heating, sensing, and plasma generation.} et Wigner Research Center for Physics.}
+\end{figure}
+
+On peut créer un plasma :
+\begin{itemize}
+	\item à partir de décharges électriques (méthode habituelle en laboratoire);
+	\item par un chauffage puissant provoquant des collisions entre atomes (centre du soleil, prototypes de centrales de fusion nucléaire) ;
+	\item par l'absorption de rayonnements ionisants (absorption des UV par la haute atmosphère).
+\end{itemize}
+
+\subsection{Mouvement des charges}
+
+Un plasma est souvent caractérisé par la densité d'électrons libres par unité de volume, notée $n_e$. Nous nous limiterons au cas des plasmas dilués, c'est-à-dire que nous négligerons les interactions entre porteurs de charge. De plus, les cations sont supposés trop massiques pour se déplacer significativement au passage d'une onde électromagnétique : l'essentiel des effets seront liés au mouvement des électrons.
+
+Nous supposerons que les électrons sont non relativistes. En effet, la vitesse caractéristique des électrons est donnée par le théorème d'équipartition de l'énergie et vaut, à une température $T = 10^4$\,K :
+\begin{equation}
+	v = \sqrt{\frac{3 k_B T}{m_e}} = 7 \cdot 10^5\,\mathrm{m}\cdot\mathrm{s}^{-1} \ll c
+\end{equation}
+
+\begin{capex}
+	Montrer que la composante magnétique de la force de Lorentz est négligeable devant la composante électrique. En déduire une relation entre la densité volumique de courant $\vv j$ et le champ électrique $\vv E$.
+\end{capex}
+
+\subsection{Relation de dispersion du plasma}
+
+On considère désormais une onde plane progressive monochromatique se propageant dans un plasma.
+
+\begin{capex}
+	Traduire la relation reliant $\vv j$ et $\vv E$ en notations complexes, puis établir la relation de dispersion de l'onde électromagnétique dans le plasma.
+\end{capex}
+
+Nous obtenons le résultat suivant :
+\begin{proposition}
+	Dans un plasma, la relation de dispersion pour une onde plane progressive monochromatique s'écrit :
+	\begin{equation}
+		\vv k ^2 = \frac{\omega^2 - \omega_p^2}{c^2}
+	\end{equation}
+	où $\omega_p$ est la pulsation plasma :
+	\begin{equation}
+		\omega_p = \frac{n_e e^2}{\epsilon_0 m_e}
+	\end{equation}
+\end{proposition}
+
+\subsection{Cas d'une onde propagative}
+
+Dans le cas où $\omega > \omega_p$, l'onde peut se propager à travers le plasma. 
+
+\begin{figure}[htbp]
+	\centering \includegraphics[width=0.6\linewidth]{relation_dispersion_plasma.png}
+	\caption{Relation de dispersion pour une onde propagative dans un plasma. On constate que la région $\omega<\omega_p$ est interdite. Source : poly de cours de Maxime Champion.}
+\end{figure}
+
+On constate alors que la longueur d'onde de l'onde, $\lambda = \dfrac{2\pi}{||\vv k||}$, n'est pas proportionnelle à la période du signal : on dit que la propagation est dispersive. Nous verrons plus loin les implications de cette dispersion.
+
+Une des propriétés caractéristiques de cette dispersion est que l'énergie ne se propage plus à la vitesse $c$ : 
+\begin{proposition}
+	Dans un plasma, l'énergie se propage à la vitesse $c^2 \vv k / \omega$.
+\end{proposition}
+
+\begin{demonstration}
+
+Nous pouvons calculer le vecteur de Poynting de l'onde à partir d'une méthode complexe :
+\begin{align}
+	\langle \vv \Pi \rangle &= \langle \frac{\vv E \wedge \vv B}{\mu_0} \rangle \\
+	&= \langle \frac{1}{\mu_0} \vv E \wedge \frac{\vv k \wedge \vv E}{\omega} \rangle \\
+	&= \langle \frac{1}{\mu_0 \omega} \vv k \vv E^2 \rangle \\
+	&= \frac{\vv{E_0}^2}{2 \mu_0 \omega} \vv k
+\end{align}
+
+Nous pouvons également calculer la densité d'énergie électromagnétique :
+\begin{align}
+	\langle u_{\rm em} \rangle &= \frac{1}{2} \epsilon_0 \langle \vv E^2 \rangle + \frac{\langle \vv B^2 \rangle}{2 \mu_0} \\
+	&= \frac{\epsilon_0 \vv{E_0}^2}{4} + \frac{\vv B_0^2}{4 \mu_0} 
+\end{align}
+Or par la relation de structure : $||\vv B_0|| = \frac{k}{\omega} ||\vv E_0||$ et donc :
+\begin{equation}
+	\langle u_{\rm em} \rangle = \frac{\epsilon_0 \vv E_0^2}{4} \left( 1 + \frac{k^2 c^2}{\omega^2} \right)
+\end{equation}
+
+Enfin la densité d'énergie cinétique des électrons peut s'écrire :
+\begin{equation}
+	\langle u_c \rangle = n_e \times \frac{1}{2} m_e \langle \vv{v}^2 \rangle 
+\end{equation}
+	Comme $m_e \frac{\dd \vv v_e}{\dd t} = - e \vv E$ on a $\langle \vv{v}^2 \rangle = \dfrac{e^2 \langle {\vv E}^2 \rangle}{m_e^2 \omega_2} = \dfrac{e^2 {\vv E_0}^2}{2 m_e^2 \omega_2}$ et donc :
+\begin{equation}
+	\langle u_{em} + u_c \rangle = \frac{\epsilon_0 \vv E_0^2}{4} \left( 1 + \frac{k^2 c^2}{\omega^2} + \frac{\omega_p^2}{\omega^2} \right) = frac{\epsilon_0 \vv E_0^2}{2}
+\end{equation}
+Nous obtenons alors :
+\begin{equation}
+	\langle \vv \Pi \rangle = \frac{c^2 \vv k}{\omega} \times \langle u_c + u_{\rm em} \rangle
+\end{equation}
+
+\end{demonstration}
+
+\subsection{Onde évanescente}
+
+On s'intéresse désormais au cas où $\omega < \omega_p$. Pour plus de simplicité, on supposera que l'onde se propage selon la direction $\vv{e_x}$, ainsi $\vv k = k \vv{e_x}$.
+
+\begin{capex}
+	En exploitant la relation de dispersion, établir le vecteur d'onde $k$ de l'onde, puis en déduire la structure de l'onde. Calculer le vecteur de Poynting associé.
+\end{capex}
+
+Nous constatons que l'onde ne peut pas pénétrer dans le milieu : elle ne transporte pas d'énergie et son amplitude diminue exponentiellement. C'est ce que l'on appelle une onde évanescente :
+\begin{definition}
+	Une onde est dite évanescente selon une direction $\vv{e_x}$ si :
+	\begin{itemize}
+		\item L'onde ne se propage pas selon $\vv{e_x}$ ;
+		\item L'onde ne transporte pas d'énergie selon $\vv{e_x}$ ;
+		\item L'amplitude décroît exponentiellement selon $\vv{e_x}$.
+	\end{itemize}
+\end{definition}
+
+Une onde évanescente selon une direction peut souvent être propagative dans les autres directions, ainsi il existe des ondes évanescentes qui se propagent parallèlement à l'interface entre le vide et un plasma, notamment dans l'ionosphère terrestre.
+
+
+\begin{figure}[htbp]
+	\centering \includegraphics[width=0.6\linewidth]{onde_evanescente.png}
+	\caption{Structure d'une onde plane progressive harmonique arrivant à l'interface avec un plasma, pour différentes valeurs de pulsations. L'onde évanescente est visible dans le plasma.}
+\end{figure}
+
+\section{Propagation d'un paquet d'ondes}
+
+\subsection{Limites du modèle de l'onde plane monochromatique}
+
+Le modèle d'onde plane progressive monochromatique que nous avons construit présente des limites, en effet, dans ce modèle, la densité volumique d'énergie électromagnétique $u_{\rm em}$ a une moyenne uniforme ($\langle u_{\rm em} \rangle = c^{ste}$) ; par ailleurs l'onde a une extension spatiale infinie, donc son énergie totale est infinie. Dans la réalité les ondes ont une extension spatiale finie. Plusieurs phénomènes peuvent en être la cause :
+\begin{itemize}
+	\item Le milieu dans lequel l'onde se propage a une extension finie et est délimité par des parois opaques au rayonnement. On a alors des phénomènes de réflexion que nous étudierons au prochain chapitre ;
+	\item L'onde en elle-même est non monochromatique, ce qui limite son extension spatiale.
+\end{itemize}
+
+Nous allons commencer par étudier ce second cas : en général, une onde est émise entre deux instants $t_1$ et $t_2$ avec une amplitude qui varie en fonction du temps, ce qui crée un signal non parfaitement monochromatique. C'est ce que l'on appelle un paquet d'onde :
+\begin{definition}
+	COMPLETER LA DEFINITION
+\end{definition}
+
+\subsection{Transformée de Fourier, paquet d'ondes, notion de dispersion}
+
+\subsection{Vitesse de phase et vitesse de groupe}
 
 
 \end{document}

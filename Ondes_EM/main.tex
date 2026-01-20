@@ -111,7 +111,7 @@ mathfontname=mathsf]{mhchem}
 \contourlength{1.2pt}
 
 \colorlet{myred}{red!65!black}
-\definecolor{myred}{RGB}{127,0,255}
+\definecolor{myred}{RGB}{243,102,25}
 \tikzstyle{ground}=[preaction={fill,top color=black!10,bottom color=black!5,shading angle=20},
                     fill,pattern=north east lines,draw=none,minimum width=0.3,minimum height=0.6]
 \tikzstyle{mass}=[line width=0.6,myred,fill=myred!40,rounded corners=1,
@@ -135,7 +135,7 @@ mathfontname=mathsf]{mhchem}
 
 %\usechapterimagefalse % If you don't want to include a chapter image, use this to toggle images off - it can be enabled later with \usechapterimagetrue
 
-\chapterimage{filmB.jpg} % Table of contents heading image
+\chapterimage{crabe_nasa.png} % Table of contents heading image
 
 %\pagestyle{empty} % No headers
 
@@ -383,6 +383,10 @@ Les ondes électromagnétiques de différentes longueurs d'onde ont des applicat
 	\item Les rayons gamma très énergétiques (en-dessous de 1\,\AA), notamment utilisés en radiothérapie.
 \end{itemize}
 
+\begin{remark}
+	L'image de couverture du chapitre montre une superposition d'images de la nébuleuse du Crabe par les télescopes Chandra, Hubble, and Spitzer qui montrent respectivement les rayons X en rose, la lumière visible en vert, et le rayonnement infrarouge en rouge. Source : NASA's Goddard Space Flight Center.
+\end{remark}
+
 \subsection{Représentation complexe}
 
 Il est possible, comme en optique, d'adopter une représentation complexe des ondes planes progressives monochromatiques :
@@ -447,6 +451,25 @@ On constate la propriété suivante, très importante :
 	\end{equation}
 \end{proposition}
 
+On remarquera par ailleurs que l'on peut relier les valeurs moyennes des propriétés énergétiques des ondes à leur représentation complexe, en effet on a la propriété suivante :
+\begin{proposition}
+	Soit $\vv E = \vv{E_0} \cos(\omega t - \vv k \cdot \vv r + \varphi)$, on peut alors adopter la représentation complexe :
+	\begin{equation}
+		\underline{\vv E} = \underline{\vv{E_0}} e^{j(\omega t - \vv k \cdot \vv r)}
+	\end{equation}
+	De même le champ magnétique peut s'écrire :
+	\begin{equation}
+		\underline{\vv B} = \underline{\vv{B_0}} e^{j(\omega t - \vv k \cdot \vv r)}
+	\end{equation}
+	On a alors les propriétés suivantes :
+	\begin{align}
+		\left\langle \frac{1}{2} \epsilon_0 \vv{E}^2 \right\rangle &= \frac{1}{2} \epsilon_0 \frac{ \underline{\vv E}^\ast \cdot \underline{\vv E}}{2} \\
+		\left\langle \frac{1}{2 \mu_0} \vv{B}^2 \right\rangle &= \frac{1}{2 \mu_0} \frac{ \underline{\vv B}^\ast \cdot \underline{\vv B}}{2} \\
+		\langle \vv \Pi \rangle &= \left\langle \frac{\vv E \wedge \vv B}{\mu_0} \right\rangle = \frac{1}{\mu_0} \Re \left( \frac{\underline{\vv E} \wedge \underline{\vv B}^\ast}{2} \right)
+	\end{align}
+\end{proposition}
+
+
 \subsection{Polarisation}
 
 \subsubsection{Relation de structure pour une onde monochromatique}
@@ -503,6 +526,18 @@ Un autre cas particulier est celui dans lequel l'ellipse dessinée par le vecteu
 	\centering \includegraphics[width=0.7\linewidth]{polarisation_circulaire.png}
 	\caption{Ondes planes progressives monochromatiques avec une polarisation circulaire droite (en haut) et gauche (en bas). Source : Wikimedia Commons.}
 \end{figure}
+
+
+\begin{figure}[htbp]
+	\centering \includegraphics[width=0.7\linewidth]{polarisation_scarabee.png} \includegraphics[width=0.7\linewidth]{scarabee_microscope.png}
+	\caption{En haut : photographie d'un scarabée en lumière naturelle, et avec un filtre sélectrionnant uniquement la polarisation circulaire gauche ou droite. En bas : images de la carapace du scarabée au microscope. Echelle : a)\,3\,µm et b)\,200\,nm. En bas à droite : modèle proposé pour la structure microscopique de la carapace, à partir des images au microscope. Source : McDonald, L. T., Finlayson, E. D., Wilts, B. D., & Vukusic, P. (2017). \textit{Circularly polarized reflection from the scarab beetle Chalcothea smaragdina: light scattering by a dual photonic structure.} Interface Focus, 7(4), 20160129.}
+\end{figure}
+
+\begin{encart}[Polarisation circulaire dans la nature]
+	La polarisation circulaire dans la nature est très rare. Certains cristaux, dits biréfringents, sont capables de transformer la polarisation linéaire en polarisation circulaire (notamment le quartz). Les scarabées ont également une propriété intéressante : ils ne réfléchissent que la lumière ayant une polarisation circulaire gauche. Ceci est lié à la structure microscopique de leur carapace. Cette propriété peut sembler surprenante, mais elle les aide à se reconnaître car leur vision est également adaptée à cette polarisation. Une équipe de recherche a ainsi montré que ces propriétés de polarisation favorisent l'expression de certains gènes ainsi que la reproduction de l'espèce.
+	Source : Li, T., Jiang, Y., Yang, X., Li, H., Gong, Z., Qin, Y., ... & Lu, C. (2023). \textit{The effects of circularly polarized light on mating behavior and gene expression in Anomala corpulenta (Coleoptera: Scarabaeidae)}. Frontiers in Physiology, 14, 1172542.
+\end{encart}
+
 
 \subsubsection{Polarisation de la lumière}
 
@@ -662,6 +697,16 @@ Une onde évanescente selon une direction peut souvent être propagative dans le
 	\caption{Structure d'une onde plane progressive harmonique arrivant à l'interface avec un plasma, pour différentes valeurs de pulsations. L'onde évanescente est visible dans le plasma.}
 \end{figure}
 
+
+\begin{figure}[htbp]
+	\centering \includegraphics[width=0.5\linewidth]{principe_tirf.png} \includegraphics[width=0.49\linewidth]{photo_tirf.png}
+	\caption{A gauche : le principe de fonctionnement de la microscopie à réflexion interne totale. A droite : image obtenue par réflexion interne totale (en vert) comparée à une image classique (en rouge). Les structures fines de la surface de l'échantillon sont beaucoup plus visibles dans le premier cas. Source : Florida State University et Université de Heidelberg.}
+\end{figure}
+
+\begin{encart}[Microscopie à réflexion interne totale]
+	Lors d'une réflexion totale, une onde évanescente est créée dans la zone interdite, ce que nous expliquerons dans un exercice de TD. En plaçant dans une cellule une molécule fluorescente, il est alors possible d'étudier ce qui se passe dans une couche très fine (de l'ordre de 100\,nm) à la surface de la cellule : on observe alors la cellule avec une très faible profondeur de champ. Ceci permet de voir une "coupe" de la surface de l'échantillon, là où un microscope classique montre (en transparence) la totalité de l'échantillon.
+\end{encart}
+
 \section{Propagation d'un paquet d'ondes}
 
 \subsection{Limites du modèle de l'onde plane monochromatique}
@@ -672,14 +717,111 @@ Le modèle d'onde plane progressive monochromatique que nous avons construit pr�
 	\item L'onde en elle-même est non monochromatique, ce qui limite son extension spatiale.
 \end{itemize}
 
+\subsection{Paquet d'ondes, vitesse de phase, vitesse de groupe}
+
 Nous allons commencer par étudier ce second cas : en général, une onde est émise entre deux instants $t_1$ et $t_2$ avec une amplitude qui varie en fonction du temps, ce qui crée un signal non parfaitement monochromatique. C'est ce que l'on appelle un paquet d'onde :
 \begin{definition}
-	COMPLETER LA DEFINITION
+	On appelle paquet d'ondes la superposition d'un nombre fini ou infini d'ondes planes progressives monochromatiques de pulsations proches d'une pulsation moyenne $\omega_0$. Son écriture mathématique la plus générale est, pour une propagation à une dimension :
+	\begin{equation}
+		\vv E(z,t) = \Re \left( \int_{-\infty}^{\infty} \underline{E_0}(k) e^{j(\omega(k) t - k z} \dd k \right)
+	\end{equation}
+\end{definition}
+On remarque que dans la forme mathématique du paquet d'onde, on a écrit $\omega = \omega(k)$ en vertu de la relation de dispersion qui est caractéristique du milieu de propagation, on aura ainsi dans le vide $\omega(k) = k c$. 
+
+Nous constatons que ce paquet d'ondes est formellement analogue à la superposition d'ondes de différentes fréquences que nous avons étudiée en optique : il s'agit d'une onde autour de la pulsation $\omega_0 = 2 \pi \nu_0$, et la présence d'une superposition d'ondes va créer une enveloppe au sein de laquelle se propage l'onde. Nous pouvons relier la durée du paquet d'ondes $\Delta t$ à la largeur fréquentielle $\Delta \omega = 2 \pi \Delta \nu$ par la relation :
+\begin{equation}
+	\Delta \nu \times \Delta t \approx 1
+\end{equation}
+(pour une démonstration de cette propriétés dans le cadre d'une exemple particulier, se référer au cours d'optique).
+
+Un paquet d'ondes peut s'interpréter comme une onde monochromatique modulée par une enveloppe, en effet on peut écrire :
+\begin{equation}
+	\omega = \omega_0 + (k-k_0) \frac{\dd \omega}{\dd k}(k=k_0)
+\end{equation}
+D'où :
+\begin{equation}
+	\omega(k) t - k z = \omega t - (k-k_0)z - k_0 z = (\omega_0 t - k_0 z) + (k-k_0) \left(\frac{\dd \omega}{\dd k}(k_0) t - z \right)
+\end{equation}
+Et donc, en réinjectant dans l'expression du paquet d'onde, nous pouvons écrire que :
+\begin{equation}
+	\underline{\vv E}(z,t) = e^{j(\omega_0 t - k_0 z} \times \mathcal{A}\left(\frac{\dd \omega}{\dd k}(k_0) t - z \right)
+\end{equation}
+avec
+\begin{equation}
+	\mathcal{A}(\zeta) = \int_{-\infty}^{\infty} \underline{E_0}(k) e^{j(k-k_0)\zeta}\dd k
+\end{equation}
+Nous pouvons alors interpréter $\underline{\vv E}(z,t)$ comme une onde plane monochromatique à la pulsation $\omega_0$, qui est modulée par une enveloppe $\mathcal{A}$. La largeur de l'enveloppe est toujours la même à savoir $\Delta t \approx 1/\Delta \nu$, ainsi plus le paquet d'ondes est spectralement pur et plus sa durée est longue.
+
+Nous constatons alors une propriété très importante :
+\begin{theorem}[Propagation du paquet d'ondes]
+	Un paquet d'ondes peut se modéliser par une onde plane monochromatique modulée par une enveloppe $\mathcal{A}$. Si on note $\omega = \omega(k)$ la relation de dispersion caractéristique du milieu de propagation, alors :
+	\begin{itemize}
+		\item La phase de l'onde monochromatique, à l'intérieur du paquet d'onde, se propage à la vitesse $v_\varphi = \dfrac{\omega}{k}$ appelée \textbf{vitesse de phase};
+		\item L'enveloppe du paquet d'onde se propage à la vitesse $v_g = \frac{\dd \omega}{\dd k}$ appelée \textbf{vitesse de groupe}.
+	\end{itemize}
+\end{theorem}
+
+Nous admettrons que cette propriété se généralise à trois dimensions, ce qui nous permet de définir la vitesse de phase et la vitesse de groupe dans un espace tridimensionnel :
+\begin{definition}
+	Soit un milieu caractérisé par la relation de dispersion $\omega = \omega(\vv k)$, alors nous définissions la vitesse de phase $\vv{v_\varphi}$ et la vitesse de groupe $\vv{v_g}$ du milieu par :
+	\begin{equation}
+		\begin{dcases}
+			\vv{v_\varphi} = \dfrac{\omega}{||\vv k||} \\
+			\vv{v_g} = \grad_{\vv k}(\omega)
+		\end{dcases}
+	\end{equation}
+	où le gradient est calculé non pas par rapport aux coordonnées d'espace, mais par rapport au vecteur d'onde $\vv k$.
+	Pour une propagation unidimensionnelle, l'expression de la vitesse de groupe se simplifie par $v_g = \dfrac{\dd \omega}{\dd k}$.
 \end{definition}
 
-\subsection{Transformée de Fourier, paquet d'ondes, notion de dispersion}
+\begin{capex}
+	Déterminer la vitesse de phase et la vitesse de groupe dans un plasma, et comparer aux résultats précédents. A quelle vitesse se propage l'énergie ?
+\end{capex}
 
-\subsection{Vitesse de phase et vitesse de groupe}
+\subsection{Notion de dispersion}
 
+Dans le cas où la relation entre $\omega$ et $k$ est non linéaire, on peut montrer qu'il va y avoir une déformation du paquet d'onde, et en particulier le paquet d'onde va s'étaler. En effet, dans ce cas, la vitesse de groupe dépend de la fréquence, si bien que les différentes fréquences contenues dans le paquet d'onde vont avoir une énergie qui se propage à des vitesses différentes. On dit alors que la propagation est dispersive :
+\begin{definition}
+	Un milieu est dit dispersif si la relation de dispersion est non linéaire. Dans ce cas, la vitesse de phase et la vitesse de groupe dépendent de la fréquence, et les paquets d'ondes subissent une déformation (ou étalement) lors de leur propagation.
+\end{definition}
+
+\begin{demonstration}
+	\textit{Cette démonstration n'est pas à connaître.}
+
+Pour démontrer ce phénomène d'étalement, nous pouvons aller à l'ordre 2 dans le développement limité :
+\begin{equation}
+	\omega = \omega_0 + (k-k_0) \frac{\dd \omega}{\dd k}(k=k_0) + \frac{(k-k_0)^2}{2} \frac{\dd^2 \omega}{\dd k^2}(k=k_0)
+\end{equation}
+	Nous allons noter $v_g = \frac{\dd \omega}{\dd k}(k=k_0)$ et $\beta = \frac{\dd^2 \omega}{\dd k^2}(k=k_0)$ pour simplifier l'expression, ainsi que $\zeta = v_g t - z$. Nous avons alors :
+	\begin{equation}
+		\omega t - k z = \omega_0 t - k_0 z + (k-k_0) \zeta + \frac{1}{2} (k-k_0)^2 \beta t
+	\end{equation}
+	Alors :
+	\begin{align}
+		\underline{\vv E}(z,t) &= e^{j(\omega_0 t - k_0 z)} \int_{-\infty}^{\infty} \underline{\vv{E_0}}(k)  e^{-j(k-k_0)} e^{-j \frac{(k-k_0)^2}{2} \beta t} \dd k \\
+		&= e^{j(\omega_0 t - k_0 z)} \times \frac{1}{\sqrt{\beta t}}  \int_{-\infty}^{\infty} \underline{\vv{E_0}}(k)  e^{-j u \frac{\zeta}{\sqrt{\beta t}}} e^{-j \frac{u^2}{2}} \dd u
+	\end{align}
+	où on a posé $u = (k-k_0)\sqrt{\beta t}$. On retrouve alors l'expression d'une onde monochromatique modulée par une enveloppe :
+	\begin{equation}
+		\underline{\vv E}(z,t) &= e^{j(\omega_0 t - k_0 z)} \times \mathcal{A}(z,t)
+	\end{equation}
+	où l'enveloppe est de la forme :
+	\begin{equation}
+		\mathcal{A}(z,t) = \frac{1}{\sqrt{\beta t}} \mathcal{F}\left(\frac{v_g t - z}{\sqrt{\beta t}}\right)
+	\end{equation}
+	Autrement dit, l'amplitude du paquet d'onde diminue en $1/\sqrt{t}$ alors que l'enveloppe s'étale petit à petit avec une demi-largeur $|z-v_g t| \sim \sqrt{\beta t}$. Le centre du paquet d'onde continue bien à avancer avec la vitesse de groupe $v_g$.
+\end{demonstration}
+
+\begin{figure}[htbp]
+        \centering \includegraphics[width=0.6\linewidth]{dispersion.png}
+        \caption{Tracé de trois relations de dispersion : en noir un milieu non dispersif et en bleu et violet deux relations plus ou moins dispersives. La courbe rouge représente l’enveloppe initiale du paquet d’onde centrée en $k=1$ (unités arbitraires). Pour les courbes bleue et violettes, la valeur de $\dd \omega/\dd k$ est la même en $k=1$, ainsi elles ont la même vitesse de groupe et le maximum de leur paquet d’onde se propagera à la même vitesse. La relation de dispersion violette a des variations plus rapides que la bleue, elle est plus dispersive. Source : poly de cours de Maxime Champion.}
+\end{figure}
+
+
+\begin{figure}[htbp]
+        \centering \includegraphics[width=\linewidth]{paquet_onde_top.png}
+        \centering \includegraphics[width=\linewidth]{paquet_onde_bottom.png}
+        \caption{Evolution à trois instants différents du même paquet d’onde (en unités arbitraires) dans trois milieux décrits par les relations de dispersion de la figure précédente. Source : poly de cours de Maxime Champion.}
+\end{figure}
 
 \end{document}

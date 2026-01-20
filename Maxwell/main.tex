@@ -107,7 +107,7 @@ mathfontname=mathsf]{mhchem}
 \contourlength{1.2pt}
 
 \colorlet{myred}{red!65!black}
-\definecolor{myred}{RGB}{127,0,255}
+\definecolor{myred}{RGB}{243,102,25}
 \tikzstyle{ground}=[preaction={fill,top color=black!10,bottom color=black!5,shading angle=20},
                     fill,pattern=north east lines,draw=none,minimum width=0.3,minimum height=0.6]
 \tikzstyle{mass}=[line width=0.6,myred,fill=myred!40,rounded corners=1,
@@ -137,7 +137,7 @@ mathfontname=mathsf]{mhchem}
 
 %\usechapterimagefalse % If you don't want to include a chapter image, use this to toggle images off - it can be enabled later with \usechapterimagetrue
 
-\chapterimage{filmB.jpg} % Table of contents heading image
+\chapterimage{liquid_core.png} % Table of contents heading image
 
 %\pagestyle{empty} % No headers
 
@@ -155,9 +155,9 @@ mathfontname=mathsf]{mhchem}
 
 \chapter{Formalisme local de l'électromagnétisme}
 
-Nous avons défini la notion de champs électrique et magnétique pour décrire les phénomènes électromagnétiques. Bien que ces champs soient continus dans le temps et dans l'espace, les lois physiques que nous avons établies et utilisées jusqu'ici n'exploitent pas directement le continuité de ces champs : elles s'appliquent à des objets macroscopiques (intégrale le long d'un circuit pour la magnétostation, ou sur une surface pour l'électrostatique).
+Nous avons défini la notion de champs électrique et magnétique pour décrire les phénomènes électromagnétiques. Bien que ces champs soient continus dans le temps et dans l'espace, les lois physiques que nous avons établies et utilisées jusqu'ici n'exploitent pas directement le continuité de ces champs : elles s'appliquent à des objets macroscopiques (intégrale le long d'un circuit pour la magnétostatique, ou sur une surface pour l'électrostatique).
 
-En particulier, le théorème de Gauss et le théorème d'Ampère ne nous ont permis d'établir clairement le champ électrique ou magnétique uniquement dans le cas où la distribution de charges et de courants était à haute symétrie. Enfin, nous ne disposons pas à ce stade d'équations nous renseignant sur l'évolution temporelle des champs électriques et magnétiques.
+En particulier, le théorème de Gauss et le théorème d'Ampère nous ont permis d'établir clairement le champ électrique ou magnétique uniquement dans le cas où la distribution de charges et de courants avait un haut degré de symétrie, ce qui n'est pas le cas dans un grand nombre de situations naturelles et industrielles. Enfin, nous ne disposons pas à ce stade d'équations nous renseignant sur l'évolution temporelle des champs électrique et magnétique.
 
 L'objectif de ce chapitre est de compléter le formalisme de l'électromagnétisme, en établissant des équations locales décrivant l'évolution des champs électromagnétiques. Nous avons vu, à travers la thermodynamique, l'intérêt que peut avoir une formulation locale : l'équation de la chaleur permet la description d'un grand nombre de situations physiques, y compris hors équilibre, telles que la propagation d'une onde de chaleur, l'évolution de la température en fonction de la position dans un barreau, ou encore les lois d'associations de résistances thermiques, autant de phénomènes qui ne peuvent pas être décrits par la thermodynamique macroscopique.
 
@@ -187,7 +187,7 @@ ou encore :
 \begin{equation}
 	\iiint_\mathcal{V} \left( \div (\vv E) - \frac{\rho}{\epsilon_0} \right) \dd \tau = 0
 \end{equation}
-Cette intégrale est nulle quel que soit le volume $\mathcal{V}$ considéré, donc la fonction intégrée est identiquement nulle et on obtient l'équation locale de l'électristatique :
+Cette intégrale est nulle quel que soit le volume $\mathcal{V}$ considéré, donc la fonction intégrée est identiquement nulle et on obtient l'équation locale de l'électrostatique :
 \begin{proposition}[Equation de Maxwell-Gauss]
 	Le champ électrostatique $\vv E(M)$ est relié à la distribution de charges $\rho(M)$ par la relation :
 	\begin{equation}
@@ -224,7 +224,7 @@ Nous obtenons les équations suivantes :
 	où $\mu$ est la masse volumique.
 \end{theorem}
 
-L'équation de Laplace est formellement équivalent à l'équation de Maxwell-Gauss, elle ne traduit aucun phénomène physique supplémentaire mais est parfois une formulation plus pratique lorsque l'on travaille à l'aide de potentiels. Dans une région vide de charges, on obtient le cas particulier de l'équation de Laplace :
+L'équation de Poisson est formellement équivalente à l'équation de Maxwell-Gauss, elle ne traduit aucun phénomène physique supplémentaire mais est parfois une formulation plus pratique lorsque l'on travaille à l'aide de potentiels. Dans une région vide de charges, on obtient le cas particulier de l'équation de Laplace :
 \begin{theorem}[Equation de Laplace]
 	En régime stationnaire, dans une région vide de charges, le potentiel électrostatique $V(M)$ vérifie :
 	\begin{equation}
@@ -248,13 +248,13 @@ L'équation de Laplace est formellement équivalent à l'équation de Maxwell-Ga
 \end{figure}
 
 \begin{encart}[Equation de Poisson et atome d'hydrogène]
-	L'équation de Poisson n'est pas spécifique à l'électrostatique ou la graviatation. Elle se retrouve dans de nombreux domaines de la physique, en particulier en mécanique des fluides, mais aussi en thermodynamique : c'est l'équation de diffusion thermique en régime stationnaire et en présence d'un terme source d'énergie.
+	L'équation de Poisson n'est pas spécifique à l'électrostatique ou la gravitation. Elle se retrouve dans de nombreux domaines de la physique, en particulier en mécanique des fluides, mais aussi en thermodynamique : c'est l'équation de diffusion thermique en régime stationnaire et en présence d'un terme source d'énergie.
 	
 	Sa résolution numérique est plus délicate que celle des équations différentielles temporelles, car c'est une équation implicite : connaître les conditions aux limites au bord du domaine suffit mathématiquement à déduire entièrement la solution. On ne peut donc pas utiliser la méthode d'Euler en intégrant l'équation de proche en proche à partir d'un unique point du bord du domaine : il faut résoudre l'équation en une seule étape (qui se fait souvent par une inversion de matrice).
 	
 	\textit{Pour aller plus loin :}
 	
-	L'équation de Poisson joue un rôle important dans la résolution des états stationnaires de l'atome d'hydrogène. En effet, dans l'atome d'hydrogène, pour un état stationnaire, l'équation de Schrödinger stationnaire $\psi(M,t) = \varphi(M) \exp(-\frac{i E t}{\hbar})$ s'écrit :
+	L'équation de Poisson joue un rôle important dans la résolution des états stationnaires de l'atome d'hydrogène. En effet, dans l'atome d'hydrogène, pour un état stationnaire, l'équation de Schrödinger pour un étét stationnaire $\psi(M,t) = \varphi(M) \exp(-\frac{i E t}{\hbar})$ s'écrit :
 	\begin{equation}
 		- \frac{\hbar^2}{2 m_e} \Delta \varphi(M) = (E - V(r)) \varphi(M)
 	\end{equation}
@@ -299,7 +299,7 @@ Dans le cadre de la magnétostatique, nous avons vu le théorème d'Ampère selo
 
 Considérons, en coordonnées cartésiennes, un élément de surface cartésien situé dans un plan $z = c^{ste}$. Nous cherchons à calculer la circulation du champ magnétique $\vv B(M)$ le long du contour enlaçant cet élément de surface dans le sens trigonométrique. Cette circulation élémentaire, $\dd \mathcal{C}$, est donnée par :
 \begin{align}
-	\dd \mathcal{C} &= B_x(x,y) \dd x + B_y(x+\dd x,y) \dd y \dd y + B_x(x,y+\dd y)\times (- \dd x) + B_y(x,y) \times (- \dd y) \\
+	\dd \mathcal{C} &= B_x(x,y) \dd x + B_y(x+\dd x,y) \dd y + B_x(x,y+\dd y)\times (- \dd x) + B_y(x,y) \times (- \dd y) \\
 	&= \dd x \dd y \left( \frac{\partial B_y}{\partial x} - \frac{\partial B_x}{\partial y} \right) \\
 	&= \left( \frac{\partial B_y}{\partial x} - \frac{\partial B_x}{\partial y} \right) \vv{e_z} \cdot \vv{\dd S}
 \end{align}
@@ -415,7 +415,7 @@ On rappelle ici quelques résultats vus sur l'induction en première année. Lor
 	\caption{Représentation d'un circuit électrique siège d'un phénomène d'induction. A gauche : flux du champ magnétique à travers le circuit. A droite : schéma électrique équivalent. Source : poly de cours de Etienne Thibierge.}
 \end{figure}
 
-Dans la loi de Faraday, la variation de flux peut être causée par une variation temporelle du champ magnétique, ou encore par un déplacement ou une déformation du circuit électrique. En particulier, la loi de Faraday permet de décrire des situations aussi variées que le déplacement d'un circuit dans un champ variables (principe de fonctionnement de certains teslamètres) ; la production d'énergie par un champ variables (principe des plaques à induction) ou encore l'apparition d'une force électromotrice dans l'expérience des rails de Laplace (circuit déformable).
+Dans la loi de Faraday, la variation de flux peut être causée par une variation temporelle du champ magnétique, ou encore par un déplacement ou une déformation du circuit électrique. En particulier, la loi de Faraday permet de décrire des situations aussi variées que le déplacement d'un circuit dans un champ variable (principe de fonctionnement de certains teslamètres) ; la production d'énergie par un champ variables (principe des plaques à induction) ou encore l'apparition d'une force électromotrice dans l'expérience des rails de Laplace (circuit déformable).
 
 Les effets de l'induction se résument bien dans la loi de modération de Lenz :
 \begin{proposition}[Loi de modération de Lenz]
@@ -448,7 +448,7 @@ Nous obtenons l'équation de Maxwell-Faraday :
 \begin{encart}[Tempêtes géomagnétiques]
 	Les tempêtes géomagnétiques sont une excellente illustration de la forme locale du théorème d'Ampère, et des équations de Maxwell-Thomson et Maxwell-Faraday.
 	
-	Le vent solaire est un flux de particules chargées dirigées vers la Terre. Ces particules subissent une force $\vv F_{\rm mag} = q \vv v \wedge \vv B$ et sont déviées par le champ magnétique terrestre (cf encart sur les aurores polaires dans le cours de magnétostatique). Cette déviation crée un courant électrique $\vv j = - \sum_i n_i q_i \vv v_i$. Par le théorème d'Ampère local vient influencer le champ magnétique en retour. A l'équilibre, les lignes du champ magnétique terrestre sont ainsi déformées par le vent solaire.
+	Le vent solaire est un flux de particules chargées dirigées vers la Terre. Ces particules subissent une force $\vv F_{\rm mag} = q \vv v \wedge \vv B$ et sont déviées par le champ magnétique terrestre (cf encart sur les aurores polaires dans le cours de magnétostatique). Cette déviation crée un courant électrique $\vv j = - \sum_i n_i q_i \vv v_i$. Par le théorème d'Ampère local, cette densité volumique de courant vient influencer le champ magnétique en retour. A l'équilibre, les lignes du champ magnétique terrestre sont ainsi déformées par le vent solaire.
 	
 	Lorsqu'une éruption solaire se produit, le vent solaire augmente fortement et la déformation des lignes de champ est plus importante. On observe alors que les lignes de champ magnétique sont plus resserrées. Par conservation du flux (équation de Maxwell-Thomson), le champ magnétique $\vv B$ devient plus intense au voisinage de la Terre.
 	
@@ -457,7 +457,7 @@ Nous obtenons l'équation de Maxwell-Faraday :
 
 \section{Conservation de la charge}
 
-Nous avons désormais établi quatre équations locales. Cependant, deux d'entre elles ont été établies à partir des lois de l'électrostatique et de la magnétostatique et ne sont donc valables qu'en régime stationnaire. En régime instationnaire, nous devons prendre en compte des phénomènes supplémentaires, et notamment la conservation de la charge électrique
+Nous avons désormais établi quatre équations locales. Cependant, deux d'entre elles ont été établies à partir des lois de l'électrostatique et de la magnétostatique et ne sont donc valables qu'en régime stationnaire. En régime instationnaire, nous devons prendre en compte des phénomènes supplémentaires, et notamment la conservation de la charge électrique.
 
 \subsection{Conservation de la charge en géométrie cartésienne à une dimension}
 
@@ -487,7 +487,7 @@ En trois dimension, la conservation de la charge peut s'écrire de la manière s
 		\frac{\partial \rho}{\partial t} + \div (\vv j) = 0
 	\end{equation}
 \end{theorem}
-Il est possible de faire une démonstration similaire à celle qui a été faite dans le cours de thermodynamique, en considérant un cube en coordonnées cartésiennes. Cette démon,stration nous avait permis de définir la divergence. Cependant, maintenant que cet opérateur est connu, nous pouvons faire une démonstration plus rapide :
+Il est possible de faire une démonstration similaire à celle qui a été faite dans le cours de thermodynamique, en considérant un cube en coordonnées cartésiennes. Cette démonstration nous avait permis de définir la divergence. Cependant, maintenant que cet opérateur est connu, nous pouvons faire une démonstration plus rapide :
 \begin{capex}
 	A partir du bilan macroscopique, établir l'équation locale de conservation de la charge.
 \end{capex}
@@ -507,11 +507,11 @@ Pour obtenir un système d'équations qui caractérise entièrement le champ él
 \begin{equation}
 	\div(\vv j) = \frac{1}{\mu_0} \div(\rot(\vv B)) = 0
 \end{equation}
-par protpriété du premier principe. Comme nous sommes en régime stationnaire ceci est compatible avec le premier principeL Or en régime instationnaire, on s'attend à ce que la conservation de la charge soit vérifiée, on doit donc avoir :
+par propriété de la divergence. Comme nous sommes en régime stationnaire ceci est compatible avec le principe de conservation de la charge. Or en régime instationnaire, on s'attend toujours à ce que la conservation de la charge soit vérifiée, on doit donc avoir :
 \begin{equation}
 	\div(\vv j) = - \frac{\partial \rho}{\partial t}
 \end{equation}
-Pour que cette équation soit satisfaite, il n'est pas possible de garder les deux équations valables en régime stationnaire telles qu'elles sont. Il est nécessaire de les modifier. On ne sait pas \textit{a priori} comment les équations doivent être modifiées, mais une modification qui convient est la suivante : on suppose que l'équation de Maxwell-Gauss reste valable en régime stationnaire, et on rajoute un terme instationnaire à la forme locale du théorème d'Ampère pour obtenir l'équation dite de Maxwell-Ampère :
+Pour que cette équation soit satisfaite, il n'est pas possible de garder les formes locales des théorèmes de Gauss et d'Ampère telles qu'elles sont. Il est nécessaire de les modifier. On ne sait pas \textit{a priori} comment les équations doivent être modifiées, mais une modification qui convient est la suivante : on suppose que l'équation de Maxwell-Gauss reste valable en régime stationnaire, et on rajoute un terme instationnaire à la forme locale du théorème d'Ampère pour obtenir l'équation dite de Maxwell-Ampère :
 \begin{proposition}[Equation de Maxwell-Ampère]
 On postule que le champ magnétique est relié au champ électrique et à la densité volumique de courants par la relation suivante :
 \begin{equation}
@@ -536,7 +536,7 @@ Les équations sont les suivantes :
 		\begin{dcases}
 			\div (\vv E) &= \dfrac{\rho}{\epsilon_0} \quad \mathrm{(Maxwell-Gauss)} \\
 			\rot (\vv E) &= -\frac{\partial \vv B}{\partial t} \quad \mathrm{(Maxwell-Faraday)} \\
-			\rot (\vv B) &= \mu_0 \left( \vv j + \epsilon_0 \dfrac{\partial \vv E}{\partial t} \right) \quad \mathrm{(Maxwell-Amp\`{e}re)} \\
+			\rot (\vv B) &= \mu_0 \left( \vv j + \epsilon_0 \dfrac{\partial \vv E}{\partial t} \right) \quad \mathrm{(Maxwell-Ampere)} \\
 			\div (\vv B) &= 0 \quad \mathrm{(Maxwell-Thomson)}
 		\end{dcases}
 	\end{equation}

@@ -1,0 +1,386 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% The Legrand Orange Book
+% LaTeX Template
+% Version 2.1.1 (14/2/16)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Mathias Legrand (legrand.mathias@gmail.com) with modifications by:
+% Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Compiling this template:
+% This template uses biber for its bibliography and makeindex for its index.
+% When you first open the template, compile it from the command line with the 
+% commands below to make sure your LaTeX distribution is configured correctly:
+%
+% 1) pdflatex main
+% 2) makeindex main.idx -s StyleInd.ist
+% 3) biber main
+% 4) pdflatex main x 2
+%
+% After this, when you wish to update the bibliography/index use the appropriate
+% command above and make sure to compile with pdflatex several times 
+% afterwards to propagate your changes to the document.
+%
+% This template also uses a number of packages which may need to be
+% updated to the newest versions for the template to compile. It is strongly
+% recommended you update your LaTeX distribution if you have any
+% compilation errors.
+%
+% Important note:
+% Chapter heading images should have a 2:1 width:height ratio,
+% e.g. 920px width and 460px height.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt,fleqn]{book} % Default font size and left-justified equations
+
+\usepackage{ifthen} 
+\newboolean{VersionProf}
+\setboolean{VersionProf}{false}
+
+\usepackage{wasysym}
+\usepackage{esint} % various fancy integral symbols
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.17}
+\usetikzlibrary{patterns}
+\usepackage{tkz-euclide} 
+\usepackage{mathtools}
+\usepackage{xurl}
+\usepackage[version=4,arrows=pgf-filled,
+textfontname=sffamily,
+mathfontname=mathsf]{mhchem}
+\usepackage{gensymb}
+\usepackage{tabularray}
+\usepackage{csquotes}
+
+\usepackage[french]{babel}
+\usepackage{dingbat}
+
+\usepackage{environ}
+\usepackage{wrapfig}
+
+\NewEnviron{solution}{%
+    \ifthenelse{\boolean{VersionProf}}{\begin{solutionA}
+        \BODY%*
+        \end{solutionA}
+    }{%
+        \relax%
+    }%
+}%
+
+\usetikzlibrary {arrows.meta} 
+
+\newcommand{\degC}{{\degree}C}
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\div}{\mathrm{div}}
+\newcommand{\rot}{\vv{\mathrm{div}}}
+\newcommand{\grad}{\vv{\mathrm{grad}}}
+
+\tikzset{
+    support/.style={
+        pattern=north east lines,
+        draw=none,
+        minimum width=0.3,
+        minimum height=0.6
+    }
+    ,>=latex
+}
+
+\usepackage[d]{esvect}
+
+%SPECIFIC TO THIS CHAPTER
+\usepackage{physics}
+\usepackage{ifthen}
+\usepackage[outline]{contour} % glow around text
+\usetikzlibrary{calc} % for pic
+\usetikzlibrary{angles,quotes} % for pic
+\usetikzlibrary{patterns}
+\tikzset{>=latex} % for LaTeX arrow head
+\contourlength{1.2pt}
+
+\colorlet{myred}{red!65!black}
+\definecolor{myred}{RGB}{127,0,255}
+\tikzstyle{ground}=[preaction={fill,top color=black!10,bottom color=black!5,shading angle=20},
+                    fill,pattern=north east lines,draw=none,minimum width=0.3,minimum height=0.6]
+\tikzstyle{mass}=[line width=0.6,myred,fill=myred!40,rounded corners=1,
+                  top color=myred!40,bottom color=myred!20,shading angle=20]
+\tikzstyle{rope}=[myred!30,line width=1.2,line cap=round] %very thick
+
+% FORCES SWITCH
+\tikzstyle{force}=[->,myred,ultra thick,line cap=round]
+\tikzstyle{Fproj}=[force,myred!60]
+\newboolean{showforces}
+\setboolean{showforces}{true}
+%----------------------------------------------------------------------------------------
+
+\input{structure} % Insert the commands.tex file which contains the majority of the structure behind the template
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	TABLE OF CONTENTS
+%----------------------------------------------------------------------------------------
+
+%\usechapterimagefalse % If you don't want to include a chapter image, use this to toggle images off - it can be enabled later with \usechapterimagetrue
+
+\chapterimage{filmB.jpg} % Table of contents heading image
+
+%\pagestyle{empty} % No headers
+
+%\tableofcontents % Print the table of contents itself
+
+%\cleardoublepage % Forces the first chapter to start on an odd page so it's on the right
+
+%\pagestyle{fancy} % Print headers again
+
+
+
+%\part{\'{E}lectromagnétisme}
+
+\setcounter{chapter}{18}
+
+\chapter{Rayonnement dipolaire}
+
+Dans les chapitres précédents, nous avons étudié les différentes propriétés des ondes électromagnétiques ainsi que leur interaction avec différents milieux tels que les plasmas ou les conducteurs électriques. Néanmoins, nous n'avons toujours pas vu comment il est possible de produire une onde électromagnétique, ni comment une telle onde interagit avec la matière à l'échelle microscopique. Pour cela, nous allons étudier la notion de rayonnement dipolaire : on peut produire une onde électromagnétique à partir d'un dipôle électrique qui oscille dans le temps.
+
+\section{Dipôle oscillant}
+
+\subsection{Définition}
+
+Pour produire un champ électrique, on utilise souvent une antenne. Cette antenne n'est rien d'autre qu'un fil électrique fermé, dans lequel on fait passer un courant alternatif à haute fréquence. On peut alors assimiler cette antenne à un dipôle électrique qui varie dans le temps en première approximation. En efet, on définit un dipôle électrique oscillant de la façon suivante :
+\begin{definition}[Dipôle oscillant]
+	Un dipôle électrique oscillant est un ensemble de charges de moment dipolaire total $\vv p(t)$ oscillant en fonction du temps.
+\end{definition}
+
+Le modèle du dipôle oscillant est très utile car il permet de décrire de nombreux phénomènes naturels ainsi que des dispositifs technologiques tels que :
+\begin{itemize}
+	\item Le mouvement des électrons autour du noyau d'un atome;
+	\item Le fonctionnement d'une antenne émettant des ondes électromagnétiques.
+\end{itemize}
+
+\begin{capex}
+	On considère une antenne constituée d'un fil de longueur $a$, parcourue par un courant $i(t) = I_0 \cos(\omega t)$. Montrer que l'antenne est équivalente à un dipôle oscillant dont on calculera le moment dipolaire $\vv p(t)$.
+\end{capex}
+
+\subsection{Approximations dans le cadre du modèle du dipôle oscillant}
+
+Dans le cadre du modèle du dipôle, nous ferons plusieurs approximations importantes :
+\begin{itemize}
+	\item Nous ferons l'approximation dipolaire que nous avons vue en électrostatique et en magnétostatique, c'est-à-dire que nous nous plaçons à une distance $r$ du dipôle telle que $r \gg a$. Cette hypothèse n'est pas très restrictive lorsque le dipôle est d'origine microscopique (on a alors $a \approx 10^{-10}$\,m) et pour les antennes, elle revient à supposer que l'on se place à une distance de l'antenne grande devant la taille de l'antenne, ce qui est généralement le cas pour la réception de signaux.
+	\item Nous supposerons que le mouvement des charges constituant le dipôle est non relativiste, c'est-à-dire que $v \ll c$. Or la fréquence du mouvement est de l'ordre de $\nu \sim v/a$, donc cette hypothèse revient à dire que $\nu \ll c/a$ ou encore $\lambda \gg a$ où $\lambda$ est la longueur d'onde de l'onde émise par le dipôle.
+	\item Enfin nous supposerons que nous nous plaçons suffisamment loin du dispositif émetteur par rapport à la longueur d'onde de l'onde, c'est-à-dire que $r \gg \lambda$.
+\end{itemize}
+
+Ces trois hypothèses permettent de simplifier l'application des équations de Maxwell au dipôle et forment le cadre du modèle du dipôle oscillant :
+\begin{definition}[Hypothèses du modèle du dipôle oscillant]
+	Dans le cadre du modèle du dipôle oscillant, trois longueurs caractéristiques sont présentes : la taille du dipôle $a$, la longueur d'onde $\lambda$ et la distance $r$ à laquelle l'onde rayonnée est observée. Nous faisons l'hypothèses qu'elles vérifient :
+	\begin{equation}
+		a \ll \lambda \ll r
+	\end{equation}
+\end{definition}
+
+\begin{capex}
+	A l'aide d'applications numériques, vérifier la validité de ces hypothèses dans les deux situations suivantes :
+	\begin{itemize}
+		\item Une onde lumineuse diffusée par un atome dans le ciel et observée à la surface de la Terre ;
+		\item Une onde radio FM émise par une antenne et réceptionnée par une voiture.
+	\end{itemize}
+\end{capex}
+
+\subsection{Onde rayonnée par le dipôle}
+
+Nous cherchons désormais à étudier l'onde électromagnétique rayonnée par le dipôle. Nous nous plaçons dans le système de coordonnées sphériques centré sur le dipôle, d'axe $(Oz)$ et de centre $O$ et nous supposons les hypothèses du modèle du dipôle oscillant vérifiées. Nous cherchons à déterminer le champ électromagnétique $(\vv E(M,t),\vv B(M,t))$. 
+
+\begin{capex}
+	A partir des symétries de la situation, montrer que le champ électrique et le champ magnétique s'écrivent :
+	\begin{align}
+		\vv E(M,t) = E_r(r,\theta,t) \vv{e_r} + E_{\theta}(r,\theta,t) \vv{e_\theta} \\
+		\vv B(M,t) = B_\varphi(r,\theta,t) \vv{e_\varphi}
+	\end{align}
+\end{capex}
+
+Nous admettons que la résolution des équations de Maxwell permet d'obtenir la forme suivante pour le champ électromagnétique émis par le dipôle électrique :
+\begin{theorem}[Rayonnement dipolaire]
+	Dans le cadre du modèle du dipôle oscillant, le rayonnement émis par un dipôle $\vv p(t) = p_0 \cos(\omega t) \vv{e_z}$ placé en $O$ est donné par :
+	\begin{equation}
+		\begin{dcases}
+			\vv E(M,t) &= - \dfrac{\mu_0 p_0 \omega^2 \sin \theta}{4 \pi r} \cos(\omega t - k r) \vv{e_\theta} \\
+			\vv B(M,t) &= - \dfrac{\mu_0 p_0 \omega^2 \sin \theta}{4 \pi c r} \cos(\omega t - k r) \vv{e_\varphi}
+		\end{dcases}
+	\end{equation}
+	avec $k = \dfrac{\omega}{c}$.
+\end{theorem}
+
+Ce théorème n'est pas à connaître mais il faut savoir interpréter la structure de l'onde rayonnée.
+
+\begin{capex}
+	On se place en un point $M$ tel que $r \gg \lambda$. Commenter la structure de l'onde émise par le dipôle au point $M$: caractère stationnaire ou propagatif, polarisation.
+\end{capex}
+
+\subsection{Puissance rayonnée}
+
+On cherche désormais à déterminer la puissance de l'onde électromagnétique rayonnée par le dipôle électrique.
+
+\begin{capex}
+	Calculer le vecteur de Poynting de l'onde et déterminer la puissance totale rayonnée par le dipôle.
+\end{capex}
+
+\begin{proposition}[Puissance rayonnée par un dipôle oscillant]
+	Dans le cadre des hypothèses du modèle du dipôle oscillant, la puissance diffusée par les ondes électromagnétiques est donnée par :
+	\begin{equation}
+		\mathcal{P} = \frac{\mu_0 p_0^2 \omega^4}{12 \pi c}
+	\end{equation}
+\end{proposition}
+Cette puissance augmente comme la fréquence à la puissance 4, d'où l'intérêt d'utiliser des hautes fréquences pour les télécommunications (typiquement de l'ordre du MHz voire du GHz, ce qui est difficilement atteignable avec un générateur basses fréquences classique). 
+
+On constate que le vecteur de Poynting de l'onde électromagnétique décroît avec la distance au dipôle comme $1/r^2$, ce qui est une conséquence directe de la conservation de l'énergie (la puissance rayonnée se répartit sur une surface de plus en plus grande au fur et à mesure que l'on s'éloigne du dipôle). On constate également que ce vecteur dépend de l'angle $\theta$ entre la direction du dipôle et le point $M$ d'observation. Pour caractériser cette dépendance, on utilise l'indicatrice de rayonnement.
+
+\begin{definition}[Indicatrice de rayonnement]
+	L'indicatrice de rayonnement est une surface permettant de visualiser la puissance d'émission d'une onde électromagnétique selon la direction d'émission. Elle est définie par l'équation suivante, en coordonnées sphériques $(R_i,\theta,\varphi)$ :
+	\begin{equation}
+		R_i = \frac{|| \vv \Pi(r,\theta,\varphi) ||}{\max_{\theta,\varphi} ||\vv \Pi(r,\theta,\varphi)||}
+	\end{equation}
+	où $R_i$ varie entre 0 et 1 par définition.
+\end{definition}
+
+\begin{proposition}
+	Dans le cadre du dipôle oscillant, l'indicatrice de rayonnement vérifie $R_i = \sin^2 \theta$.
+\end{proposition}
+
+\begin{capex}
+	Représenter l'allure de l'indicatrice de rayonnement pour le dipôle oscillant.
+\end{capex}
+
+\subsection{Détection de l'onde électromagnétique rayonnée}
+
+\textit{Seule la mise en oeuvre expérimentale de cette partie est exigible aux concours.}
+
+Pour détercter une onde électromagnétique rayonnée, on peut utiliser une seconde antenne. Supposons que l'on place au point $M$ un second fil de taille $b$ et orienté selon un vecteur unitaire $\vv u_a$ incliné d'un angle $\theta_a$ par rapport à $\vv{e_z}$. On suppose que la longueur du fil vérifie $b \ll \lambda$ et $b \ll r$, alors le champ électromagnétique peut être considéré comme uniforme à l'échelle de l'antenne. En plaçant un voltmètre aux bornes de l'antenne récptrice, on mesure une tension :
+\begin{equation}
+	U = \int_{\rm antenne} \vv E \cdot \vv{\dd \ell} \approx b \vv E(M) \cdot \vv u \approx E_\theta(M) b \cos(\vv{u_a}, \vv{e_\theta})
+\end{equation}
+Nous en déduisons que :
+\begin{equation}
+	U \approx \dfrac{\mu_0 p_0 b \omega^2 \sin \theta}{4 \pi r} \cos(\omega t - k r) \cos(\vv{u_a},\vv{e_\theta})
+\end{equation}
+Ainsi, l'antenne réceptrice permet de mesurer une tension de même fréquence que la fréquence du dipôle oscillant émetteur. Ce dispositif permet donc les télécommunications. La tension $U$ est d'autant plus grande que :
+\begin{itemize}
+	\item L'antenne réceptrice est longue, d'où l'intérêt de choisir de grandes antennes ;
+	\item L'antenne réceptrice est parallèle à $\vv{e_\theta}$. Dans le cas de l'écoute d'une radio, l'antenne émettrice est généralement verticale et la réception se fait à une altitude proche de celle de l'émission, la réception est donc optimisée si l'antenne est placée verticalement.
+\end{itemize}
+
+\section{Diffusion d'une onde électromagnétique par une molécule}
+
+Nous avons étudié le cas d'une onde électromagnétique émise par un dipôle oscillant, ce qui présente des applications très classiques en télécommunications : on utilise des antennes pour produire artificiellement des dipôles oscillants et ainsi transmettre de l'information à l'aide d'ondes électromagnétiques.
+
+Néanmoins, des phénomènes d'émission par des dipôles oscillants existent également dans la nature, ces dipôles étant constitués de protons et d'électrons. Il s'agit donc de phénomènes se produisant à l'échelle microscopique, et le mouvement des électrons et des protons est provoqué, ce qui induit l'émission d'une nouvelle onde électromagnétique : on parle de diffusion d'une onde électromagnétique.
+
+\begin{definition}[Diffusion des ondes électromagnétiques]
+	On dit qu'une onde électromagnétique est diffusée par une molécule lorsqu'une partie de l'énergie de l'onde est absorbée par la molécule pour exciter un dipôle oscillant, ce qui provoque l'émission d'une onde secondaire, appelée onde diffusée.
+\end{definition}
+
+La diffusion est omniprésente dans la nature. S'il n'y avait pas de diffusion, le ciel serait noir et on pourrait observer les étoiles à tout moment de la journée. Mais la présence de molécules dans l'air diffuse la lumière ce qui implique que de la lumière parvient à nos yeux depuis tous les points du ciel qui sont illuminés par le soleil. De la même manière, les nuages diffusent la lumière du soleil, et la couleur claire ou sombre d'un nuage reflète simplement la partie du nuage qui est plus ou moins éclairée par le soleil.
+
+Dans cette partie, nous allons apporter une description très succinte du phénomène de diffusion lumineuse à partir d'un modèle simplifié : le modèle de l'électron élastiquement lié.
+
+\subsection{Modèle de l'électron élastiquement lié}
+
+Le modèle de l'électron élastiquement lié dérive d'une représentation de l'atome qui fait suite à la découverte de l'électron : on suppose que les électrons sont ponctuels, mais que la charge positive du noyau est uniformément répartie dans une sphère de rayon $a_0$ dans laquelle l'électron peut se mouvoir, en subissant une force de frottement fluide $\vv F_f = - \alpha \vv v$.
+
+\begin{remark}
+	Ce modèle est évidemment inadapté à une description quantitative fine du phénomène de diffusion. En réalité, on sait que le noyau a un rayon très faible devant la taille de l'atome $a_0$. Par ailleurs, nous savons également que la mécanique classique ne peut pas décrire le mouvement d'un électron autour du noyau, mais qu'une description quantique est plus adaptées. Néanmoins, nous n'avons pas de théorie accessible en MP nous permettant de décrire le champ électromagnétique produit par une distribution quantique de charges et de courants (il faudrait une version quantique des équations de Maxwell), et nous nous contenterons donc de ce modèle classique.
+
+	Le modèle de l'électron élastiquement lié présente l'avantage d'être simple et de capturer les bons ordres de grandeur et les dépendances principales de l'onde rayonnée aux paramètres du problème.
+\end{remark}
+
+\begin{capex}
+	A l'aide du théorème de Gauss, déterminer le champ électrique dans le noyau. En déduire que la force électrique du noyau sur l'électron peut s'assimiler à un ressort de longueur à vide nulle, dont on déterminera la raideur $\kappa$.
+\end{capex}
+
+Cette propriété justifie la dénomination du modèle de l'électron élastiquement lié : bien qu'en pratique, il n'existe pas de liaison élastique entre l'électron et le noyau, ce modèle est équivalent mathématiquement à une telle liaison.
+
+\subsection{Réponse de l'électron à une onde électromagnétique}
+
+On envoie sur la molécule une onde plane progresive monochromatique polarisée rectilignement selon $\vv{e_x}$ :
+\begin{equation}
+	\vv E(M,t) = E_0 \cos(\omega t - k z) \vv{e_x}
+\end{equation}
+Dans l'hypothèse où $a_0 \ll \lambda$ (correspondant aux hypothèses du modèle du dipôle oscillant), on peut considérer que $kz \ll 1$ dans l'atome.
+
+L'onde est également associée à un champ magnétique, mais nous avons déjà montré dans les chapitres précédents que la composante magnétique de la force de Lorentz est négligeable tant que le mouvement de l'électron est non relativiste. Par ailleurs, le poids de l'électron est négligeable.
+
+L'atome n'est pas en interaction avec d'autres corps (on fait une hypothèse de gaz parfait), il ne subit donc aucune force mis à part son poids que l'on négligera, et il est donc en translation rectiligne uniforme par rapport au référentiel terrestre supposé galiléen. Le référentiel de l'atome est donc galiléen. Dans ce référentiel, l'électron est soumis uniquement à la force électrique du noyau et celle de l'onde électromagnétique, ainsi que la force de frottement fluide, et on a :
+\begin{equation}
+	m_e \frac{\dd^2 \vv r}{\dd t^2} = - \alpha \frac{\dd \vv r}{\dd t} - \kappa \vv r - e E_0 \cos(\omega t) \vv{e_x}  
+\end{equation}
+
+\begin{capex}
+	Mettre cette équation différentielle sous forme canonique en définissant une pulsation propre $\omega_0$ et un facteur de qualité $Q$. Calculer numériquement la fréquence propre $f_0$ dans le cas de l'atome d'hydrogène.
+\end{capex}
+
+Pour résoudre l'équation, on passe en notation complexe et on écrit :
+\begin{equation}
+	\underline{\vv r}  = \underline{\vv{r_0}} e^{i \omega t}
+\end{equation}
+Nous obtenons alors :
+\begin{equation}
+	\underline{\vv{r_0}} = - \dfrac{e E_0}{\kappa} \frac{1}{1 + i \dfrac{\omega}{Q \omega_0} - \left(\dfrac{\omega}{\omega_0}\right)^2} \vv{e_x}
+\end{equation}
+Or le mouvement de l'électron correspond au mouvement d'un dipôle qui vaut :
+\begin{equation}
+	\vv p(t) = -e \vv r(t)
+\end{equation}
+si bien que l'on peut en déduire que l'onde électromagnétique crée un dipôle oscillant dans la molécule $\vv p(t) = p_0 \cos(\omega t + \psi) \vv{e_x}$ où $p_0$ et $\psi$ sont donnés par le module et l'argument de la fonction de transfert du second ordre. On obtient ainsi :
+\begin{equation}
+	p_0 = \frac{e^2 E_0}{\kappa \sqrt{ \left(1 - \left(\dfrac{\omega}{\omega_0}\right)^2 \right)^2 + \left(\dfrac{\omega}{Q \omega_0}\right)^2  }}
+\end{equation}
+
+Nous constatons que le comportement du dipôle est un filtre passe-bas résonant. Son facteur de qualité $Q$ est souvent très élevé car les phénomènes de dissipation d'énergie sont très faibles en pratique; la force de frottement $\vv F_f$ est un modèle simpliste permettant de prendre en compte cette dissipation d'énergie et $\alpha$ est très faible en pratique.
+
+\subsection{Onde électromagnétique diffusée}
+
+\begin{capex}
+	Déterminer la puissance de l'onde électromagnétique diffusée par l'atome, $\mathcal{P}_{\rm diff}$. Tracer son allure en fonction de $\omega$.
+\end{capex}
+
+A AJOUTER : DOMAINES DE FREQUENCE, DIFFUSION RAYLEIGH, RESONANCE, DIFFUSION MIE (HORS PROGRAMME)
+
+Nous constatons que la puissance diffusée est croissante avec $E_0$, c'est-à-dire que la diffusion est d'autant plus importante que l'onde électromagnétique incidente est puissante. Pour éviter de prndre en compte cet effet, nous définissons la section efficace d'absorption :
+\begin{definition}[Section efficace de diffusion (hors programme)]
+	La section efficace de diffusion d'une molécule correspond à la surface d'un objet parfaitement abosrbant qui absorberait la même quantité d'énergie que la molécule. En pratique, elle se calcule comme suit :
+	\begin{equation}
+		\sigma_{\rm diff} = \frac{\mathcal{P}_{\rm diff}}{\langle || \vv \Pi_{\rm inc}|| \rangle}
+	\end{equation}
+	où $\vv \Pi_{\rm inc}$ est le vecteur de Poynting de l'onde électromagnétique incidente.
+\end{definition}
+
+Ici le vecteur de Poynting incident est donné par $\vv \Pi_{\rm inc} = \frac{\epsilon_0 E_0^2}{2} c \vv{e_z} = \frac{E_0^2}{2 \mu_0 c} \vv{e_z}$. Nous en déduisons la section efficace :
+\begin{proposition}[Section efficace d'absorption]
+	La section efficace de diffusion de la molécule est donnée par :
+	\begin{equation}
+		\sigma_{\rm diff} = \sigma_0 \frac{\left( \dfrac{\omega}{\omega_0}\right)^4}{\left(1 - \left(\dfrac{\omega}{\omega_0}\right)^2 \right)^2 + \left(\dfrac{\omega}{Q \omega_0}\right)^2}
+	\end{equation}
+	avec :
+	\begin{equation}
+		\sigma_0 = \frac{\mu_0^2 e^4}{6 \pi m_e^2}
+	\end{equation}
+\end{proposition}
+
+
+
+
+
+
+\end{document}

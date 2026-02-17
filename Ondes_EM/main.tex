@@ -1,7 +1,3 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% The Legrand Orange Book
-% LaTeX Template
-% Version 2.1.1 (14/2/16)
 %
 % This template has been downloaded from:
 % http://www.LaTeXTemplates.com
@@ -82,12 +78,6 @@ mathfontname=mathsf]{mhchem}
 
 \usetikzlibrary {arrows.meta} 
 
-\newcommand{\degC}{{\degree}C}
-\newcommand{\dd}{\mathrm{d}}
-\renewcommand{\div}{\mathrm{div}}
-\newcommand{\rot}{\vv{\mathrm{rot}}}
-\renewcommand{\grad}{\vv{\mathrm{grad}}}
-
 \tikzset{
     support/.style={
         pattern=north east lines,
@@ -126,6 +116,14 @@ mathfontname=mathsf]{mhchem}
 %----------------------------------------------------------------------------------------
 
 \input{structure} % Insert the commands.tex file which contains the majority of the structure behind the template
+
+
+\newcommand{\degC}{{\degree}C}
+\newcommand{\dd}{\mathrm{d}}
+\renewcommand{\div}{\mathrm{div}}
+\newcommand{\rot}{\vv{\mathrm{rot}}}
+\renewcommand{\grad}{\vv{\mathrm{grad}}}
+
 
 \begin{document}
 
@@ -180,7 +178,7 @@ L'interprétation géométrique de cet opérateur est délicate, mais comme le l
 \begin{proposition}
 	Soit $\vv A$ un champ vectoriel. Alors :
 	\begin{equation}
-		\rot(\rot(\vv A)) = \grad(\div(A)) - \vv \Delta \vv A
+		\rot(\rot(\vv A)) = \grad(\div(\vv A)) - \vv \Delta \vv A
 	\end{equation}
 \end{proposition}
 
@@ -188,7 +186,7 @@ L'interprétation géométrique de cet opérateur est délicate, mais comme le l
 
 On peut alors combiner les équations de Maxwell dans le vide avec ces propriétés pour obtenir l'équation dite de d'Alembert :
 \begin{theorem}[\'{E}quation de d'Alembert]
-	Dans le vide, le champ électromagnétique $(\vv E(M,t),\vv B(M,t))$ obéit à l'équation de d'Alembert :
+	Dans le vide, le champ électromagnétique obéit à l'équation de d'Alembert :
 	\begin{align}
 		&\vv \Delta \vv E - \frac{1}{c^2} \frac{\partial^2 \vv E}{\partial t^2} = \vv 0\\
 		&\vv \Delta \vv B - \frac{1}{c^2} \frac{\partial^2 \vv B}{\partial t^2} = \vv 0
@@ -206,7 +204,7 @@ La nature des solutions de cette équation n'est pas claire a priori. Dans un pr
 \end{definition}
 
 \begin{capex}
-	Rappeler la définition d'une surface d'onde. Comment sont orientées les surfaces d'onde dans el cas d'une onde plane ?
+	Rappeler la définition d'une surface d'onde. Comment sont orientées les surfaces d'onde dans le cas d'une onde plane ?
 \end{capex}
 
 Dans ce cas, nous pouvons étudier une onde se propageant selon $\vv{e_x}$. Les champs $\vv E$ et $\vv B$ ne dépendent alors que de la coordonnée $x$ (invariance par translation selon $(Oy)$ et $(Oz)$, par définition de l'onde plane). Dans ce cas, l'équation de d'Alembert pour le champ électrique devient :
@@ -259,7 +257,7 @@ Dans ce cas, nous pouvons étudier une onde se propageant selon $\vv{e_x}$. Les 
 	\begin{equation}
 		\frac{\partial}{\partial u} \left( \frac{\partial f}{\partial v}\right) = 0
 	\end{equation}
-	Ainsi, $\frac{\partial f}{\partial v}$ est indépendante de $u$, c'est-à-dire qu'il existe une fonction $g_0$ telle que $\frac{\partial f}{\partial v} = g_0(v)$. En intégrant, on obtient :
+	Ainsi, $\dfrac{\partial f}{\partial v}$ est indépendante de $u$, c'est-à-dire qu'il existe une fonction $g_0$ telle que $\dfrac{\partial f}{\partial v} = g_0(v)$. En intégrant, on obtient :
 	\begin{equation}
 		f(u,v) = \int_0^v g_0(v') \dd v' + f(u,v=0)
 	\end{equation}
@@ -275,9 +273,9 @@ Dans ce cas, nous pouvons étudier une onde se propageant selon $\vv{e_x}$. Les 
 
 Nous pouvons alors constater que les solutions sont des perturbations se propageant à la célérité $c$, nous pouvons ainsi interpréter $c$ comme la célérité de la lumière dans le vide :
 \begin{definition}
-	On note $c = \frac{1}{\sqrt{\epsilon_0 \mu_0}}$ la célérité des ondes électromagnétiques dans le vide, qui vaut :
+	On note $c = \dfrac{1}{\sqrt{\epsilon_0 \mu_0}}$ la célérité des ondes électromagnétiques dans le vide, qui vaut :
 	\begin{equation}
-		c = 299\,792\,458\,\mathrm{m}\cdot\mathrm{s}^{-1} \quad \mathrm{(valeur exacte)}
+		c = 299\,792\,458\,\mathrm{m}\cdot\mathrm{s}^{-1} \quad \mathrm{(valeur\,exacte)}
 	\end{equation}
 \end{definition}
 
@@ -306,7 +304,7 @@ Nous avons ici choisi, par convention, d'orienter la direction de propagation se
 
 \subsection{Relation de structure}
 
-Nous pouvons désormais étudier la structure du champ électromagnétique en reliant le champ électrique et le champ magnétique pour une onde plane. Pour cela, nous allons uriliser la relation de structure, valable pour une onde plane :
+Nous pouvons désormais étudier la structure du champ électromagnétique en reliant le champ électrique et le champ magnétique pour une onde plane. Pour cela, nous allons utiliser la relation de structure, valable pour une onde plane :
 \begin{theorem}[Relation de structure]
 	On considère une onde plane progressive se propageant selon la direction $\vv u$. Alors le champ électrique et le champ magnétique sont reliés par la relation :
 	\begin{equation}
@@ -326,7 +324,7 @@ Nous pouvons désormais étudier la structure du champ électromagnétique en re
 	\begin{equation}
 		\frac{\partial \vv E_\xi}{\partial \zeta} = u_\zeta E_\xi'(\vv u \cdot \vv r - c t)
 	\end{equation}
-	(où $\xi \in {x,y,z}$ et $\zeta \in {x,y,z}$). Or on sait que par définition du rotationnel :
+	(où $\xi \in \{x,y,z\}$ et $\zeta \in \{x,y,z\}$). Or on sait que par définition du rotationnel :
 	\begin{equation}
 		\rot(\vv E)  = \begin{pmatrix} \dfrac{\partial}{\partial x} \\[9pt]  \dfrac{\partial}{\partial y} \\[9pt] \dfrac{\partial}{\partial z} \end{pmatrix} \wedge \begin{pmatrix} E_x \\[5pt] E_y \\[5pt] E_z \end{pmatrix} = \begin{pmatrix} u_x \\ u_y \\ u_z \end{pmatrix} \wedge \begin{pmatrix} E_x'(\vv u \cdot \vv r - c t) \\ E_y'(\vv u \cdot \vv r - c t) \\ E_z'(\vv u \cdot \vv r - c t) \end{pmatrix}
 	\end{equation}
@@ -365,7 +363,7 @@ L'équation de d'Alembert permet la propagation d'ondes et de signaux de toute f
 Le vecteur d'onde et la pulsation sont reliés à la direction de propagation $\vv u$, à la longueur d'onde $\lambda$, à la période $T$ et à la fréquence $\nu$ par les relations suivantes :
 \begin{align}
 	\vv k &= \frac{2\pi}{\lambda} \vv u \\
-	\omega = 2 \pi \nu = \frac{2 \pi}{T}
+	\omega &= 2 \pi \nu = \frac{2 \pi}{T}
 \end{align}
 
 \begin{figure}[p]
@@ -496,7 +494,7 @@ En un point $M$ de l'espace, le vecteur $\vv E(M,t)$ aura donc une évolution bi
 	Une onde électromagnétique est dite polarisée rectilignement si, en tout point $M$ de l'espace, le champ électrique $\vv E(M,t)$ garde une direction fixe au cours du temps. Cette direction est alors appelée la direction de polarisation.
 \end{definition}
 
-Cette situation se produit lorsque le déphasage $\Delta \phi_E = \phi_E^x - \phi_E^y$ est tel que $\phi = 0[\pi]$. On a alors $e^{j \Delta \phi_E} = \pm 1$ et :
+Cette situation se produit lorsque le déphasage $\Delta \phi_E = \phi_E^x - \phi_E^y$ est tel que $\phi \equiv 0[\pi]$. On a alors $e^{j \Delta \phi_E} = \pm 1$ et :
 \begin{equation}
 	\vv E(M,t) = (E_{0x} \vv{e_x} \pm E_{0y} \vv{e_y}) \cos(\omega t - k z + \phi_E^x)
 \end{equation}
@@ -514,13 +512,8 @@ Cette situation se produit lorsque le déphasage $\Delta \phi_E = \phi_E^x - \ph
 
 Un autre cas particulier est celui dans lequel l'ellipse dessinée par le vecteur champ électrique est un cercle, on parle alors de polarisation circulaire :
 \begin{definition}
-	Une onde électromagnétique est dite polarisée circulairement si, en tout point $M$ de l'espace, le champ électrique $\vv E(M,t)$ garde une norme constante au cours du temps. La polarisation est dire cticulaire droite (respectivement circulaire gauche) si un observateur qui voit l'onde arriver vers lui voit le champ électrique tourner dans le sens horaire (respectivement trigonométrique).
+	Une onde électromagnétique est dite polarisée circulairement si, en tout point $M$ de l'espace, le champ électrique $\vv E(M,t)$ garde une norme constante au cours du temps. La polarisation est dire circulaire droite (respectivement circulaire gauche) si un observateur qui voit l'onde arriver vers lui voit le champ électrique tourner dans le sens horaire (respectivement trigonométrique).
 \end{definition}
-
-\begin{capex}
-	Quel doit être le déphasage $\Delta \phi_E$ pour que l'onde soit polarisée circulairement ? Que peut-on dire de la densité d'énergie électromagnétique pour une onde polarisée circulairement ? 
-\end{capex}
-
 
 \begin{figure}[htbp]
 	\centering \includegraphics[width=0.7\linewidth]{polarisation_circulaire.png}
@@ -528,15 +521,19 @@ Un autre cas particulier est celui dans lequel l'ellipse dessinée par le vecteu
 \end{figure}
 
 
-\begin{figure}[htbp]
-	\centering \includegraphics[width=0.7\linewidth]{polarisation_scarabee.png} \includegraphics[width=0.7\linewidth]{scarabee_microscope.png}
-	\caption{En haut : photographie d'un scarabée en lumière naturelle, et avec un filtre sélectrionnant uniquement la polarisation circulaire gauche ou droite. En bas : images de la carapace du scarabée au microscope. Echelle : a)\,3\,µm et b)\,200\,nm. En bas à droite : modèle proposé pour la structure microscopique de la carapace, à partir des images au microscope. Source : McDonald, L. T., Finlayson, E. D., Wilts, B. D., & Vukusic, P. (2017). \textit{Circularly polarized reflection from the scarab beetle Chalcothea smaragdina: light scattering by a dual photonic structure.} Interface Focus, 7(4), 20160129.}
-\end{figure}
+\begin{capex}
+	Quel doit être le déphasage $\Delta \phi_E$ pour que l'onde soit polarisée circulairement ? Que peut-on dire de la densité d'énergie électromagnétique pour une onde polarisée circulairement ? 
+\end{capex}
 
 \begin{encart}[Polarisation circulaire dans la nature]
 	La polarisation circulaire dans la nature est très rare. Certains cristaux, dits biréfringents, sont capables de transformer la polarisation linéaire en polarisation circulaire (notamment le quartz). Les scarabées ont également une propriété intéressante : ils ne réfléchissent que la lumière ayant une polarisation circulaire gauche. Ceci est lié à la structure microscopique de leur carapace. Cette propriété peut sembler surprenante, mais elle les aide à se reconnaître car leur vision est également adaptée à cette polarisation. Une équipe de recherche a ainsi montré que ces propriétés de polarisation favorisent l'expression de certains gènes ainsi que la reproduction de l'espèce.
 	Source : Li, T., Jiang, Y., Yang, X., Li, H., Gong, Z., Qin, Y., ... & Lu, C. (2023). \textit{The effects of circularly polarized light on mating behavior and gene expression in Anomala corpulenta (Coleoptera: Scarabaeidae)}. Frontiers in Physiology, 14, 1172542.
 \end{encart}
+
+\begin{figure}[htbp]
+	\centering \includegraphics[width=0.7\linewidth]{polarisation_scarabee.png} \includegraphics[width=0.7\linewidth]{scarabee_microscope.png}
+	\caption{En haut : photographie d'un scarabée en lumière naturelle, et avec un filtre sélectrionnant uniquement la polarisation circulaire gauche ou droite. En bas : images de la carapace du scarabée au microscope. Echelle : a)\,3\,µm et b)\,200\,nm. En bas à droite : modèle proposé pour la structure microscopique de la carapace, à partir des images au microscope. Source : McDonald, L. T., Finlayson, E. D., Wilts, B. D., & Vukusic, P. (2017). \textit{Circularly polarized reflection from the scarab beetle Chalcothea smaragdina: light scattering by a dual photonic structure.} Interface Focus, 7(4), 20160129.}
+\end{figure}
 
 
 \subsubsection{Polarisation de la lumière}
@@ -549,9 +546,8 @@ Dans la nature, la lumière est parfois polarisée et parfois non. La lumière p
 
 Plusieurs objets sont capables de polariser la lumière. En pariculier, les polariseurs (ou polaroïds) utilisés en TP et dans les verres polarisants des lunettes de soleil permettent de sélectionner l'une des directions du champ électrique :
 \begin{proposition}
-	Un polariseur orienté selon la direction $\vv{e_x}$ absorbe les composantes du champ électrique orientées perpendiculairement à $\vv{e_x}$ et transmet les composantes parallèles à $\vv{e_x}$. Ainsi, il transforme une onde incidente quelconque en onde polarisée rectilignement selon $\vv{e_x}$.
+	Un polariseur orienté selon la direction $\vv{e_x}$ absorbe les composantes du champ électrique orientées parallèlemement à $\vv{e_x}$ et transmet les composantes perpendiculaires à $\vv{e_x}$. Ainsi, il transforme une onde incidente quelconque en onde polarisée rectilignement.
 \end{proposition}
-
 
 \begin{figure}[htbp]
 	\centering \includegraphics[width=0.8\linewidth]{polariseur.png}
@@ -612,9 +608,9 @@ Nous obtenons le résultat suivant :
 \begin{proposition}
 	Dans un plasma, la relation de dispersion pour une onde plane progressive monochromatique s'écrit :
 	\begin{equation}
-		\vv k ^2 = \frac{\omega^2 - \omega_p^2}{c^2}
+		{\vv k}^2 = \frac{\omega^2 - \omega_p^2}{c^2}
 	\end{equation}
-	où $\omega_p$ est la pulsation plasma :
+	où $\omega_p$ est la pulsation plasma définie comme :
 	\begin{equation}
 		\omega_p = \frac{n_e e^2}{\epsilon_0 m_e}
 	\end{equation}
@@ -638,7 +634,7 @@ Une des propriétés caractéristiques de cette dispersion est que l'énergie ne
 
 \begin{demonstration}
 
-Nous pouvons calculer le vecteur de Poynting de l'onde à partir d'une méthode complexe :
+Nous pouvons calculer le vecteur de Poynting de l'onde :
 \begin{align}
 	\langle \vv \Pi \rangle &= \langle \frac{\vv E \wedge \vv B}{\mu_0} \rangle \\
 	&= \langle \frac{1}{\mu_0} \vv E \wedge \frac{\vv k \wedge \vv E}{\omega} \rangle \\
@@ -660,7 +656,7 @@ Enfin la densité d'énergie cinétique des électrons peut s'écrire :
 \begin{equation}
 	\langle u_c \rangle = n_e \times \frac{1}{2} m_e \langle \vv{v}^2 \rangle 
 \end{equation}
-	Comme $m_e \frac{\dd \vv v_e}{\dd t} = - e \vv E$ on a $\langle \vv{v}^2 \rangle = \dfrac{e^2 \langle {\vv E}^2 \rangle}{m_e^2 \omega_2} = \dfrac{e^2 {\vv E_0}^2}{2 m_e^2 \omega_2}$ et donc :
+	Comme $m_e \dfrac{\dd \vv v_e}{\dd t} = - e \vv E$ on a $\langle \vv{v}^2 \rangle = \dfrac{e^2 \langle {\vv E}^2 \rangle}{m_e^2 \omega_2} = \dfrac{e^2 {\vv E_0}^2}{2 m_e^2 \omega_2}$ et donc :
 \begin{equation}
 	\langle u_{em} + u_c \rangle = \frac{\epsilon_0 \vv E_0^2}{4} \left( 1 + \frac{k^2 c^2}{\omega^2} + \frac{\omega_p^2}{\omega^2} \right) = frac{\epsilon_0 \vv E_0^2}{2}
 \end{equation}
@@ -734,7 +730,7 @@ Nous constatons que ce paquet d'ondes est formellement analogue à la superposit
 \end{equation}
 (pour une démonstration de cette propriétés dans le cadre d'une exemple particulier, se référer au cours d'optique).
 
-Un paquet d'ondes peut s'interpréter comme une onde monochromatique modulée par une enveloppe, en effet on peut écrire :
+On peut retrouver cette propriété en écrivant :
 \begin{equation}
 	\omega = \omega_0 + (k-k_0) \frac{\dd \omega}{\dd k}(k=k_0)
 \end{equation}
@@ -757,7 +753,7 @@ Nous constatons alors une propriété très importante :
 	Un paquet d'ondes peut se modéliser par une onde plane monochromatique modulée par une enveloppe $\mathcal{A}$. Si on note $\omega = \omega(k)$ la relation de dispersion caractéristique du milieu de propagation, alors :
 	\begin{itemize}
 		\item La phase de l'onde monochromatique, à l'intérieur du paquet d'onde, se propage à la vitesse $v_\varphi = \dfrac{\omega}{k}$ appelée \textbf{vitesse de phase};
-		\item L'enveloppe du paquet d'onde se propage à la vitesse $v_g = \frac{\dd \omega}{\dd k}$ appelée \textbf{vitesse de groupe}.
+		\item L'enveloppe du paquet d'onde se propage à la vitesse $v_g = \dfrac{\dd \omega}{\dd k}$ appelée \textbf{vitesse de groupe}.
 	\end{itemize}
 \end{theorem}
 
@@ -809,7 +805,9 @@ Pour démontrer ce phénomène d'étalement, nous pouvons aller à l'ordre 2 dan
 	\begin{equation}
 		\mathcal{A}(z,t) = \frac{1}{\sqrt{\beta t}} \mathcal{F}\left(\frac{v_g t - z}{\sqrt{\beta t}}\right)
 	\end{equation}
-	Autrement dit, l'amplitude du paquet d'onde diminue en $1/\sqrt{t}$ alors que l'enveloppe s'étale petit à petit avec une demi-largeur $|z-v_g t| \sim \sqrt{\beta t}$. Le centre du paquet d'onde continue bien à avancer avec la vitesse de groupe $v_g$.
+	Autrement dit, l'amplitude du paquet d'onde diminue en $1/\sqrt{t}$ alors que l'enveloppe s'étale petit à petit avec une demi-largeur $|z-v_g t| \sim \sqrt{\beta t}$. Le centre du paquet d'onde continue bien à avancer avec la vitesse de groupe $v_g$. 
+
+	Nous avons ainsi bien démontré que le paquet d'onde avance à la vitesse de groupe, mais subit un étalement d'autant plus important que $\beta$ est élevé, c'est-à-dire que la relation de dispersion est non linéaire : c'est le phénomène de dispersion.
 \end{demonstration}
 
 \begin{figure}[htbp]

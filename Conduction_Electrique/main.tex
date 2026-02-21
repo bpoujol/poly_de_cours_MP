@@ -64,6 +64,9 @@ mathfontname=mathsf]{mhchem}
 \usepackage{gensymb}
 \usepackage{tabularray}
 \usepackage{csquotes}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
 
 \usepackage[french]{babel}
 \usepackage{dingbat}
@@ -87,6 +90,7 @@ mathfontname=mathsf]{mhchem}
 \newcommand{\div}{\mathrm{div}}
 \newcommand{\rot}{\vv{\mathrm{div}}}
 \newcommand{\grad}{\vv{\mathrm{grad}}}
+\NewCommandCopy{\amshbar}{\hbar}
 
 \tikzset{
     support/.style={
@@ -111,7 +115,7 @@ mathfontname=mathsf]{mhchem}
 \contourlength{1.2pt}
 
 \colorlet{myred}{red!65!black}
-\definecolor{myred}{RGB}{127,0,255}
+\definecolor{myred}{RGB}{243,102,25}
 \tikzstyle{ground}=[preaction={fill,top color=black!10,bottom color=black!5,shading angle=20},
                     fill,pattern=north east lines,draw=none,minimum width=0.3,minimum height=0.6]
 \tikzstyle{mass}=[line width=0.6,myred,fill=myred!40,rounded corners=1,
@@ -135,7 +139,7 @@ mathfontname=mathsf]{mhchem}
 
 %\usechapterimagefalse % If you don't want to include a chapter image, use this to toggle images off - it can be enabled later with \usechapterimagetrue
 
-\chapterimage{filmB.jpg} % Table of contents heading image
+\chapterimage{voile_solaire.png} % Table of contents heading image
 
 %\pagestyle{empty} % No headers
 
@@ -187,7 +191,12 @@ Nous n'allons pas décrire le phénomène de conduction électrique de manière 
 
 \paragraph*{Le modèle de Drude}
 
-	Il est possible de retrouver cette formule à partir d'un modèle simpliste de la conduction, appelé "modèle de Drude". Ce modèle utilise cependant des hypothèses qui ne sont absolument pas vérifiées : il suppose que les électrons ont un comportement classique (et non pas quantique), et par ailleurs modélis l'interaction des électrons avec le réseau cristallin du métal comme une force de frottement fluide alors qu'il s'agit en réalité d'une interaction de nature électrostatique.
+	Il est possible de retrouver cette formule à partir d'un modèle simpliste de la conduction, appelé "modèle de Drude". Ce modèle utilise cependant des hypothèses qui ne sont absolument pas vérifiées : il suppose que les électrons ont un comportement classique (et non pas quantique), et par ailleurs modélise l'interaction des électrons avec le réseau cristallin du métal comme une force de frottement fluide alors qu'il s'agit en réalité d'une interaction de nature électrostatique.
+
+\begin{figure}[htbp]
+	\centering \includegraphics[width=0.3\linewidth]{drude.png}
+	\caption{Principe du modèle de Drude. Dans ce modèle, on suppose (à tort) que les électrons ont un comportement classique, et qu'ils sont soumis à la force de Lorentz électrique $\vv{F_L}$ ainsi qu'une force de frottement fluide $\vv f$ qui modélise des collisions avec les ions du réseau cristallin se faisant avec un temps caractéristique $\tau$. Source : poly de cours de Etienne Thibierge.}
+\end{figure}
 
 	Dans ce modèle, les électrons sont soumis à un champ électrique $\vv E$. Comme ils sont non relativistes, on peut montrer que la composante électrique de la force de Lorentz domine devant la composante magnétique (cf cours sur les ondes dans les plasmas). On suppose par ailleurs que les interactions entre les électrons et les ions du réseau peuvent se modéliser par une force de frottement fluide $\vv{F_f} = - \dfrac{m_e}{\tau} \vv v$ où $\vv v$ est la vitesse des électrons et $\tau$ est un temps caractéristique de collision avec les ions du réseau. Ainsi :
 	\begin{equation}
@@ -199,12 +208,33 @@ Nous n'allons pas décrire le phénomène de conduction électrique de manière 
 	\end{equation}
 	On retrouve ainsi la loi d'Ohm avec une conductivité $\gamma = \frac{n e^2 \tau}{m_e}$.	Ce modèle est tellement classique qu'il est bon de savoir calculer la conductivité électrique dans ce cadre. Néanmoins, toute application numérique montrera que le modèle ne fonctionne pas du tout, et en particulier il est incapable d'expliquer pourquoi la conductivité électrique varie avec des ordres de grandeur d'écart selon les matériaux.
 
+\subsubsection{Electroneutralité du conducteur}
+
+La conservation de la charge dans un conducteur impose :
+\begin{equation}
+	\frac{\partial \rho}{\partial t} + \div \vv j = 0
+\end{equation}
+En combinant avec la loi d'Ohm $\vv j = \gamma \vv E$ et l'équation de Maxwell-Gauss, nous obtenons :
+\begin{equation}
+	\frac{\partial \rho}{\partial t} + \frac{\rho}{\tau_c} = 0
+\end{equation}
+où $\tau_c = \frac{\epsilon_0}{\gamma} \approx 10^{-19}$\,s. Ainsi la densité volumiques de charges décroît exponentiellement dans le conducteur avec un temps caractéristique $\tau_c$ très court, qui est négligeable devant la période de la plupart des ondes électromagnétiques utilisées habituellement. On pourra donc considérer que les conducteurs sont électriquement neutres :
+
+\begin{proposition}[Electroneutralité des conducteurs]
+	La densité volumique de charges $\rho$ est généralement nulle dans un conducteur électrique, sauf lorsque l'on travaille à très haute fréquence.
+\end{proposition}
+
 \subsection{Bilan d'énergie dans une résistance}
 
 Nous pouvons désormais faire un bilan énergétique sur un matériau conducteur :
 \begin{capex}
 	On considère une résistance électrique de section $S$ et de longueur $L$. Déterminer l'expression de la résistance en fonction de $S, L$ et la conductivité $\gamma$ du milieu. Réaliser un bilan énergétique dans la résistance et retrouver ainsi l'expression de la puissance dissipée par effet Joule dans la résistance.
 \end{capex}
+
+\begin{figure}[htbp]
+	\centering \includegraphics[width=0.5\linewidth]{schema_resistance.png}
+	\caption{Schéma d'un matériau conducteur cylindrique dont on souhaite calculer la résistance. Source : poly de cours de Maxime Champion.}
+\end{figure}
 
 Nous en déduisons la propriété suivante, à connaître :
 \begin{proposition}
@@ -239,13 +269,34 @@ On peut cependant définir la conductivité complexe pour d'autres matériaux, e
 
 \section{Propagation des ondes électromagnétiques dans un conducteur}
 
-\subsection{Approximation des régimes quasi-stationnaires}
+\subsection{Approximation des régimes quasi stationnaires}
+
+Dans les conducteurs, on pourra souvent faire des hypothèses simplificatrices sur la propagation du champ électromagnétique. Parmi ces hypothèses, on peut en particulier réaliser l'approximation des régimes quasi stationnaires, qui permet de retrouver les lois de l'électricité.
 
 \subsubsection{Définition}
 
+\begin{definition}
+	Dans le cadre de l’approximation des régimes quasi-stationnaires (ARQS), on suppose que le temps caractéristique nécessaire aux ondes électromagnétiques pour parcourir la taille caractéristique du système $L$ est très rapide devant le temps caractéristique $T$ des phénomènes étudiés, soit $L \ll cT$.
+
+	Ceci revient à supposer que la propagation des ondes électromagnétiques est instantanée.
+\end{definition}
+
+Cette hypothèse permet de négliger tous les termes de propagation dans les équations de Maxwell. Dans un circuit électrique de TP, dont la taille fait environ 1\,m, l'ARQS sera vérifiée tant que $T \gg L/c$. Cette approximation est bien vérifiée pour des fréquences allant jusqu'à 1\,MHz.
+
+On admet la propriété suivante :
+\begin{proposition}
+	Dans le cadre de l'ARQS, et lorsque la densité volumique de charge $\rho$ est faible ($\rho \ll ||\vv j||/c$), on peut négliger le terme de courant de déplacement dans l'équation de Maxwell-Ampère, ainsi que la dérivée temporelle dans l'équation de conservation de la charge. On parle d'ARQS magnétique.
+
+	On a ainsi $\vv rot \vv B = \mu_0 \vv j$ et $\div \vv j = 0$.
+\end{proposition}
+
+\begin{remark}
+	La condition $\rho \ll ||\vv j||/c$ est généralement vérifiée dans les conducteurs puisqu'ils sont électriquement neutres ($\rho = 0$). Une exception notable est le cas du condensateur en régime variable.
+\end{remark}
+
 \subsubsection{Loi des noeuds}
 
-Une des conséquences de l'ARQS est la loi des noeuds. Considérons une intersection entre des fils électriques. Nous définissons une surface fermée $\Sigma$ contenant le noeud électrique. Cette surface coupe les fils, en formant des sections notées $\vv{S_i}$, où le vecteur $\vv{S_i}$ correspond au fil $i$ et est orienté parallèlement au fil, dans le sens sortant de la surface $\Sigma$. Alors la somme des courants entrants vers le noeuds s'écrit :
+Une des conséquences de l'ARQS magnétique est la loi des noeuds. Considérons une intersection entre des fils électriques. Nous définissons une surface fermée $\Sigma$ contenant le noeud électrique. Cette surface coupe les fils, en formant des sections notées $\vv{S_i}$, où le vecteur $\vv{S_i}$ correspond au fil $i$ et est orienté parallèlement au fil, dans le sens sortant de la surface $\Sigma$. Alors la somme des courants entrants vers le noeuds s'écrit :
 \begin{equation}
 	I_{\rm entrant}  = - \sum_i \vv \vv{j_i} S_i = - \oiint_\Sigma \vv j \cdot \vv{\dd S}
 \end{equation}
@@ -259,17 +310,22 @@ La dérivée temporelle pouvant être considérée comme nulle dans le cadre de 
 \end{equation}
 ce qui correspond à la loi des noeuds.
 
+\begin{figure}[htbp]
+	\centering \includegraphics[width=0.5\linewidth]{loi_des_noeuds.png}
+	\caption{Schéma d'un noeud électrique auquel on applique la forme intégrale de la conservation de la charge. Source : poly de cours de Maxime Champion.}
+\end{figure}
+
 \subsubsection{Loi des mailles}
 
-La loi des maills peut également s'obtenir à partir de l'ARQS. Considérons un circuit électrique fermé, correspondant à un contour $\Gamma$. Par définition, la force électromotrice $e$ le long de ce circuit est la circulation du champ électrique le long de ce contour, qui est définie comme :
+La loi des mailles peut également s'obtenir, cette fois-ci en l'absence de phénomènes d'induction. Considérons un circuit électrique fermé, correspondant à un contour $\Gamma$. Par définition, la force électromotrice $e$ le long de ce circuit est la circulation du champ électrique le long de ce contour, qui est définie comme :
 \begin{equation}
 	e = \oint_\Gamma \vv E \cdot \vv{\dd \ell}
 \end{equation}
-Nous appliquons la loi de Faraday à ce circuit, et négligons la dérivée temporelle dans le cadre de l'ARQS :
+Nous appliquons la loi de Faraday à ce circuit :
 \begin{equation}
 	e = - \frac{\dd \Phi}{\dd t} = 0
 \end{equation}
-où $\Phi$ est le flux du champ magnétique à travers le circuit. Nous en concluons directement que $e=0$, c'est-à-dire que la somme des tensions aux bornes de chaque dipôle s'annule, ce qui correspond à la loi des mailles.
+où $\Phi$ est le flux du champ magnétique à travers le circuit. En l'absence de champ magnétique, ou pour un champ lentement variable, nous en concluons directement que $e=0$, c'est-à-dire que la somme des tensions aux bornes de chaque dipôle s'annule, ce qui correspond à la loi des mailles.
 
 \subsection{Réflexion d'une onde sur un conducteur, effet de peau}
 
@@ -280,12 +336,17 @@ Que se passe-t-il lorsqu'une onde électromagnétique, initialement dans le vide
 \end{itemize}
 
 \begin{capex}
-	Etablir l'équation de propagation du champ électromagnétique dans un conducteur de conductivité $\gamma$. En déduire la relation de dispersion d'une onde plane progressive harmonique.  
+	Etablir l'équation de propagation du champ électromagnétique dans un conducteur de conductivité $\gamma$. Quel est le nom de cette équation ? En déduire la relation de dispersion d'une onde plane progressive harmonique.  
 \end{capex}
+
+\begin{figure}[htbp]
+	\centering \includegraphics[width=0.5\linewidth]{reflexion.png}
+	\caption{Onde électromagnétique incidente sur un conducteur. Source : poly de cours de Maxime Champion.}
+\end{figure}
 
 Pour comprendre la structure d'une onde, on s'intéresse à une onde plane progressive monochromatique polarisée rectilignement selon $\vv{e_x}$, en incidence normale sur un conducteur parfait, occupant le demi-espace $z>0$. On adopte la représentation complexe :
 \begin{equation}
-	\underline{\vv E_i} = E_0 e^{i(\omega t - k_i z} \vv{e_x}
+	\underline{\vv E_i} = E_0 e^{i(\omega t - k_i z)} \vv{e_x}
 \end{equation}
 L'onde incidente va donner naissance à une onde réfléchie, notée $\underline{\vv{E_r}}$ et à une onde transmise dans le métal, notée $\underline{\vv{E_t}}$. L'onde réfléchie se propage dans le sens des $z$ décroissants, et l'onde transmise dans le sens des $z$ croissants, on supposera ainsi qu'elles prennent la forme suivante :
 \begin{align}
@@ -294,7 +355,7 @@ L'onde incidente va donner naissance à une onde réfléchie, notée $\underline
 \end{align}
 
 \begin{capex}
-	Justifier la forme proposée pour les ondes réfléchie et transmise. Déterminer le champ magnétique associé à chacune des deux ondes. En exploitant les relations de dispersion dans le vide et dans le conducteur, et la continuité du champ électromagnétique à l'interface, déterminer l'expression de $k_r$ et $k_t$. Interpréter la forme de l'onde transmise.
+	Justifier la forme proposée pour les ondes réfléchie et transmise et les représenter sur le schéma. Déterminer le champ magnétique associé à chacune des deux ondes. En exploitant les relations de dispersion dans le vide et dans le conducteur, et la continuité du champ électromagnétique à l'interface, déterminer l'expression de $k_r$ et $k_t$. Interpréter la forme de l'onde transmise.
 \end{capex}
 
 On obtient alors une onde transmise de la forme :
@@ -307,13 +368,18 @@ où l'on définit l'épaisseur de peau :
 \end{definition}
 On constate qu'une onde électromagnétique ne peut pas pénétrer profondément dans un milieu conducteur, et ce d'autant plus que la conductivité du milieu et la fréquence de l'onde sont élevées.
 
-\begin{capex}
-	Calculer le vecteur de Poynting des ondes incidente, réfléchie et transmise. Définir le coefficient de réflexion en énergie de l'onde. Montrer que l'intégralité de l'énergie transmise vers le conducteur est dissipée par effet Joule.
-\end{capex}
+\begin{figure}[htbp]
+	\centering \includegraphics[width=0.6\linewidth]{effet_de_peau.jpeg}
+	\caption{Schéma du champ électrique et magnétique dans le conducteur à un instant donné : l'épaisseur de peau est du même ordre de grandeur que la longueur d'onde de l'onde dans le conducteur. Source : Vuibert et al.(2025), \textit{Tout-en-Un MP/MP}$^\ast$, Dunod.}
+\end{figure}
+
+%\begin{capex}
+%	Calculer le vecteur de Poynting des ondes incidente, réfléchie et transmise. Définir le coefficient de réflexion en énergie de l'onde. Montrer que l'intégralité de l'énergie transmise vers le conducteur est dissipée par effet Joule.
+%\end{capex}
 
 \section{Conducteur parfait}
 
-Nous avons vu que dans les conducteurs, les ondes électromagnétiques ne peuvent pas pénétrer avec une profondeur trop importante. Il est possible de simplifier ce modèle en considérant le cas limite du conducteur parfait : dans ce cas, la conductivité tend vers l'infini, si bien que l'épaisseur de peau tend vers zéro :
+Nous avons vu que dans les conducteurs, les ondes électromagnétiques ne peuvent pas pénétrer avec une profondeur trop importante : le conducteur électromagnétique fait écran à la propagation de l'onde. Il est possible de simplifier ce modèle en considérant le cas limite du conducteur parfait : dans ce cas, la conductivité tend vers l'infini, si bien que l'épaisseur de peau tend vers zéro :
 \begin{definition}[Modèle du conducteur parfait]
 	On dit qu'un conducteur est parfait lorsque sa conductivité $\gamma$ tend vers l'infini. Dans ce cas, aucun champ électrique ne peux exister au sein du conducteur. Dans une situation indépendante du temps, on peut ainsi considérer que l'ensembple du volume conducteur est au même potentiel électrique $V$.
 \end{definition}
@@ -324,7 +390,7 @@ Dans le cadre du modèle du conducteur parfait, on peut avoir une discontinuité
 \begin{align}
 	\underline{\vv j} &= \frac{1}{\mu_0} \rot(\underline{\vv B}) \\
 	&= \frac{1}{\mu_0} \frac{E_0(1+i)}{i \delta \omega} \frac{\partial}{\partial z} \left[ e^{i(\omega t - \frac{z}{\delta})}  e^{-z/\delta} \right] \vv{e_x} \\
-	&= \frac{1}{\mu_0} \frac{E_0(1+i)^2}{i \delta^2 \omega}  e^{i(\omega t - \frac{z}{\delta})}  e^{-z/\delta}  \vv{e_x}
+	&= \frac{1}{\mu_0} \frac{E_0(1+i)^2}{i \delta^2 \omega}  e^{i(\omega t - \frac{z}{\delta})}  e^{-z/\delta}  \vv{e_x} \\
 	&= \frac{1}{\mu_0} \frac{2 E_0}{\delta^2 \omega}  e^{i(\omega t - \frac{z}{\delta})}  e^{-z/\delta} \vv{e_x}
 \end{align}
 Ces courants forment une nappe d'épaisseur $\delta$. Lorsque $\delta \to 0$, l'épaisseur de la nappe de courants tend vers 0 mais l'amplitude de la densité volumique de courant diverge ! Cela ne pose pas de problème physique puisque la quantité totale de courant transportée dans l'interface reste finie, et on peut alors définir le courant surfacique :
@@ -336,6 +402,12 @@ Ces courants forment une nappe d'épaisseur $\delta$. Lorsque $\delta \to 0$, l'
 	\end{equation}
 	où l'on intègre sur une couche d'épaisseur $e$ selon la coordonnée $z$ orientée perpendiculairement à la surface considérée.
 \end{definition}
+
+\begin{figure}[htbp]
+	\centering \includegraphics[width=0.5\linewidth]{courant_surfacique.png}
+	\caption{Nappe de courant pouvant être décrite par une densité surfacique de courant. Source : femto-physique.fr}
+\end{figure}
+
 Dans notre cas, la densité surfacique de courant s'écrit :
 \begin{equation}
 	\underline{\vv j_s} = \int_0^\infty \underline{\vv j} \dd z = \frac{1}{\mu_0} \frac{2 E_0}{\delta^2 \omega} \times \frac{\delta}{(1+i)} e^{i\omega t} \vv{e_x} 
@@ -364,10 +436,17 @@ Dans le cas de l'onde en incidence normale, polarisée rectilignement, nous avon
 	En particulier, il y a \textbf{continuité de la composante tangentielle du champ électrique et de la composante normale du champ magnétique} à l'interface.
 \end{theorem}
 
+\begin{figure}[htbp]
+	\includegraphics[width=0.36\linewidth]{passage_E_normal.png}
+	\includegraphics[width=0.36\linewidth]{passage_E_tangentiel.png}
+	\includegraphics[width=0.27\linewidth]{passage_B_tangentiel.png}
+	\caption{Surfaces et contours utilisés pour la démonstration des relations de passage concernant (de gauche à droite) la composante normale du champ électrique, la composante tangentielle du champ électrique, et la composante tangentielle du champ magnétique. Source : femto-physique.fr}
+\end{figure}
+
 \begin{demonstration}
 	On considère un point $M$ situé à l'interface entre les deux milieux. Nous pouvons définir une base locale $(\vv n_{1 \to 2},\vv{t},\vv{u})$ telle que $\vv{t}$ et $\vv u$ sont tangents à l'interface et $(\vv n_{1 \to 2}, \vv t, \vv u)$ forme une base orthonormée directe.	
 
-	Commençons par étudier la relation de passage pour la composante normale du champ électrique. On définit un volume élémentaire $\dd V$ constitué de deux éléments de surface $\dd S$ situés juste de part et d'autre de l'interface au niveau du point $M$. On applique le théorème de Gauss à ce volume, le flux du champ électrique sortant du volume est :
+	Commençons par étudier la relation de passage pour la composante normale du champ électrique. On définit un volume élémentaire $\dd V$ constitué de deux éléments de surface $\dd S$ situés juste de part et d'autre de l'interface au niveau du point $M$ (sur le schéma, on a $S_0 = S_1 = S_2 = \dd S$). On applique le théorème de Gauss à ce volume, le flux du champ électrique sortant du volume est :
 	\begin{equation}
 		\oiint_{\dd V} \vv E \cdot \vv{\dd S} = (E_2 - E_1) \dd S 
 	\end{equation}
@@ -399,7 +478,7 @@ Dans le cas de l'onde en incidence normale, polarisée rectilignement, nous avon
 	\end{equation}
 	Nous appliquons désormais la forme intégrale de l'équation de Maxwell-Ampère au contour $\dd \Gamma$ défini précédemment :
 	\begin{equation}
-		\oint_{\dd \Gamma} \vv B \cdot \vv{\dd \ell} = \mu_0 I_{\rm enlace} + \frac{1}{c^2} \frac{\dd}{\dd t} \iint_{\dd S} \vv E \cdot \vv{\d S}
+		\oint_{\dd \Gamma} \vv B \cdot \vv{\dd \ell} = \mu_0 I_{\rm enlace} + \frac{1}{c^2} \frac{\dd}{\dd t} \iint_{\dd S} \vv E \cdot \vv{\dd S}
 	\end{equation}
 	Le courant enlacé par le contour vaut $\dd I_{\rm enlace} = \vv{j_s} \cdot \vv u \dd \ell$, et le flux du champ électrique à travers la surface $\dd S$ est nul puisque cette surface est nulle. Nous en déduisons que :
 	\begin{equation}
@@ -420,7 +499,7 @@ Dans le cas de l'onde en incidence normale, polarisée rectilignement, nous avon
 
 On peut maintenant étudier le cas plus particulier de la réflexion sur un conducteur parfait, qui est une situation courante en pratique. On considère donc qu'une onde incidente se propage vers un conducteur en incidence normale, et donne naissance à une onde réfléchie. 
 \begin{capex}
-	Déterminer l'expression de l'onde réfléchie en fonction de l'onde réfléchie à partir des relations de passage. Quelle est le coefficient de réflexion en énergie ? En déduire que la puissance dissipée dans le conducteur parfait est nulle.
+	Déterminer l'expression de l'onde réfléchie en fonction de l'onde incidente à partir des relations de passage. Quelle est le coefficient de réflexion en énergie ? En déduire que la puissance dissipée dans le conducteur parfait est nulle.
 \end{capex}
 
 Nous obtenons la propriété suivante :
@@ -430,6 +509,10 @@ Nous obtenons la propriété suivante :
 		\vv E_r = E_0 \cos(\omega t + k z) \vv{e_x}
 	\end{equation}
 \end{proposition}
+
+\begin{remark}
+	Le même exercice peut être fait en prenant un conducteur non parfait : à partir des expressions des champs électrique et magnétique pour l'effet de peau, on peut calculer le vecteur de Poynting $\vv \Pi$ dans le conducteur et montrer que la totalité de l'énergie entrant dans le condcuteur est dissipée par effet Joule.
+\end{remark}
 
 \subsection{Quantité de mouvement du champ électromagnétique}
 
@@ -482,6 +565,13 @@ Nous obtenons la propriété suivante :
 
 \subsection{Onde stationnaire}
 
+On rappelle la définition d'une onde stationnaire :
+\begin{definition}
+	Une onde est dite stationnaire lorsque les variables de temps et d'espace sont découplées dans l'expression des champs associés à l'onde. Un champ $s(\vv x,t)$ correspondant à une onde stationnaire s'écrira ainsi $s(x,t) = f(x) g(t)$.
+
+	On appelle noeuds les positions pour lesquelles $f(x) = 0$ (on n'a alors pas d'oscillations) et ventres les positions pour lesquelles $|f(x)|$ est maximal (oscillations d'amplitude maximale).
+\end{definition}
+
 \begin{capex}
 	Montrer que la superposition de l'onde incidente et de l'onde réfléchie est une onde stationnaire.
 \end{capex}
@@ -491,10 +581,31 @@ Nous obtenons la propriété suivante :
 
 Dans de nombreux dispositifs physiques, on utilise une onde électromagnétique confinée entre deux plans conducteurs. L'onde est réfléchie par chacun des deux plans ce qui crée une cavité résonante. Dans le cas où une faible excitation existe entre les plans, ou bien un milieu amplificateur (c'est le cas notamment dans un laser), une onde stationnaire se forme entre les deux plans conducteurs.
 
+\begin{figure}[htbp]
+	\centering \includegraphics[width=0.6\linewidth]{cavite.png}
+	\caption{Cavité électromagnétique entre deux conducteurs parfaits. Source : poly de cours de Etienne Thibierge.}
+\end{figure}
+
 \begin{capex}
 	On considère deux conducteurs parfaits occupant les plans $z=0$ et $z=L$ et séparés par de l'air assimilé à du vide. On étudie une onde électromagnétique entre ces deux plans conducteurs, et on supposera toutes les quantités invariantes par translation selon $\vv{e_x}$ et $\vv{e_y}$. Quelles sont les conditions aux limites sur le champ électrique aux extrémités de la cavité ? Montrer qu'une onde stationnaire peut se former, dont la longueur d'onde $\lambda$ est quantifiée.  
 \end{capex}
 
+On peut alors définir les modes propres de la cavité :
+\begin{theorem}
+	Le champ électromagnétique confiné dans une cavité de longueur $L$ composée de deux conducteurs parfaits à une dimension a un nombre d’onde quantifié. Les fréquences des ondes stationnaires sont des multiples d’une fréquence fondamentale $f_1 = \dfrac{c}{2L}$ :
+	\begin{equation}
+		f_n = \frac{n c}{2L}
+	\end{equation}
+Ces fréquences possibles sont appelées fréquences propres du système. Les solutions correspondantes sont appelés modes propres.
+\end{theorem}
+
+
+\begin{figure}[htbp]
+	\centering \includegraphics[width=0.5\linewidth]{modes_propres.png}
+	\caption{Modes propres d'une cavité électromagnétique à une dimension. Source : poly de cours de Maxime Champion.}
+\end{figure}
+
+De manière générale, par principe de superposition, le champ électromagnétique est une combinaison linéaire de modes propres. Comme les modes propres sont des ondes stationnaires, leur vecteur de Poynting est nul et ils ne propagent pas d'énergie : l'énergie reste confinée dans la cavité.
 
 
 \end{document}

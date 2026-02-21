@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.9.16)  12 FEB 2026 07:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.9.16)  21 FEB 2026 12:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1934,33 +1934,13 @@ Package biblatex Info: Reference section=0 on input line 130.
 Package biblatex Info: Reference segment=0 on input line 130.
 Package hyperref Info: Link coloring OFF on input line 130.
 Chapitre 19.
-
-LaTeX Warning: File `filmB.jpg' not found on input line 154.
-
-
-! Package pdftex.def Error: File `filmB.jpg' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.154 \chapter{Rayonnement dipolaire}
-                                     
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 1
-54.
-(/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
-File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
-)
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `cmtt' (encoding: T1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
+<sunset.png, id=7, 903.375pt x 507.8975pt>
+File: sunset.png Graphic file (type png)
+<use sunset.png>
+Package pdftex.def Info: sunset.png  used on input line 154.
+(pdftex.def)             Requested size: 597.50787pt x 335.94963pt.
 LaTeX Font Info:    Trying to load font information for T1+pag on input line 15
 4.
-
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pag.fd
 File: t1pag.fd 2001/06/04 font definitions for T1/pag.
 )
@@ -2056,10 +2036,9 @@ nput line 174.
 [1
 
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf/fonts/enc/
-dvips/cm-super/cm-super-t1.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/b
-ase/8r.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/fontawesome5/fa5free2
-.enc}]
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-di
+st/fonts/enc/dvips/base/8r.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/f
+ontawesome5/fa5free2.enc} <./sunset.png>]
 Package mdframed Info: mdframed works in twoside mode on input line 187.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
@@ -2068,93 +2047,162 @@ Package mdframed Info: mdframed works in twoside mode on input line 194.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 194.
-Package mdframed Info: mdframed works in twoside mode on input line 206.
+<coordonnees.png, id=28, 228.855pt x 221.82875pt>
+File: coordonnees.png Graphic file (type png)
+<use coordonnees.png>
+Package pdftex.def Info: coordonnees.png  used on input line 207.
+(pdftex.def)             Requested size: 149.37958pt x 144.7996pt.
+Package mdframed Info: mdframed works in twoside mode on input line 211.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 206.
-Package mdframed Info: mdframed works in twoside mode on input line 215.
+(mdframed)              on input line 211.
+Package mdframed Info: Not enough space on this page on input line 217.
+ [2 <./coordonnees.png>]
+Package mdframed Info: Not enough space on this page on input line 217.
+Package mdframed Info: mdframed works in twoside mode on input line 220.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 215.
- [2]
-Package mdframed Info: mdframed works in twoside mode on input line 228.
+(mdframed)              on input line 220.
+Package mdframed Info: mdframed works in twoside mode on input line 233.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 228.
-Package mdframed Info: mdframed works in twoside mode on input line 236.
+(mdframed)              on input line 233.
+<lignes_de_champ.png, id=42, 777.90625pt x 772.8875pt>
+File: lignes_de_champ.png Graphic file (type png)
+<use lignes_de_champ.png>
+Package pdftex.def Info: lignes_de_champ.png  used on input line 238.
+(pdftex.def)             Requested size: 256.07741pt x 254.42862pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [3 <./lignes_de_champ.png>]
+Package mdframed Info: mdframed works in twoside mode on input line 246.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 236.
-Package mdframed Info: mdframed works in twoside mode on input line 250.
+(mdframed)              on input line 246.
+Package mdframed Info: mdframed works in twoside mode on input line 260.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 250.
-Package mdframed Info: mdframed works in twoside mode on input line 262.
+(mdframed)              on input line 260.
+Package mdframed Info: mdframed works in twoside mode on input line 272.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 262.
- [3]
-Package mdframed Info: mdframed works in twoside mode on input line 290.
+(mdframed)              on input line 272.
+Package mdframed Info: mdframed works in twoside mode on input line 276.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 290.
+(mdframed)              on input line 276.
+<rayonnement_antennes.png, id=56, 1193.45876pt x 902.37125pt>
+File: rayonnement_antennes.png Graphic file (type png)
+<use rayonnement_antennes.png>
+Package pdftex.def Info: rayonnement_antennes.png  used on input line 281.
+(pdftex.def)             Requested size: 426.79135pt x 322.69167pt.
+ [4] [5 <./rayonnement_antennes.png>]
+Package mdframed Info: mdframed works in twoside mode on input line 309.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 309.
+<principe_diffusion.png, id=79, 591.20876pt x 149.55875pt>
+File: principe_diffusion.png Graphic file (type png)
+<use principe_diffusion.png>
+Package pdftex.def Info: principe_diffusion.png  used on input line 315.
+(pdftex.def)             Requested size: 384.1096pt x 97.17094pt.
+ [6 <./principe_diffusion.png>]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 303.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 328.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 303.
- [4]
-Package mdframed Info: mdframed works in twoside mode on input line 308.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 328.
+<thomson.png, id=91, 1606.0pt x 1031.855pt>
+File: thomson.png Graphic file (type png)
+<use thomson.png>
+Package pdftex.def Info: thomson.png  used on input line 334.
+(pdftex.def)             Requested size: 213.39568pt x 137.10588pt.
+Package mdframed Info: mdframed works in twoside mode on input line 338.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 308.
-Package mdframed Info: mdframed works in twoside mode on input line 329.
+(mdframed)              on input line 338.
+ [7 <./thomson.png>]
+Package mdframed Info: mdframed works in twoside mode on input line 359.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 329.
- [5]
-Package mdframed Info: mdframed works in twoside mode on input line 354.
+(mdframed)              on input line 359.
+Package mdframed Info: mdframed works in twoside mode on input line 384.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 354.
-Package mdframed Info: mdframed works in twoside mode on input line 361.
+(mdframed)              on input line 384.
+<ciel_bleu.png, id=103, 1245.65375pt x 455.7025pt>
+File: ciel_bleu.png Graphic file (type png)
+<use ciel_bleu.png>
+Package pdftex.def Info: ciel_bleu.png  used on input line 396.
+(pdftex.def)             Requested size: 426.79135pt x 156.13278pt.
+Package mdframed Info: mdframed works in twoside mode on input line 400.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 361.
- [6] (./main.aux)
+(mdframed)              on input line 400.
+ [8]
+<ciel_pola_1.png, id=116, 1521.685pt x 547.04375pt>
+File: ciel_pola_1.png Graphic file (type png)
+<use ciel_pola_1.png>
+Package pdftex.def Info: ciel_pola_1.png  used on input line 408.
+(pdftex.def)             Requested size: 341.43437pt x 122.74564pt.
+<ciel_pola_2.png, id=117, 696.6025pt x 602.25pt>
+File: ciel_pola_2.png Graphic file (type png)
+<use ciel_pola_2.png>
+Package pdftex.def Info: ciel_pola_2.png  used on input line 409.
+(pdftex.def)             Requested size: 213.39568pt x 184.49007pt.
+Package mdframed Info: mdframed works in twoside mode on input line 416.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 416.
+Package mdframed Info: Box was splittet wrong
+ starting loop to iterate the splitting point
+(mdframed)              on input line 422.
+ [9 <./ciel_bleu.png>]
+
+LaTeX Warning: Reference `mdf@pagelabel-18' on page 10 undefined on input line 
+422.
+
+[10 <./ciel_pola_1.png> <./ciel_pola_2.png>] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 57621 strings out of 476080
- 1280175 string characters out of 5792744
- 2332150 words of memory out of 5000000
- 78352 multiletter control sequences out of 15000+600000
- 633009 words of font info for 288 fonts, out of 8000000 for 9000
+ 57684 strings out of 476080
+ 1281011 string characters out of 5792744
+ 2327225 words of memory out of 5000000
+ 78378 multiletter control sequences out of 15000+600000
+ 639296 words of font info for 307 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
- 102i,22n,107p,1173b,1786s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,22n,107p,1173b,1788s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/fontawesome5/FontAwesome5Fr
 ee-Solid.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex
 10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
 ></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/
 share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/
 texlive/texmf-dist/fonts/type1/public/esint-type1/esint10.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/share/texmf/fonts/type1/
-public/cm-super/sftt1095.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/ava
-ntgar/uagd8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/avantgar/uagk8a
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/urw/times/utmri8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/esvect
-/vect10.pfb>
-Output written on main.pdf (6 pages, 163327 bytes).
+ve/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/urw/avantgar/uagd8a.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/urw/avantgar/uagk8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/symbol/
+usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/urw/times/utmri8a.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/esvect/vect10.pfb>
+Output written on main.pdf (10 pages, 3896142 bytes).
 PDF statistics:
- 206 PDF objects out of 1000 (max. 8388607)
- 166 compressed objects within 2 object streams
- 53 named destinations out of 1000 (max. 500000)
- 68709 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 250 PDF objects out of 1000 (max. 8388607)
+ 190 compressed objects within 2 object streams
+ 67 named destinations out of 1000 (max. 500000)
+ 72338 words of extra memory for PDF output out of 74296 (max. 10000000)
 

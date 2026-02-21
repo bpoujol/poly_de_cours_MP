@@ -111,7 +111,7 @@ mathfontname=mathsf]{mhchem}
 \contourlength{1.2pt}
 
 \colorlet{myred}{red!65!black}
-\definecolor{myred}{RGB}{127,0,255}
+\definecolor{myred}{RGB}{243,102,25}
 \tikzstyle{ground}=[preaction={fill,top color=black!10,bottom color=black!5,shading angle=20},
                     fill,pattern=north east lines,draw=none,minimum width=0.3,minimum height=0.6]
 \tikzstyle{mass}=[line width=0.6,myred,fill=myred!40,rounded corners=1,
@@ -135,7 +135,7 @@ mathfontname=mathsf]{mhchem}
 
 %\usechapterimagefalse % If you don't want to include a chapter image, use this to toggle images off - it can be enabled later with \usechapterimagetrue
 
-\chapterimage{filmB.jpg} % Table of contents heading image
+\chapterimage{sunset.png} % Table of contents heading image
 
 %\pagestyle{empty} % No headers
 
@@ -171,7 +171,7 @@ Le modèle du dipôle oscillant est très utile car il permet de décrire de nom
 \end{itemize}
 
 \begin{capex}
-	On considère une antenne constituée d'un fil de longueur $a$, parcourue par un courant $i(t) = I_0 \cos(\omega t)$. Montrer que l'antenne est équivalente à un dipôle oscillant dont on calculera le moment dipolaire $\vv p(t)$.
+	On considère une antenne constituée d'un fil de longueur $a$, parcourue par un courant uniforme $i(t) = I_0 \cos(\omega t)$. En utilisant la conservation de la charge, montrer que l'antenne est équivalente à un dipôle oscillant dont on calculera le moment dipolaire $\vv p(t)$.
 \end{capex}
 
 \subsection{Approximations dans le cadre du modèle du dipôle oscillant}
@@ -203,11 +203,16 @@ Ces trois hypothèses permettent de simplifier l'application des équations de M
 
 Nous cherchons désormais à étudier l'onde électromagnétique rayonnée par le dipôle. Nous nous plaçons dans le système de coordonnées sphériques centré sur le dipôle, d'axe $(Oz)$ et de centre $O$ et nous supposons les hypothèses du modèle du dipôle oscillant vérifiées. Nous cherchons à déterminer le champ électromagnétique $(\vv E(M,t),\vv B(M,t))$. 
 
+\begin{figure}[htbp]
+	\centering \includegraphics[width=0.35\linewidth]{coordonnees.png}
+	\caption{Système de coordonnées utilisé pour étudier le rayonnement dipolaire; Source : poly de cours de Valérie Heinrich.}
+\end{figure}
+
 \begin{capex}
 	A partir des symétries de la situation, montrer que le champ électrique et le champ magnétique s'écrivent :
 	\begin{align}
-		\vv E(M,t) = E_r(r,\theta,t) \vv{e_r} + E_{\theta}(r,\theta,t) \vv{e_\theta} \\
-		\vv B(M,t) = B_\varphi(r,\theta,t) \vv{e_\varphi}
+		\vv E(M,t) &= E_r(r,\theta,t) \vv{e_r} + E_{\theta}(r,\theta,t) \vv{e_\theta} \\
+		\vv B(M,t) &= B_\varphi(r,\theta,t) \vv{e_\varphi}
 	\end{align}
 \end{capex}
 
@@ -228,6 +233,11 @@ Ce théorème n'est pas à connaître mais il faut savoir interpréter la struct
 \begin{capex}
 	On se place en un point $M$ tel que $r \gg \lambda$. Commenter la structure de l'onde émise par le dipôle au point $M$: caractère stationnaire ou propagatif, polarisation.
 \end{capex}
+
+\begin{figure}[htbp]
+	\centering \includegraphics[width=0.6\linewidth]{lignes_de_champ.png}
+	\caption{Lignes de champ électrique associées au rayonnement dipolaire. Source : poly de cours de Olivier Granier.}
+\end{figure}
 
 \subsection{Puissance rayonnée}
 
@@ -263,11 +273,20 @@ On constate que le vecteur de Poynting de l'onde électromagnétique décroît a
 	Représenter l'allure de l'indicatrice de rayonnement pour le dipôle oscillant.
 \end{capex}
 
+\begin{encart}[Diagramme de rayonnement des antennes]
+	Ici, nous avons supposé que le courant $i$ est uniforme dans l'antenne ce qui permet de l'assimiler à un dipôle oscillant. Mais en réalité, on choisit plutôt das antennes dont la longueur est de l'ordre de la longueur d'onde électromagnétique étudiée ce qui permet d'augmenter la puissance d'émission. Les calculs précédents ne sont alors plus valides et on obtient des diagrammes d'émission plus complexes, comme représentés ci dessous, qui dépendent du rapport entre la longueur $L$ de l'antenne et la longueur d'onde $\lambda$ émise.
+\end{encart}
+
+\begin{figure}[htbp]
+	\centering \includegraphics[width=\linewidth]{rayonnement_antennes.png}
+	\caption{Diagramme de rayonnement pour des antennes de différente taille, représentés en 3D. Source : université de Carthage.}
+\end{figure}
+
 \subsection{Détection de l'onde électromagnétique rayonnée}
 
 \textit{Seule la mise en oeuvre expérimentale de cette partie est exigible aux concours.}
 
-Pour détercter une onde électromagnétique rayonnée, on peut utiliser une seconde antenne. Supposons que l'on place au point $M$ un second fil de taille $b$ et orienté selon un vecteur unitaire $\vv u_a$ incliné d'un angle $\theta_a$ par rapport à $\vv{e_z}$. On suppose que la longueur du fil vérifie $b \ll \lambda$ et $b \ll r$, alors le champ électromagnétique peut être considéré comme uniforme à l'échelle de l'antenne. En plaçant un voltmètre aux bornes de l'antenne récptrice, on mesure une tension :
+Pour détecter une onde électromagnétique rayonnée, on peut utiliser une seconde antenne. Supposons que l'on place au point $M$ un second fil de taille $b$ et orienté selon un vecteur unitaire $\vv u_a$ incliné d'un angle $\theta_a$ par rapport à $\vv{e_z}$. On suppose que la longueur du fil vérifie $b \ll \lambda$ et $b \ll r$, alors le champ électromagnétique peut être considéré comme uniforme à l'échelle de l'antenne. En plaçant un voltmètre aux bornes de l'antenne récptrice, on mesure une tension :
 \begin{equation}
 	U = \int_{\rm antenne} \vv E \cdot \vv{\dd \ell} \approx b \vv E(M) \cdot \vv u \approx E_\theta(M) b \cos(\vv{u_a}, \vv{e_\theta})
 \end{equation}
@@ -291,6 +310,12 @@ Néanmoins, des phénomènes d'émission par des dipôles oscillants existent é
 	On dit qu'une onde électromagnétique est diffusée par une molécule lorsqu'une partie de l'énergie de l'onde est absorbée par la molécule pour exciter un dipôle oscillant, ce qui provoque l'émission d'une onde secondaire, appelée onde diffusée.
 \end{definition}
 
+\begin{figure}[htbp]
+	%\centering \includegraphics[width=0.4\linewidth]{schema_diffusion.png}
+	\centering \includegraphics[width=0.9\linewidth]{principe_diffusion.png}
+	\caption{Schéma de principe de la diffusion de la lumière par les molécules de l'atmosphère. Sources : Wikimedia Commons et poly de cours de Olivier Granier.}
+\end{figure}
+
 La diffusion est omniprésente dans la nature. S'il n'y avait pas de diffusion, le ciel serait noir et on pourrait observer les étoiles à tout moment de la journée. Mais la présence de molécules dans l'air diffuse la lumière ce qui implique que de la lumière parvient à nos yeux depuis tous les points du ciel qui sont illuminés par le soleil. De la même manière, les nuages diffusent la lumière du soleil, et la couleur claire ou sombre d'un nuage reflète simplement la partie du nuage qui est plus ou moins éclairée par le soleil.
 
 Dans cette partie, nous allons apporter une description très succinte du phénomène de diffusion lumineuse à partir d'un modèle simplifié : le modèle de l'électron élastiquement lié.
@@ -304,6 +329,11 @@ Le modèle de l'électron élastiquement lié dérive d'une représentation de l
 
 	Le modèle de l'électron élastiquement lié présente l'avantage d'être simple et de capturer les bons ordres de grandeur et les dépendances principales de l'onde rayonnée aux paramètres du problème.
 \end{remark}
+
+\begin{figure}[htbp]
+	\centering \includegraphics[width=0.5\linewidth]{thomson.png}
+	\caption{Modèle de Thomson de l'atome. Source : Encyclopaedia Britannica.}
+\end{figure}
 
 \begin{capex}
 	A l'aide du théorème de Gauss, déterminer le champ électrique dans le noyau. En déduire que la force électrique du noyau sur l'électron peut s'assimiler à un ressort de longueur à vide nulle, dont on déterminera la raideur $\kappa$.
@@ -355,10 +385,35 @@ Nous constatons que le comportement du dipôle est un filtre passe-bas résonant
 	Déterminer la puissance de l'onde électromagnétique diffusée par l'atome, $\mathcal{P}_{\rm diff}$. Tracer son allure en fonction de $\omega$.
 \end{capex}
 
-A AJOUTER : DOMAINES DE FREQUENCE, DIFFUSION RAYLEIGH, RESONANCE, DIFFUSION MIE (HORS PROGRAMME)
+Nous pouvons identifier différents domaines sur cette courbe :
+\begin{itemize}
+	\item Le domaine de Rayleigh pour $\omega \ll \omega_0$, c'est dans ce domaine que se trouve la diffusion de la lumière par les molécules de l'atmosphère. Dans ce domaine, on a $\mathcal{P}_{\rm diff} \propto \omega^4$, donc une forte dépendance de la puissance diffusée à la longueur d'onde ;
+	\item La résonance pour $\omega \approx \omega_0$ ;
+	\item Et le domaine de Thomson pour $\omega \gg \omega_0$, qui concerne plutôt les grosses particules diffusantes comme les gouttelettes de nuage. Dans ce domaine, on a $\mathcal{P}_{\rm diff}$ indépendant de $\omega$ et toutes les longueurs d'onde sont diffusées avec la même puissance.
+\end{itemize}
+
+\begin{figure}[t]
+	\centering \includegraphics[width=\linewidth]{ciel_bleu.png}
+	\caption{Diffusion de la lumière par les molécules du ciel. Source : Poly de cours de Olivier Granier.}
+\end{figure}
+
+\begin{encart}[Le bleu du ciel]
+	La couleur du ciel vient directement de la diffusion de la lumière. Pour les molécules de diazote et de dioxygène, la pulsation de résonance $\omega_0$ est élevée, si bien que la lumière visible se trouve dans le domaine de Rayleigh, ainsi la diffusion des courtes longueurs d'onde est dominante par rapport à celle des grandes longueurs d'onde. Ceci explique la couleur bleue du ciel.
+	Au coucher de soleil, l'essentiel de la lumière directe a été diffusée si bien que seules les grandes longueurs d'onde peuvent arriver jusqu'à nos yeux, le soleil apparaît donc rouge-orangé au coucher de soleil. Cet effet est exacerbé lorsque l'atmosphère contient beaucoup de molécules diffusantes, typiquement lors d'un épisode de brumes sahariennes : la diffusion étant très forte, le ciel est d'un bleu très pâle et lumineux dans la journée, et le coucher de soleil est très rouge. Au contraire, en haute montagne, le ciel est d'un bleu profond ce qui indique que moins de particules diffusantes sont présentes dans l'atmosphère.
+
+	La diffusion de la lumière est également une source de polarisation, en effet, nous avons vu qu'aucun rayonnement n'est diffusé dans la direction du dipôle. Or le dipôle se trouve dans la même direction que le champ électrique incident, donc perpendiculairement à la direction de propagation du champ électrique incident ce qui donne deux directions possibles. Si la diffusion se fait à un angle de 90$^\circ$, l'une de ces deux directions diffuse une puissance nulle, et le rayonnement diffusé est polarisé linéairement, ce qui se voit à l'aide d'un polariseur.
+\end{encart}
+
+\begin{figure}[htb]
+	\centering \includegraphics[width=0.8\linewidth]{ciel_pola_1.png}
+	\centering \includegraphics[width=0.5\linewidth]{ciel_pola_2.png}
+	\caption{Polarisation de la lumière diffusée par les molécules d'air dans l'atmosphère. Source : Poly de cours de Valérie Heinrich.}
+\end{figure}
+
+\paragraph{Section efficace (hors programme)}
 
 Nous constatons que la puissance diffusée est croissante avec $E_0$, c'est-à-dire que la diffusion est d'autant plus importante que l'onde électromagnétique incidente est puissante. Pour éviter de prndre en compte cet effet, nous définissons la section efficace d'absorption :
-\begin{definition}[Section efficace de diffusion (hors programme)]
+\begin{definition}[Section efficace de diffusion]
 	La section efficace de diffusion d'une molécule correspond à la surface d'un objet parfaitement abosrbant qui absorberait la même quantité d'énergie que la molécule. En pratique, elle se calcule comme suit :
 	\begin{equation}
 		\sigma_{\rm diff} = \frac{\mathcal{P}_{\rm diff}}{\langle || \vv \Pi_{\rm inc}|| \rangle}
@@ -377,7 +432,6 @@ Ici le vecteur de Poynting incident est donné par $\vv \Pi_{\rm inc} = \frac{\e
 		\sigma_0 = \frac{\mu_0^2 e^4}{6 \pi m_e^2}
 	\end{equation}
 \end{proposition}
-
 
 
 

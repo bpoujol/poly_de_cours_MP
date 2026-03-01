@@ -296,9 +296,14 @@ On admet la propriété suivante :
 
 \subsubsection{Loi des noeuds}
 
+\begin{figure}[htbp]
+	\centering \includegraphics[width=0.5\linewidth]{loi_des_noeuds.png}
+	\caption{Schéma d'un noeud électrique auquel on applique la forme intégrale de la conservation de la charge. Source : poly de cours de Maxime Champion.}
+\end{figure}
+
 Une des conséquences de l'ARQS magnétique est la loi des noeuds. Considérons une intersection entre des fils électriques. Nous définissons une surface fermée $\Sigma$ contenant le noeud électrique. Cette surface coupe les fils, en formant des sections notées $\vv{S_i}$, où le vecteur $\vv{S_i}$ correspond au fil $i$ et est orienté parallèlement au fil, dans le sens sortant de la surface $\Sigma$. Alors la somme des courants entrants vers le noeuds s'écrit :
 \begin{equation}
-	I_{\rm entrant}  = - \sum_i \vv \vv{j_i} S_i = - \oiint_\Sigma \vv j \cdot \vv{\dd S}
+	I_{\rm entrant}  = - \sum_i \vv{j_i} \cdot \vv{S_i} = - \oiint_\Sigma \vv j \cdot \vv{\dd S}
 \end{equation}
 Or, la forme intégrale de la conservation de la charge nous permet d'écrire que :
 \begin{equation}
@@ -310,10 +315,6 @@ La dérivée temporelle pouvant être considérée comme nulle dans le cadre de 
 \end{equation}
 ce qui correspond à la loi des noeuds.
 
-\begin{figure}[htbp]
-	\centering \includegraphics[width=0.5\linewidth]{loi_des_noeuds.png}
-	\caption{Schéma d'un noeud électrique auquel on applique la forme intégrale de la conservation de la charge. Source : poly de cours de Maxime Champion.}
-\end{figure}
 
 \subsubsection{Loi des mailles}
 
@@ -562,6 +563,9 @@ Nous obtenons la propriété suivante :
 	\end{equation}
 \end{proposition}
 
+\begin{encart}[Voiles solaires]
+	La quantité de mouvement du champ électromagnétique peut être exploitée pour propulser des petits satellites à l'aide d'une voile solaire : un grande toile conductrice déployée face au soleil. Ce type de dispositif a été testé avec succès pour la première fois en 2010 par la JAXA (agence spatiale japonaise) et a depuis été repris par d'autres agences spatiales, mais reste encore au stade de prototype. Il permet d'éviter l'utilisation de panneaux solaires ou de carburants, relativement lourds et chers. La photo de couverture montre une vue d'artiste d'une voile solaire déployée en 2025 par la NASA.
+\end{encart}
 
 \subsection{Onde stationnaire}
 

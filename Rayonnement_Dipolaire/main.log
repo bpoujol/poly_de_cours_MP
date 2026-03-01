@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.9.16)  21 FEB 2026 12:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.9.16)  22 FEB 2026 17:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2088,31 +2088,30 @@ Package mdframed Info: mdframed works in twoside mode on input line 272.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 272.
-Package mdframed Info: mdframed works in twoside mode on input line 276.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 276.
 <rayonnement_antennes.png, id=56, 1193.45876pt x 902.37125pt>
 File: rayonnement_antennes.png Graphic file (type png)
 <use rayonnement_antennes.png>
-Package pdftex.def Info: rayonnement_antennes.png  used on input line 281.
+Package pdftex.def Info: rayonnement_antennes.png  used on input line 277.
 (pdftex.def)             Requested size: 426.79135pt x 322.69167pt.
+Package mdframed Info: mdframed works in twoside mode on input line 281.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 281.
  [4] [5 <./rayonnement_antennes.png>]
 Package mdframed Info: mdframed works in twoside mode on input line 309.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 309.
-<principe_diffusion.png, id=79, 591.20876pt x 149.55875pt>
+<principe_diffusion.png, id=83, 591.20876pt x 149.55875pt>
 File: principe_diffusion.png Graphic file (type png)
 <use principe_diffusion.png>
 Package pdftex.def Info: principe_diffusion.png  used on input line 315.
 (pdftex.def)             Requested size: 384.1096pt x 97.17094pt.
- [6 <./principe_diffusion.png>]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 328.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 328.
-<thomson.png, id=91, 1606.0pt x 1031.855pt>
+<thomson.png, id=84, 1606.0pt x 1031.855pt>
 File: thomson.png Graphic file (type png)
 <use thomson.png>
 Package pdftex.def Info: thomson.png  used on input line 334.
@@ -2121,16 +2120,17 @@ Package mdframed Info: mdframed works in twoside mode on input line 338.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 338.
- [7 <./thomson.png>]
+ [6 <./principe_diffusion.png>]
 Package mdframed Info: mdframed works in twoside mode on input line 359.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 359.
+ [7 <./thomson.png>]
 Package mdframed Info: mdframed works in twoside mode on input line 384.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 384.
-<ciel_bleu.png, id=103, 1245.65375pt x 455.7025pt>
+<ciel_bleu.png, id=106, 1245.65375pt x 455.7025pt>
 File: ciel_bleu.png Graphic file (type png)
 <use ciel_bleu.png>
 Package pdftex.def Info: ciel_bleu.png  used on input line 396.
@@ -2140,12 +2140,12 @@ Package mdframed Info: mdframed detected package amsthm
  changed the theorem header of amsthm
 (mdframed)              on input line 400.
  [8]
-<ciel_pola_1.png, id=116, 1521.685pt x 547.04375pt>
+<ciel_pola_1.png, id=117, 1521.685pt x 547.04375pt>
 File: ciel_pola_1.png Graphic file (type png)
 <use ciel_pola_1.png>
 Package pdftex.def Info: ciel_pola_1.png  used on input line 408.
 (pdftex.def)             Requested size: 341.43437pt x 122.74564pt.
-<ciel_pola_2.png, id=117, 696.6025pt x 602.25pt>
+<ciel_pola_2.png, id=118, 696.6025pt x 602.25pt>
 File: ciel_pola_2.png Graphic file (type png)
 <use ciel_pola_2.png>
 Package pdftex.def Info: ciel_pola_2.png  used on input line 409.
@@ -2154,22 +2154,12 @@ Package mdframed Info: mdframed works in twoside mode on input line 416.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 416.
-Package mdframed Info: Box was splittet wrong
- starting loop to iterate the splitting point
-(mdframed)              on input line 422.
- [9 <./ciel_bleu.png>]
-
-LaTeX Warning: Reference `mdf@pagelabel-18' on page 10 undefined on input line 
-422.
-
-[10 <./ciel_pola_1.png> <./ciel_pola_2.png>] (./main.aux)
+ [9 <./ciel_bleu.png>] [10 <./ciel_pola_1.png> <./ciel_pola_2.png>] (./main.aux
+)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
-
-
-LaTeX Warning: There were undefined references.
 
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
@@ -2181,7 +2171,7 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 Here is how much of TeX's memory you used:
  57684 strings out of 476080
  1281011 string characters out of 5792744
- 2327225 words of memory out of 5000000
+ 2323253 words of memory out of 5000000
  78378 multiletter control sequences out of 15000+600000
  639296 words of font info for 307 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
@@ -2199,7 +2189,7 @@ usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/s
 hare/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/te
 xmf-dist/fonts/type1/urw/times/utmri8a.pfb></usr/share/texlive/texmf-dist/fonts
 /type1/public/esvect/vect10.pfb>
-Output written on main.pdf (10 pages, 3896142 bytes).
+Output written on main.pdf (10 pages, 3896268 bytes).
 PDF statistics:
  250 PDF objects out of 1000 (max. 8388607)
  190 compressed objects within 2 object streams

@@ -1,0 +1,470 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% The Legrand Orange Book
+% LaTeX Template
+% Version 2.1.1 (14/2/16)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Mathias Legrand (legrand.mathias@gmail.com) with modifications by:
+% Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Compiling this template:
+% This template uses biber for its bibliography and makeindex for its index.
+% When you first open the template, compile it from the command line with the 
+% commands below to make sure your LaTeX distribution is configured correctly:
+%
+% 1) pdflatex main
+% 2) makeindex main.idx -s StyleInd.ist
+% 3) biber main
+% 4) pdflatex main x 2
+%
+% After this, when you wish to update the bibliography/index use the appropriate
+% command above and make sure to compile with pdflatex several times 
+% afterwards to propagate your changes to the document.
+%
+% This template also uses a number of packages which may need to be
+% updated to the newest versions for the template to compile. It is strongly
+% recommended you update your LaTeX distribution if you have any
+% compilation errors.
+%
+% Important note:
+% Chapter heading images should have a 2:1 width:height ratio,
+% e.g. 920px width and 460px height.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt,fleqn]{book} % Default font size and left-justified equations
+
+\usepackage{ifthen} 
+\newboolean{VersionProf}
+\setboolean{VersionProf}{false}
+
+\usepackage{wasysym}
+\usepackage{esint} % various fancy integral symbols
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.17}
+\usetikzlibrary{patterns}
+\usepackage{tkz-euclide} 
+\usepackage{mathtools}
+\usepackage{xurl}
+\usepackage[version=4,arrows=pgf-filled,
+textfontname=sffamily,
+mathfontname=mathsf]{mhchem}
+\usepackage{gensymb}
+\usepackage{tabularray}
+\usepackage{csquotes}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\usepackage[french]{babel}
+\usepackage{dingbat}
+
+\usepackage{environ}
+\usepackage{wrapfig}
+
+\NewEnviron{solution}{%
+    \ifthenelse{\boolean{VersionProf}}{\begin{solutionA}
+        \BODY%*
+        \end{solutionA}
+    }{%
+        \relax%
+    }%
+}%
+
+\usetikzlibrary {arrows.meta} 
+
+\newcommand{\degC}{{\degree}C}
+\newcommand{\dd}{\mathrm{d}}
+\renewcommand{\div}{\mathrm{div}}
+\newcommand{\rot}{\vv{\mathrm{rot}}}
+\renewcommand{\grad}{\vv{\mathrm{grad}}}
+
+\tikzset{
+    support/.style={
+        pattern=north east lines,
+        draw=none,
+        minimum width=0.3,
+        minimum height=0.6
+    }
+    ,>=latex
+}
+
+\usepackage[d]{esvect}
+
+%SPECIFIC TO THIS CHAPTER
+\usepackage{physics}
+\usepackage{ifthen}
+\usepackage[outline]{contour} % glow around text
+\usetikzlibrary{calc} % for pic
+\usetikzlibrary{angles,quotes} % for pic
+\usetikzlibrary{patterns}
+\tikzset{>=latex} % for LaTeX arrow head
+\contourlength{1.2pt}
+
+\colorlet{myred}{red!65!black}
+\definecolor{myred}{RGB}{127,0,255}
+\tikzstyle{ground}=[preaction={fill,top color=black!10,bottom color=black!5,shading angle=20},
+                    fill,pattern=north east lines,draw=none,minimum width=0.3,minimum height=0.6]
+\tikzstyle{mass}=[line width=0.6,myred,fill=myred!40,rounded corners=1,
+                  top color=myred!40,bottom color=myred!20,shading angle=20]
+\tikzstyle{rope}=[myred!30,line width=1.2,line cap=round] %very thick
+
+% FORCES SWITCH
+\tikzstyle{force}=[->,myred,ultra thick,line cap=round]
+\tikzstyle{Fproj}=[force,myred!60]
+\newboolean{showforces}
+\setboolean{showforces}{true}
+%----------------------------------------------------------------------------------------
+
+\input{structure} % Insert the commands.tex file which contains the majority of the structure behind the template
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	TABLE OF CONTENTS
+%----------------------------------------------------------------------------------------
+
+%\usechapterimagefalse % If you don't want to include a chapter image, use this to toggle images off - it can be enabled later with \usechapterimagetrue
+
+\chapterimage{filmB.jpg} % Table of contents heading image
+
+%\pagestyle{empty} % No headers
+
+%\tableofcontents % Print the table of contents itself
+
+%\cleardoublepage % Forces the first chapter to start on an odd page so it's on the right
+
+%\pagestyle{fancy} % Print headers again
+
+
+
+%\part{\'{E}lectromagnétisme}
+
+\setcounter{chapter}{19}
+
+\chapter{Mécanique quantique ondulatoire}
+
+Dans le chapitre sur la dualité onde-particule, nous avons vu que les particules microscopiques pouvaient être décrites avec un formalisme ondulatoire : à chaque particule, on peut associer une fonction d'onde $\psi(x,t)$ qui obéit à une équation d'onde : l'équation de Schrödinger. 
+
+Cette propriété nous a permis d'expliquer un grand nombre d'observations expérimentales incompatibles avec la mécanique classique, en particulier la quantification des niveaux d'énergie dans un puits de potentiel, la possibilité d'interférences avec des particules uniques, ou encore la stabilité de l'atome d'hydrogène. Dans ce chapitre, nous nous proposons désormais de ne plus nous limiter à la situation des puits de potentiel, mais d'étudier ce qui se produit lorsqu'une particule quantique est libre de se déplacer. Nous allons pour cela faire appel à la théorie des ondes que nous avons développée tout au long de l'année, et plus particulièrement dans le cours d'électromagnétisme. En effet, la particule se comportant comme une onde, on s'attend à ce qu'elle subisse des phénomènes similaires à ceux subis par d'autres types d'onde. Nous observerons un certain nombre de similarités, mais aussi de différences avec les ondes électromagnétiques, puisque l'équation de propagation de Schrödinger est différente des équations que nous avons déjà étudiées (équation de D'Alembert, équation de diffusion notamment).
+
+Conformément au programme, dans l'ensemble du chapitre, nous nous restreignons à l'étude des problèmes à une dimension $\vv{e_x}$. Les résultats obtenus se généralisent cependant aisément en trois dimensions.
+
+\section{Particule quantique libre}
+
+Nous nous intéressons tout d'abord à l'étude d'une particule quantique libre :
+\begin{definition}
+	Une particule est dite libre lorsqu'elle n'est soumise à aucun potentiel : $V(x) = 0$.
+\end{definition}
+
+En mécanique classique, ceci revient à dire que la particule n'est soumise à aucune force ($F = - \dd V/\dd x = 0$). Par le principe d'inertie (première loi de Newton), nous pouvons conclure que le mouvement de la particule est rectiligne uniforme dans un référentiel galiléen. Est-ce également le cas en mécanique quantique ?
+
+Pour le savoir, nous revenons à l'équation de Schrödinger qui décrit le comportement de la particule de masse $m$ et de foncton d'onde $\psi(x,t)$ :
+\begin{equation}
+	i \hbar \frac{\partial \psi}{\partial t} = - \frac{\hbar^2}{2 m} \frac{\partial^2 \psi}{\partial x^2} + V(x) \psi
+\end{equation}
+Cette équation se simplifie dans le cadre d'une particule libre :
+\begin{proposition}[Equation de Schrödinger pour une particule libre]
+	Une particule libre de masse $m$ obéit à l'équation de Schrödinger suivante :
+	\begin{equation}
+	i \hbar \frac{\partial \psi}{\partial t} = - \frac{\hbar^2}{2 m} \frac{\partial^2 \psi}{\partial x^2}
+	\end{equation}
+\end{proposition}
+Nous avons vu dans le chapitre sur la dualité onde-particule que le membre de gauche de cette équation indique l'énergie mécanique de la particule, alors que le membre de droite est relié à son énergie cinétique. Ainsi, cette équation traduit le fait que pour une particule libre, l'énergie de la particule est entièrement sous forme d'énergie cinétique.
+
+On cherche les solutions de cette équation sous forme d'états stationnaires, c'est-à-dire d'états dont la densité de probabilité de présence $|\psi|^2$ ne dépend pas du temps.
+\begin{capex}
+	Ecrire l'équation de Schrödinger indépendante du temps pour la particule libre, puis en déduire les solutions de cette équation sous forme d'états stationnaires. On notera $E$ l'énergie totale de la particule, et on montrera que celle-ci est forcément positive. 
+\end{capex}
+
+On peut conclure que les solutions sont forcément des superpositions d'ondes dont la fréquence et le vecteur d'onde sont reliés à l'énergie de la particule :
+\begin{theorem}[Fonction d'onde de la particule libre]
+	Une particule libre quantique de masse $m$ et d'énergie $E$ a une fonction d'onde de la forme :
+	\begin{equation}
+		\psi(x,t) = A e^{i(kx - \omega t)} + B e^{-i(k x + \omega t)}
+	\end{equation}
+	où $\omega = \dfrac{E}{\hbar}$ et $k = \dfrac{\sqrt{2mE}}{\hbar}$.
+\end{theorem}
+
+Nous retrouvons ainsi le fait que les particules quantiques peuvent être modélisées comme des ondes, et nous pouvons interpréter cette superposition comme une onde propagative selon $+\vv{e_x}$ et une onde propagative selon $-\vv{e_x}$. Pour simplifier notre étude, il est plus facile de commencer par étudier le cas de figure dans lequel la particule se propage dans une unique direction, alors la fonction d'onde de la particule correspond à une onde plane progressive monochromatique. On parle d'onde de De Broglie :
+\begin{definition}
+	Une onde de De Broglie est une onde plane progressive monochromatique solution de l'équation de Schrödinger. Elle est de la forme :
+	\begin{equation}
+		\psi(x,t) = \Psi_0 e^{i(kx - \omega t)}
+	\end{equation}
+\end{definition}
+
+\begin{capex}
+	Relier l'énergie cinétique de la particule à la pulsation de l'onde et au vecteur d'onde. Retrouver alors la relation de De Broglie entre la longueur d'onde et la quantité de mouvement de la particule.
+\end{capex}
+
+Nous pouvons ainsi conclure les propriétés suivantes :
+\begin{theorem}[Energie et quantité de mouvement d'une particule quantique libre]
+	Une particule quantique libre d'énergie cinétique $E$ et de quantité de mouvement $\vv p$ est associée à une onde de pulsation $\omega$ et de vecteur d'onde $\vv k$ tels que :
+	\begin{align}
+		E &= \hbar \omega \\
+		\vv p &= \hbar \vv k
+	\end{align}
+	Si $m$ est la masse de la particule, on a alors :
+	\begin{equation}
+		E = \frac{{\vv p}^2}{2m} = \frac{\hbar^2 {\vv k}^2}{2m}
+	\end{equation}
+\end{theorem}
+
+Nous pouvons alors proposer une description ondulatoire de la particule et la comparer à la modélisation que l'on fait habituellement en physique classique :
+
+\begin{capex}
+	Déterminer la relation de dispersion associée aux particules libres, et en déduire leur vitesse de phase et leur vitesse de groupe. La propagation est-elle dispersive ? Laquelle de ces deux vitesses correspond à la vitesse de propagation classique de la particule ?
+\end{capex}
+
+\subsection{Paquet d'ondes quantique et localisation de la particule}
+
+Nous avons vu que la particule quantique libre peut être décrite par des ondes planes progressives monochromatiques. Cependant, ces ondes présentent un inconvénient majeur : la densité de probabilité de présence associée à ces ondes est uniforme :
+\begin{equation}
+	\rho_{\mathbb{P}}(x,t) = |\psi(x,t)|^2 = |\Psi_0|^2 = cste
+\end{equation}
+Or, nous savons que la fonction d'onde doit satisfaire la condition de normalisation :
+\begin{equation}
+	\int_{-\infty}^{+\infty} |\psi(x,t)|^2 \dd x = 1
+\end{equation}
+Ceci n'est pas possible puisque l'intégrale diverge (ou est nulle si on prend $\Psi_0 = 0$).
+
+\begin{capex}
+	En exploitant le principe d'indétermination de Heisenberg, expliquer pourquoi on s'attend à avoir un problème lorsque l'on modélise la particule à l'aide d'une onde monochromatique.
+\end{capex}
+
+\begin{remark}
+	Une solution parfois utilisée pour normaliser cette fonction d'onde est de considérer qu'on a non pas une mais un grand nombre de particules (c'est le cas dans de nombreuses situations expérimentales). On peut alors faire en sorte que $|\Psi_0|^2$ corresponde au nombre de particules par unité de longueur $n$.
+\end{remark}
+
+Une solution plus réaliste est de considérer que la particule n'a pas une quantité de mouvement $p = \hbar k$ bien définie, mais que sa finction d'onde s'écrit comme une superposition d'ondes de De Broglie associées à des quantités de mouvement proches d'une quantité de mouvement $p_0$ avec une variation typique de $\Delta p$. En notant $p_0 = \hbar k_0$ et $\Delta p = \hbar \Delta k$, nous adoptons une description en paquet d'onde quantique :
+\begin{definition}[Paquet d'onde quantique]
+	Le modèle du paquet d'onde permet de décrire une particule quantique par une fonction d'onde de la forme :
+	\begin{equation}
+		\psi(x,t) = \int_{-\infty}^{+\infty} A(k) e^{i(kx - \omega(k)t)} \dd k
+	\end{equation}
+	avec $\omega(k) = \dfrac{\hbar k^2}{2m}$.
+\end{definition}
+La fonction $A(k)$ décrit la composition spectrale de l'onde, et elle aura une largeur $\Delta k$. Nous avons vu dans le cours d'optique que la largeur de cette fonction est reliée à la largeur $\Delta x$ de la fonction d'onde $\psi(x,t)$ par la relation $\Delta k \Delta x \approx 1$. Or nous avons vu que $\Delta p = \hbar \Delta k$, nous obtenons donc pour le paquet d'ondes quantique :
+\begin{equation}
+	\Delta x \times \Delta p \approx \hbar
+\end{equation}
+et nous retrouvons ici une conséquence directe du principe d'indétermination de Heisenberg : pour que la particule quantique soit localisée, il faut que sont spectre ne soit pas parfaitement pur. Ceci implique que sa longueur d'onde de De Broglie $\lambda_{\rm dB}$ n'est pas parfaitement définie, et donc sa quantité de mouvement ne l'est pas non plus : la localisation de la particule implique une indétermination de sa quantité de mouvement. Le principe d'indétermination de Heisenberg est donc une conséquence directe de la nature ondulatoire des particules.
+
+Nous avons par ailleurs vu dans le cours d'électromagnétisme que dans un tel paquet d'onde :
+\begin{itemize}
+	\item Les bosses et les creux se propagent à la vitesse de phase $v_\varphi$ ;
+	\item L'enveloppe se propage à la vitesse de groupe $v_g$
+\end{itemize}
+La densité de probabilité de présence $\rho_{\mathbb{P}}$ de la particule est associée à l'enveloppe de l'onde, ainsi il est naturel d'assimiler la vitesse de la particule en mécanique classique à la vitesse de groupe de l'onde. Nous avons justement démontré plus haut que ces deux quantités sont égales.
+
+\section{Densité de courant de probabilité}
+
+Dans le cas d'une particule confinée, il était surtout intéressant de connaître la position de la particule quantique. Puisque cette position ne peut pas être déterminée avec certitue en mécanique quantique, nous l'avons décrite par la densité de probabilité de présence $\rho_{\mathbb{P}}(x,t) = |\psi(x,t)|^2$. Mais nous étudions désormais une particule libre, et nous voulons donc caractériser le flux de particules plutôt que leur position (par exemple, si on veut mesurer le nombre de particules traversant une barrière de potentiel, ce que nous ferons à la fon du chapitre). Pour cela, il est nécessaire de définir une nouvelle grandeur, qui sera reliée à l'évolution temporelle de la densité de probabilité.
+
+\subsection{Conservation de la densité de probabilité}
+
+Pour faire apparaître cette grandeur, nous allons utiliser l'équation de conservation de la densité de probabilité qui s'écrit comme ceci :
+\begin{theorem}[Equation de conservation de la densité de probabilité]
+	La densité de probabilité d'une particule quantique $\rho_{\mathbb{P}}$ obéit à l'équation suivante :
+	\begin{equation}
+		\frac{\partial \rho_{\mathbb{P}}}{\partial t} + \frac{\partial j_{\mathbb{P}}}{\partial x} = 0
+	\end{equation}
+\end{theorem}
+où l'on a défini la densité de courant de probabilité :
+\begin{definition}[Densité de courant de probabilité]
+	La densité de courant de probabilité d'une particule quantique de masse $m$ et de fonction d'onde $\psi$ est définie par :
+	\begin{equation}
+		j_{\mathbb{P}} = \frac{\hbar}{m} \Im \left( \psi^\ast \frac{\partial \psi}{\partial x} \right)
+	\end{equation}
+\end{definition}
+
+\begin{capex}
+	A quelle équation déjà connue cette équation est-elle similaire ? Par analogie, en déduire le sens physique de la densité de courant de probabilité.
+\end{capex}
+
+\begin{demonstration}
+	Pour démontrer l'équation de conservation, nous multiplions l'équation de Schrödinger par $\psi^\ast$ :
+	\begin{equation}
+		\frac{i \hbar}{2} \frac{\partial |\psi|^2}{\partial t} = - \frac{\hbar^2}{2m} \frac{\partial^2 \psi}{\partial x^2}
+	\end{equation}
+	Nous en déduisons :
+	\begin{equation}
+		\frac{\partial |\psi|^2}{\partial t} = i \frac{\hbar}{m} \psi^\ast \frac{\partial^2 \psi}{\partial x^2}
+		\label{eq:demo}
+	\end{equation}
+	Nous faisons alors l'opération $\frac{1}{2} \times (($\ref{eq:demo}$)+($\ref{eq:demo}$)^\ast)$ et nous obtenons :
+	\begin{align}
+		\frac{\partial |\psi|^2}{\partial t} &= i \frac{\hbar}{2m} \left( \psi^\ast \frac{\partial^2 \psi}{\partial x^2} - \psi \frac{\partial^2 \psi^\ast}{\partial x^2} \right) \\
+		&= i \frac{\hbar}{2m} \frac{\partial}{\partial x} \left( \psi^\ast \frac{\partial \psi}{\partial x} - \psi^\ast \frac{\partial \psi^\ast}{\partial x} \right) \\
+		&= i \frac{\hbar}{2m} \frac{\partial}{\partial x} \left( 2 i \Im \left( \psi^\ast \frac{\partial \psi}{\partial x} \right) \right) \\
+		&= - \frac{\partial j_{\mathb{P}}}{\partial x}
+	\end{align}
+\end{demonstration}
+
+\subsection{Courant de probabilité d'une particule libre}
+
+Nous pouvons utiliser le concept de densité de courant de probabilité pour décrire une particule libre quantique.
+
+\begin{capex}
+	Déterminer la densité de courant de probabilité associée à une particule quantique décrite par une onde de De Broglie. La relier à la vitesse de groupe de l'onde, et proposer une interprétation du résultat. Proposer une analogie en électromagnétisme.
+\end{capex}
+
+Nous avons ainsi pu montrer que, si l'onde de De Broglie n'est pas normalisable, elle permet de décrire une sitation dans laquelle des particules se déplacent le long d'un axe avec une quantité de mouvement fixée. Le flux de particules le long de l'axe peut alors être décrit par la densité de courant de probabilité, qui présente une expression très simple dans le cas de l'onde de De Broglie. Nous utiliserons donc cette modélisation (bien qu'elle soit grossière) pour étudier un certain nombre de phénomènes quantiques dans la suite de ce cours.
+
+\section{Evolution d'une particule libre dans un potentiel constant par morceaux}
+
+Nous allons désormais étudier une particule initialement libre qui se retrouve confrontée à une variation de potentiel : elle peut rencontrer une marche de potentiel, un puits de potentiel ou encore une barrière de potentiel. Pour faciliter les calculs, nous allons nous restreindre aux situations dans lesquelles le potentiel est constant par morceaux. Bien que ceci puisse paraître simpliste, les comportements obtenus dans cette approximation sont déjà très riches et permettent de décrire un grand nombre de phénomènes quantiques observés en laboratoire.
+
+\subsection{Marche de potentiel}
+
+Nous allons commencer par décrire une situation parmi les plus simples possibles : une particule arrive sur une marche de potentiel, localisée en $x=0$. Cette situation peut par exemple représenter :
+\begin{itemize}
+	\item Un électron qui arrive sur la paroi d'un métal, il doit alors vaincre le travail d'extraction $W_e$ pour pouvoir s'échapper du métal ;
+	\item Un neutron que l'on essaye de faire rentrer dans un noyau atomique lors d'une expérience de physique nucléaire
+	\item Ou toute autre situation physique dans laquelle une particule microscopique en déplacement doit vaincre une hausse de l'énergie potentielle pour continuer son chemin.
+\end{itemize}
+Nous supposerons que le potentiel vaut :
+\begin{equation}
+	\begin{cases}
+		V(x) = 0 \quad \mathrm{pour} \quad x<0 \\
+		V(x) = V_0 \quad \mathrm{pour} \quad x>0
+	\end{cases}
+\end{equation}
+
+\subsubsection{Résolution en mécanique classique}
+
+Nous étudions le cas dans lequel on envoie une particule sur la barrière, dans le sens des $x$ croissants, avec une énergie cinétique $E$.
+\begin{capex}
+	Déterminer le comportement attendu de la particule en mécanique classique, dans le cas où $E<V_0$ et $E>V_0$. Préciser le sens de déplacement et la vitesse de la particule dans l'état final.
+\end{capex}
+
+\subsubsection{Résolution en mécanique quantique}
+
+Pour résoudre le problème en mécanique quantique, nous avons besoin de connaître les conditions de continuité de la fonction d'onde au niveau du satu de potentiel. Nous admettons la propriété suivante :
+\begin{proposition}
+	Dans le cas d'une discontinuité finie de potentiel, la fonction d'onde ainsi que ses dérivées spatiales sont continues.\\
+	Dans le cas d'une discontinuité infinie de potentiel, seule la fonction d'onde est continue.
+\end{proposition}
+
+On modélise la particule incidente par une onde de De Broglie qui se propage selon les $x$ croissants :
+\begin{equation}
+	\psi_i(x,t) = A_i e^{i(k_i x-\omega t)}
+\end{equation}
+où $\omega = E/\hbar$ est la pulsation de l'onde. 
+On pourra alors supposer que l'on a une onde réfléchie au niveau de l'interface, et une onde transmise, dont les expressions s'écrivent :
+\begin{align}
+	\psi_r(x,t) &= A_r e^{-i(k_r x + \omega t)} \\
+	\psi_t(x,t) &= A_t e^{i(k_t x - \omega t)}
+\end{align}
+
+Nous pouvons alors définir les coefficients de réflexion et de transmission, de manière analogue à l'électromagnétisme :
+\begin{definition}
+	On définit le coefficient de réflexion en amplitude $\underline{r}$ et le coefficient de transmission $\underline{t}$ par :
+	\begin{equation}
+		\underline{r} = \frac{A_r}{A_i} \quad \mathrm{et} \quad \underline{t} = \frac{A_t}{A_i}
+	\end{equation}
+	Les probabilités de réflexion et de transmission de la barrière de potentiel sont données par :
+	\begin{equation}
+		R = \frac{|j_{\mathbb{P},r}|}{|j_{\mathbb{P},i}|} \quad \mathrm{et} \quad T = \frac{|j_{\mathbb{P},t}|}{|j_{\mathbb{P},i}|}
+	\end{equation}
+\end{definition}
+
+\paragraph{Cas où $E < V_0$}
+
+\begin{capex}
+	On considère dans un premier temps le cas où $E<V_0$. Déterminer les vecteurs d'onde $k_i, k_r$ et $k_t$ en fonction de l'énergie de la particule. En déduire les probabilités de réflexion et de transmission de la particule, et comparer aux valeurs attendues en mécanique classique.
+\end{capex}
+
+Nous constatons ainsi que, contrairement à la mécanique classique, une particule a une probabilité non négligeable d'être réfléchie par une marche de potentiel dont la hauteur est inférieure à l'énergie cinétique de la particule. Cette probabilité, néanmoins, s'approche de 0 lorsque l'énergie cinétique de la particule devient largement supérieure à la marche de potentiel à gravir.
+
+INCLURE FIGURE T = f(E/V_0) AVEC SITUATIONS POUR DIFFERENTES PARTICULES
+
+Nous pouvons également déterminer la structure de l'onde dans la région $x<0$ :
+\begin{align}
+	\varphi(x) &= A_i e^{ikx} + A_r e^{-ikx} \\
+	&= A_i \left( e^{ikx} + \sqrt{R} e^{-ikx} \right) \\
+	&= A_i \left( (1-\sqrt{R}) e^{ikx} + 2 \sqrt{R} \cos(kx) \right)
+\end{align}
+D'où :
+\begin{equation}
+	\psi(x,t) = A_i (1-\sqrt{R}) e^{i(k x - \omega t)} + 2 A_i \sqrt{R} \cos(kx) e^{-i\omega t}
+\end{equation}
+Nous observons que nous avons une superposition entre une onde pregressive se propageant vers la marche de potentiel, et une onde stationnaire qui correspond à la superposition de l'onde réfléchie avec une partie de l'onde progressive incidente. Nous pouvons calculer la densité de probabilité associée à cette structure ondulatoire :
+\begin{align}
+	\rho_{\mathbb{P}}(x,t) &= |A_i|^2 \left( (1-\sqrt{R})^2 + 4 R \cos^2(kx) + 4 \sqrt{R}(1-\sqrt{R}) \cos^2(kx) \right) \\
+	&= |A_i|^2 \left( 1 + R + 2 \sqrt{R} (2 \cos^2(kx) - 1) \right) \\
+	&= |A_i|^2 \left( 1 + R + 2 \sqrt{R} \cos(2kx) \right) 
+\end{align}
+Autrement dit, nous pouvons constater une structure typique d'onde stationnaire, avec des noeuds et des ventres de probabilité en amont de la marche de potentiel où se produit la réflexion. Ce résultat est ainsi tout à fait analogue à la présence d'une onde stationnaire en amont d'une réflexion sur un conducteur parfait, à la différence qu'ici le coefficient de réflexion n'est pas égal à 1 ce qui réduit le contraste associé à l'onde stationnaire.
+
+\paragraph{Cas où $E > V_0$}
+
+\begin{capex}
+	On considère désormais le cas où $E<V_0$. Déterminer les vecteurs d'onde $k_i, k_r$ et $k_t$ en fonction de l'énergie de la particule. Quelle est la structure de l'onde dans la région $x>0$ ? Calculer la densité de courant de probabilité de cette onde.
+\end{capex}
+
+Nous constatons que, dans ce cas, aucune densité de courant de probabilité n'est transmise à travers la barrière, nous avons donc $T=0$. Or nous savons que par conservation de la densité de probabilité, nous devons avoir $R+T = 1$ ainsi $R=1$. Les coefficients de réflexion et de transmission sont donc identiques à ceux prédits par la mécanique classique.
+
+En revanche, un autre phénomène, lui interdit par la mécanique classique, est prédit par la mécanique quantique : la densité de probabilité de présence de la particule dans la région interdite est non nulle et décroît exponentiellement en fonction de la distance. Ce phénomène est analogue à la présence d'une onde dans les régions interdites lors du phénomène de réflexion totale (vitreuse ou à l'interface avec un plasma).
+
+\subsection{Barrière de potentiel, effet tunnel}
+
+Nous avons vu que dans le cas d'une marche de potentiel, si l'énergie mécanique de la particule est inférieure à la hauteur de la marche, la particule ne peut pas franchir la barrière, que ce soit en mécanique classique ou en mécanique quantique. En revanche, en mécanique quantique, la probabilité de présence de la particule est non nulle dans la région interdite car une onde évanescente de matière se forme. La longueur caractéristique de cette onde est du même ordre de grandeur que la longueur d'onde de De Broglie de la particule.
+
+Il devient alors intéressant d'étudier le cas de figure dans lequel une nouvelle région autorisée par la mécanique classique est présente derrière la marche de potentiel : on a alors une barrière de potentiel. Dans ce cas, si la barrière est suffisamment étroite, l'onde évanescente pourra la traverser et on aura alors une probabilité non nulle de transmission à travers la barrière de potentiel.
+
+Des barrières de potentiel quantiques permettent de décrire, par exemple, le mouvement d'un neutron vers l'extérieur d'un atome (phénomène de radioactivité). L'étude de la barrière de potentiel est également au coeur de la technique de microscopie à effet tunnel, qui est devenue largement utilisée de nos jours.
+
+Nous modélisons la barrière de potentiel par la fonction suivante :
+\begin{equation}
+	\begin{cases}
+		V(x) = 0 \quad \mathrm{pour} \quad |x|>\frac{a}{2} \\
+		V(x) = V_0 \quad \mathrm{pour} \quad |x| < \frac{a}{2}
+	\end{cases}
+\end{equation}
+En mécanique classique, une particule arrivant sur la barrière pourra franchir la barrière si elle a une énergie supérieure à $V_0$ et sera réfléchie sinon. On cherche une solution sous forme d'une superposition d'ondes de De Broglie, et nous nous intéressons exclusivement au cas où $E<V_0$ dans lequel la particule n'a pas une énergie suffisante pour franchir la barrière en mécanique classique. Nous avons alors , par un raisonnement similaire à celui mené pour la marche de potentiel, et toujours en notant $\psi(x,t) = \varphi(x) e^{-i E t / \hbar}$ :
+\begin{align}
+	\mathrm{Pour} \quad |x|>\frac{a}{2}\,: \quad &\varphi''(x) + k^2 \varphi(x) = 0 \\
+	\mathrm{Pour} \quad |x|<\frac{a}{2}\,: \quad &\varphi''(x) - q^2 \varphi(x) = 0
+\end{align}
+où $k = \dfrac{\sqrt{2mE}}{\hbar}$ et $q = \dfrac{\sqrt{2m(V_0-E)}}{\hbar}$.
+Nous pouvons alors séparer le domaine d'étude en trois régions :
+\begin{align}
+	\mathrm{Pour} \quad x<-\frac{a}{2}\,: \quad \varphi(x) = A_i e^{ikx} + A_r e^{-ikx} \\
+	\mathrm{Pour} \quad |x|<\frac{a}{2}\,: \quad \varphi(x) = A_1 e^{-qx} + A_2 e^{qx} \\
+	\mathrm{Pour} \quad x>\frac{a}{2}\,: \quad \varphi(x) = A_t e^{ikx} \\
+\end{align}
+où nous avons noté $A_i, A_r$ et $A_t$ les amplitudes respectives des ondes incidente, réfléchie et transmise. 
+
+Nous pouvons alors écrire la continuité de $\varphi$ et de $\varphi'$ en $x = \pm \frac{a}{2}$ ce qui fournit quatre équations indépendantes. $A_i$ étant fixée (reliée au flux de particules envoyées sur la barrière), nous avons également quatre inconnues $A_r,A_1,A_2$ et $A_t$. Ce système de quatre équations à quatre inconnues peut alors être résolu. Le calcul, fastidieux, n'est pas au programme, mais il permet de déterminer le coefficient de transmission de la barrière :
+\begin{proposition}[Coefficient de transmission de la barrière de potentiel]
+	La probabilité de transmission $T$ d'une particule quantique de masse $m$ et d'énergie $E$ à travers une barrière de potentiel de largeur $a$ et d'amplitude $V_0>E$ est donnée par :
+	\begin{equation}
+		T = \dfrac{1}{1 + \dfrac{V_0^2}{4 E(V_0-E)} \sinh^2(qa)} \quad \mathrm{avec} \quad q = \frac{\sqrt{2m(V_0-E)}}{\hbar}
+	\end{equation}
+\end{proposition}
+
+Nous constatons que cette probabilité de transmission n'est pas nulle : c'est l'effet tunnel quantique. Plus la particule aura une énergie proche de la limite maximale $V_0 \approx E$ et plus $q$ sera faible, donc plus la probabilité de transmission sera proche de 1. 
+
+\paragraph{Approximation de la barrière épaisse}
+
+En général, les longueurs d'onde de De Broglie des particules sont assez faibles devant la taille caractéristique de la barrière de potentiel. C'est typiquement le cas pour le phénomène de radioactivité ou encore dans un microscope à effet tunnel. On a alors $qa \ge 3$.
+
+\begin{capex}
+	Simplifier l'expression de $T$ dans l'approximation de la barrière épaisse. Comment interpréter l'expression obtenue à la lumière des résultats obtenus pour la marche de potentiel ? Que dire de la structure de l'onde dans la région $|x| < \frac{a}{2}$ dans ce cas ?
+\end{capex}
+
+
+\end{document}

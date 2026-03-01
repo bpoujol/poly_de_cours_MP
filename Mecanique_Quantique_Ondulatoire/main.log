@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.9.16)  28 FEB 2026 21:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.9.16)  1 MAR 2026 09:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1803,14 +1803,7 @@ Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'french'.
-(./main.aux
-
-LaTeX Warning: Label `eq:demo' multiply defined.
-
-
-LaTeX Warning: Label `eq:demo' multiply defined.
-
-)
+(./main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 132.
@@ -2164,27 +2157,35 @@ Package mdframed Info: mdframed detected package amsthm
  changed the theorem header of amsthm
 (mdframed)              on input line 320.
 [5]
-Package mdframed Info: mdframed works in twoside mode on input line 349.
+<marche_potentiel.png, id=87, 720.6925pt x 304.13625pt>
+File: marche_potentiel.png Graphic file (type png)
+<use marche_potentiel.png>
+Package pdftex.def Info: marche_potentiel.png  used on input line 347.
+(pdftex.def)             Requested size: 213.39568pt x 90.05354pt.
+Package mdframed Info: mdframed works in twoside mode on input line 354.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 349.
-Package mdframed Info: mdframed works in twoside mode on input line 373.
+(mdframed)              on input line 354.
+ [6 <./marche_potentiel.png>]
+Package mdframed Info: mdframed works in twoside mode on input line 378.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 373.
-Package mdframed Info: Box was splittet wrong
- starting loop to iterate the splitting point
-(mdframed)              on input line 382.
- [6]
-Package mdframed Info: mdframed works in twoside mode on input line 386.
+(mdframed)              on input line 378.
+Package mdframed Info: mdframed works in twoside mode on input line 391.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 386.
+(mdframed)              on input line 391.
+<paquet_onde_marche_potentiel.png, id=102, 1232.605pt x 684.5575pt>
+File: paquet_onde_marche_potentiel.png Graphic file (type png)
+<use paquet_onde_marche_potentiel.png>
+Package pdftex.def Info: paquet_onde_marche_potentiel.png  used on input line 3
+98.
+(pdftex.def)             Requested size: 426.79135pt x 237.02911pt.
 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.392 INCLURE FIGURE T = f(E/V_
+l.402 INCLURE FIGURE T = f(E/V_
                                0) AVEC SITUATIONS POUR DIFFERENTES PARTICULES
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2192,52 +2193,99 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.393 
+l.403 
       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-Package mdframed Info: mdframed works in twoside mode on input line 414.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 414.
-
-Package mdframed Warning: You got a bad break
-(mdframed)                because the last box will be empty
-(mdframed)                you have to change it manually
-(mdframed)                by changing the text, the space
-(mdframed)                or something else on input line 416.
-
 [7]
-Underfull \vbox (badness 2512) has occurred while \output is active []
-
- [8]
-Package mdframed Info: mdframed works in twoside mode on input line 465.
+<rhop_marche_potentiel_cas1.png, id=122, 889.3225pt x 280.04625pt>
+File: rhop_marche_potentiel_cas1.png Graphic file (type png)
+<use rhop_marche_potentiel_cas1.png>
+Package pdftex.def Info: rhop_marche_potentiel_cas1.png  used on input line 424
+.
+(pdftex.def)             Requested size: 298.75264pt x 94.07352pt.
+Package mdframed Info: mdframed works in twoside mode on input line 430.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 465.
+(mdframed)              on input line 430.
+<paquet_onde_marche_potentiel_2.png, id=123, 1232.605pt x 684.5575pt>
+File: paquet_onde_marche_potentiel_2.png Graphic file (type png)
+<use paquet_onde_marche_potentiel_2.png>
+Package pdftex.def Info: paquet_onde_marche_potentiel_2.png  used on input line
+ 438.
+(pdftex.def)             Requested size: 426.79135pt x 237.02911pt.
+ [8 <./paquet_onde_marche_potentiel.png> <./rhop_marche_potentiel_cas1.png>]
+<rhop_marche_potentiel_cas2.png, id=134, 684.5575pt x 217.81375pt>
+File: rhop_marche_potentiel_cas2.png Graphic file (type png)
+<use rhop_marche_potentiel_cas2.png>
+Package pdftex.def Info: rhop_marche_potentiel_cas2.png  used on input line 445
+.
+(pdftex.def)             Requested size: 298.75264pt x 95.06062pt.
+[9 <./paquet_onde_marche_potentiel_2.png> <./rhop_marche_potentiel_cas2.png>]
+[10]
+Package mdframed Info: mdframed works in twoside mode on input line 494.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 494.
+<paquet_onde_effet_tunnel.png, id=159, 1053.9375pt x 866.23625pt>
+File: paquet_onde_effet_tunnel.png Graphic file (type png)
+<use paquet_onde_effet_tunnel.png>
+Package pdftex.def Info: paquet_onde_effet_tunnel.png  used on input line 499.
+(pdftex.def)             Requested size: 426.79135pt x 350.78412pt.
+<effet_tunnel_rhop.png, id=160, 216.20775pt x 162.1257pt>
+File: effet_tunnel_rhop.png Graphic file (type png)
+<use effet_tunnel_rhop.png>
+Package pdftex.def Info: effet_tunnel_rhop.png  used on input line 504.
+(pdftex.def)             Requested size: 298.75264pt x 224.04294pt.
+ [11 <./paquet_onde_effet_tunnel.png>]
+Package mdframed Info: mdframed works in twoside mode on input line 509.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 509.
+Package mdframed Info: Not enough space on this page on input line 519.
+<microscope_effet_tunnel.png, id=169, 216.20775pt x 214.03966pt>
+File: microscope_effet_tunnel.png Graphic file (type png)
+<use microscope_effet_tunnel.png>
+Package pdftex.def Info: microscope_effet_tunnel.png  used on input line 522.
+(pdftex.def)             Requested size: 277.41176pt x 274.6524pt.
+ [12 <./effet_tunnel_rhop.png>]
+<radioactivite_alpha.png, id=176, 1284.8pt x 874.26625pt>
+File: radioactivite_alpha.png Graphic file (type png)
+<use radioactivite_alpha.png>
+Package pdftex.def Info: radioactivite_alpha.png  used on input line 532.
+(pdftex.def)             Requested size: 213.39568pt x 145.20819pt.
 
-[9] (./main.aux)
+[13 <./microscope_effet_tunnel.png> <./radioactivite_alpha.png>]
+<radioactivite_alpha_barriere.png, id=186, 216.20775pt x 158.0304pt>
+File: radioactivite_alpha_barriere.png Graphic file (type png)
+<use radioactivite_alpha_barriere.png>
+Package pdftex.def Info: radioactivite_alpha_barriere.png  used on input line 5
+42.
+(pdftex.def)             Requested size: 209.1301pt x 152.86006pt.
+<radioactivite_alpha_loi.png, id=187, 216.20775pt x 162.1257pt>
+File: radioactivite_alpha_loi.png Graphic file (type png)
+<use radioactivite_alpha_loi.png>
+Package pdftex.def Info: radioactivite_alpha_loi.png  used on input line 542.
+(pdftex.def)             Requested size: 209.1301pt x 156.8214pt.
+ [14 <./radioactivite_alpha_barriere.png> <./radioactivite_alpha_loi.png>] (./m
+ain.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
-
-
-LaTeX Warning: There were multiply-defined labels.
-
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 57717 strings out of 476080
- 1281559 string characters out of 5792744
- 2325430 words of memory out of 5000000
- 78391 multiletter control sequences out of 15000+600000
- 639523 words of font info for 314 fonts, out of 8000000 for 9000
+ 57871 strings out of 476080
+ 1285126 string characters out of 5792744
+ 2325380 words of memory out of 5000000
+ 78481 multiletter control sequences out of 15000+600000
+ 648837 words of font info for 344 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
- 102i,21n,107p,1188b,1788s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,21n,107p,1188b,1786s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/fontawesome5/FontAwesome5Fr
 ee-Solid.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex
 10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
@@ -2253,10 +2301,10 @@ tgar/uagk8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/symbol/usyr.pfb>
 ive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/urw/times/utmri8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
 blic/esvect/vect10.pfb>
-Output written on main.pdf (9 pages, 182465 bytes).
+Output written on main.pdf (14 pages, 1091982 bytes).
 PDF statistics:
- 259 PDF objects out of 1000 (max. 8388607)
- 213 compressed objects within 3 object streams
- 86 named destinations out of 1000 (max. 500000)
- 73301 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 316 PDF objects out of 1000 (max. 8388607)
+ 247 compressed objects within 3 object streams
+ 105 named destinations out of 1000 (max. 500000)
+ 81548 words of extra memory for PDF output out of 89155 (max. 10000000)
 

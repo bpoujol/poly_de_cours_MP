@@ -343,6 +343,11 @@ Nous supposerons que le potentiel vaut :
 	\end{cases}
 \end{equation}
 
+\begin{figure}[htbp]
+	\centering \includegraphics[width=0.5\linewidth]{marche_potentiel.png}
+	\caption{Marche de potentiel. Source : Poly de cours de Maxime Champion.}
+\end{figure}
+
 \subsubsection{Résolution en mécanique classique}
 
 Nous étudions le cas dans lequel on envoie une particule sur la barrière, dans le sens des $x$ croissants, avec une énergie cinétique $E$.
@@ -389,7 +394,10 @@ Nous pouvons alors définir les coefficients de réflexion et de transmission, d
 
 Nous constatons ainsi que, contrairement à la mécanique classique, une particule a une probabilité non négligeable d'être réfléchie par une marche de potentiel dont la hauteur est inférieure à l'énergie cinétique de la particule. Cette probabilité, néanmoins, s'approche de 0 lorsque l'énergie cinétique de la particule devient largement supérieure à la marche de potentiel à gravir.
 
-INCLURE FIGURE T = f(E/V_0) AVEC SITUATIONS POUR DIFFERENTES PARTICULES
+\begin{figure}[htbp]
+	\centering \includegraphics[width=\linewidth]{paquet_onde_marche_potentiel.png}
+	\caption{Paquet d'onde incident sur une marche de potentiel, avec une énergie $E > V_0$. Une partie du paquet est transmise tandis que l'autre est réfléchie. Source : Poly de cours de Maxime Champion.}
+\end{figure}
 
 Nous pouvons également déterminer la structure de l'onde dans la région $x<0$ :
 \begin{align}
@@ -409,6 +417,11 @@ Nous observons que nous avons une superposition entre une onde pregressive se pr
 \end{align}
 Autrement dit, nous pouvons constater une structure typique d'onde stationnaire, avec des noeuds et des ventres de probabilité en amont de la marche de potentiel où se produit la réflexion. Ce résultat est ainsi tout à fait analogue à la présence d'une onde stationnaire en amont d'une réflexion sur un conducteur parfait, à la différence qu'ici le coefficient de réflexion n'est pas égal à 1 ce qui réduit le contraste associé à l'onde stationnaire.
 
+\begin{figure}[htbp]
+	\centering \includegraphics[width=0.7\linewidth]{rhop_marche_potentiel_cas1.png}
+	\caption{Densité de probabilité de présence dans le cas de la marche de potentiel, pour $E>V_0$. On observe la présence d'une onde stationnaire en amont de la marche. Source : Poly de cours de Fatima Haddani.}
+\end{figure}
+
 \paragraph{Cas où $E > V_0$}
 
 \begin{capex}
@@ -417,7 +430,18 @@ Autrement dit, nous pouvons constater une structure typique d'onde stationnaire,
 
 Nous constatons que, dans ce cas, aucune densité de courant de probabilité n'est transmise à travers la barrière, nous avons donc $T=0$. Or nous savons que par conservation de la densité de probabilité, nous devons avoir $R+T = 1$ ainsi $R=1$. Les coefficients de réflexion et de transmission sont donc identiques à ceux prédits par la mécanique classique.
 
+
+\begin{figure}[htbp]
+	\centering \includegraphics[width=\linewidth]{paquet_onde_marche_potentiel_2.png}
+	\caption{Paquet d'onde incident sur une marche de potentiel, avec une énergie $E < V_0$. Le paquet est entièrement réfléchi ($R = 1$ et $T=0$). Source : Poly de cours de Maxime Champion.}
+\end{figure}
+
 En revanche, un autre phénomène, lui interdit par la mécanique classique, est prédit par la mécanique quantique : la densité de probabilité de présence de la particule dans la région interdite est non nulle et décroît exponentiellement en fonction de la distance. Ce phénomène est analogue à la présence d'une onde dans les régions interdites lors du phénomène de réflexion totale (vitreuse ou à l'interface avec un plasma).
+
+\begin{figure}[htbp]
+	\centering \includegraphics[width=0.7\linewidth]{rhop_marche_potentiel_cas2.png}
+	\caption{Densité de probabilité de présence dans le cas de la marche de potentiel, pour $E<V_0$. On observe la présence d'une onde évanescente en aval de la marche. Source : Poly de cours de Fatima Haddani.}
+\end{figure}
 
 \subsection{Barrière de potentiel, effet tunnel}
 
@@ -426,6 +450,8 @@ Nous avons vu que dans le cas d'une marche de potentiel, si l'énergie mécaniqu
 Il devient alors intéressant d'étudier le cas de figure dans lequel une nouvelle région autorisée par la mécanique classique est présente derrière la marche de potentiel : on a alors une barrière de potentiel. Dans ce cas, si la barrière est suffisamment étroite, l'onde évanescente pourra la traverser et on aura alors une probabilité non nulle de transmission à travers la barrière de potentiel.
 
 Des barrières de potentiel quantiques permettent de décrire, par exemple, le mouvement d'un neutron vers l'extérieur d'un atome (phénomène de radioactivité). L'étude de la barrière de potentiel est également au coeur de la technique de microscopie à effet tunnel, qui est devenue largement utilisée de nos jours.
+
+\subsubsection{Coefficient de transmission}
 
 Nous modélisons la barrière de potentiel par la fonction suivante :
 \begin{equation}
@@ -458,7 +484,7 @@ Nous pouvons alors écrire la continuité de $\varphi$ et de $\varphi'$ en $x = 
 
 Nous constatons que cette probabilité de transmission n'est pas nulle : c'est l'effet tunnel quantique. Plus la particule aura une énergie proche de la limite maximale $V_0 \approx E$ et plus $q$ sera faible, donc plus la probabilité de transmission sera proche de 1. 
 
-\paragraph{Approximation de la barrière épaisse}
+\subsubsection{Approximation de la barrière épaisse}
 
 En général, les longueurs d'onde de De Broglie des particules sont assez faibles devant la taille caractéristique de la barrière de potentiel. C'est typiquement le cas pour le phénomène de radioactivité ou encore dans un microscope à effet tunnel. On a alors $qa \ge 3$.
 
@@ -466,5 +492,54 @@ En général, les longueurs d'onde de De Broglie des particules sont assez faibl
 	Simplifier l'expression de $T$ dans l'approximation de la barrière épaisse. Comment interpréter l'expression obtenue à la lumière des résultats obtenus pour la marche de potentiel ? Que dire de la structure de l'onde dans la région $|x| < \frac{a}{2}$ dans ce cas ?
 \end{capex}
 
+\begin{figure}[htbp]
+	\centering \includegraphics[width=\linewidth]{paquet_onde_effet_tunnel.png}
+	\caption{Paquet d'onde incident sur une barrière de potentiel, avec une énergie $E < V_0$. Source : Poly de cours de Maxime Champion.}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering \includegraphics[width=0.7\linewidth]{effet_tunnel_rhop.png}
+	\caption{Densité de probabilité de présence dans le cas d'une onde de De Broglie arrivant sur une barrière de potentiel. Source : Fillette, Froustey et Roussille, \textit{Physique pour l'Agrégation} (2023).}
+\end{figure}
+
+\newpage
+\begin{encart}[Le microscope à effet tunnel]
+L'une des applications principales de l'effet tunnel est le microscope à effet tunnel. Son principe de fonctionnement est détaillé sur la figure suivante :
+
+Le microscope est constitué d'une pointe métallique de taille atomique, reliée à l'échantillon à étudier par un circuit électrique. Lorsque la pointe ne touche pas l'échantillon, le circuit est ouvert et aucun courant ne peut circuler. En effet, les électrons de l'échantillon y sont confinés, et pour échapper à l'échantillon, il faut leur fournir un travail d'extraction $W$. (Nous avons introduit le travail d'extraction en étudiant l'effet photoélectrique dans le cours sur la dualité onde-particule). Il en est de même au niveau de la pointe.
+
+Entre la pointe et l'échantillon, on applique une différence de potentiel $U$ ce qui crée un champ électrique entre les deux éléments ; en supposant le champ uniforme on a alors un potentiel électrique des électrons $E_p = - e V_{\rm elec}$ qui varie linéairement en fonction de la position $z$.
+
+Nous obtenons ainsi une barrière de potentiel dont la forme est représentée sur la figure. Si la barrière est suffisamment fine, l'effet tunnel va se manifester et les électrons pourront traverser la barrière avec une probabilité non nulle qui sera décroissante exponentiellement en fonction de la largeur de la barrière. Le courant électrique qui va circuler sera donc très sensible aux moindres variations de la hauteur de surface de l'échantillon, à l'échelle atomique. 
+
+En pratique, pour plus de précision, on ne mesure pas directement le courant qui circule à travers la pointe, mais on asservit plutôt ce courant à une valeur constante, ce qui implique de faire varier soit la tension $U$, soit la position de la pointe selon $Oz$, que l'on mesure alors expérimentalement.
+\end{encart}
+
+\begin{figure}[htbp]
+	\centering \includegraphics[width=0.65\linewidth]{microscope_effet_tunnel.png}
+	\caption{Principe de fonctionnement d'un microscope à effet tunnel. Source : Fillette, Froustey et Roussille, \textit{Physique pour l'Agrégation} (2023).}
+\end{figure}
+
+\newpage
+
+\subsubsection{Un exemple d'effet tunnel : la radioactivité $\alpha$}
+
+La radioactivité est un phénomène qui a été découvert par Henri Becquerel, puis interprété par Marie Curie, Pierre Curie et Ernest Rutherford au début du XX$^e$ siècle. L'un des types de radioactivité est la radioactivité $\alpha$ : un noyau instable (souvent correspondant à un élément chimique de grand numéro atomique) perd deux protons et deux neutrons, c'est-à-dire l'équivalent d'un noyau d'hélium, comme visible sur la figure ci-dessous :
+\begin{figure}[htbp]
+	\centering \includegraphics[width=0.35\linewidth]{radioactivite_alpha.png}
+	\caption{Principe de la radioactivité $\alpha$. Source : Wikimedia Commons.}
+\end{figure}
+
+Ce phénomène s'explique par un modèle théorique à partir de l'effet tunnel quantique : lorsque la particule $\alpha$ se trouve dans le noyau, elle est liée au reste du noyau par une interaction de liaison très forte, qui est une interaction de contact. On a donc une énergie de liaison $V(r) = -E_0$ lorsque la position $r$ de la particule $\alpha$ est inférieure au rayon du noyau $r_0$. En dehors de cette région, on a une interaction électrostatique répulsive entra la particule alpha et le noyau :
+\begin{equation}
+	V(r>r_0) = \frac{2 Z e^2}{4 \pi \epsilon_0 r}
+\end{equation}
+Nous obtenons alors une barrière de potentiel représentée sur la figure suivante.
+\begin{figure}[htbp]
+	\centering \includegraphics[width=0.49\linewidth]{radioactivite_alpha_barriere.png} \includegraphics[width=0.49\linewidth]{radioactivite_alpha_loi.png}
+	\caption{A gauche : barrière de potentiel à franchir par la particule $\alpha$ pour pouvoir s'échapper du noyau. A droite : la loi de Geiger et Nuttall qui relier le temps de demi-vie des noyaux à l'énergie cinétique $E$ de la particule $\alpha$ et le numéro atomique $Z$ du noyau est très bien vérifiée expérimentalement. Source : Fillette, Froustey et Roussille, \textit{Physique pour l'Agrégation} (2023).}
+\end{figure}
+
+Il est alors possible de démontrer, en faisant quelques approximations, que dans ce cas on s'attend à ce que la probabilité de transmission des atomes soit reliée au numéro atomique $Z$ du noyau considéré ainsi qu'à l'énergie cinétique $E$ de la particule $\alpha$. Cette loi peut être vérifiée expérimentalement en mesurant le temps de demi-vie des noyaux $t_{1/2}$ et constitue un des grands succès de la théorie quantique. Pour plus de détails sur ce calcul, vous pouvez faire le DM de mécanique quantique.
 
 \end{document}

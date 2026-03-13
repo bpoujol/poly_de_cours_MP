@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.9.16)  3 MAR 2026 20:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.9.16)  13 MAR 2026 09:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -985,17 +985,6 @@ Package csquotes Info: ... configuration file loaded successfully.
 (/usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.cfg
 File: csquotes.cfg 
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
-Package: amssymb 2013/01/14 v3.01 AMS font symbols
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
-Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
-\symAMSa=\mathgroup6
-\symAMSb=\mathgroup7
-LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
-LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
-(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-))
 (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
 Package: babel 2024/01/07 v24.1 The Babel package
 \babel@savecnt=\count344
@@ -1041,22 +1030,8 @@ Package babel Info: Importing font and identification data for french
 (/usr/share/texlive/texmf-dist/tex/latex/carlisle/scalefnt.sty)
 (/usr/share/texlive/texmf-dist/tex/latex/dingbat/dingbat.sty
 Package: dingbat 2001/04/27 v1.00 Hands and other dingbats
-
-
-! LaTeX Error: Command \checkmark already defined.
-               Or name \end... illegal, see p.192 of the manual.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.40 \newcommand{\checkmark}{\dingbat@sym{'104}}
-                                                
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-) (/usr/share/texlive/texmf-dist/tex/latex/environ/environ.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/environ/environ.sty
 Package: environ 2014/05/04 v0.3 A new way to define environments
 
 (/usr/share/texlive/texmf-dist/tex/latex/trimspaces/trimspaces.sty
@@ -1071,20 +1046,22 @@ Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 Package: wrapfig 2003/01/31  v 3.6
 )
 
-! LaTeX Error: Command \grad undefined.
+! LaTeX Error: Command \div already defined.
+               Or name \end... illegal, see p.192 of the manual.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.91 \renewcommand{\grad}
-                         {\vv{\mathrm{grad}}}
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+l.87 \newcommand{\div}{\mathrm{div}}
+                                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
 
 (/usr/share/texlive/texmf-dist/tex/latex/esvect/esvect.sty
 Package: esvect 
-\symesvector=\mathgroup8
+\symesvector=\mathgroup6
 LaTeX Font Info:    Redeclaring math symbol \fldr on input line 38.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/physics/physics.sty
@@ -1212,8 +1189,8 @@ LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
 (Font)                  OMX/cmex/m/n --> OMX/ztmcm/m/n on input line 31.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
 (Font)                  OMX/cmex/m/n --> OMX/ztmcm/m/n on input line 31.
-\symbold=\mathgroup9
-\symitalic=\mathgroup10
+\symbold=\mathgroup7
+\symitalic=\mathgroup8
 LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 34.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
 (Font)                  OT1/cmr/bx/n --> OT1/ptm/bx/n on input line 34.
@@ -1540,6 +1517,16 @@ Package: fancyhdr 2022/11/09 v4.1 Extensive control of page headers and footers
 \f@nch@O@olf=\skip100
 \f@nch@O@orf=\skip101
 )
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup9
+\symAMSb=\mathgroup10
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+)
 (/usr/share/texlive/texmf-dist/tex/latex/amscls/amsthm.sty
 Package: amsthm 2020/05/29 v2.20.6
 \thm@style=\toks52
@@ -1797,7 +1784,7 @@ File: bkm-pdftex.def 2023-12-10 v1.31 bookmark driver for pdfTeX and luaTeX (HO
 \BKM@id=\count523
 )))
 
-Package csquotes Warning: Load 'inputenc' before 'csquotes' on input line 132.
+Package csquotes Warning: Load 'inputenc' before 'csquotes' on input line 137.
 
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
@@ -1806,24 +1793,24 @@ Package csquotes Info: Redefining alias 'default' -> 'french'.
 (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
  (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count524
@@ -1850,30 +1837,30 @@ Package pgfplots notification 'compat/show suggested version=true': you might b
 enefit from \pgfplotsset{compat=1.18} (current compat level: 1.17).
 
 
-Package chemgreek Info: Activating mapping `default' on line 132.
+Package chemgreek Info: Activating mapping `default' on line 137.
 
-LaTeX Info: Redefining \celsius on input line 132.
-Package gensymb Info: Faking symbols for \degree and \celsius on input line 132
+LaTeX Info: Redefining \celsius on input line 137.
+Package gensymb Info: Faking symbols for \degree and \celsius on input line 137
 .
 
 Package gensymb Warning: Not defining \perthousand.
 
-LaTeX Info: Redefining \ohm on input line 132.
-Package gensymb Info: Using \upOmega for \ohm on input line 132.
+LaTeX Info: Redefining \ohm on input line 137.
+Package gensymb Info: Using \upOmega for \ohm on input line 137.
 
 Package gensymb Warning: Not defining \micro.
 
 (/usr/share/texlive/texmf-dist/tex/latex/ninecolors/ninecolors.sty
 Package: ninecolors 2022-02-13 v2022D Select colors with proper color contrast
 )
-LaTeX Info: Redefining \degres on input line 132.
+LaTeX Info: Redefining \degres on input line 137.
 Package french.ldf Info: Setting StandardItemizeEnv=true for
 (french.ldf)             compatibility with enumitem package,
-(french.ldf)             reported on input line 132.
+(french.ldf)             reported on input line 137.
 Package french.ldf Info: Setting StandardEnumerateEnv=true for
 (french.ldf)             compatibility with enumitem package,
-(french.ldf)             reported on input line 132.
-LaTeX Info: Redefining \up on input line 132.
+(french.ldf)             reported on input line 137.
+LaTeX Info: Redefining \up on input line 137.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1909,19 +1896,19 @@ LaTeX Info: Redefining \up on input line 132.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \microtypecontext on input line 132.
-Package microtype Info: Applying patch `item' on input line 132.
-Package microtype Info: Applying patch `toc' on input line 132.
-Package microtype Info: Applying patch `eqnum' on input line 132.
-Package microtype Info: Applying patch `footnote' on input line 132.
-Package microtype Info: Applying patch `verbatim' on input line 132.
+LaTeX Info: Redefining \microtypecontext on input line 137.
+Package microtype Info: Applying patch `item' on input line 137.
+Package microtype Info: Applying patch `toc' on input line 137.
+Package microtype Info: Applying patch `eqnum' on input line 137.
+Package microtype Info: Applying patch `footnote' on input line 137.
+Package microtype Info: Applying patch `verbatim' on input line 137.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 132.
+LaTeX Info: Redefining \showhyphens on input line 137.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -1943,17 +1930,17 @@ Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' not found.
 
 No file main.bbl.
-Package biblatex Info: Reference section=0 on input line 132.
-Package biblatex Info: Reference segment=0 on input line 132.
-Package hyperref Info: Link coloring OFF on input line 132.
-Chapitre 20.
-<vue_artiste_microscope.jpg, id=7, 853.68938pt x 426.59375pt>
-File: vue_artiste_microscope.jpg Graphic file (type jpg)
-<use vue_artiste_microscope.jpg>
-Package pdftex.def Info: vue_artiste_microscope.jpg  used on input line 156.
-(pdftex.def)             Requested size: 597.50787pt x 298.59406pt.
-LaTeX Font Info:    Trying to load font information for T1+pag on input line 15
-6.
+Package biblatex Info: Reference section=0 on input line 137.
+Package biblatex Info: Reference segment=0 on input line 137.
+Package hyperref Info: Link coloring OFF on input line 137.
+Chapitre 21.
+<cyclone.jpg, id=7, 1204.5pt x 687.31781pt>
+File: cyclone.jpg Graphic file (type jpg)
+<use cyclone.jpg>
+Package pdftex.def Info: cyclone.jpg  used on input line 161.
+(pdftex.def)             Requested size: 597.50787pt x 340.96274pt.
+LaTeX Font Info:    Trying to load font information for T1+pag on input line 16
+1.
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pag.fd
 File: t1pag.fd 2001/06/04 font definitions for T1/pag.
 )
@@ -1962,9 +1949,57 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/pag/b/n' in size <20.74> not available
-(Font)              Font shape `T1/pag/db/n' tried instead on input line 156.
+(Font)              Font shape `T1/pag/db/n' tried instead on input line 161.
+LaTeX Font Info:    Font shape `T1/pag/b/n' in size <12> not available
+(Font)              Font shape `T1/pag/db/n' tried instead on input line 167.
+LaTeX Font Info:    Font shape `T1/pag/b/n' in size <10.95> not available
+(Font)              Font shape `T1/pag/db/n' tried instead on input line 169.
+Package mdframed Info: mdframed works in twoside mode on input line 172.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 172.
+LaTeX Font Info:    Font shape `T1/pag/b/n' in size <10> not available
+(Font)              Font shape `T1/pag/db/n' tried instead on input line 172.
+Package mdframed Info: mdframed works in twoside mode on input line 176.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 176.
+LaTeX Font Info:    Trying to load font information for U+fontawesomefree2 on i
+nput line 177.
+
+(/usr/share/texlive/texmf-dist/tex/latex/fontawesome5/ufontawesomefree2.fd)
+Package mdframed Info: mdframed works in twoside mode on input line 181.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 181.
+
+[1
+
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-di
+st/fonts/enc/dvips/base/8r.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/f
+ontawesome5/fa5free2.enc} <./cyclone.jpg>]
+Package mdframed Info: Not enough space on this page on input line 183.
+Package mdframed Info: mdframed works in twoside mode on input line 185.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 185.
+<referentiel_copernic.png, id=21, 1189.44376pt x 414.54875pt>
+File: referentiel_copernic.png Graphic file (type png)
+<use referentiel_copernic.png>
+Package pdftex.def Info: referentiel_copernic.png  used on input line 190.
+(pdftex.def)             Requested size: 303.02472pt x 105.61047pt.
+<referentiel_terrestre.png, id=23, 465.74pt x 433.62pt>
+File: referentiel_terrestre.png Graphic file (type png)
+<use referentiel_terrestre.png>
+Package pdftex.def Info: referentiel_terrestre.png  used on input line 190.
+(pdftex.def)             Requested size: 119.50105pt x 111.25644pt.
+Package mdframed Info: mdframed works in twoside mode on input line 195.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 195.
 LaTeX Font Info:    Trying to load font information for OT1+ztmcm on input line
- 158.
+ 196.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
 File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
@@ -1974,239 +2009,175 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Trying to load font information for OML+ztmcm on input line
- 158.
+ 196.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omlztmcm.fd
 File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 )
 LaTeX Font Info:    Trying to load font information for OMS+ztmcm on input line
- 158.
+ 196.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsztmcm.fd
 File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
 )
 LaTeX Font Info:    Trying to load font information for OMX+ztmcm on input line
- 158.
+ 196.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omxztmcm.fd
 File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
 )
-LaTeX Font Info:    Trying to load font information for U+wasy on input line 15
-8.
+LaTeX Font Info:    Trying to load font information for U+wasy on input line 19
+6.
 
 (/usr/share/texlive/texmf-dist/tex/latex/wasysym/uwasy.fd
 File: uwasy.fd 2020/01/19 v2.4 Wasy-2 symbol font definitions
 )
 LaTeX Font Info:    Trying to load font information for U+esint on input line 1
-58.
+96.
 
 (/usr/share/texlive/texmf-dist/tex/latex/esint/uesint.fd
 File: uesint.fd 
 )
+LaTeX Font Info:    Trying to load font information for U+esvect on input line 
+196.
+
+(/usr/share/texlive/texmf-dist/tex/latex/esvect/uesvect.fd
+File: uesvect.fd 
+)
+LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 1
+96.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+)
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 196.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 196.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 196.
+
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+esvect on input line 
-158.
-
-(/usr/share/texlive/texmf-dist/tex/latex/esvect/uesvect.fd
-File: uesvect.fd 
-)
-LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 1
-58.
-
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
-File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
-)
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 158.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 158.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 158.
-LaTeX Font Info:    Font shape `T1/pag/b/n' in size <12> not available
-(Font)              Font shape `T1/pag/db/n' tried instead on input line 164.
-Package mdframed Info: mdframed works in twoside mode on input line 167.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 167.
-LaTeX Font Info:    Font shape `T1/pag/b/n' in size <10> not available
-(Font)              Font shape `T1/pag/db/n' tried instead on input line 168.
- [1
-
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-di
-st/fonts/enc/dvips/base/8r.enc} <./vue_artiste_microscope.jpg>]
-Package mdframed Info: mdframed works in twoside mode on input line 187.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 187.
-LaTeX Font Info:    Trying to load font information for U+fontawesomefree2 on i
-nput line 188.
-
-(/usr/share/texlive/texmf-dist/tex/latex/fontawesome5/ufontawesomefree2.fd)
-Package mdframed Info: mdframed works in twoside mode on input line 192.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 192.
 Package mdframed Info: mdframed works in twoside mode on input line 201.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 201.
-Package mdframed Info: mdframed works in twoside mode on input line 208.
+Package mdframed Info: mdframed works in twoside mode on input line 209.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 208.
-Package mdframed Info: mdframed works in twoside mode on input line 213.
+(mdframed)              on input line 209.
+ [2 <./referentiel_copernic.png> <./referentiel_terrestre.png>]
+Package mdframed Info: mdframed works in twoside mode on input line 218.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 213.
-Package mdframed Info: Not enough space on this page on input line 223.
-LaTeX Font Info:    Font shape `T1/pag/b/n' in size <10.95> not available
-(Font)              Font shape `T1/pag/db/n' tried instead on input line 223.
-
-[2{/usr/share/texlive/texmf-dist/fonts/enc/dvips/fontawesome5/fa5free2.enc}]
-Package mdframed Info: Not enough space on this page on input line 223.
-Package mdframed Info: mdframed works in twoside mode on input line 227.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 227.
-Package mdframed Info: mdframed works in twoside mode on input line 243.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 243.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 248.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 248.
-Package mdframed Info: mdframed works in twoside mode on input line 252.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 252.
-Package mdframed Info: Box was splittet wrong
- starting loop to iterate the splitting point
-(mdframed)              on input line 258.
-
-[3]
-Package mdframed Info: mdframed works in twoside mode on input line 279.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 279.
-Package mdframed Info: mdframed works in twoside mode on input line 286.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 286.
- [4]
-Package mdframed Info: mdframed works in twoside mode on input line 293.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 293.
+(mdframed)              on input line 218.
+<rotation_reperes.png, id=44, 1189.44376pt x 414.54875pt>
+File: rotation_reperes.png Graphic file (type png)
+<use rotation_reperes.png>
+Package pdftex.def Info: rotation_reperes.png  used on input line 227.
+(pdftex.def)             Requested size: 320.0935pt x 111.55644pt.
 LaTeX Font Info:    Font shape `T1/pag/b/n' in size <6> not available
-(Font)              Font shape `T1/pag/db/n' tried instead on input line 298.
+(Font)              Font shape `T1/pag/db/n' tried instead on input line 232.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 298.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 232.
+
+Overfull \hbox (14.48979pt too wide) in paragraph at lines 232--233
+[][]$\U/msa/m/n/6 ^^D$ \T1/pag/db/n/10 (-20) Dé-mons-tra-tion []\T1/ptm/m/n/10.
+95 (-20) Nous choi-sis-sons par conven-tion d'orien-ter l'axe $\OML/ztmcm/m/it/
+10.95 O[]z$ \T1/ptm/m/n/10.95 (-20) du ré-fé-ren-tiel $\OMS/ztmcm/m/n/10.95 R[]
+\OT1/ztmcm/m/n/10.95 (\OML/ztmcm/m/it/10.95 O[]; []; []; []\OT1/ztmcm/m/n/10.95
+ )$
+ []
+
+[3 <./rotation_reperes.png>]
+Package mdframed Info: mdframed works in twoside mode on input line 261.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 261.
+Package mdframed Info: mdframed works in twoside mode on input line 265.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 265.
+ [4]
+Package mdframed Info: mdframed works in twoside mode on input line 302.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 302.
+Package mdframed Info: mdframed works in twoside mode on input line 307.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 307.
+<zerog.png, id=76, 1806.75pt x 1016.79875pt>
+File: zerog.png Graphic file (type png)
+<use zerog.png>
+Package pdftex.def Info: zerog.png  used on input line 316.
+(pdftex.def)             Requested size: 341.43437pt x 192.15425pt.
 Package mdframed Info: mdframed works in twoside mode on input line 320.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 320.
- [5]
-<marche_potentiel.png, id=87, 720.6925pt x 304.13625pt>
-File: marche_potentiel.png Graphic file (type png)
-<use marche_potentiel.png>
-Package pdftex.def Info: marche_potentiel.png  used on input line 347.
-(pdftex.def)             Requested size: 213.39568pt x 90.05354pt.
-Package mdframed Info: mdframed works in twoside mode on input line 354.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 320.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 320.
+ [5 <./zerog.png>]
+Package mdframed Info: mdframed works in twoside mode on input line 330.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 354.
- [6 <./marche_potentiel.png>]
-Package mdframed Info: mdframed works in twoside mode on input line 378.
+(mdframed)              on input line 330.
+Package mdframed Info: mdframed works in twoside mode on input line 358.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 378.
-Package mdframed Info: mdframed works in twoside mode on input line 391.
+(mdframed)              on input line 358.
+
+
+Package mdframed Warning: You got a bad break
+(mdframed)                because the last box will be empty
+(mdframed)                you have to change it manually
+(mdframed)                by changing the text, the space
+(mdframed)                or something else on input line 365.
+
+[6]
+<coriolis.jpg, id=101, 1606.0pt x 1606.0pt>
+File: coriolis.jpg Graphic file (type jpg)
+<use coriolis.jpg>
+Package pdftex.def Info: coriolis.jpg  used on input line 368.
+(pdftex.def)             Requested size: 320.0935pt x 320.09157pt.
+Package mdframed Info: mdframed works in twoside mode on input line 372.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 391.
-<paquet_onde_marche_potentiel.png, id=102, 1232.605pt x 684.5575pt>
-File: paquet_onde_marche_potentiel.png Graphic file (type png)
-<use paquet_onde_marche_potentiel.png>
-Package pdftex.def Info: paquet_onde_marche_potentiel.png  used on input line 3
-98.
-(pdftex.def)             Requested size: 426.79135pt x 237.02911pt.
-<rhop_marche_potentiel_cas1.png, id=103, 889.3225pt x 280.04625pt>
-File: rhop_marche_potentiel_cas1.png Graphic file (type png)
-<use rhop_marche_potentiel_cas1.png>
-Package pdftex.def Info: rhop_marche_potentiel_cas1.png  used on input line 421
-.
-(pdftex.def)             Requested size: 298.75264pt x 94.07352pt.
- [7]
-Package mdframed Info: mdframed works in twoside mode on input line 427.
+(mdframed)              on input line 372.
+<forme_terre.png, id=102, 931.48pt x 850.17625pt>
+File: forme_terre.png Graphic file (type png)
+<use forme_terre.png>
+Package pdftex.def Info: forme_terre.png  used on input line 383.
+(pdftex.def)             Requested size: 213.39568pt x 194.77104pt.
+Package mdframed Info: mdframed works in twoside mode on input line 387.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 427.
-<paquet_onde_marche_potentiel_2.png, id=123, 1232.605pt x 684.5575pt>
-File: paquet_onde_marche_potentiel_2.png Graphic file (type png)
-<use paquet_onde_marche_potentiel_2.png>
-Package pdftex.def Info: paquet_onde_marche_potentiel_2.png  used on input line
- 435.
-(pdftex.def)             Requested size: 426.79135pt x 237.02911pt.
- [8 <./paquet_onde_marche_potentiel.png> <./rhop_marche_potentiel_cas1.png>]
-<rhop_marche_potentiel_cas2.png, id=134, 684.5575pt x 217.81375pt>
-File: rhop_marche_potentiel_cas2.png Graphic file (type png)
-<use rhop_marche_potentiel_cas2.png>
-Package pdftex.def Info: rhop_marche_potentiel_cas2.png  used on input line 442
-.
-(pdftex.def)             Requested size: 298.75264pt x 95.06062pt.
- [9 <./paquet_onde_marche_potentiel_2.png> <./rhop_marche_potentiel_cas2.png>]
-Package mdframed Info: mdframed works in twoside mode on input line 491.
+(mdframed)              on input line 387.
+ [7 <./coriolis.jpg>]
+Package mdframed Info: mdframed works in twoside mode on input line 397.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 491.
- [10]
-<paquet_onde_effet_tunnel.png, id=158, 1053.9375pt x 866.23625pt>
-File: paquet_onde_effet_tunnel.png Graphic file (type png)
-<use paquet_onde_effet_tunnel.png>
-Package pdftex.def Info: paquet_onde_effet_tunnel.png  used on input line 496.
-(pdftex.def)             Requested size: 426.79135pt x 350.78412pt.
-<effet_tunnel_rhop.png, id=159, 216.20775pt x 162.1257pt>
-File: effet_tunnel_rhop.png Graphic file (type png)
-<use effet_tunnel_rhop.png>
-Package pdftex.def Info: effet_tunnel_rhop.png  used on input line 501.
-(pdftex.def)             Requested size: 298.75264pt x 224.04294pt.
- [11 <./paquet_onde_effet_tunnel.png>]
-Package mdframed Info: mdframed works in twoside mode on input line 506.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 506.
-Package mdframed Info: Not enough space on this page on input line 516.
-<microscope_effet_tunnel.png, id=168, 216.20775pt x 214.03966pt>
-File: microscope_effet_tunnel.png Graphic file (type png)
-<use microscope_effet_tunnel.png>
-Package pdftex.def Info: microscope_effet_tunnel.png  used on input line 519.
-(pdftex.def)             Requested size: 277.41176pt x 274.6524pt.
- [12 <./effet_tunnel_rhop.png>]
-<radioactivite_alpha.png, id=175, 1284.8pt x 874.26625pt>
-File: radioactivite_alpha.png Graphic file (type png)
-<use radioactivite_alpha.png>
-Package pdftex.def Info: radioactivite_alpha.png  used on input line 529.
-(pdftex.def)             Requested size: 149.37958pt x 101.63907pt.
-<radioactivite_alpha_barriere.png, id=176, 216.20775pt x 158.0304pt>
-File: radioactivite_alpha_barriere.png Graphic file (type png)
-<use radioactivite_alpha_barriere.png>
-Package pdftex.def Info: radioactivite_alpha_barriere.png  used on input line 5
-39.
-(pdftex.def)             Requested size: 209.1301pt x 152.86006pt.
-<radioactivite_alpha_loi.png, id=177, 216.20775pt x 162.1257pt>
-File: radioactivite_alpha_loi.png Graphic file (type png)
-<use radioactivite_alpha_loi.png>
-Package pdftex.def Info: radioactivite_alpha_loi.png  used on input line 539.
-(pdftex.def)             Requested size: 209.1301pt x 156.8214pt.
- [13 <./microscope_effet_tunnel.png> <./radioactivite_alpha.png>] [14 <./radioa
-ctivite_alpha_barriere.png> <./radioactivite_alpha_loi.png>] (./main.aux)
+(mdframed)              on input line 397.
+ [8 <./forme_terre.png>]
+<cyclone_schema.jpg, id=118, 1606.0pt x 1096.095pt>
+File: cyclone_schema.jpg Graphic file (type jpg)
+<use cyclone_schema.jpg>
+Package pdftex.def Info: cyclone_schema.jpg  used on input line 402.
+(pdftex.def)             Requested size: 426.79135pt x 291.28333pt.
+<tornade.jpg, id=119, 1279.78125pt x 940.26282pt>
+File: tornade.jpg Graphic file (type jpg)
+<use tornade.jpg>
+Package pdftex.def Info: tornade.jpg  used on input line 402.
+(pdftex.def)             Requested size: 298.75264pt x 219.49837pt.
+ [9 <./cyclone_schema.jpg> <./tornade.jpg>] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
@@ -2216,31 +2187,29 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 57820 strings out of 476080
- 1284024 string characters out of 5792744
- 2325380 words of memory out of 5000000
- 78436 multiletter control sequences out of 15000+600000
- 648523 words of font info for 343 fonts, out of 8000000 for 9000
+ 57704 strings out of 476080
+ 1281591 string characters out of 5792744
+ 2335329 words of memory out of 5000000
+ 78413 multiletter control sequences out of 15000+600000
+ 644096 words of font info for 308 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
- 102i,21n,107p,1188b,1786s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,23n,107p,1173b,1786s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/fontawesome5/FontAwesome5Fr
 ee-Solid.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex
 10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
 ></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/
 share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/public/esint-type1/esint10.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/urw/avantgar/uagd8a.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/urw/avantgar/uagk8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/symbol/usyr.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/esvect/vect10.pfb>
-Output written on main.pdf (14 pages, 1808812 bytes).
+texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/urw/avantgar/uagd8a.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/urw/avantgar/uagk8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/sym
+bol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/esvect/vect10.pfb>
+Output written on main.pdf (9 pages, 1992876 bytes).
 PDF statistics:
- 310 PDF objects out of 1000 (max. 8388607)
- 242 compressed objects within 3 object streams
- 104 named destinations out of 1000 (max. 500000)
- 81041 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 220 PDF objects out of 1000 (max. 8388607)
+ 167 compressed objects within 2 object streams
+ 62 named destinations out of 1000 (max. 500000)
+ 81010 words of extra memory for PDF output out of 89155 (max. 10000000)
 

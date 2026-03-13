@@ -137,7 +137,7 @@ mathfontname=mathsf]{mhchem}
 
 %\usechapterimagefalse % If you don't want to include a chapter image, use this to toggle images off - it can be enabled later with \usechapterimagetrue
 
-\chapterimage{filmB.jpg} % Table of contents heading image
+\chapterimage{vue_artiste_microscope.jpg} % Table of contents heading image
 
 %\pagestyle{empty} % No headers
 
@@ -271,7 +271,7 @@ La densité de probabilité de présence $\rho_{\mathbb{P}}$ de la particule est
 
 \section{Densité de courant de probabilité}
 
-Dans le cas d'une particule confinée, il était surtout intéressant de connaître la position de la particule quantique. Puisque cette position ne peut pas être déterminée avec certitue en mécanique quantique, nous l'avons décrite par la densité de probabilité de présence $\rho_{\mathbb{P}}(x,t) = |\psi(x,t)|^2$. Mais nous étudions désormais une particule libre, et nous voulons donc caractériser le flux de particules plutôt que leur position (par exemple, si on veut mesurer le nombre de particules traversant une barrière de potentiel, ce que nous ferons à la fon du chapitre). Pour cela, il est nécessaire de définir une nouvelle grandeur, qui sera reliée à l'évolution temporelle de la densité de probabilité.
+Dans le cas d'une particule confinée, il était surtout intéressant de connaître la position de la particule quantique. Puisque cette position ne peut pas être déterminée avec certitude en mécanique quantique, nous l'avons décrite par la densité de probabilité de présence $\rho_{\mathbb{P}}(x,t) = |\psi(x,t)|^2$. Mais nous étudions désormais une particule libre, et nous voulons donc caractériser le flux de particules plutôt que leur position (par exemple, si on veut mesurer le nombre de particules traversant une barrière de potentiel, ce que nous ferons à la fin du chapitre). Pour cela, il est nécessaire de définir une nouvelle grandeur, qui sera reliée à l'évolution temporelle de la densité de probabilité.
 
 \subsection{Conservation de la densité de probabilité}
 
@@ -309,7 +309,7 @@ où l'on a défini la densité de courant de probabilité :
 		\frac{\partial |\psi|^2}{\partial t} &= i \frac{\hbar}{2m} \left( \psi^\ast \frac{\partial^2 \psi}{\partial x^2} - \psi \frac{\partial^2 \psi^\ast}{\partial x^2} \right) \\
 		&= i \frac{\hbar}{2m} \frac{\partial}{\partial x} \left( \psi^\ast \frac{\partial \psi}{\partial x} - \psi^\ast \frac{\partial \psi^\ast}{\partial x} \right) \\
 		&= i \frac{\hbar}{2m} \frac{\partial}{\partial x} \left( 2 i \Im \left( \psi^\ast \frac{\partial \psi}{\partial x} \right) \right) \\
-		&= - \frac{\partial j_{\mathb{P}}}{\partial x}
+		&= - \frac{\partial j_{\mathbb{P}}}{\partial x}
 	\end{align}
 \end{demonstration}
 
@@ -357,7 +357,7 @@ Nous étudions le cas dans lequel on envoie une particule sur la barrière, dans
 
 \subsubsection{Résolution en mécanique quantique}
 
-Pour résoudre le problème en mécanique quantique, nous avons besoin de connaître les conditions de continuité de la fonction d'onde au niveau du satu de potentiel. Nous admettons la propriété suivante :
+Pour résoudre le problème en mécanique quantique, nous avons besoin de connaître les conditions de continuité de la fonction d'onde au niveau du saut de potentiel. Nous admettons la propriété suivante :
 \begin{proposition}
 	Dans le cas d'une discontinuité finie de potentiel, la fonction d'onde ainsi que ses dérivées spatiales sont continues.\\
 	Dans le cas d'une discontinuité infinie de potentiel, seule la fonction d'onde est continue.
@@ -409,7 +409,7 @@ D'où :
 \begin{equation}
 	\psi(x,t) = A_i (1-\sqrt{R}) e^{i(k x - \omega t)} + 2 A_i \sqrt{R} \cos(kx) e^{-i\omega t}
 \end{equation}
-Nous observons que nous avons une superposition entre une onde pregressive se propageant vers la marche de potentiel, et une onde stationnaire qui correspond à la superposition de l'onde réfléchie avec une partie de l'onde progressive incidente. Nous pouvons calculer la densité de probabilité associée à cette structure ondulatoire :
+Nous observons que nous avons une superposition entre une onde progressive se propageant vers la marche de potentiel, et une onde stationnaire qui correspond à la superposition de l'onde réfléchie avec une partie de l'onde progressive incidente. Nous pouvons calculer la densité de probabilité associée à cette structure ondulatoire :
 \begin{align}
 	\rho_{\mathbb{P}}(x,t) &= |A_i|^2 \left( (1-\sqrt{R})^2 + 4 R \cos^2(kx) + 4 \sqrt{R}(1-\sqrt{R}) \cos^2(kx) \right) \\
 	&= |A_i|^2 \left( 1 + R + 2 \sqrt{R} (2 \cos^2(kx) - 1) \right) \\
@@ -468,9 +468,9 @@ En mécanique classique, une particule arrivant sur la barrière pourra franchir
 où $k = \dfrac{\sqrt{2mE}}{\hbar}$ et $q = \dfrac{\sqrt{2m(V_0-E)}}{\hbar}$.
 Nous pouvons alors séparer le domaine d'étude en trois régions :
 \begin{align}
-	\mathrm{Pour} \quad x<-\frac{a}{2}\,: \quad \varphi(x) = A_i e^{ikx} + A_r e^{-ikx} \\
-	\mathrm{Pour} \quad |x|<\frac{a}{2}\,: \quad \varphi(x) = A_1 e^{-qx} + A_2 e^{qx} \\
-	\mathrm{Pour} \quad x>\frac{a}{2}\,: \quad \varphi(x) = A_t e^{ikx} \\
+	\mathrm{Pour}& \quad x<-\frac{a}{2}\,: \quad \varphi(x) = A_i e^{ikx} + A_r e^{-ikx} \\
+	\mathrm{Pour}& \quad |x|<\frac{a}{2}\,: \quad \varphi(x) = A_1 e^{-qx} + A_2 e^{qx} \\
+	\mathrm{Pour}& \quad x>\frac{a}{2}\,: \quad \varphi(x) = A_t e^{ikx}
 \end{align}
 où nous avons noté $A_i, A_r$ et $A_t$ les amplitudes respectives des ondes incidente, réfléchie et transmise. 
 
@@ -504,7 +504,7 @@ En général, les longueurs d'onde de De Broglie des particules sont assez faibl
 
 \newpage
 \begin{encart}[Le microscope à effet tunnel]
-L'une des applications principales de l'effet tunnel est le microscope à effet tunnel. Son principe de fonctionnement est détaillé sur la figure suivante :
+L'une des applications principales de l'effet tunnel est le microscope à effet tunnel. Son principe de fonctionnement est détaillé sur la figure suivante.
 
 Le microscope est constitué d'une pointe métallique de taille atomique, reliée à l'échantillon à étudier par un circuit électrique. Lorsque la pointe ne touche pas l'échantillon, le circuit est ouvert et aucun courant ne peut circuler. En effet, les électrons de l'échantillon y sont confinés, et pour échapper à l'échantillon, il faut leur fournir un travail d'extraction $W$. (Nous avons introduit le travail d'extraction en étudiant l'effet photoélectrique dans le cours sur la dualité onde-particule). Il en est de même au niveau de la pointe.
 

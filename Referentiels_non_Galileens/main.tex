@@ -160,7 +160,7 @@ mathfontname=mathsf]{mhchem}
 
 \chapter{Dynamique en référentiel non galiléen}
 
-Les lois que nous connaissons en mécanique (principe d'inertie, principe fondamentale de la dynamique, théorème du moment cinétique, théorème de l'énergie cinétique) sont valables exclusivement dans des référentiels galiléens. Néanmoins, il est parfois utile d'étudier un mouvement dans un référentiel qui n'est pas galiléen, les lois usuelles de la mécanique ne semblent alors plus vérifées. C'est le cas par exemple dans un véhicule qui démarre, ou bien dans un référentiel en rotation. On observe alors des phénomènes qui peuvent paraître contre-intuitifs.
+Les lois que nous connaissons en mécanique (principe d'inertie, principe fondamental de la dynamique, théorème du moment cinétique, théorème de l'énergie cinétique) sont valables exclusivement dans des référentiels galiléens. Néanmoins, il est parfois utile d'étudier un mouvement dans un référentiel qui n'est pas galiléen, les lois usuelles de la mécanique ne semblent alors plus vérifées. C'est le cas par exemple dans un véhicule qui démarre, ou bien dans un référentiel en rotation. On observe alors des phénomènes qui peuvent paraître contre-intuitifs.
 
 Dans ce chapitre, nous allons construire une base théorique permettant d'étudier ce type de mouvement, en se ramenant à l'étude du mouvement dans un référentiel galiléen. Nous allons alors montrer que le caractère non galiléen du référentiel peut se traduire par la notion de pseudo-force d'inertie, comme la pseudo-force centrifuge, d'entraînement, ou de Coriolis.
 
@@ -194,16 +194,15 @@ Nous pouvons également définir le référentiel héliocentrique :
 Afin de décrire les mouvements des référentiels les uns par rapport aux autres, nous définissons deux types de mouvements :
 \begin{definition}[Translation]
 	Un référentiel $\rref_2$ est dit en translation par rapport au référentiel $\rref_1$ lorsque le centre $O_2$ de $\rref_2$ se déplace par rapport au centre $O_1$ de $\rref_1$, mais que l'orientation des axes de $\rref_2$ par rapport à $\rref_1$ reste inchangée. 
-	On parle de translation rectiligne lorsque le mouvement de $O_2$ est rectiligne dans $\
-rrref_1$, et de translation rectiligne uniforme lorsque ce mouvement est rectiligne uniforme.
+	On parle de translation rectiligne lorsque le mouvement de $O_2$ est rectiligne dans $\rref_1$, et de translation rectiligne uniforme lorsque ce mouvement est rectiligne uniforme.
 \end{definition}
 
 \begin{definition}[Rotation]
-	Un référentiel $\rref_2$ est dit en rotation par rapport au référentiel $\rref_1$ lorsqu'il existe un axe $(\Delta)$ de $\rref_2$ immobile dans le référentiel $\rref_1$, et que tous les points fixes dans $\rref_2$ ont un mouvement de rotation autour de l'axe $\Delta$ dans $\rref_1$.
+	Un référentiel $\rref_2$ est dit en rotation par rapport au référentiel $\rref_1$ lorsqu'il existe un axe $(\Delta)$ de $\rref_2$ immobile dans le référentiel $\rref_1$, et tel que tous les points fixes dans $\rref_2$ ont un mouvement de rotation autour de l'axe $\Delta$ dans $\rref_1$.
 	On définit alors le vecteur rotation $\vv \Omega$ colinéaire à $(\Delta)$ dont la norme correspond à la vitesse angulaire de la rotation et le sens est donné par la règle de la main droite.
 \end{definition}
 \begin{remark}
-	Dans ce cours, nous nous limiterons exclusivement aux référentiels en translation et en rotation uniforme autour d'un axe fixe.
+	Dans ce cours, nous nous limiterons exclusivement aux référentiels en translation et en rotation uniforme autour d'un axe fixe par rapport à un référentiel galiléen.
 \end{remark}
 
 \begin{capex}
@@ -218,7 +217,7 @@ La dérivée d'un vacteur par rapport au temps dépend du référentiel dans leq
 \begin{theorem}[Relation de dérivation composée]
 	Soit $\vv u$ un vecteur et $\rref_1$ et $\rref_2$ deux référentiels. On note $\vv \Omega$ le vecteur rotation de $\rref_2$ par rapport à $\rref_1$, alors :
 	\begin{equation}
-		\left. \frac{\dd \vv u}{\dd t} \right|_{\rref_1} = \left. \frac{\dd \vv u}{\dd t} \right|_{\rref_2} + \vv u \wedge \vv \Omega
+		\left. \frac{\dd \vv u}{\dd t} \right|_{\rref_1} = \left. \frac{\dd \vv u}{\dd t} \right|_{\rref_2} + \vv \Omega \wedge \vv u
 	\end{equation}
 \end{theorem}
 
@@ -246,7 +245,7 @@ La dérivée d'un vacteur par rapport au temps dépend du référentiel dans leq
 	\end{equation}
 	Lorsque l'on dérive $\vv u$ par rapport au temps dans $\rref_1$, il faut prendre en compte le fait que ces vecteurs dépendent du temps et :
 	\begin{equation}
-		\left. \frac{\dd \vv u}{\dd t} \right|_{\rref_2} = \dot u_x \vv{e_x} + \dot u_y \vv{e_y} + \dot u_z \vv{e_z} + u_x \Omega \vv{e_y} - u_y \Omega \vv{e_x}
+		\left. \frac{\dd \vv u}{\dd t} \right|_{\rref_1} = \dot u_x \vv{e_x} + \dot u_y \vv{e_y} + \dot u_z \vv{e_z} + u_x \Omega \vv{e_y} - u_y \Omega \vv{e_x}
 	\end{equation}
 	Nous reconnaissons alors le résultat à démontrer.
 \end{demonstration}
@@ -335,7 +334,7 @@ Nous obtenons la propriété suivante :
 \begin{proposition}[Composition des accélérations dans un référentiel en rotation]
 	Soit $M$ un point matériel, $\rref_2$ un référentiel en rotation par rapport à un autre référentiel $\rref_1$ autour d'un axe fixe $(\Delta)$, et $O$ l'origine de ces deux référentiels située sur l'axe $(\Delta)$. On note $\vv r = \vv{OM} = \vv r_\perp + \vv r_\parallel$ la décomposition du vecteur position selon les directions parallèle et perpendiculaire à l'axe de rotation. Alors nous pouvons écrire :
 	\begin{equation}
-		\vv a_(M/\rref_1) = \vv a_{\rm ent} + \vv a_{\rm rel} + \vv a_{\rm cor}
+		\vv a(M/\rref_1) = \vv a_{\rm ent} + \vv a_{\rm rel} + \vv a_{\rm cor}
 	\end{equation}
 	où :
 	\begin{itemize}
@@ -345,11 +344,11 @@ Nous obtenons la propriété suivante :
 			\end{equation}
 		\item $\vv a_{\rm rel}$ est l'accélération du point $M$ dans le référentiel mobile :
 			\begin{equation}
-				\vv a_{\rm rel} = \vv a_(M/\rref_2)
+				\vv a_{\rm rel} = \vv a(M/\rref_2)
 			\end{equation}
 		\item $\vv a_{\rm cor}$ est l'accélération de Coriolis, liée à la combinaison entre la vitesse de la particule dans le référentiel $\rref_2$ et la rotation de ce dernier :
 			\begin{equation}
-				\vv a_{\rm cor} = 2 \vv v(M/\rref_2) \wedge \vv \Omega = 2 \vv v_{\rm rel} \wedge \vv \Omega
+				\vv a_{\rm cor} = 2 \vv \Omega \wedge \vv v(M/\rref_2) = 2 \vv \Omega \wedge \vv v_{\rm rel}
 			\end{equation}
 	\end{itemize}
 \end{proposition}
@@ -359,7 +358,7 @@ Nous pouvons alors conclure quant à l'existence de deux pseudo-forces d'inertie
 	Soit $M$ un point matériel de masse $m$, $\rref_2$ un référentiel en rotation par rapport à un référentiel galiléen autour d'un axe fixe à la vitesse angulaire $\Omega$. On se place dans un système de coordonnées cylindriques dont l'axe $(Oz)$ coïncide avec l'axe de rotation. Alors on peut appliquer le principe fondamental de la dynamique dans le référentiel mobile $\rref_2$ en rajoutant deux pseudo-forces d'inertie :
 	\begin{itemize}
 		\item La pseudo-force d'inertie d'entraînement (communément appelée \textit{force centrifuge}) $\vv f_{\rm i.e.} = m r \Omega^2 \vv{e_r}$
-		\item La pseudo-force d'inertie de Coriolis $\vv f_{\rm i.c.} = 2 m \vv \Omega \wedge \vv v_{\rm rel}$
+		\item La pseudo-force d'inertie de Coriolis $\vv f_{\rm i.c.} = - 2 m \vv \Omega \wedge \vv v_{\rm rel}$
 	\end{itemize}
 	où $\vv v_{\rm rel}$ est la vitesse du point $M$ dans le référentiel tournant $\rref_2$.
 \end{theorem}
@@ -372,7 +371,7 @@ Nous pouvons alors conclure quant à l'existence de deux pseudo-forces d'inertie
 \begin{encart}[La forme de la Terre]
 	En raison de la pseudo-force d'inertie d'entraînement, la rotation de la Terre cause un léger bombement de la surface, ainsi le rayon de la Terre est plus important à l'équateur qu'au niveau des pôles. Ceci a été découvert lors d'expéditions scientifiques françaises : Bouguer, en se rendant au Pérou, a constaté que la période d'oscillation d'un pendule y était plus longue qu'à Paris. L'explication est double :
 	\begin{itemize}
-		\item D'une part, en raison de la rotation de la Terre, la pseudo-force d'inertie d'entraînement (centrifuge) est plus forte près de l'équateur et contribue donc à réduire l'éffet de l'attraction gravitationnelle de la Terre ;
+		\item D'une part, en raison de la rotation de la Terre, la pseudo-force d'inertie d'entraînement (centrifuge) est plus forte près de l'équateur et contribue donc à réduire l'effet de l'attraction gravitationnelle de la Terre ;
 		\item D'autre part, la Terre étant plus large à l'équateur, on s'y trouve plus éloigné du centre de la Terre ce qui contribue également à une diminution de l'intensité du champ de gravitation.
 	\end{itemize}
 	Les mesures de Bouguer ont été fortement controversées, si bien qu'il a été décidé de mener deux expéditions scientifiques en parallèle pour mesurer le rayon de courbure de la Terre par triangulation, au pôle Nord et en Amérique latine. Les résultats ont montré sans appel que la Terre était effectivement aplatie aux pôles.

@@ -133,7 +133,7 @@
 
 La mécanique s'intéresse essentiellement à la description des mouvements d'objets solides.
 
-La cause principale de ces mouvements, d'après la mécanique newtonienne, est la présence d'actions mécaniques. Nous avons vu en première année qu'il existe plusieurs types d'actions mécaniques :
+La cause principale de ces mouvements, d'après la mécanique newtonienne, est la présence d'actions mécaniques. Il en existe pulsieurs types :
 
 Les forces qui s'exercent à distance. Par exemple :
 \begin{itemize}
@@ -156,7 +156,7 @@ Après quelques rappels de dynamique du point, nous allons nous intéresser aux 
 
 Dans cette partie, nous allons revoir les principes de la mécanique classique qui ont été vus en première année. Ces principes sont tous équivalents puisqu'ils sont dérivés du principe fondamental de la dynamique :
 
-\begin{theorem}
+\begin{theorem}[Principe fondamental de la dynamique]
     Soit $M$ un point matériel soumis à un ensemble de forces $\vv F_{ext}$. Soit $\vv r = \vv{OM}$ le vecteur position du point $M$ dans un référentiel galiléen. Alors, l'accélération $\vv a$ du point $M$ dans ce référentiel est égale à la somme des forces extérieures qui lui sont appliquées :
     \begin{equation}
         m \frac{\dd² \vv r}{\dd t} = m \vv a = \sum \vv F_{ext}
@@ -249,7 +249,7 @@ Nous allons faire quelques rappels de ces principes de la mécanique à partir d
 
 Il est également possible de résoudre ce problème à partir du théorème du moment cinétique. Le théorème est donné par :
 \begin{theorem}[Théorème du moment cinétique]
-    Soit $M$ un point matériel de masse $m$ soumis à un ensemble de forces $\vv F_{ext}$. Dans un référentiel galiléen dans lequel le point $O$ est fixe, la variation du moment cinétique $\vv{L_O}$ du point $M$ par rapport au point $O$ est vaut :
+    Soit $M$ un point matériel de masse $m$ soumis à un ensemble de forces $\vv F_{ext}$. Dans un référentiel galiléen dans lequel le point $O$ est fixe, la variation du moment cinétique $\vv{L_O}$ du point $M$ par rapport au point $O$ vaut :
     \begin{equation}
         \frac{\dd \vv{L_O}}{\dd t} = \sum \mathcal{M}_0 ( \vv F_{ext} )
     \end{equation}
@@ -334,7 +334,7 @@ Nous allons maintenant nous intéresser à la force de gravitation. Cette force 
 \begin{theorem}[Loi de la gravitation universelle]
     Soient deux corps massifs $M_1$ et $M_2$ de masses respectives $m_1$ et $m_2$. Ces deux corps s'attirent mutuellement par une force d'interaction donnée par :
     \begin{equation}
-        \vv F_{1 \rightarrow 2} = - G \frac{m_1 m_2}{||\vv{M_1 M_2}||^2} \frac{\vv{M_1 M_2}}{||\vv{M_1 M_2}||}
+        \vv F_{1 \rightarrow 2} = - G \dfrac{m_1 m_2}{\left|\left|\vv{M_1 M_2}\right|\right|^2} \dfrac{\vv{M_1 M_2}}{\left|\left|\vv{M_1 M_2}\right|\right|}
     \end{equation}
     où $G = 6.67\times10^{-11}$m$^3 \cdot$kg$^{-1}\cdot$s$^{-2}$ est la constante de gravitation universelle.
 \end{theorem}
@@ -503,7 +503,7 @@ Cette intégrale correspond à ce que l'on nomme la circulation du champ gravita
         &= G m m_0 \left(\frac{1}{r_2} - \frac{1}{r_1} \right)
     \end{align}
 \end{example}
-On constate que le travail de la force électrostatique ne dépend que de la position initiale et de la position finale de la particule, données par $r_1$ et $r_2$: il est indépendant du chemin suivi pour relier ces deux positions. On en déduit que la force gravitationnelle est une force conservative :
+On constate que le travail de la force gravitationnelle ne dépend que de la position initiale et de la position finale de la particule, données par $r_1$ et $r_2$: il est indépendant du chemin suivi pour relier ces deux positions. On en déduit que la force gravitationnelle est une force conservative :
 
 \begin{proposition}[Conservativité de la force électrique]
     La force gravitationnelle est une force \textbf{conservative}.
@@ -534,8 +534,7 @@ Pour visualiser le potentiel électrique, on dessine souvent des surfaces équip
 
 \subsection{Opérateur gradient et lien entre potentiel et champ}
 
-Nous cherchons maintenant à relier le potentiel gravitationnel et le champ gravitationnel par une relation directe, sans faire intervenir d'intégrale. Pour cela, nous pouvons remarquer que
-Le travail élémentaire de la force électrique le long d'un chemin $\mathrm{d} \vv l$ peut s'écrire d'une part:
+Nous cherchons maintenant à relier le potentiel gravitationnel et le champ gravitationnel par une relation directe, sans faire intervenir d'intégrale. Pour cela, nous pouvons remarquer que le travail élémentaire de la force électrique le long d'un chemin $\mathrm{d} \vv l$ peut s'écrire d'une part:
 \begin{equation}
     \delta W = -\mathrm{d}E_{pot} = - m \mathrm{d} \phi
 \end{equation}
@@ -564,7 +563,7 @@ Pour obtenir cette relation, nous décomposons comme suit l'équation \ref{eq:dp
 \end{equation}
 ce qui se traduit immédiatement par :
 \begin{equation}
-    \mathcal{G}_x = \frac{\partial \phi}{\partial x} \quad ; \quad \mathcal{G}_y = \frac{\partial \phi}{\partial y} \quad ; \quad \mathcal{G}_z = \frac{\partial \phi}{\partial z} 
+    \mathcal{G}_x = -\frac{\partial \phi}{\partial x} \quad ; \quad \mathcal{G}_y = -\frac{\partial \phi}{\partial y} \quad ; \quad \mathcal{G}_z = -\frac{\partial \phi}{\partial z} 
 \end{equation}
 
 Nous allons simplifier cette équation en introduisant l'opérateur gradient.
@@ -610,7 +609,7 @@ L'une des propriétés fondamentales de l'opérateur gradient est le théorème 
 
 \paragraph{Retour au lien entre potentiel gravitationnel et champ gravitationnel}
 
-Maintenant que nous avons introduit l'opératuer gradient, nous obtenons un lien direct entre champ gravitationnel et potentiel gravitationnel :
+Maintenant que nous avons introduit l'opérateur gradient, nous obtenons un lien direct entre champ gravitationnel et potentiel gravitationnel :
 
 \begin{proposition}
     Le champ gravitationnel est le gradient du potentiel gravitationnel:
@@ -620,7 +619,7 @@ Maintenant que nous avons introduit l'opératuer gradient, nous obtenons un lien
 \end{proposition}
 
 \begin{demonstration}
-Le travail élémentaire de la force gravitationnelle le long d'un chemin $\mathrm{d} \vv \ell$ peut s'écrire d'une part:
+	Le travail élémentaire de la force gravitationnelle le long d'un élément de chemin $\vv{\mathrm{d} \ell}$ peut s'écrire d'une part:
 \begin{equation}
     \delta W = \vv{\mathcal{G}} \cdot \mathrm{d} \vv \ell
 \end{equation}
@@ -628,7 +627,7 @@ et d'autre part:
 \begin{equation}
     \delta W = -\mathrm{d}E_{pot} = - m \mathrm{d} \phi = - m\,\vv{\mathrm{grad}}(\phi) \cdot \mathrm{d} \vv \ell
 \end{equation}
-par propriété de l'opérateur gradient. Par identification, on en déduit:
+	par propriété de l'opérateur gradient. Par identication, on en déduit:
 \begin{equation}
     \vv{\mathcal{G}} \cdot \mathrm{d} \vv l = -\vv{\mathrm{grad}}(\phi) \cdot \mathrm{d} \vv l
 \end{equation}

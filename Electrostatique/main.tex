@@ -291,6 +291,14 @@ De manière analogue au champ gravitationnel, nous définissons les lignes de ch
     \caption{Lignes de champ produites par une charge ponctuelle (à gauche) et par 3 charges ponctuelles (à droite). Les lignes partent des charges positives et se terminent sur les charges négatives. Source : université de technologie de Compiègne.}
 \end{figure}
 
+\begin{capex}
+Tracer les lignes de champ produites par :
+\begin{itemize}
+\item Une unique charge négative
+\item Un ensemble de deux charges positives
+\end{itemize}
+\end{capex}
+
 \subsection{Potentiel électrique}
 
 Calculons le travail de la force électrique le long de la trajectoire d'une particule chargée. Soit une particule ponctuelle chargée d'une charge $q$ et parcourant un chemin infinitésimal $\vv{\dd \ell}$.  Le travail élémentaire exercé par la force électrique sur la particule le long de ce déplacement est donné par:
@@ -311,15 +319,20 @@ Cette intégrale correspond à ce que l'on nomme la circulation du champ électr
     \end{equation}
 \end{definition}
 
-\begin{example}
-    Calculons le travail issu du déplacement d'une particule $M$ de charge $q$ au voisinage d'une particule charge $q_0$ située sur l'origine. La particule $M$ est soumise à la force électrostatique de Coulomb et on a:
-    \begin{align}
-        W &= \int_\Gamma q \vv E \cdot \vv{\dd \ell} \\
-        &= \int_\Gamma \frac{q q_0}{4 \pi \varepsilon_0 r^2} \vv{e_r} \cdot \vv{\dd \ell}\\
-        &=  \frac{q q_0}{4 \pi \varepsilon_0} \int_\Gamma \frac{\mathrm{d}r}{r^2} \\
-        &= \frac{q q_0}{4 \pi \varepsilon_0} \left(\frac{1}{r_A} - \frac{1}{r_B} \right)
-    \end{align}
-\end{example}
+\begin{capex}
+Calculer le travail issu du déplacement d'une particule $M$ de charge $q$ sur un chemin $AB$, au voisinage d'une particule charge $q_0$ située sur l'origine $O$.
+\end{capex}
+
+%\begin{example}
+%    Calculons le travail  La particule $M$ est soumise à la force électrostatique de Coulomb et on a:
+%    \begin{align}
+%        W &= \int_\Gamma q \vv E \cdot \vv{\dd \ell} \\
+%        &= \int_\Gamma \frac{q q_0}{4 \pi \varepsilon_0 r^2} \vv{e_r} \cdot \vv{\dd \ell}\\
+%        &=  \frac{q q_0}{4 \pi \varepsilon_0} \int_\Gamma \frac{\mathrm{d}r}{r^2} \\
+%        &= \frac{q q_0}{4 \pi \varepsilon_0} \left(\frac{1}{r_A} - \frac{1}{r_B} \right)
+%    \end{align}
+%\end{example}
+
 On constate que le travail de la force électrostatique ne dépend que de la position initiale et de la position finale de la particule: il est indépendant du chemin suivi. Nous avons vu cela pour une charge ponctuelle, mais le résultat se généralise à tout champ électrique produit par un ensemble de charges:
 
 \begin{proposition}[Conservativité de la force électrique]
@@ -397,6 +410,9 @@ A travers la lecture d'une carte de lignes équipotentielles, on peut donc retro
 
 Pour une charge ponctuelle, le potentiel électrique $V$ ne dépend que du rayon $r$, les équipotentielles sont donc des sphères centrées sur la charge concernée. Le champ électrique étant plus fort au voisinage de la charge, les équipotentielles y sont plus rapprochées.
 
+\begin{capex}
+Dans les deux situations de la capcité exigible précédente, tracer également l'allure des équipotentielles.
+\end{capex}
 
 %Généralisation à une situation quelconque:
 %En l'absence d'induction, le rotationnel du champ électrique est nul:
@@ -536,45 +552,49 @@ Dans cette partie, nous allons nous intéresser au champ créé par un dipôle �
 \caption{Le dipôle électrostatique est composé de deux charges $+q$ et $-q$. On utilise un système de coordonnées sphériques pour étudier le problème. Figure de gauche : dipôle et système de coordonnées. Figure de droite : représentation dans le plan $(OMH)$.}
 \end{figure}
 
+%Le potentiel électrostatique généré par le dipôle est donné par la somme des potentiels créés par chacune des deux charges, en vertu du principe de superposition :
+%\begin{equation}
+%    V = \frac{q}{4 \pi \varepsilon_0} \left( \frac{1}{r_+} -  \frac{1}{r_-} \right)
+%\end{equation}
+%Or en utilisant le schéma de droite on remarque que :
+%\begin{equation}
+%    h^2 = r^2 - z^2 = r_+^2 - \left(z-\frac{a}{2}\right)^2
+%\end{equation}
+%D'où :
+%\begin{align}
+%    r_+^2 &= r^2 +  \left(z-\frac{a}{2}\right)^2 - z^2 \\
+%    &= r^2 - az + \frac{a^2}{4} \\
+%    &= r^2 - ar \cos\theta + \frac{a^2}{4} 
+%\end{align}
+%où l'on a utilisé $z = r \cos \theta$.
 
-Le potentiel électrostatique généré par le dipôle est donné par la somme des potentiels créés par chacune des deux charges, en vertu du principe de superposition :
-\begin{equation}
-    V = \frac{q}{4 \pi \varepsilon_0} \left( \frac{1}{r_+} -  \frac{1}{r_-} \right)
-\end{equation}
-Or en utilisant le schéma de droite on remarque que :
-\begin{equation}
-    h^2 = r^2 - z^2 = r_+^2 - \left(z-\frac{a}{2}\right)^2
-\end{equation}
-D'où :
-\begin{align}
-    r_+^2 &= r^2 +  \left(z-\frac{a}{2}\right)^2 - z^2 \\
-    &= r^2 - az + \frac{a^2}{4} \\
-    &= r^2 - ar \cos\theta + \frac{a^2}{4} 
-\end{align}
-où l'on a utilisé $z = r \cos \theta$.
-
-On fera ce que l'on appelle l'approximation dipolaire :
+Afin de simplifier les calculs, qui sont relativement complexes, on fera ce que l'on appelle l'approximation dipolaire :
 \begin{definition}
     On parle d'approximation dipolaire lorsque l'on étudie le champ créé à une distance grande devant la taille caractéristique du dipôle : $r \gg a$
 \end{definition}
-Dans ce cas, on peut négliger le dernier terme et on obtient :
-\begin{equation}
-    r_+^2 \approx r^2 - ar \cos \theta
-\end{equation}
-Alors en faisant un développement limité à l'ordre 1 :
-\begin{equation}
-    \frac{1}{r_+} = (r_+^2)^{-\frac{1}{2}} = \frac{1}{r} \left( 1 - \frac{a}{r} \cos \theta\right)^{-\frac{1}{2}} \approx \frac{1}{r} \left( 1 + \frac{a}{2r} \cos \theta \right)
-\end{equation}
-De même on trouve :
-\begin{equation}
-    \frac{1}{r_-} \approx \frac{1}{r} \left( 1 - \frac{a}{2r} \cos \theta \right)
-\end{equation}
-Si bien que l'on obtient au final un potentiel total :
-\begin{equation}
-    V = \frac{q a \cos \theta}{4 \pi \varepsilon_0 r^2}
-\end{equation}
 
-On constate ici que ce potentiel ne dépend que du produit entre la charge portée par les éléments du dipôle et la distance entre ces éléments; on appelle cette quantité le moment dipolaire.
+\begin{capex}
+Exprimer le potentiel électrostatique au point $M$ en fonction de la charge $q$ et des distances $r_+$ et $r_-$, puis en fonction de $q,r$ et $\theta$.
+\end{capex}
+
+%Dans ce cas, on peut négliger le dernier terme et on obtient :
+%\begin{equation}
+%    r_+^2 \approx r^2 - ar \cos \theta
+%\end{equation}
+%Alors en faisant un développement limité à l'ordre 1 :
+%\begin{equation}
+%    \frac{1}{r_+} = (r_+^2)^{-\frac{1}{2}} = \frac{1}{r} \left( 1 - \frac{a}{r} \cos \theta\right)^{-\frac{1}{2}} \approx \frac{1}{r} \left( 1 + \frac{a}{2r} \cos \theta \right)
+%\end{equation}
+%De même on trouve :
+%\begin{equation}
+%    \frac{1}{r_-} \approx \frac{1}{r} \left( 1 - \frac{a}{2r} \cos \theta \right)
+%\end{equation}
+%Si bien que l'on obtient au final un potentiel total :
+%\begin{equation}
+%    V = \frac{q a \cos \theta}{4 \pi \varepsilon_0 r^2}
+%\end{equation}
+
+On constate que le potentiel $V(M)$ ne dépend que du produit entre la charge portée par les éléments du dipôle et la distance entre ces éléments; on appelle cette quantité le moment dipolaire.
 
 
 \begin{definition}[Moment dipolaire]
@@ -597,17 +617,33 @@ On constate alors que $\theta$ n'est autre que l'angle entre le dipôle électro
 
 \paragraph{Champ électrique créé par un dipôle}
 
-On peut également calculer le champ électrique provoqué par le dipôle. Pour cela, on pourrait réutiliser le principe de superposition mais cette fois-ce sur le champ électrique. Mais il est plus direct d'utiliser la relation $\vv E = - \vv{\mathrm{grad}}(V)$. On utilise en particulier l'expression du gradient en coordonnées sphériques :
+\begin{capex}
+A partir de l'expression du potentiel $V(M)$, déterminer le champ électrique $\vv E(M)$ produit par le dipôle.
+
+On donne l'expression du gradient en coordonnées sphériques :
 \begin{equation}
     \grad = \frac{\partial}{\partial r} \vv{e_r} + \frac{1}{r} \frac{\partial}{\partial \theta}  \vv{e_\theta} + \frac{1}{r \sin \theta} \frac{\partial}{\partial \varphi}  \vv{e_\varphi}
 \end{equation}
-Ici le potentiel ne dépend que de $\theta$ et de $\phi$ et le champ $\vv E$ est donc donné par :
-\begin{align}
-    \vv E &= - \grad \left( 
-    \frac{q a \cos \theta}{4 \pi \varepsilon_0 r^2} \right) \\
-    &= -\frac{qa}{4 \pi \varepsilon_0} \left( \cos \theta \frac{\partial}{\partial r} \left( \frac{1}{r^2} \right) \vv{e_r} + \frac{1}{r^3} \frac{\partial \cos \theta}{\partial \theta} \vv{e_\theta}  \right) \\
-    &= \frac{qa}{4 \pi \varepsilon_0 r^3} \left( 2 \cos \theta \, \vv{e_r} + \sin \theta \, \vv{e_\theta}  \right)
-\end{align}
+\end{capex}
+
+%On peut également calculer le champ électrique provoqué par le dipôle. Pour cela, on pourrait réutiliser le principe de superposition mais cette fois-ce sur le champ électrique. Mais il est plus direct d'utiliser la relation $\vv E = - \vv{\mathrm{grad}}(V)$. On utilise en particulier l'expression du gradient en coordonnées sphériques :
+%\begin{equation}
+%    \grad = \frac{\partial}{\partial r} \vv{e_r} + \frac{1}{r} \frac{\partial}{\partial \theta}  \vv{e_\theta} + \frac{1}{r \sin \theta} \frac{\partial}{\partial \varphi}  \vv{e_\varphi}
+%\end{equation}
+%Ici le potentiel ne dépend que de $\theta$ et de $\phi$ et le champ $\vv E$ est donc donné par :
+%\begin{align}
+%    \vv E &= - \grad \left( 
+%    \frac{q a \cos \theta}{4 \pi \varepsilon_0 r^2} \right) \\
+%    &= -\frac{qa}{4 \pi \varepsilon_0} \left( \cos \theta \frac{\partial}{\partial r} \left( \frac{1}{r^2} \right) \vv{e_r} + \frac{1}{r^3} \frac{\partial \cos \theta}{\partial \theta} \vv{e_\theta}  \right) \\
+%    &= \frac{qa}{4 \pi \varepsilon_0 r^3} \left( 2 \cos \theta \, \vv{e_r} + \sin \theta \, \vv{e_\theta}  \right)
+%\end{align}
+
+\begin{proposition}
+Le champ électrique créé par un dipôle électrostatique $\vv p = p \vv{e_z}$ placé à l'origine d'un repère de coordonnées sphériques d'axe $Oz$, est donné par :
+\begin{equation}
+\vv E = \frac{p}{4 \pi \varepsilon_0 r^3} \left( 2 \cos \theta \, \vv{e_r} + \sin \theta \, \vv{e_\theta}  \right)
+\end{equation}
+\end{proposition}
 
 \begin{remark}
     L'expression de ce champ n'est pas à connaître par coeur, mais il faut savoir la redémontrer à partir du potentiel, voire même depuis le début (dans ce dernier cas, au concours, la démonstration est souvent guidée par plusieurs questions).
@@ -698,17 +734,21 @@ Nous pouvons maintenant nous poser la question de la réponse d'un dipôle élec
 
 \paragraph{Cas d'un champ uniforme}
 
-Si un champ $\vv E$ uniforme est appliqué, alors les deux charges sont soumises à des forces égales et opposées :
-\begin{equation}
-    \vv F = \vv{F_+} + \vv{F_-} = q \vv E + (-q) \vv E = \vv 0
-\end{equation}
+\begin{capex}
+Dans le cas où le dipôle est soumis à un champ uniforme, calculer la résultante des forces électriques agissant sur le dipôle ainsi que leur moment au point $O$.
+\end{capex}
 
-Et la résultante des forces qui s'applique sur le dipôle est nulle. En revanche, le moment de ces forces par rapport au point $O$ situé au centre du dipôle est non nul :
-
-\begin{equation}
-    \vv{\mathcal{M}} = \vv{\mathcal{M}_+} + \vv{\mathcal{M}_-} = \vv{OM_+} \wedge q \vv E + \vv{OM_-} \wedge (-q) \vv E
-\end{equation}
-Or on a par la relation de Chasles $\vv{OM_+} - \vv{OM_-} = \vv{M_- M_+}$ et en utilisant la définition du moment dipolaire on trouve l'expression suivante pour le moment de la force électrique sur un dipôle :
+%Si un champ $\vv E$ uniforme est appliqué, alors les deux charges sont soumises à des forces égales et opposées :
+%\begin{equation}
+%    \vv F = \vv{F_+} + \vv{F_-} = q \vv E + (-q) \vv E = \vv 0
+%\end{equation}
+%
+%Et la résultante des forces qui s'applique sur le dipôle est nulle. En revanche, le moment de ces forces par rapport au point $O$ situé au centre du dipôle est non nul :
+%
+%\begin{equation}
+%    \vv{\mathcal{M}} = \vv{\mathcal{M}_+} + \vv{\mathcal{M}_-} = \vv{OM_+} \wedge q \vv E + \vv{OM_-} \wedge (-q) \vv E
+%\end{equation}
+%Or on a par la relation de Chasles $\vv{OM_+} - \vv{OM_-} = \vv{M_- M_+}$ et en utilisant la définition du moment dipolaire on trouve l'expression suivante pour le moment de la force électrique sur un dipôle :
 
 \begin{proposition}[Moment des forces électriques sur un dipôle]
     Le moment des forces électrostatiques qui s'appliquent sur un dipôle électrostatique de moment dipolaire $\vv p$ situé dans un champ environnant $\vv E$ est donné par :
@@ -807,7 +847,7 @@ On peut retrouver la charge totale d'une distribution de charges simplement en i
 
 \paragraph{Densité surfacique de charges}
 
-Dans les conducteurs, on peut observer une accumulation de charges sur la surface du conducteur. Ceci va nous permettre de définir une densité surfacique de charges $\sigma$ :
+Dans les conducteurs, les charges sont libres de se déplacer. Comme les charges de même signe se repoussent, elles ne vont pas rester à l'intérieur du conducteur mais vont s'accumuler à la surface du conducteur (nous étudierons ce phénomène plus en détail dans le cadre du cours d'électromagnétisme). On peut alors observer une accumulation de charges sur la surface du conducteur. Ceci va nous permettre de définir une densité surfacique de charges $\sigma$ :
 
 \begin{definition}[Densité surfacique de charges]
     La densité surfacique de charges, notée $\sigma$, correspond à la charge contenue par unité de surface en un point d'une surface chargée. Si $\dd S$ est un élément mésoscopique de surface qui porte une charge infinitésimale $\dd q$, alors la densité surfacique de charge est :
@@ -833,16 +873,22 @@ Enfin pour décrire certaines situations comme un fil, on peut être amené à u
     \end{equation}
 \end{definition}
 
-\begin{example}
-Considérons un fil correspondant à un cylindre de rayon $a$, avec une densité volumique de charges uniforme $\rho$. Pour simplifier le modèle, on peut supposer que le rayon $a$ est petit. Alors on modélise le fil par un fil infiniment fin portant une densité linéique de charge $\lambda$. Par définition de la densité volumique de charges, la quantité de charge le long d'un segment $\dd \ell$ est donnée par :
-\begin{equation}
-    \dd q = \pi a^2 \dd \ell \times \rho
-\end{equation}
-On en déduit la densité linéique de charges :
-\begin{equation}
-    \lambda = \pi a^2 \rho
-\end{equation}
-\end{example}
+\begin{capex}
+Considérons un fil correspondant à un cylindre de rayon $a$, avec une densité volumique de charges uniforme $\rho$. Pour simplifier le modèle, on peut supposer que le rayon $a$ est petit. Alors on modélise le fil par un fil infiniment fin portant une densité linéique de charge $\lambda$.
+
+Déterminer la densité linéique $\lambda$ équivalente du fil.
+\end{capex} 
+
+%\begin{example}
+%Considérons un fil correspondant à un cylindre de rayon $a$, avec une densité volumique de charges uniforme $\rho$. Pour simplifier le modèle, on peut supposer que le rayon $a$ est petit. Alors on modélise le fil par un fil infiniment fin portant une densité linéique de charge $\lambda$. Par définition de la densité volumique de charges, la quantité de charge le long d'un segment $\dd \ell$ est donnée par :
+%\begin{equation}
+%    \dd q = \pi a^2 \dd \ell \times \rho
+%\end{equation}
+%On en déduit la densité linéique de charges :
+%\begin{equation}
+%    \lambda = \pi a^2 \rho
+%\end{equation}
+%\end{example}
 
 \begin{proposition}[Charge totale d'une distribution linéique]
     La charge totale d'une distribution de densité linéique de charges $\lambda$ répartie le long d'un chemin $\mathcal{C}$ s'écrit :
@@ -891,7 +937,7 @@ Ces deux propriétés peuvent être facilement comprises à travers les exemples
     \label{fig:symetries_thibierge}
 \end{figure}
 
-Nous allons maintenant utiliser ces propriétés pour en déduire des informations sur la direction du champ électrique dans différentes configurations classiques, comme représenté sur la figure \ref{fig:symetries}. Les propriétés issues de l'analyse de la figure \ref{fig:symetries} ne sont pas essentielles à connaître (elles ne sont donc pas encadrées), ce sont plutôt leurs démonstrations qu'il faut savoir refaire. Elles donnent un exemple de la manière dont on peut utiliser les plans de symétrie et d'antisymétrie pour déterminer la direction du champ électrique.
+Nous allons maintenant utiliser ces propriétés pour en déduire des informations sur la direction du champ électrique dans différentes configurations classiques, comme représenté sur la figure \ref{fig:symetries}. 
 
 \begin{figure}[htbp]
     \centering
@@ -977,28 +1023,39 @@ Nous allons maintenant utiliser ces propriétés pour en déduire des informatio
 \label{fig:symetries}
 \end{figure}
 
-\begin{propositionT}[Direction du champ en cas d'invariance par translation]
-    Si la distribution de charges est invariante par translation le long d'un axe, alors le champ électrique est en tout point perpendiculaire à cet axe.
-\end{propositionT}
+\begin{example}
 
-\begin{demonstration}
-    Cette situation est rencontrée dans les schémas de gauche et du milieu de la figure \ref{fig:symetries}. Nous nous plaçons dans un repère cartésien tel que l'axe d'invariance soit porté par $\vv{e_z}$. Soit $M$ un point quelconque de l'espace, et $\Pi_1$ le plan passant par $M$ et normal à $\vv{e_z}$. Puisque la distribution de charges ne dépend pas de $z$, $\Pi$ est un plan de symétrie de la distribution de charges. Comme $M \in \Pi$, le champ électrique $\vv E(M)$ est contenu dans le plan $\Pi_1$ et donc, par définition du plan $\Pi_1$, est perpendiculaire à $\vv e_z$. Ceci étant vrai pour tout point $M$ on en déduit que le champ électrique est en tout point de l'espace perpendiculaire à $\vv{e_z}$. 
-\end{demonstration}
+    On se place dans la situation correspondant au cas de gauche de la figure \ref{fig:symetries}. 
 
-\begin{propositionT}[Direction du champ en cas d'invariance par rotation autour d'un axe]
-    Si la distribution de charges est invariante par rotation autour d'un axe $(Oz)$ alors dans le repère cylindrique $(r,\theta,z)$ défini par cet axe, la composante tangentielle du champ électrique est nulle.
-\end{propositionT}
+Soit $M$ un point quelconque de l'espace, et $\Pi_1$ le plan passant par $M$ et normal à $\vv{e_z}$. Puisque la distribution de charges ne dépend pas de $z$, $\Pi$ est un plan de symétrie de la distribution de charges. Comme $M \in \Pi$, le champ électrique $\vv E(M)$ est contenu dans le plan $\Pi_1$ et donc, par définition du plan $\Pi_1$, est perpendiculaire à $\vv e_z$. Ceci étant vrai pour tout point $M$ on en déduit que le champ électrique est en tout point de l'espace perpendiculaire à $\vv{e_z}$. 
+\end{example}
 
-\begin{demonstration}
-    Cette situation est rencontrée dans les schémas du milieu et de droite de la figure \ref{fig:symetries}. Soit un point $M$ et soit $\Pi_2$ le plan contenant à la fois $M$ et $(Oz)$. Comme la distribution de charges est à symétrie cylindrique autour de $Oz$, $\Pi_2$ est un plan de symétrie de la distribution de charges. Le champ électrique au point $M$ est donc contenu dans ce plan, ce qui implique que la composante tangentielle est nulle. 
-\end{demonstration}
-\begin{propositionT}[Direction du champ en cas de symétrie sphérique]
-    Si la distribution de charges est invariante par rotation autour du point $O$, alors le champ électrique est radial.
-\end{propositionT}
+\begin{capex}
+De la même manière, déterminer la firection du champ électrique dans les figures du centre et de droite. On pourra s'aider des plans $\Pi_1$ et $\Pi_2$ dessinés sur les figures.
+\end{capex}
 
-\begin{demonstration}
-Cette situation est rencontrée dans le schéma de droite de la figure \ref{fig:symetries}. Soit un point $M$ et un plan quelconque passant par $O$ et $M$. Comme la distribution de charges est à symétrie sphérique autour de $O$, ce plan est un plan de symétrie de la distribution de charges. Le champ électrique est donc contenu dans ce plan. Ceci étant vrai pour tout plan contenant $O$ et $M$ (par exemple $\Pi_1$ et $\Pi_2$ sur le schéma), le champ électrique est parallèle à $(OM)$, et donc est orienté selon $\vv{e_r}$.
-\end{demonstration}
+%\begin{propositionT}[Direction du champ en cas d'invariance par translation]
+%    Si la distribution de charges est invariante par translation le long d'un axe, alors le champ électrique est en tout point perpendiculaire à cet axe.
+%\end{propositionT}
+%
+%\begin{demonstration}
+%    Cette situation est rencontrée dans les schémas de gauche et du milieu de la figure \ref{fig:symetries}. Nous nous plaçons dans un repère cartésien tel que l'axe d'invariance soit porté par $\vv{e_z}$. Soit $M$ un point quelconque de l'espace, et $\Pi_1$ le plan passant par $M$ et normal à $\vv{e_z}$. Puisque la distribution de charges ne dépend pas de $z$, $\Pi$ est un plan de symétrie de la distribution de charges. Comme $M \in \Pi$, le champ électrique $\vv E(M)$ est contenu dans le plan $\Pi_1$ et donc, par définition du plan $\Pi_1$, est perpendiculaire à $\vv e_z$. Ceci étant vrai pour tout point $M$ on en déduit que le champ électrique est en tout point de l'espace perpendiculaire à $\vv{e_z}$. 
+%\end{demonstration}
+%
+%\begin{propositionT}[Direction du champ en cas d'invariance par rotation autour d'un axe]
+%    Si la distribution de charges est invariante par rotation autour d'un axe $(Oz)$ alors dans le repère cylindrique $(r,\theta,z)$ défini par cet axe, la composante tangentielle du champ électrique est nulle.
+%\end{propositionT}
+%
+%\begin{demonstration}
+%    Cette situation est rencontrée dans les schémas du milieu et de droite de la figure \ref{fig:symetries}. Soit un point $M$ et soit $\Pi_2$ le plan contenant à la fois $M$ et $(Oz)$. Comme la distribution de charges est à symétrie cylindrique autour de $Oz$, $\Pi_2$ est un plan de symétrie de la distribution de charges. Le champ électrique au point $M$ est donc contenu dans ce plan, ce qui implique que la composante tangentielle est nulle. 
+%\end{demonstration}
+%\begin{propositionT}[Direction du champ en cas de symétrie sphérique]
+%    Si la distribution de charges est invariante par rotation autour du point $O$, alors le champ électrique est radial.
+%\end{propositionT}
+%
+%\begin{demonstration}
+%Cette situation est rencontrée dans le schéma de droite de la figure \ref{fig:symetries}. Soit un point $M$ et un plan quelconque passant par $O$ et $M$. Comme la distribution de charges est à symétrie sphérique autour de $O$, ce plan est un plan de symétrie de la distribution de charges. Le champ électrique est donc contenu dans ce plan. Ceci étant vrai pour tout plan contenant $O$ et $M$ (par exemple $\Pi_1$ et $\Pi_2$ sur le schéma), le champ électrique est parallèle à $(OM)$, et donc est orienté selon $\vv{e_r}$.
+%\end{demonstration}
 
 \subsubsection{Invariances}
 
@@ -1025,40 +1082,51 @@ Du principe de Curie découle une autre propriété importante, liée aux invari
 
 \subsubsection{Forme générale du champ dans des cas de symétrie particuliers} \label{sect:symetries_cas_particuliers}
 
-En combinant les propriétés de symétrie et d'invariance, on obtient la forme générale du champ électrique pour différentes distributions de charges. Il faut être capable de retrouver et de redémontrer ces formes générales.
+En combinant les propriétés de symétrie et d'invariance, on obtient la forme générale du champ électrique pour différentes distributions de charges. Nous allons à nouveau reprendre l'exemple des trois figures ci-dessus.
 
-\begin{propositionT}[Symétrie sphérique]
-    Si la distribution de charges est invariante par rotation autour d'un point $O$, alors, dans le repère $(r,\theta$,$\phi)$ d'origine $O$, le champ électrique est de la forme $\vv E = E(r) \vv{e_r}$.
-\end{propositionT}
+\begin{example}
+Dans le cas de la figure de gauche, la distribution de charges est invariante par translation selon l'axe $(Oz)$, donc le champ électrique est indépendant de $z$. Nous avons par ailleurs vu que ce champ est perpendiculaire à $\vv{e_z}$, il est donc porté par les vecteurs $\vv{e_x}$ et $\vv{e_y}$, ainsi :
+\begin{equation}
+\vv E (M) = E_x(x,y) \vv{e_x} + E_y(x,y) \vv{e_y}
+\end{equation}
+\end{example}
 
-\begin{demonstration}
-    Nous avons vu qu'en cas d'invariance par rotation autour d'un point, le champ est radial :
-    \begin{equation}
-    \vv E = E(r,\theta,\varphi) \vv{e_r}        
-    \end{equation}
-    Par ailleurs, nous avons aussi vu que ses composantes ne dépendent que de $r$, d'où la forme finale $\vv E = E(r) \vv{e_r}$.
-\end{demonstration}
+\begin{capex}
+Déterminer la forme général du champ électrique dans un système de coordonnées approprié, pour les figures du centre et de droite.
+\end{capex}
 
-Nous pouvons également étudier la symétrie cylindrique, qui est définie comme suit :
-
-\begin{definition}[Symétrie cylindrique]
-    Une distribution de charges est dite à symétrie cylindrique autour d'un ace $(Oz)$ si elle est invariante à la fois par translation le long de cet axe et par rotation autour de cet axe.
-\end{definition}
-
-\begin{propositionT}[Symétrie cylindrique]
-    Si la distribution de charges est à symétrie cylindrique dans le repère $(r,\theta,z)$ d'axe $(Oz)$ alors le champ électrique est de la forme $\vv E = E(r) \vv{e_r}$
-\end{propositionT}
-
-\begin{demonstration}
-    Plaçons nous dans le repère $(r,\theta,z)$ d'axe $(Oz)$. La distribution de charges étant invariante par translation de long de $(Oz)$, le champ électrique est indépendant de $z$ et perpendiculaire à $\vv{e_z}$ si bien que :
-    \begin{equation}
-        \vv E = E_r(r,\theta) \vv{e_r} + E_\theta(r,\theta) \vv{e_\theta}
-    \end{equation}
-    Or le champ électrique est également invariant par rotation autour de $(Oz)$, il est donc radial, et ses composantes ne dépendent pas de $\theta$. On en déduit :
-    \begin{equation}
-        \vv E = E(r) \vv{e_r}
-    \end{equation}
-\end{demonstration}
+%\begin{propositionT}[Symétrie sphérique]
+%    Si la distribution de charges est invariante par rotation autour d'un point $O$, alors, dans le repère $(r,\theta$,$\phi)$ d'origine $O$, le champ électrique est de la forme $\vv E = E(r) \vv{e_r}$.
+%\end{propositionT}
+%
+%\begin{demonstration}
+%    Nous avons vu qu'en cas d'invariance par rotation autour d'un point, le champ est radial :
+%    \begin{equation}
+%    \vv E = E(r,\theta,\varphi) \vv{e_r}        
+%    \end{equation}
+%    Par ailleurs, nous avons aussi vu que ses composantes ne dépendent que de $r$, d'où la forme finale $\vv E = E(r) \vv{e_r}$.
+%\end{demonstration}
+%
+%Nous pouvons également étudier la symétrie cylindrique, qui est définie comme suit :
+%
+%\begin{definition}[Symétrie cylindrique]
+%    Une distribution de charges est dite à symétrie cylindrique autour d'un ace $(Oz)$ si elle est invariante à la fois par translation le long de cet axe et par rotation autour de cet axe.
+%\end{definition}
+%
+%\begin{propositionT}[Symétrie cylindrique]
+%    Si la distribution de charges est à symétrie cylindrique dans le repère $(r,\theta,z)$ d'axe $(Oz)$ alors le champ électrique est de la forme $\vv E = E(r) \vv{e_r}$
+%\end{propositionT}
+%
+%\begin{demonstration}
+%    Plaçons nous dans le repère $(r,\theta,z)$ d'axe $(Oz)$. La distribution de charges étant invariante par translation de long de $(Oz)$, le champ électrique est indépendant de $z$ et perpendiculaire à $\vv{e_z}$ si bien que :
+%    \begin{equation}
+%        \vv E = E_r(r,\theta) \vv{e_r} + E_\theta(r,\theta) \vv{e_\theta}
+%    \end{equation}
+%    Or le champ électrique est également invariant par rotation autour de $(Oz)$, il est donc radial, et ses composantes ne dépendent pas de $\theta$. On en déduit :
+%    \begin{equation}
+%        \vv E = E(r) \vv{e_r}
+%    \end{equation}
+%\end{demonstration}
 
 \begin{encart}[Les symétries : comment faire en pratique ?]
     Il est facile de se perdre dans ces multiples propriétés. Elles sont incluses dans le polycopié pour que vous ayez une vue générale de toutes les situations de symétrie classique.
@@ -1069,7 +1137,6 @@ Nous pouvons également étudier la symétrie cylindrique, qui est définie comm
         \item Dans le cas d'une invariance par translation, le champ est indépendant de la coordonnée le long de l'axe correspondant;
         \item Dans le cas d'une invariance par rotation, les \textbf{composantes} du champ sont indépendantes de la/des coordonnée(s) angulaire(s) caractérisant cette rotation.
     \end{itemize}
-    Il ne faut pas utiliser les propriétés qui ne sont pas encadrées : elles sont présentes dans ce polycopié surtout pour que vous sachiez comment les démontrer.
 
 \textbf{Exemple} Supposons qu'un exercice demande d'établir la forme du champ pour un fil infini chargé. Nous nous plaçons dans le système de coordonnées cylindriques $(r,\theta,z)$ tel que l'axe $(Oz)$ coïncide avec le fil. Soit $M$ un point quelconque de l'espace.
 
@@ -1171,29 +1238,33 @@ Soit $\mathcal{S}$ une surface quelconque et $\vv A$ un champ de vecteurs. Le fl
     \label{fig:gauss_sphere}
 \end{figure}
 
-\begin{example}[Flux du champ électrique créé par une charge ponctuelle à travers une sphère]
-    Calculons, par exemple, le flux du champ électrique créé par une charge ponctuelle à travers une sphère centrée sur l'origine.  La situation est représentée sur la figure \ref{fig:gauss_sphere}. Nous nous plaçons dans le système de coordonnées sphériques centré sur l'origine. Si l'élément de surface est pris suffisament petit il est localement plan et assimilable à un parallélépipède rectangle. Sa surface est donnée par :
-    \begin{equation}
-        \dd S = r \dd \theta \times r \sin \theta \dd \varphi
-    \end{equation}
-    Par ailleurs, il s'appuie sur le verteur unitaire orthogonal à la surface et sortant, qui n'est autre que $\vv{e_r}$. On en déduit :
-    \begin{equation}
-        \vv{\dd S} = r^2 \sin \theta \dd \theta  \dd \varphi \vv{e_r}
-    \end{equation}
+\begin{capex}
+On considère une charge ponctuelle $q$ placée à l'origine d'un repère sphérique. Déterminer le flux du champ électrique à travers la sphère de centre $O$ et de rayon $r$.
+\end{capex}
 
-    On peut alors calculer le flux du champ électrique produit par la charge, en remplaçant l'expression de $\vv E$ par celle obtenue via la loi de Coulomb et en utilisant la formule que l'on vient d'obtenir pour $\vv{\dd S}$ :
-    \begin{align}
-        \Phi &= \oiint_{\mathcal{S}} \vv E \cdot \vv{\dd S} \\
-        &= \oiint_{\mathcal{S}} \frac{q}{4 \pi \varepsilon_0 r^2} \vv{e_r} \cdot r^2 \sin \theta \dd \theta \dd \varphi \vv{e_r} \\
-        &= \int_{\theta=0}^\pi \int_{\varphi=0}^{2\pi}  \frac{q}{4 \pi \varepsilon_0} \sin \theta \dd \theta \dd \varphi \\
-        &= \frac{q}{4 \pi \varepsilon_0} \times 2 \pi \times \int_{\theta=0}^\pi \sin \theta \dd \theta \\
-        &= \frac{q}{\varepsilon_0}
-    \end{align}
+%\begin{example}[Flux du champ électrique créé par une charge ponctuelle à travers une sphère]
+%    Calculons, par exemple, le flux du champ électrique créé par une charge ponctuelle à travers une sphère centrée sur l'origine.  La situation est représentée sur la figure \ref{fig:gauss_sphere}. Nous nous plaçons dans le système de coordonnées sphériques centré sur l'origine. Si l'élément de surface est pris suffisament petit il est localement plan et assimilable à un parallélépipède rectangle. Sa surface est donnée par :
+%    \begin{equation}
+%        \dd S = r \dd \theta \times r \sin \theta \dd \varphi
+%    \end{equation}
+%    Par ailleurs, il s'appuie sur le verteur unitaire orthogonal à la surface et sortant, qui n'est autre que $\vv{e_r}$. On en déduit :
+%    \begin{equation}
+%        \vv{\dd S} = r^2 \sin \theta \dd \theta  \dd \varphi \vv{e_r}
+%    \end{equation}
+%
+%    On peut alors calculer le flux du champ électrique produit par la charge, en remplaçant l'expression de $\vv E$ par celle obtenue via la loi de Coulomb et en utilisant la formule que l'on vient d'obtenir pour $\vv{\dd S}$ :
+%    \begin{align}
+%        \Phi &= \oiint_{\mathcal{S}} \vv E \cdot \vv{\dd S} \\
+%        &= \oiint_{\mathcal{S}} \frac{q}{4 \pi \varepsilon_0 r^2} \vv{e_r} \cdot r^2 \sin \theta \dd \theta \dd \varphi \vv{e_r} \\
+%        &= \int_{\theta=0}^\pi \int_{\varphi=0}^{2\pi}  \frac{q}{4 \pi \varepsilon_0} \sin \theta \dd \theta \dd \varphi \\
+%        &= \frac{q}{4 \pi \varepsilon_0} \times 2 \pi \times \int_{\theta=0}^\pi \sin \theta \dd \theta \\
+%        &= \frac{q}{\varepsilon_0}
+%    \end{align}
+%
+%    
+%\end{example}
 
 Nous constatons que le flux du champ électrique à travers cette surface est proportionnel à la charge contenue dans la sphère, ce qui n'est pas surprenant : plus la charge est importante et plus le champ électrique qu'elle produit est intense.
-    
-\end{example}
-
 
 \subsection{Le théorème de Gauss}
 
@@ -1346,40 +1417,44 @@ Ce modèle peut correspondre, par exemple, à la description d'un noyau atomique
 
 Nous nous plaçons naturellement dans le système de coordonnées sphériques dont l'origine $O$ coïncide avec le centre de la sphère. 
 
-La distribution de charges est invariante par rotation autour de l'origine $O$. Par le principe de Curie, le champ électrique est radial et sa composante selon $\vv{e_r}$ est invariante par rotation autour de $O$ :
-\begin{equation}
-    \vv E = E(r) \vv{e_r}
-\end{equation}
+\begin{capex}
+En appliquant le théorème de Gauss à une sphère de rayon $r$, déterminer l'expression du champ électrique produit par la sphère. On prendra soin de distinguer les cas $r>R$ et $r<R$.
+\end{capex}
 
-Nous allons maintenant appliquer le théorème de Gauss. Pour cela, nous choisissons une surface fermée qui va nous permettre d'exploiter la symétrie du problème. Nous prenons une sphère de rayon $r$ centrée sur l'origine. D'après le théorème de Gauss, le flux du champ électrique sortant de la sphère est donné par :
-\begin{equation}
-    \Phi = \oiint_{\mathcal{S}(r)} \vv E \cdot \vv{\dd S} = \frac{Q_{int}(r)}{\varepsilon_0}
-\end{equation}
-où $Q_{int}(r)$ est la charge contenue dans la sphère $\mathcal{S}(r)$ de centre $O$ et de rayon $r$.
-
-On distingue alors deux cas de figure :
-\begin{itemize}
-    \item Si $r > R$ alors $Q_{int} = \frac{4}{3} \pi r^3 \rho = \left( \frac{r}{R} \right)^3 Q$
-    \item Si $r>R$ alors $Q_{int} = Q$
-\end{itemize}
-
-Par ailleurs, on a $\vv{\dd S} = r^2 \sin \theta \dd \theta \dd \varphi \vv{e_r}$ et l'on peut donc écrire :
-\begin{equation}
-    \Phi = \int_{\theta=0}^\pi \int_{\varphi=0}^{2\pi} E(r) \vv{e_r} \cdot r^2 \sin \theta \dd \theta \dd \varphi \vv{e_r} = 4 \pi r^2 E(r)
-\end{equation}
-On obtient donc, en utilisant le théorème de Gauss et l'expression de la charge à l'intérieur de la sphère :
-\begin{equation}
-    E(r) = \frac{Q r}{4 \pi \varepsilon_0 R^3} \quad \mathrm{si} \quad r<R
-\end{equation}
-\begin{equation}
-    E(r) = \frac{Q}{4 \pi \varepsilon_0 r^2} \quad \mathrm{si} \quad r>R
-\end{equation}
-Le champ électrique augmente linéairement à l'intérieur de la sphère chargée et est maximal au bord de la sphère, avec une intensité :
-\begin{equation}
-    || \vv E||_{max} = \frac{Q}{4 \pi \varepsilon_0 R^2}
-\end{equation}
-
-A l'extérieur de la sphère, le champ diminue en $1/r^2$. Cette diminution en $1/r^2$ est une conséquence directe de la conservation du flux dans une région vide de charges: elle compense l'augmentation de la surface d'une sphère de rayon $r$, cette surface étant proportionnelle à $r^2$.
+%La distribution de charges est invariante par rotation autour de l'origine $O$. Par le principe de Curie, le champ électrique est radial et sa composante selon $\vv{e_r}$ est invariante par rotation autour de $O$ :
+%\begin{equation}
+%    \vv E = E(r) \vv{e_r}
+%\end{equation}
+%
+%Nous allons maintenant appliquer le théorème de Gauss. Pour cela, nous choisissons une surface fermée qui va nous permettre d'exploiter la symétrie du problème. Nous prenons une sphère de rayon $r$ centrée sur l'origine. D'après le théorème de Gauss, le flux du champ électrique sortant de la sphère est donné par :
+%\begin{equation}
+%    \Phi = \oiint_{\mathcal{S}(r)} \vv E \cdot \vv{\dd S} = \frac{Q_{int}(r)}{\varepsilon_0}
+%\end{equation}
+%où $Q_{int}(r)$ est la charge contenue dans la sphère $\mathcal{S}(r)$ de centre $O$ et de rayon $r$.
+%
+%On distingue alors deux cas de figure :
+%\begin{itemize}
+%    \item Si $r > R$ alors $Q_{int} = \frac{4}{3} \pi r^3 \rho = \left( \frac{r}{R} \right)^3 Q$
+%    \item Si $r>R$ alors $Q_{int} = Q$
+%\end{itemize}
+%
+%Par ailleurs, on a $\vv{\dd S} = r^2 \sin \theta \dd \theta \dd \varphi \vv{e_r}$ et l'on peut donc écrire :
+%\begin{equation}
+%    \Phi = \int_{\theta=0}^\pi \int_{\varphi=0}^{2\pi} E(r) \vv{e_r} \cdot r^2 \sin \theta \dd \theta \dd \varphi \vv{e_r} = 4 \pi r^2 E(r)
+%\end{equation}
+%On obtient donc, en utilisant le théorème de Gauss et l'expression de la charge à l'intérieur de la sphère :
+%\begin{equation}
+%    E(r) = \frac{Q r}{4 \pi \varepsilon_0 R^3} \quad \mathrm{si} \quad r<R
+%\end{equation}
+%\begin{equation}
+%    E(r) = \frac{Q}{4 \pi \varepsilon_0 r^2} \quad \mathrm{si} \quad r>R
+%\end{equation}
+%Le champ électrique augmente linéairement à l'intérieur de la sphère chargée et est maximal au bord de la sphère, avec une intensité :
+%\begin{equation}
+%    || \vv E||_{max} = \frac{Q}{4 \pi \varepsilon_0 R^2}
+%\end{equation}
+%
+%A l'extérieur de la sphère, le champ diminue en $1/r^2$. Cette diminution en $1/r^2$ est une conséquence directe de la conservation du flux dans une région vide de charges: elle compense l'augmentation de la surface d'une sphère de rayon $r$, cette surface étant proportionnelle à $r^2$.
 
 \begin{remark}
     On constate que l'expression du champ électrique est identique au champ électrique produit par une charge ponctuelle située au centre de la sphère. Il est remarquable que cette propriété soit valide non seulement loin de la sphère, mais également au voisinage de la sphère. Ceci justifie l'utilisation d'un modèle plus simple pour les noyaux électroniques, dans lequel on les assimile à une charge ponctuelle $+Ze$.
@@ -1399,7 +1474,7 @@ Nous allons maintenant utiliser le théorème de Gauss pour étudier un dipôle 
 \end{proposition}
 
 \begin{demonstration}
-Par définition de l'influence totale, toutes les lignes de champ partant d'un des deux conducteurs arrivent à l'autre, et vice-versa. Il est donc possible de construire un volume $\mathcal{V}$ formé par l'ensemble des deux conducteurs en influence totale ainsi que par le tube de champ qui est défini par les lignes de champ joignant les deux conducteurs. Puisque toutes les lignes de champ partant d'un conducteur arrivent à l'autre, alors elles sont toutes à l'intérieur du tube de champ. En conséquence, aucune ligne de champ ne sort du volume $\mathcal{V}$ et le flux du champ électrostatique à travers la surface fermée délimitant $\mathcal{V}$ est nul. On en déduit, par le théorèmle de Gauss, que la charge totale contenue dans $\mathcal{V}$ est nulle. Autrement dit, les deux conducteurs sont porteurs de charges opposées.    
+Par définition de l'influence totale, toutes les lignes de champ partant d'un des deux conducteurs arrivent à l'autre, et vice-versa. Il est donc possible de construire un volume $\mathcal{V}$ formé par l'ensemble des deux conducteurs en influence totale ainsi que par le tube de champ qui est défini par les lignes de champ joignant les deux conducteurs. Puisque toutes les lignes de champ partant d'un conducteur arrivent à l'autre, alors elles sont toutes à l'intérieur du tube de champ. En conséquence, aucune ligne de champ ne sort du volume $\mathcal{V}$ et le flux du champ électrostatique à travers la surface fermée délimitant $\mathcal{V}$ est nul. On en déduit, par le théorème de Gauss, que la charge totale contenue dans $\mathcal{V}$ est nulle. Autrement dit, les deux conducteurs sont porteurs de charges opposées.    
 \end{demonstration}
 
 Dans un condensateur, les deux conducteurs, typiquement, se font face et sont séparés par un diélectrique. Nous allons considérer le modèle le plus simple de condensateur, constitué de deux armatures planes de taille $L$ séparées par un espace $e$. Nous adoptons le système de coordonnées cartésien, dont l'origine se trouve entre les deux plaques.
@@ -1469,38 +1544,46 @@ Nous pouvons donc modéliser notre condensateur par deux plaques infinies, local
 
 Pour commencer, nous allons étudier une seule des deux armatures. Comme indiqué sur la figure \ref{fig:surface} nous supposons l'armature infinie et placée dans le plan $z=0$.
 
-Analysons les symétries du problème :
-\begin{itemize}
-    \item Le problème est invariant par translation selon $\vv{e_x}$ et $\vv{e_y}$, donc le champ électrique ne dépend que de $z$ : $\vv E = \vv E(z)$.
-    \item En tout point $M(x,y,z)$, tout plan passant par $M$ et contenant $\vv{e_z}$ est un plan de symétrie de la distribution de charges, si bien que le champ $\vv E(M)$ est contenu dans tous ces plans et est donc orienté selon $\vv{e_z}$. 
-    \item Le plan $z=0$ est un plan de symétrie de la distribution de charges, c'est donc un plan de symétrie du champ électrique, ainsi $\vv E(-z) = -\vv E(z)$
-\end{itemize}
-On en déduit que :
-\begin{equation}
-    \vv E = E(z) \vv{e_z}
-\end{equation}
-et $E(-z) = -E(z)$
+\begin{capex}
+A partir d'une analyse des symétries du problème, montrer qu'en tout point $M$ de l'espace, le champ électrique prend la forme $\vv E(M) = E(z) \vv{e_z}$. Déterminer la parité de la fonction $E(z)$.
+\end{capex}
+
+%Analysons les symétries du problème :
+%\begin{itemize}
+%    \item Le problème est invariant par translation selon $\vv{e_x}$ et $\vv{e_y}$, donc le champ électrique ne dépend que de $z$ : $\vv E = \vv E(z)$.
+%    \item En tout point $M(x,y,z)$, tout plan passant par $M$ et contenant $\vv{e_z}$ est un plan de symétrie de la distribution de charges, si bien que le champ $\vv E(M)$ est contenu dans tous ces plans et est donc orienté selon $\vv{e_z}$. 
+%    \item Le plan $z=0$ est un plan de symétrie de la distribution de charges, c'est donc un plan de symétrie du champ électrique, ainsi $\vv E(-z) = -\vv E(z)$
+%\end{itemize}
+%On en déduit que :
+%\begin{equation}
+%    \vv E = E(z) \vv{e_z}
+%\end{equation}
+%et $E(-z) = -E(z)$
 
 Choisissons maintenant une surface de Gauss appropriée. Soit $\mathcal{V}$ le volume délimité par un pavé droit $\mathcal{S}$ dont la base est une surface carrée de taille $H$ dans la dimension horizontale. Le pavé est orienté selon l'axe $\vv{e_z}$ et se trouve entre les altitudes $-z$ et $z$. 
 
-Comme le champ électrique est orienté selon $\vv{e_z}$, cette surface est un tube de champ (quatre des faces du parallélépipède sont colinéaires au champ). Le flux du champ électrique à travers le tube est donné par la différence entre le flux du champ à travers la face supérieure et la face inférieure :
-\begin{equation}
-    \Phi = \oiint_{\mathcal{S}} \vv E \cdot \vv{\dd S} = H^2 (E(z) - E(-z))
-\end{equation}
-En utilisant la propriété de symétrie, on obtient :
-\begin{equation}
-    \Phi = 2 H^2 E(z)
-\end{equation}
+\begin{capex}
+En appliquant le théorème de Gauss à cette surface, déterminer l'expression de $E(z)$.
+\end{capex}
 
-Par ailleurs, d'après le théorème de Gauss :
-\begin{equation}
-    \Phi = \frac{Q_{int}(z)}{\varepsilon_0}
-\end{equation}
-où $Q_{int}(z) = \sigma H^2$ est la charge contenue dans la surface de Gauss. On en déduit que :
-\begin{align}
-    \vv E(z) &= +\frac{\sigma}{2 \epsilon_0} \vv{e_z} \quad \mathrm{si} \quad z>0\\
-    \vv E(z) &= -\frac{\sigma}{2 \epsilon_0} \vv{e_z} \quad \mathrm{si} \quad z<0
-\end{align} 
+%Comme le champ électrique est orienté selon $\vv{e_z}$, cette surface est un tube de champ (quatre des faces du parallélépipède sont colinéaires au champ). Le flux du champ électrique à travers le tube est donné par la différence entre le flux du champ à travers la face supérieure et la face inférieure :
+%\begin{equation}
+%    \Phi = \oiint_{\mathcal{S}} \vv E \cdot \vv{\dd S} = H^2 (E(z) - E(-z))
+%\end{equation}
+%En utilisant la propriété de symétrie, on obtient :
+%\begin{equation}
+%    \Phi = 2 H^2 E(z)
+%\end{equation}
+%
+%Par ailleurs, d'après le théorème de Gauss :
+%\begin{equation}
+%    \Phi = \frac{Q_{int}(z)}{\varepsilon_0}
+%\end{equation}
+%où $Q_{int}(z) = \sigma H^2$ est la charge contenue dans la surface de Gauss. On en déduit que :
+%\begin{align}
+%    \vv E(z) &= +\frac{\sigma}{2 \epsilon_0} \vv{e_z} \quad \mathrm{si} \quad z>0\\
+%    \vv E(z) &= -\frac{\sigma}{2 \epsilon_0} \vv{e_z} \quad \mathrm{si} \quad z<0
+%\end{align} 
 
 \paragraph{Application au condensateur plan}
 
@@ -1524,19 +1607,24 @@ Le champ électrique est donc nul à l'extérieur du condensateur, et le champ �
 
 Il est possible maintenant de revenir à notre modèle du condensateur et d'utiliser ces résultats pour étudier le comportement du condensateur à l'échelle macroscopique. En particulier, nous allons démontrer la loi reliant courant et tension aux bornes d'un condensateur, qui a été admise en première année.
 
-Pour cela, on calcule la tension aux bornes du condensateur, qui n'est autre que la différence de potentiel entre les armatures. La différence de potentiel est donnée par la circulation du champ le long d'une ligne qui relie les armatures :
-\begin{equation}
-    u = - \int_{-\frac{e}{2}}^{\frac{e}{2}} \vv E \cdot \dd z \vec{e_z} = \frac{\sigma e}{\varepsilon_0}
-\end{equation}
-Autrement dit, le potentiel électrique est maximal sur l'armature chargée positivement.
+\begin{capex}
+Déterminer la tension $u$ aux bornes du condensateur (c'est-à-dire, la différence de potentiel entre les armatures). En déduire l'expression de la capacité $C$ du condensateur.
+\end{capex} 
 
-Par ailleurs, si $S$ est la surface des armatures (que l'on a supposée telle que $\sqrt{S} \gg e$), la charge totale portée par les armatures est $q = \sigma S$.
+%Pour cela, on calcule la tension aux bornes du condensateur, qui n'est autre que la différence de potentiel entre les armatures. La différence de potentiel est donnée par la circulation du champ le long d'une ligne qui relie les armatures :
+%\begin{equation}
+%    u = - \int_{-\frac{e}{2}}^{\frac{e}{2}} \vv E \cdot \dd z \vec{e_z} = \frac{\sigma e}{\varepsilon_0}
+%\end{equation}
+%Autrement dit, le potentiel électrique est maximal sur l'armature chargée positivement.
+%
+%Par ailleurs, si $S$ est la surface des armatures (que l'on a supposée telle que $\sqrt{S} \gg e$), la charge totale portée par les armatures est $q = \sigma S$.
+%
+%Ainsi, il est possible de relier la charge portée par les armatures à la tension entre ces armatures via la relation :
+%\begin{equation}
+%    q = C u
+%\end{equation}
+%et l'on obtient la capacité du condensateur plan :
 
-Ainsi, il est possible de relier la charge portée par les armatures à la tension entre ces armatures via la relation :
-\begin{equation}
-    q = C u
-\end{equation}
-et l'on obtient la capacité du condensateur plan :
 \begin{proposition}
     La capacité d'un condensateur plan, dont les armatures ont une surface $S$ et sont séparées par une distance $e$, est donnée par :
     \begin{equation}

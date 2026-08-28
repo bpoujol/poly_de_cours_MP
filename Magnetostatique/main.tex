@@ -239,24 +239,30 @@ Les métaux sont des éléments du tableau périodique qui peuvent perdre des é
     \label{fig:courant_electrique}
 \end{figure}
 
-Nous allons noter $\vv v$ la vitesse moyenne des électrons, et $n$ la densité moyenne d'électrons (en électrons par mètre cube). Les électrons portent une charge $q = -e$. Considérons un petit élément $\dd S$ de la section du fil pris perpendiculaire au mouvement des électrons, à la coordonnée $x$ (partie haute de la figure \ref{fig:courant_electrique}). Les électrons qui traversent la surface $\vv{\dd S}$ pendant $\dd t$ sont ceux qui se trouvaient à l'instant $t$ dans le volume $\dd V$ compris entre $x-v \dd t$ et $x$, de côté $\dd S$.
-On a :
-\begin{equation}
-\dd V = v \dd t \times \dd S
-\end{equation}
-Le nombre d'électrons qui traverse $\dd S$ pendant $\dd t$ est donc donné par :
-\begin{equation}
-    \dd N = n \times (v \dd t \times \dd S)
-\end{equation}
-ce qui correspond à une charge :
-\begin{equation}
-    \dd q = - n e v \dd S \dd t
-\end{equation}
+Nous allons noter $\vv v$ la vitesse moyenne des électrons, et $n$ la densité moyenne d'électrons (en électrons par mètre cube). Les électrons portent une charge $q = -e$. 
+
+\begin{capex}
+Considérons un petit élément $\dd S$ de la section du fil pris perpendiculaire au mouvement des électrons, à la coordonnée $x$ (partie haute de la figure \ref{fig:courant_electrique}). Déterminer le nombre d'électrons qui traversent la surface $\vv{\dd S}$ pendant $\dd t$. En déduire le courant qui circule à travers la surface $\dd S$.
+\end{capex}
+
+% sont ceux qui se trouvaient à l'instant $t$ dans le volume $\dd V$ compris entre $x-v \dd t$ et $x$, de côté $\dd S$.
+%On a :
+%\begin{equation}
+%\dd V = v \dd t \times \dd S
+%\end{equation}
+%Le nombre d'électrons qui traverse $\dd S$ pendant $\dd t$ est donc donné par :
+%\begin{equation}
+%    \dd N = n \times (v \dd t \times \dd S)
+%\end{equation}
+%ce qui correspond à une charge :
+%\begin{equation}
+%    \dd q = - n e v \dd S \dd t
+%\end{equation}
+
 De manière générale, on peut montrer que si l'élément de surface n'est pas pris perpendiculaire au mouvement des électrons (bas de la figure \ref{fig:courant_electrique}), l'expression reste inchangée avec un produit scalaire :
 \begin{equation}
     \dd q = - n e \vv v \cdot \vv{\dd S} \dd t
 \end{equation}
-
 
 Cette interprétation microscopique nous amène à définir le vecteur densité de courant volumique :
 
@@ -281,8 +287,7 @@ Le calcul précédent nous fournit alors directement son expression :
     \end{equation}
 \end{proposition}
 
-
-Nous pouvons alors interpréter l'intensité du courant qui traverse le fil comme un flux du vecteur densité volumique de courant :
+Nous pouvons alors interpréter l'intensité totale du courant qui traverse le fil comme un flux du vecteur densité volumique de courant :
 
 \begin{proposition}
     L'intensité $i$ qui traverse un fil de section $\Sigma$ est donnée par le flux de la densité volumique de courant à travers cette surface :
@@ -616,6 +621,7 @@ Dans la suite, nous allons voir quelques applications classiques du théorème d
     \label{fig:fil_infini}
 \end{figure}
 
+
 Considérons un fil infini parcouru par un courant constant $i$. Nous nous plaçons dans le repère de coordonnées cylindriques $(r,\theta,z)$ dont l'axe $(Oz)$ coïncide avec le fil, et tel que le courant circule dans le sens $+\vv{e_z}$.
 
 Nous commençons par utiliser le principe de Curie. La distribution de courants est invariante par translation selon $\vv{e_z}$ et par rotation autour de $(Oz)$, ainsi les composantes du champ magnétique ne dépendent pas de $z$ ni de $\theta$.
@@ -633,22 +639,26 @@ On conclut que le champ magnétique est de la forme :
     Mais comme on le voit plus haut, ce n'était pas nécessaire pour conclure, et trouver un plan de symétrie permet d'avoir un résultat plus précis (on obtient en un seul coup l'orientation du champ).
 \end{remark}
 
-Nous choisissons maintenant un contour fermé approprié à la situation : soit $\Gamma$ le cercle passant par $M$, de rayon $r$ et orienté selon $+\vv{e_\theta}$. Le courant enlacé par ce contour est tout simplement le courant $i$ parcouru par le fil. Par ailleurs, la circulation du champ magnétique le long de ce contour est donnée par :
-\begin{equation}
-    \oint_\Gamma \vv B \cdot \vv{\dd \ell} = \int_0^{2\pi} B(r) \times r \dd \theta = 2 \pi r B(r)
-\end{equation}
-Le théorème d'Ampère s'écrit :
-\begin{equation}
-    \oint_\Gamma \vv B \cdot \vv{\dd \ell} = \mu_0 I_{\mathrm{enlace}}
-\end{equation}
-et on obtient donc :
-\begin{equation}
-    2 \pi r B(r) = \mu_0 i
-\end{equation}
-ou encore :
-\begin{equation}
-    \vv B = \frac{\mu_0 i}{2 \pi r} \vv{e_\theta}
-\end{equation}
+\begin{capex}
+En appliquant le théorème d'Ampère au contour $\Gamma$ indiqué sur la figure \ref{fig:fil_infini}, déterminer l'expression du champ magnétique autour du fil.
+\end{capex}
+
+%Nous choisissons maintenant un contour fermé approprié à la situation : soit $\Gamma$ le cercle passant par $M$, de rayon $r$ et orienté selon $+\vv{e_\theta}$. Le courant enlacé par ce contour est tout simplement le courant $i$ parcouru par le fil. Par ailleurs, la circulation du champ magnétique le long de ce contour est donnée par :
+%\begin{equation}
+%    \oint_\Gamma \vv B \cdot \vv{\dd \ell} = \int_0^{2\pi} B(r) \times r \dd \theta = 2 \pi r B(r)
+%\end{equation}
+%Le théorème d'Ampère s'écrit :
+%\begin{equation}
+%    \oint_\Gamma \vv B \cdot \vv{\dd \ell} = \mu_0 I_{\mathrm{enlace}}
+%\end{equation}
+%et on obtient donc :
+%\begin{equation}
+%    2 \pi r B(r) = \mu_0 i
+%\end{equation}
+%ou encore :
+%\begin{equation}
+%    \vv B = \frac{\mu_0 i}{2 \pi r} \vv{e_\theta}
+%\end{equation}
 
 \begin{remark}
     Cet exemple est très classique. Il est vivement recommandé de connaître le résultat par coeur et de savoir le retrouver facilement.
@@ -739,51 +749,63 @@ Considérons maintenant un exemple qui a de nombreuses applications pratiques : 
 
 Nous adoptons à nouveau un système de coordonnées cylindriques dont l'axe coïncide avec l'axe de la bobine. L'axe $(Oz)$ est orienté de telle sorte que le courant circule selon la direction $+\vv{e_\theta}$.
 
-Commençons par analyser les symétries du problème. Le problème est invariant par rotation autour de $(Oz)$ et par translation selon $\vv{e_z}$, ainsi les composantes du champ magnétique ne dépendent que du rayon $r$.
+\begin{capex}
+Par une analyse des symétries du problème, déterminer la forme du champ magnétique.
+\end{capex}
 
-Par ailleurs, soit $M$ un point quelconque de l'espace. Le plan passant par $M$ et perpendiculaire à l'axe $(Oz)$ est un plan de symétrie de la distribution de courants. Il s'agit donc d'un plan d'antisymétrie du champ magnétique. Le champ $\vv B(M)$ est donc normal à ce plan.
-
-On en conclut que le champ magnétique est de la forme :
-\begin{equation}
-    \vv B = B(r) \vv{e_z}
-\end{equation}
+%Commençons par analyser les symétries du problème. Le problème est invariant par rotation autour de $(Oz)$ et par translation selon $\vv{e_z}$, ainsi les composantes du champ magnétique ne dépendent que du rayon $r$.
+%
+%Par ailleurs, soit $M$ un point quelconque de l'espace. Le plan passant par $M$ et perpendiculaire à l'axe $(Oz)$ est un plan de symétrie de la distribution de courants. Il s'agit donc d'un plan d'antisymétrie du champ magnétique. Le champ $\vv B(M)$ est donc normal à ce plan.
+%
+%On en conclut que le champ magnétique est de la forme :
+%\begin{equation}
+%    \vv B = B(r) \vv{e_z}
+%\end{equation}
 
 Nous allons maintenant choisir un contour approprié. Nous prenons un contour rectangulaire dans le plan $\theta=0$, de longueur $L$ selon l'axe $(Oz)$, et situé entre les rayons $r_1$ et $r_2$. Nous supposons que $r_2 \gg R$ si bien que l'on se trouve très loin de la bobine. On peut alors supposer que $B(r_2) = 0$. Nous choisissons le contour orienté dans le sens trigonométrique, selon $+\vv{e_z}$ en $r=r_1$. 
 
-La circulation du champ magnétique le long de ce contour est donnée par :
-\begin{equation}
-    \oint_\Gamma \vv B \cdot \vv{\dd \ell} = B(r_1) L - B(r_2) L = B(r_1) L
-\end{equation}
-car on a choisi $r_2 \gg R$ de sorte que $B(r_2) = 0$.
-Par ailleurs, le courant enlacé par le contour correspond au courant $i$ de la bobine multiplié par le nombre de spires enlacées $N = n \times L$. Les spires ne sont enlacées par le contour que si $r_1<R$. Ainsi :
-\begin{itemize}
-    \item Si $r_1<R$ alors $I_{\mathrm{enlace}} = i n L$
-    \item Sinon $I_{\mathrm{enlace}} = 0$
-\end{itemize}
-Nous appliquons le théorème d'Ampère :
-\begin{equation}
-    \oint_\Gamma \vv B \cdot \vv{\dd \ell} = \mu_0 I_{\mathrm{enlace}}
-\end{equation}
-et nous obtenons le champ à l'intérieur de la bobine :
-\begin{equation}
-    \vv B = \mu_0 n i \vv{e_z} \quad \mathrm{si} \quad r<R
-\end{equation}
-alors que le champ est nul à l'extérieur de la bobine.
+\begin{capex}
+En appliquant le théorème d'Ampère à ce contour, déterminer le champ magnétique à l'intérieur et à l'extérieur de la bobine.
+\end{capex}
+
+%La circulation du champ magnétique le long de ce contour est donnée par :
+%\begin{equation}
+%    \oint_\Gamma \vv B \cdot \vv{\dd \ell} = B(r_1) L - B(r_2) L = B(r_1) L
+%\end{equation}
+%car on a choisi $r_2 \gg R$ de sorte que $B(r_2) = 0$.
+%Par ailleurs, le courant enlacé par le contour correspond au courant $i$ de la bobine multiplié par le nombre de spires enlacées $N = n \times L$. Les spires ne sont enlacées par le contour que si $r_1<R$. Ainsi :
+%\begin{itemize}
+%    \item Si $r_1<R$ alors $I_{\mathrm{enlace}} = i n L$
+%    \item Sinon $I_{\mathrm{enlace}} = 0$
+%\end{itemize}
+%Nous appliquons le théorème d'Ampère :
+%\begin{equation}
+%    \oint_\Gamma \vv B \cdot \vv{\dd \ell} = \mu_0 I_{\mathrm{enlace}}
+%\end{equation}
+%et nous obtenons le champ à l'intérieur de la bobine :
+%\begin{equation}
+%    \vv B = \mu_0 n i \vv{e_z} \quad \mathrm{si} \quad r<R
+%\end{equation}
+%alors que le champ est nul à l'extérieur de la bobine.
 
 \begin{remark}
     Ce résultat est à connaître. Il faut savoir le démontrer. Attention à l'orientation des contours et des vecteurs, bien utiliser la règle de la main droite.
 \end{remark}
 
-Nous avons vu en première année la relation $\Phi = L i$ entre le flux du champ magnétique à travers les spires d'une bobine et le courant qui la parcourt. Nous pouvons maintenant calculer l'inductance d'une bobine en fonction de ses propriétés.
+\begin{capex}
+Après avoir rappelé la définition de l'inductiance $L$, calculer l'inductance de la bobine en fonction de $R,N$ et $\ell$.
+\end{capex}
 
-Comme le champ magnétique est uniforme à l'intérieur du solénoïde, le flux du champ magnétique à travers une spire de la bobine est directement donné par une multiplication (pas besoin de calculer une intégrale) :
-\begin{equation}
-    \Phi_{\mathrm{1\,spire}} = \pi R^2 \times B = \mu_0 n i \pi R^2
-\end{equation}
-Supponsons maintenant que la bobine contient $N$ spires. Le flux total à travers la bobine est donné par $\Phi = N \Phi_{\mathrm{1\,spire}}$. En remarquant que $n = N/\ell$ où $\ell$ est la longueur de la bobine, nous obtenons l'expression de son inductance :
-\begin{equation}
-    \Phi = L i \quad \mathrm{avec} \quad L = \frac{\pi \mu_0 R^2 N^2}{\ell}
-\end{equation}
+%Nous avons vu en première année la relation $\Phi = L i$ entre le flux du champ magnétique à travers les spires d'une bobine et le courant qui la parcourt. Nous pouvons maintenant calculer l'inductance d'une bobine en fonction de ses propriétés.
+%
+%Comme le champ magnétique est uniforme à l'intérieur du solénoïde, le flux du champ magnétique à travers une spire de la bobine est directement donné par une multiplication (pas besoin de calculer une intégrale) :
+%\begin{equation}
+%    \Phi_{\mathrm{1\,spire}} = \pi R^2 \times B = \mu_0 n i \pi R^2
+%\end{equation}
+%Supponsons maintenant que la bobine contient $N$ spires. Le flux total à travers la bobine est donné par $\Phi = N \Phi_{\mathrm{1\,spire}}$. En remarquant que $n = N/\ell$ où $\ell$ est la longueur de la bobine, nous obtenons l'expression de son inductance :
+%\begin{equation}
+%    \Phi = L i \quad \mathrm{avec} \quad L = \frac{\pi \mu_0 R^2 N^2}{\ell}
+%\end{equation}
 
 Nous allons maintenant supposer que le courant électrique dans la bobine varie avec le temps, ainsi le champ magnétique produit par ce courant va également varier. Dans ce cas, nous ne sommes plus stricto sensu en régime permanent et les lois de la magnétostatique ne sont a priori plus valides. Mais, nous pouvons nous placer dans le cadre de l'ARQS magnétique, c'est-à-dire que nous supposons que le courant varie lentement par rapport au temps caractéristique avec lequel le champ magnétique est influencé par le courant. Ainsi, on peut considérer que le champ magnétique peut être approximé par les lois de la magnétostatique. Nous verrons plus en détail les conditions exactes d'application de l'ARQS plus tard dans l'année.
 
@@ -875,12 +897,22 @@ Maintenant que nous avons établi un lien entre courant électrique et champ mag
     \label{fig:placeholder}
 \end{figure}
 
-Nous supposons la boucle placée à l'origine d'un repère sphéique $(r,\theta,\varphi)$. Le problème étant invariant par rotation autour de $(Oz)$, les coordonnées du champ magnétique dans ce repère ne dépendent pas de $\varphi$. 
+Nous supposons la boucle placée à l'origine d'un repère sphérique $(r,\theta,\varphi)$. 
 
-Par ailleurs, considérons un point $M$ quelconque. Le plan $\Pi_a$ contenant $M$ et $(Oz)$ est un plan d'antisymétrie de la distribution de courants; c'est donc un plan de symétrie de la distribution de charges et on en déduit que $\vv B(M)$ est contenu dans ce plan. Ainsi :
-\begin{equation}
-    \vv B = B_r(r,\theta) \vv{e_r} + B_\theta(r,\theta) \vv{e_\theta}
-\end{equation}
+\begin{remark}
+Il pourrait être tentant ici de choisir un système de coordonnées cylindriques, mais la pratique montre que les calculs sont en général plus simples en coordonnées sphériques (comme pour le dipôle électrostatique).
+\end{remark}
+
+\begin{capex}
+Etablir la forme générale du champ magnétique par une analyse des symétries du problème.
+\end{capex}
+
+%Le problème étant invariant par rotation autour de $(Oz)$, les coordonnées du champ magnétique dans ce repère ne dépendent pas de $\varphi$. 
+%
+%Par ailleurs, considérons un point $M$ quelconque. Le plan $\Pi_a$ contenant $M$ et $(Oz)$ est un plan d'antisymétrie de la distribution de courants; c'est donc un plan de symétrie de la distribution de charges et on en déduit que $\vv B(M)$ est contenu dans ce plan. Ainsi :
+%\begin{equation}
+%    \vv B = B_r(r,\theta) \vv{e_r} + B_\theta(r,\theta) \vv{e_\theta}
+%\end{equation}
 
 Le degré de symétrie de la situation n'est pas suffisant pour obtenir une expression du champ magnétique simple. Nous ne pouvons donc pas calculer le champ magnétique créé par cette boucle de courant par le théorème d'Ampère. Pour simplifier les calculs, on se place à une distance grande par rapport à taille de la spire, c'est ce qu'on appelle l'approximation dipolaire magnétique :
 \begin{definition}[Approximation dipolaire]
@@ -984,24 +1016,24 @@ Le couple total exercé par les forces de Laplace vaut donc :
     \label{fig:placeholder}
 \end{figure}
 
+Nous souhaitons savoir si ce couple dérive d'un potentiel. Pour cela, plaçons-nous dans le système de coordonnées polaires dans le plan contenant les deux vecteurs $\vv{\mathcal{M}}$ et $\vv B$. Nous choisissons l'angle $\theta=0$ aligné avec le champ $\vv B$. En supposant le circuit électrique indéformable, la norme de $\vv{\mathcal{M}}$ est constante, notée $\mathcal{M}$.
+\begin{capex}
+Déterminer le travail élémentaire $\delta W$ du couple magnétique lors d'une petite rotation $\dd \Theta$ du circuit électrique. En déduire que ce couple dérive d'une énergie potentielle que l'on exprimera.
+\end{capex}
 
-Nous souhaitons savoir si ce couple dérive d'un potentiel. Pour cela, plaçons-nous dans le système de coordonnées polaires dans le plan contenant les deux vecteurs $\vv{\mathcal{M}}$ et $\vv B$. Nous choisissons l'angle $\theta=0$ aligné avec le champ $\vv B$ En supposant le circuit électrique indéformable, la norme de $\vv{\mathcal{M}}$ est constante, notée $\mathcal{M}$ et l'on peut écrire le couple :
-\begin{equation}
-    \vv \Gamma = - B \mathcal{M} \sin \Theta
-\end{equation}
-où $\Theta$ est l'angle entre entre le champ magnétique et le moment magnétique. Le travail élémentaire de ce couple lors d'une rotation $\dd \Theta$ du moment magnétique est donné par :
-\begin{equation}
-\delta W = \Gamma \dd \Theta = - B \mathcal{M} \sin \Theta \dd \Theta
-\end{equation}
-On peut remarquer que ce travail dérive d'une énergie potentielle $E_{mag}$ telle que :
-\begin{equation}
-\delta W = - \dd E_{mag}
-\end{equation}
-où l'on a :
-\begin{equation}
-    E_{mag} = -  B \mathcal{M} \cos \Theta
-\end{equation}
-On peut simplifier cette écriture pour obtenir l'énergie potentielle du dipôle magnétique :
+%Le travail élémentaire de ce couple lors d'une rotation $\dd \Theta$ du moment magnétique est donné par :
+%\begin{equation}
+%\delta W = \Gamma \dd \Theta = - B \mathcal{M} \sin \Theta \dd \Theta
+%\end{equation}
+%On peut remarquer que ce travail dérive d'une énergie potentielle $E_{mag}$ telle que :
+%\begin{equation}
+%\delta W = - \dd E_{mag}
+%\end{equation}
+%où l'on a :
+%\begin{equation}
+%    E_{mag} = -  B \mathcal{M} \cos \Theta
+%\end{equation}
+%On peut simplifier cette écriture pour obtenir l'énergie potentielle du dipôle magnétique :
 \begin{proposition}
     Un dipôle magnétique $\vv{\mathcal{M}}$ placé dans un champ magnétique $\vv B$ a une énergie potentielle magnétique :
     \begin{equation}
@@ -1013,7 +1045,7 @@ On constate une analogie formelle entre l'énergie potentielle du dipôle élect
 
 Si le champ magnétique n'est pas uniforme, on admettra que l'expression de l'énergie potentielle magnétique est inchangée. Comme pour le dipôle électrique, l'existence d'une énergie potentielle qui varie dans l'espace implique qu'une force nette s'applique sur le dipôle :
 \begin{equation}
-    \vv{F_{mag}} = - \grad(\vv{\mathcal{M}} \cdot \vv B)
+    \vv{F_{mag}} = - \grad E_p =  \grad(\vv{\mathcal{M}} \cdot \vv B)
 \end{equation}
 Dans l'hypothèse où le moment magnétique s'est aligné avec le champ magnétique, cette force va avoir tendance à attirer le dipôle vers les zones où le champ magnétique est le plus fort.
 

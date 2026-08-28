@@ -36,21 +36,7 @@
 \usepackage{booktabs} % Required for nicer horizontal rules in tables
 
 \usepackage{xcolor} % Required for specifying colors by name
-
-\usepackage{fontawesome5}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% SELECT HERE THE MAIN THEME
-
-%ELECTROMAGNETISME
-\definecolor{ocre}{RGB}{243,102,25}
-%MECANIQUE
-%\definecolor{ocre}{RGB}{55,62,161}
-%THERMO
-%\definecolor{ocre}{RGB}{235,39,0}
-%OPTIQUE
-%\definecolor{ocre}{RGB}{125,0,255}
-
+\definecolor{ocre}{RGB}{243,102,25} % Define the orange color used for highlighting throughout the book
 
 %----------------------------------------------------------------------------------------
 %	FONTS
@@ -58,7 +44,7 @@
 
 \usepackage{avant} % Use the Avantgarde font for headings
 %\usepackage{times} % Use the Times font for headings
-\usepackage{mathptmx} % Use the Adobe Times Roman as the default text font together with math symbols from the Sym­bol, Chancery and Com­puter Modern fonts
+\usepackage{mathptmx} % Use the Adobe Times Roman as the default text font together with math symbols from the Symbol, Chancery and Computer Modern fonts
 
 \usepackage{microtype} % Slightly tweak font spacing for aesthetics
 \usepackage[utf8]{inputenc} % Required for including letters with accents
@@ -207,19 +193,6 @@
 \thmnote{\nobreakspace\the\thm@notefont\sffamily\bfseries\color{black}---\nobreakspace#3.}} % Optional theorem note
 \renewcommand{\qedsymbol}{$\blacksquare$}% Optional qed square
 
-% Boxed/framed environments
-\newtheoremstyle{capexbox}% % Theorem style name
-{0pt}% Space above
-{0pt}% Space below
-{\normalfont}% % Body font
-{}% Indent amount
-{\small\bf\sffamily\color{ocre}}% % Theorem head font
-{\;}% Punctuation after theorem head
-{0.25em}% Space after theorem head
-{\small\sffamily\color{ocre}\thmname{#1}\nobreakspace\thmnumber{\@ifnotempty{#1}{}\@upn{#2}}% Theorem text (e.g. Theorem 2.1)
-\thmnote{\nobreakspace\the\thm@notefont\sffamily\bfseries\color{black}---\nobreakspace#3.}} % Optional theorem note
-\renewcommand{\qedsymbol}{$\blacksquare$}% Optional qed square
-
 \newtheoremstyle{blacknumex}% Theorem style name
 {5pt}% Space above
 {5pt}% Space below
@@ -257,11 +230,6 @@
 \makeatother
 
 % Defines the theorem text style for each type of theorem to one of the three styles above
-
-\newcounter{countcapex} 
-\theoremstyle{capexbox}
-\newtheorem{capexT}[countcapex]{\reflectbox{\faPencil*} Capacité exigible}
-
 \newcounter{dummy} 
 \numberwithin{dummy}{section}
 \theoremstyle{ocrenumbox}
@@ -271,7 +239,6 @@
 \theoremstyle{blacknumex}
 \newtheorem{exampleT}{Exemple}[chapter]
 \newtheorem{demonstrationT}{Démonstration}[chapter]
-\newtheorem{solutionT}{Solution}[chapter]
 \theoremstyle{blacknumbox}
 \newtheorem{vocabulary}{Vocabulaire}[chapter]
 \newtheorem{definitionT}{Définition}[section]
@@ -350,12 +317,10 @@ innerbottommargin=5pt]{cBox}
 
 % Creates an environment for each type of theorem and assigns it a theorem text style from the "Theorem Styles" section above and a colored box from above
 \newenvironment{theorem}{\begin{tBox}\begin{theoremeT}}{\end{theoremeT}\end{tBox}}
-\newenvironment{capex}{\begin{tBox}\begin{capexT}}{\end{capexT}\end{tBox}}
 \newenvironment{exercise}{\begin{eBox}\begin{exerciseT}}{\hfill{\color{ocre}\tiny\ensuremath{\blacksquare}}\end{exerciseT}\end{eBox}}				  
 \newenvironment{definition}{\begin{dBox}\begin{definitionT}}{\end{definitionT}\end{dBox}}	
 \newenvironment{example}{\begin{exampleT}}{\hfill{\tiny\ensuremath{\blacksquare}}\end{exampleT}}		
 \newenvironment{demonstration}{\begin{demonstrationT}}{\hfill{\tiny\ensuremath{\blacksquare}}\end{demonstrationT}}	
-\newenvironment{solutionA}{\begin{solutionT}}{\hfill{\tiny\ensuremath{\blacksquare}}\end{solutionT}}	
 \newenvironment{corollary}{\begin{cBox}\begin{corollaryT}}{\end{corollaryT}\end{cBox}}	
 \newenvironment{encart}{\begin{cBox}\begin{encartT}}{\end{encartT}\end{cBox}}	
 

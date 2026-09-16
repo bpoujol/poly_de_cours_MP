@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2026.8.28)  28 AUG 2026 11:17
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2026.8.28)  8 SEP 2026 09:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2066,61 +2066,35 @@ Package mdframed Info: mdframed works in twoside mode on input line 752.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 752.
-
-
-LaTeX Warning: Reference `mdf@pagelabel-12' on page 10 undefined on input line 
-754.
-
 Package mdframed Info: mdframed works in twoside mode on input line 767.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 767.
-
-LaTeX Warning: Reference `mdf@pagelabel-13' on page 10 undefined on input line 
-769.
-
 Package mdframed Info: mdframed works in twoside mode on input line 795.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 795.
-
-LaTeX Warning: Reference `mdf@pagelabel-14' on page 10 undefined on input line 
-797.
-
-[10]
+ [10]
 Package mdframed Info: mdframed works in twoside mode on input line 814.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 814.
-
-
-LaTeX Warning: Reference `mdf@pagelabel-15' on page 11 undefined on input line 
-819.
 
 contour: Using real outline for `$\theta $' on input line 892.
 Package mdframed Info: mdframed works in twoside mode on input line 906.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 906.
-
-LaTeX Warning: Reference `mdf@pagelabel-16' on page 11 undefined on input line 
-908.
-
 [11]
 Package mdframed Info: mdframed works in twoside mode on input line 918.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 918.
-
-
-LaTeX Warning: Reference `mdf@pagelabel-17' on page 12 undefined on input line 
-920.
-
 File: Pictures/dipole_pres.png Graphic file (type bmp)
 <Pictures/dipole_pres.png>
 File: Pictures/dipole_loin.png Graphic file (type bmp)
 <Pictures/dipole_loin.png>
-[12]
+ [12]
 Overfull \hbox (2.97893pt too wide) in paragraph at lines 963--965
 [][]$\U/msa/m/n/6 ^^D$ \T1/pag/db/n/10 Dé-mons-tra-tion []\T1/ptm/m/it/10.95 Ce
 tte dé-mons-tra-tion n'est pas ex-pli-ci-te-ment au pro-gramme donc pas à conna
@@ -2132,19 +2106,11 @@ Package mdframed Info: mdframed works in twoside mode on input line 1020.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 1020.
-
-
-LaTeX Warning: Reference `mdf@pagelabel-18' on page 14 undefined on input line 
-1022.
-
-[14] [15] (./main.aux)
+ [14] [15] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
-
-
-LaTeX Warning: There were undefined references.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -2156,7 +2122,7 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 Here is how much of TeX's memory you used:
  53034 strings out of 476823
  1140447 string characters out of 5802848
- 2247514 words of memory out of 5000000
+ 2247676 words of memory out of 5000000
  74074 multiletter control sequences out of 15000+600000
  616290 words of font info for 127 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191

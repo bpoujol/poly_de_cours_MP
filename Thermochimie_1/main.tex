@@ -147,16 +147,16 @@ D'où vient cette énergie thermique ? Pour le comprendre, nous pouvons applique
 
 Nous rappelons ici l'expression du premier principe :
 \begin{theorem}[Premier principe de la thermodynamique (rappel)]
-    Soit un système fermé $\Sigma$ subissant une transformation thermodynamique. Nous notons $\mathcal{U}$ son énergie interne, $\mathcal{E}_c$ son énergie cinétique macroscopique, et   $\mathcal{E}_p$ son énergie potentielle macroscopique. Nous notons également $Q$ l'énergie thermique reçue par le système au cours de la transformation, et $W$ le travail des forces extérieures sur le système pendant la transformation. Alors :
+    Soit un système fermé $\Sigma$ subissant une transformation thermodynamique. Nous notons $U$ son énergie interne, $E_c$ son énergie cinétique macroscopique, et   $E_p$ son énergie potentielle macroscopique. Nous notons également $Q$ l'énergie thermique reçue par le système au cours de la transformation, et $W$ le travail des forces extérieures sur le système pendant la transformation. Alors :
     \begin{equation}
-        \Delta(\mathcal{U} + \mathcal{E}_p + \mathcal{E}_c) = W + Q
+        \Delta(U+E_p+E_c) = W + Q
     \end{equation}
 \end{theorem}
 
 
 Le système $\Sigma$ est un système fermé, en effet le gaz qui sort de la bonbonne réagit avec le dioxygène mais les produits de combustion se mélangent à l'air de la pièce. On peut donc lui appliquer le premier principe. Le système $\Sigma$ n'a pas d'énergie cinétique macroscopique et son énergie potentielle est constante, par ailleurs les forces extérieures ne travaillent pas. Enfin l'énergie reçue par le système au cours d'une durée $\Delta t$ est donnée par $Q = -\mathcal{P} \Delta t$. On en déduit :
 \begin{equation}
-    \Delta \mathcal{U} = - \mathcal{P} \Delta t
+    \Delta U = - \mathcal{P} \Delta t
 \end{equation}
 Cette équation nous montre que \textbf{l'énergie thermique libérée par la réaction chimique provient d'une variation d'énergie interne dans le système chimique}. Comment pouvons-nous expliquer ceci ?
 
@@ -189,44 +189,49 @@ Nous rappelons quelques définitions :
     \end{itemize}
 \end{definition}
 
-Nous avons vu en première année qua dans le cas d'une transformation isobare, il est utile de définir une nouvelle variable, appelée enthalpie :
+Nous avons vu en première année qu'il est utile de définir une nouvelle variable, appelée enthalpie :
 \begin{definition}[Enthalpie (rappel)]
-    L'enthalpie d'un système d'énergie interne $\mathcal{U}$, de volume $V$ et à la pression $p$ est donnée par :
+    L'enthalpie d'un système d'énergie interne $U$, de volume $V$ et à la pression $p$ est donnée par :
     \begin{equation}
-        \mathcal{H} = \mathcal{U} + p V
+        H = U + p V
     \end{equation}
 \end{definition}
 
-Comme le système est à l'équilibre avec l'environnement au début et à la fin de la transformation, on peut remarquer que la pression dans le système est égale à la pression extérieure au début et à la fin de la transformation ($p_{finale} = p_{initiale} = p_{ext}$), si bien que :
-\begin{equation}
-    \Delta \mathcal{H} = \Delta \mathcal{U} + p_{finale} V_{final} - p_{initiale} V_{initial} = \Delta \mathcal{U} + p_{ext} \Delta V
-\end{equation}
+\begin{capex}
+En appliquant le premier principe, établir l'expression de la variation d'enthalpie au cours d'une transformation monobare.
+\end{capex}
 
-Le travail des forces extérieures lors d'une transformation monobare s'écrit :
-\begin{equation}
-    W = - \int p_{ext} \dd V = - p_{ext} \Delta V
-\end{equation}
-On obtient alors en appliquant le premier principe :
-\begin{equation}
-    \Delta (\mathcal{H} + \mathcal{E}_p + \mathcal{E}_c) = W_{autres} + Q
-\end{equation}
-où $W_{autres}$ correspond au travail des forces autres que les forces de pression. Dans le cas général d'une transformation chimique à l'air libre, la plupart de ces termes disparaissent :
+%Comme le système est à l'équilibre avec l'environnement au début et à la fin de la transformation, on peut remarquer que la pression dans le système est égale à la pression extérieure au début et à la fin de la transformation ($p_{finale} = p_{initiale} = p_{ext}$), si bien que :
+%\begin{equation}
+%    \Delta H = \Delta U + p_{finale} V_{final} - p_{initiale} V_{initial} = \Delta U + p_{ext} \Delta V
+%\end{equation}
+%
+%Le travail des forces extérieures lors d'une transformation monobare s'écrit :
+%\begin{equation}
+%    W = - \int p_{ext} \dd V = - p_{ext} \Delta V
+%\end{equation}
+%On obtient alors en appliquant le premier principe :
+%\begin{equation}
+%    \Delta (\mathcal{H} + \mathcal{E}_p + \mathcal{E}_c) = W_{autres} + Q
+%\end{equation}
+%où $W_{autres}$ correspond au travail des forces autres que les forces de pression. Dans le cas général d'une transformation chimique à l'air libre, la plupart de ces termes disparaissent :
+
 \begin{proposition}
     Soit $\Sigma$ un système composé de réactifs chimiques. Lors d'une transformation chimique \textbf{monobare} entre deux états d'équilibre, si le système ne subit pas de variation d'énergie mécanique macroscopique et n'est pas soumis au travail de forces autres que les forces de pression, alors :
     \begin{equation}
-        \Delta \mathcal{H} = Q
+        \Delta H = Q
     \end{equation}
 \end{proposition}
 
-Cette relation est très utile pour décrire les réactions chimiques. En effet, elle relie directement les transferts thermiques lors de la réaction aux transferts thermiques entre le système et son environnement. Par ailleurs, la quantité $\Delta \mathcal{H}$ se décompose en deux parties :
+Cette relation est très utile pour décrire les réactions chimiques. En effet, elle relie directement les transferts thermiques lors de la réaction aux transferts thermiques entre le système et son environnement. Par ailleurs, la quantité $\Delta H$ se décompose en deux parties :
 \begin{itemize}
-    \item Une contribution $\Delta \mathcal{H}_{chimique}$ issue de la rupture des liaisons des réactifs et de la formation de nouvelles liaisons. Il s'agit de la variation d'énergie potentielle microscopique du système ;
-    \item Une contribution $\Delta \mathcal{H}_{thermique}$ issue de la variation de température du système. Il s'agit de la variation d'énergie cinétique microscopique du système correspondant à l'agitation thermique de ses consitutants.    
+    \item Une contribution $\Delta H_{\rm chimique}$ issue de la rupture des liaisons des réactifs et de la formation de nouvelles liaisons. Il s'agit de la variation d'énergie potentielle microscopique du système ;
+    \item Une contribution $\Delta H_{\rm thermique}$ issue de la variation de température du système. Il s'agit de la variation d'énergie cinétique microscopique du système correspondant à l'agitation thermique de ses consitutants.    
 \end{itemize}
 
-L'énergie chimique libérée par la réaction est donnée par la quantité $\Delta H_{chimique}$. Cette énergie est ensuite convertie en énergie thermique qui peut soit rester à l'intérieur du système et l'échauffer ou le refoidir ($\Delta \mathcal{H}_{thermique}$) ou bien être transférée à l'extérieur du système ($Q$). 
+L'énergie chimique libérée par la réaction est donnée par la quantité $\Delta H_{\rm chimique}$. Cette énergie est ensuite convertie en énergie thermique qui peut soit rester à l'intérieur du système et l'échauffer ou le refoidir ($\Delta H_{\rm thermique}$) ou bien être transférée à l'extérieur du système ($Q$). 
 
-Ceci nous amène à définir la quantité $\Delta H_{chimique}$ de façon plus rigoureuse, puisqu'elle est la mesure de l'énergie pouvant être libérée par une réaction chimique. Il s'agit de la variation d'enthalpie du système chimique en l'absence de variation de pression ou de température. Pour définir cette quantité de manière claire, nous devons adopter certaines conventions.
+Ceci nous amène à définir la quantité $\Delta H_{\rm chimique}$ de façon plus rigoureuse, puisqu'elle est la mesure de l'énergie pouvant être libérée par une réaction chimique. Il s'agit de la variation d'enthalpie du système chimique en l'absence de variation de pression ou de température. Pour définir cette quantité de manière claire, nous devons adopter certaines conventions.
 
 \section{Enthalpie standard de réaction}
 
@@ -261,7 +266,7 @@ Une fois que l'on a défini ces états standard, on peut définir de façon rigo
     Attention ! La façon dont on équilibre les coefficients stoechiométriques est importante. Si on multiplie par 2 les coefficients stoechiométriques, alors on multiplie aussi par 2 l'enthalpie standard. 
 \end{remark}
 
-Dans le cas d'une réaction à l'état standard et isotherme, on aura ainsi $\Delta \mathcal{H} = \Delta_r H \degree$. Or on a vu que $\Delta \mathcal{H} = Q$, autrement dit l'enthalpie de réaction correspond à l'énergie thermique reçue par le système au cours d'une transformation isotherme. Ceci nous fournit une interprétation concrète de l'enthalpie standard de réaction : 
+Dans le cas d'une réaction à l'état standard et isotherme, on aura ainsi $\Delta H = \Delta_r H \degree$. Or on a vu que $\Delta H = Q$, autrement dit l'enthalpie de réaction correspond à l'énergie thermique reçue par le système au cours d'une transformation isotherme. Ceci nous fournit une interprétation concrète de l'enthalpie standard de réaction : 
 \begin{proposition}
     L'enthalpie standard de réaction mesure, au signe près, l'énergie chimique (par unité d'avancement) pouvant être libérée sous forme thermique lors d'une réaction chimique.
 \end{proposition}
@@ -286,7 +291,7 @@ Nous allons appliquer le premier principe pour calculer la température d'une fl
 \end{equation}
 Nous considérons un système composé des réactifs gazeux à l'équilibre avant combustion, que nous supposons en quantité stœchiométrique et en l'absence d'autre gaz. 
 
-Comme la transformation ne dépend pas du chemin suivi, on peut imaginer la transformation comme une succession de deux états :
+Comme la variation des fonctions d'état ne dépend pas du chemin suivi, on peut imaginer la transformation comme une succession de deux états :
 \begin{itemize}
     \item Phase 1 : la réaction se produit à la température ambiante $T_0 \approx 300$\,K
     \item Phase 2 : les produits s'échauffent jusqu'à la température $T_f$ atteinte dans l'état final.
@@ -294,42 +299,54 @@ Comme la transformation ne dépend pas du chemin suivi, on peut imaginer la tran
 
 On peut alors écrire la variation d'enthalpie au cours de la réaction comme la somme de la variation d'enthalpie lors des deux étapes :
 \begin{equation}
-    \Delta \mathcal{H} = \Delta \mathcal{H}_1 + \Delta \mathcal{H}_2
+    \Delta H = \Delta H_1 + \Delta H_2
 \end{equation}
 
-Commençons par calculer la variation d'enthalpie lors de la première phase.
-L'enthalpie standard de la réaction est tabulée et vaut $\Delta_r H\degree = -2\,$MJ$\cdot$mol$^{-1}$. Comme les réactifs et produits forment un mélange de gaz, ils ne sont pas dans leur état standard. Cependant, nous avons vu en première année que pour un gaz parfait, l'enthalpie molaire ne dépend que de la température et pas de la pression partielle du gaz : $\mathcal{H} = c_p T$ (2e loi de Joule). Ainsi, en supposant que les réactifs et produits se comportent comme des gaz parfaits, l'enthalpie des réactifs gazeux réels est la même que leur enthalpie dans leur état standard. On en déduit que la variation d'enthalpie est la même que pour la réaction standard. Si une quantité de matière $n$ de propane est brûlée alors :
-\begin{equation}
-    \Delta \mathcal{H}_1 = n \Delta_r H\degree
-\end{equation}
+\begin{capex}
+Déterminer la température de flamme (température atteinte par le mélange réactionnel) en supposant la réaction adiabatique.\\
+\textit{Données :} : 
+\begin{itemize}
+\item Enthalpie de la réaction : $\Delta_r H\degree = -2\,$MJ$\cdot$mol$^{-1}$
+\item Caapcités thermiques molaires : $C_{p,\ce{H2O}} = 36$\,J$\cdot$K$\cdot$mol$^{-1}$ et $C_{p,\ce{CO2}} = 37$\,J$\cdot$K$\cdot$mol$^{-1}$ 
+\end{itemize}
+\end{capex}
 
-Dans la seconde phase, les produits sont échauffés. Ils correspondent à $3n$ moles de \ce{CO2} et $4n$ moles de \ce{H2O}. D'après la seconde loi de Joule, leur enthalpie ne dépend que de la température et comme il s'agit d'une grandeur extensive, on peut additionner l'enthalpie des deux gaz :
-\begin{equation}
-    H_2(T) = 3 n C_{p,\ce{CO2}} T + 4 n C_{p,\ce{H2O}} T
-\end{equation}
-d'où la variation d'enthalpie :
-\begin{equation}
-    \Delta \mathcal{H}_2 = (3 C_{p,\ce{CO2}} + 4 C_{p,\ce{H2O}}) n (T_f-T_0)
-\end{equation}
+%Commençons par calculer la variation d'enthalpie lors de la première phase.
+%L'enthalpie standard de la réaction est tabulée et vaut $\Delta_r H\degree = -2\,$MJ$\cdot$mol$^{-1}$. Comme les réactifs et produits forment un mélange de gaz, ils ne sont pas dans leur état standard. Cependant, nous avons vu en première année que pour un gaz parfait, l'enthalpie molaire ne dépend que de la température et pas de la pression partielle du gaz : $\mathcal{H} = c_p T$ (2e loi de Joule). Ainsi, en supposant que les réactifs et produits se comportent comme des gaz parfaits, l'enthalpie des réactifs gazeux réels est la même que leur enthalpie dans leur état standard. On en déduit que la variation d'enthalpie est la même que pour la réaction standard. Si une quantité de matière $n$ de propane est brûlée alors :
+%\begin{equation}
+%    \Delta \mathcal{H}_1 = n \Delta_r H\degree
+%\end{equation}
+%
+%Dans la seconde phase, les produits sont échauffés. Ils correspondent à $3n$ moles de \ce{CO2} et $4n$ moles de \ce{H2O}. D'après la seconde loi de Joule, leur enthalpie ne dépend que de la température et comme il s'agit d'une grandeur extensive, on peut additionner l'enthalpie des deux gaz :
+%\begin{equation}
+%    H_2(T) = 3 n C_{p,\ce{CO2}} T + 4 n C_{p,\ce{H2O}} T
+%\end{equation}
+%d'où la variation d'enthalpie :
+%\begin{equation}
+%    \Delta \mathcal{H}_2 = (3 C_{p,\ce{CO2}} + 4 C_{p,\ce{H2O}}) n (T_f-T_0)
+%\end{equation}
+%
+%Enfin, nous avons vu que si la réaction se produit en l'absence de changement d'énergie mécanique macroscopique et en l'absence de travaux de forces autres que les forces de pression :
+%\begin{equation}
+%    \Delta \mathcal{H} = Q
+%\end{equation}
+%La réaction étant supposée adiabatique, nous avons $Q = 0$. En remplaçant $\Delta \mathcal{H}$ par son expression nous obtenons :
+%\begin{equation}
+%    n \Delta_r H\degree + \Delta \mathcal{H}_2 = (3 C_{p,\ce{CO2}} + 4 C_{p,\ce{H2O}}) n (T_f-T_0) = 0
+%\end{equation}
+%
+%Après avoir simplifié $n$ nous obtenons une estimation de la température finale :
+%\begin{equation}
+%    T_f = T_0 - \frac{\Delta_r H\degree}{3 C_{p,\ce{CO2}} + 4 C_{p,\ce{H2O}}}
+%\end{equation}
+%En utilisant les valeurs $C_{p,\ce{H2O}} = 36$\,J$\cdot$K$\cdot$mol$^{-1}$ et $C_{p,\ce{CO2}} = 37$\,J$\cdot$K$\cdot$mol$^{-1}$ on obtient une température de flamme :
+%\begin{equation}
+%    T_f \approx 8000\,\mathrm{K}
+%\end{equation}
 
-Enfin, nous avons vu que si la réaction se produit en l'absence de changement d'énergie mécanique macroscopique et en l'absence de travaux de forces autres que les forces de pression :
-\begin{equation}
-    \Delta \mathcal{H} = Q
-\end{equation}
-La réaction étant supposée adiabatique, nous avons $Q = 0$. En remplaçant $\Delta \mathcal{H}$ par son expression nous obtenons :
-\begin{equation}
-    n \Delta_r H\degree + \Delta \mathcal{H}_2 = (3 C_{p,\ce{CO2}} + 4 C_{p,\ce{H2O}}) n (T_f-T_0) = 0
-\end{equation}
-
-Après avoir simplifié $n$ nous obtenons une estimation de la température finale :
-\begin{equation}
-    T_f = T_0 - \frac{\Delta_r H\degree}{3 C_{p,\ce{CO2}} + 4 C_{p,\ce{H2O}}}
-\end{equation}
-En utilisant les valeurs $C_{p,\ce{H2O}} = 36$\,J$\cdot$K$\cdot$mol$^{-1}$ et $C_{p,\ce{CO2}} = 37$\,J$\cdot$K$\cdot$mol$^{-1}$ on obtient une température de flamme :
-\begin{equation}
-    T_f \approx 8000\,\mathrm{K}
-\end{equation}
 Un corps porté à une telle température émet un rayonnement dont le spectre dépend de la température et est donnée par la loi de Wien (vue au lycée). La couleur résultant de ce spectre est indiquée sur la figure ci-dessus. On peut y constater qu'une température de 8000\,K correspond à une couleur bleutée, qui est effectivement la couleur de la flamme sortant d'une cuisinière.
+
+De manière générale, la couleur de la flamme renseigne directement sur sa température, et permettra donc de discriminer entre différentes réactions chimiques.
 
 \begin{figure}
     \centering
@@ -346,14 +363,19 @@ C'est le cas par exemple lors qu'un changement d'état, si l'on fait bouillir de
 \begin{equation}
     \ce{H2O(l) -> H2O(g)}
 \end{equation}
-La réaction est monobare et isotherme (elle se fait à la température de 100$^\circ$C), on a donc $\Delta H = Q$. Autrement dit, si on vaporise une quantité de matière $n$ d'eau, l'énergie thermique à fournir pour vaporiser l'eau est :
-\begin{equation}
-    Q = \Delta \mathcal{H} = \Delta_{vap} H^\circ \times n
-\end{equation}
-On se ramène en général à l'enthalpie massique de vaporisation, $L_{vap} = \Delta_{vap} H^\circ/M_{H_2O}$ de sorte que l'on puisse écrire l'énergie à fournir pour vaporiser une masse $m= M_{H_2O} n$ d'eau :
-\begin{equation}
-    Q = m L_{vap}
-\end{equation}
+
+\begin{capex}
+Relier le transfert thermique $Q$ consommé lors du changement d'état à l'enthalpie molaire de vaporisation de l'eau $L_{\rm vap}$.
+\end{capex}
+
+%La réaction est monobare et isotherme (elle se fait à la température de 100$^\circ$C), on a donc $\Delta H = Q$. Autrement dit, si on vaporise une quantité de matière $n$ d'eau, l'énergie thermique à fournir pour vaporiser l'eau est :
+%\begin{equation}
+%    Q = \Delta \mathcal{H} = \Delta_{vap} H^\circ \times n
+%\end{equation}
+%On se ramène en général à l'enthalpie massique de vaporisation, $L_{vap} = \Delta_{vap} H^\circ/M_{H_2O}$ de sorte que l'on puisse écrire l'énergie à fournir pour vaporiser une masse $m= M_{H_2O} n$ d'eau :
+%\begin{equation}
+%    Q = m L_{vap}
+%\end{equation}
 
 
 \section{Loi de Hess}
@@ -445,6 +467,29 @@ On retrouve bien la loi de Hess, puisque le'enthalpie standard de formation du d
     Dans un concours, il est inutile de refaire cette démonstration : vous pouvez utiliser la loi de Hess directement. Cette démonstration est là pour que vous puissiez comprendre pourquoi cette loi est valable, et pourquoi il est utile de définir toutes ces variables standard. En général, on ne vous donnera jamais une enthalpie standard de réaction car celles-ci ne sont pas tabulées. Il faudra la calculer à partir de la loi de Hess.
 \end{remark}
 
+\begin{capex}
+La réaction de photosynthèse permet de produire le glucose $\ce{C6H12O6}$ à partir de dioxyde de carbone et d'eau. 
+\begin{itemize}
+\item Calculer l'enthalpie standard de la réaction.
+\item Expliquer pourquoi des photons sont nécessaires à la réaction. 
+\item La chlorophylle absorbe des photons dans le vert. Combien de photons sont nécessaires pour produire une mole de glucose ?
+\end{itemize}
+\textit{Données :} $\Delta_f H^\circ(\ce{C6H12O6}) = -1273$\,kJ$\cdot$mol$^{-1}$ ; $\Delta_f H^\circ(\ce{H2O(l)}) = -286$\,kJ$\cdot$mol$^{-1}$ ; $\Delta_f H^\circ(\ce{CO2(g)}) = -394$\,kJ$\cdot$mol$^{-1}$  
+\end{capex}
 
+\begin{encart}[Fluorescence chlorophyllienne]
+En réalité, le nombre de photons absorbés lors de la réaction de photosynthèse est plus élevé que le nombre théorique : jusqu'à trois fois plus de photons sont utilisés par une plante que le nombre calculé précédemment. L'énergie excédentaire est en partie convertie sous forme d'énergie thermique lors du processus, ce qui réchauffe la plante, et peut aussi provoquer l'évaporation de l'eau et le dessèchement.
+
+Pour éviter ces conséquences néfastes, la plante restitue une partie de cet excès d'énergie sous forme lumineuse, par fluorescence. Les photons émis par la plante sont moins énergétiques et ont donc une longueur d'onde plus élevée, dans le rouge et dans l'infrarouge. La mission satellitaire FLEX (Fluorescence Explorer), lancée le 15 septembre 2026, a pour objectif de mesurer cette fluorescence pour en déduire l'activité photosynthétique des plantes. Ceci permet notamment d'évaluer la santé des écosystèmes, d'anticiper les situations de stress hydrique précédant les sécheresses, et d'étudier l'évolution de l'activité des plantes dans un climat qui se réchauffe et dans lequel la concentration en dioxyde de carbone augmente.
+
+Pour cela, le satellite est équipé de l'instrumetn FLORIS, un spectromètre à réseau qui permet de séparer les différentes longueurs d'onde du spectre visible, et de sélectionner celles qui correspondent à la fluorescence des plantes.
+\begin{center}
+\includegraphics[width=0.45\linewidth]{photosynthese.pdf}
+\includegraphics[width=0.45\linewidth]{spectre.jpeg} \\
+Ci-dessus : processus de photosynthèse et spectre de la lumière émise par fluorescence.
+\end{center}
+
+
+\end{encart}
 
 \end{document}

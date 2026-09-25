@@ -143,35 +143,30 @@ Pour cela, nous considérons une réaction chimique monotherme et monobare, c'es
 \begin{theorem}
     Soit $\Sigma$ un système physico-chimique fermé. La variation d'entropie du système au cours d'une transformation thermodynamique est donnée par :
     \begin{equation}
-        \Delta S = S_{creee} + S_{echangee}
+        \Delta S = S_{créée} + S_{échangée}
     \end{equation}
     où l'entropie créée au cours de la transformation est toujours positive, et l'entropie échangée est :
     \begin{equation}
-        S_{echangee} = \int \frac{\delta Q}{T_{ext}}
+        S_{échangée} = \int \frac{\delta Q}{T_{ext}}
     \end{equation}
     avec $Q$ l'énergie thermique reçue par $\Sigma$ au cours de la transformation, et $T_{ext}$ la température extérieure.
 \end{theorem}
-
-\begin{capex}
-Appliquer le second principe de la thermodynamique à une transformation chimique monotherme et monobare et déterminer l'entropie créée lors de la réaction.
-\end{capex}
-
-%Ici, la transformation étant monotherme, l'intégrale se simplifie et on peut écrire $S_{echangee} = Q/T_{ext}$. On en déduit qu'au cours de la transformation :
-%\begin{equation}
-%    \Delta S - \frac{Q}{T_{ext}} > 0
-%\end{equation}
-%Or, puisque la transformation est monobare, nous pouvons utiliser la relation suivante que nous avons démontrée dans le chapitre précédent :
-%\begin{equation}
-%    Q = \Delta H
-%\end{equation}
-%où $H$ est l'enthalpie du système. On obtient ainsi :
-%\begin{equation}
-%    \Delta H = T_{ext} \Delta S < 0
-%\end{equation}
-%Comme la transformation se fait entre deux états d'équilibre, nous avons $T_{initiale} = T_{finale} = T_{ext}$ et nous pouvons conclure que :
-%\begin{equation}
-%    \Delta(H - TS) < 0
-%\end{equation}
+Ici, la transformation étant monotherme, l'intégrale se simplifie et on peut écrire $S_{échangée} = Q/T_{ext}$. On en déduit qu'au cours de la transformation :
+\begin{equation}
+    \Delta S - \frac{Q}{T_{ext}} > 0
+\end{equation}
+Or, puisque la transformation est monobare, nous pouvons utiliser la relation suivante que nous avons démontrée dans le chapitre précédent :
+\begin{equation}
+    Q = \Delta H
+\end{equation}
+où $H$ est l'enthalpie du système. On obtient ainsi :
+\begin{equation}
+    \Delta H = T_{ext} \Delta S < 0
+\end{equation}
+Comme la transformation se fait entre deux états d'équilibre, nous avons $T_{initiale} = T_{finale} = T_{ext}$ et nous pouvons conclure que :
+\begin{equation}
+    \Delta(H - TS) < 0
+\end{equation}
 La quantité $H - TS$ ne peut que décroître au cours de la transformation : on dit que c'est un potentiel thermodynamique. C'est une conséquence directe du second principe. Cette équation nous informe sur le sens d'évolution d'une réaction chimique : la réaction va avoir lieu dans le sens qui a tendance à diminuer cette quantité. On définit donc l'enthalpie libre d'un système :
 \begin{definition}
     L'enthalpie libre $G$ d'un système thermodynamique $\Sigma$ est définie en fonction de son énergie interne $U$, sa pression $p$, son volume $V$, sa température $T$ et son entropie $S$:
@@ -188,15 +183,7 @@ La quantité $H - TS$ ne peut que décroître au cours de la transformation : on
     Si un système fermé subit une transformation thermodynamique monotherme et monobare, alors son enthalpie libre ne peut que diminuer.
 \end{proposition}
 
-Nous avons donc démontré que le système chimique va évoluer dans le sens qui minimise son enthalpie libre. En particulier, l'avancement de la réaction $\xi$ va évoluer de sorte à ce qu'il minimise l'enthalpie libre, c'est-à-dire que l'avancement à l'équilibre correspondra au minimum de la courbe $G(\xi)$ comme représenté sur la figure \ref{fig:enthalpie_libre_reaction}. 
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.7\linewidth]{Pictures/deplacement_equilibre.jpg}
-    \caption{Enthalpie libre du système $G$ en fonction de l'avancement. L'enthalpie libre de réaction correspond à la pente de la courbe. L'état d'équilibre est atteint lorsque l'enthalpie est minimale, et l'enthalpie libre de réaction est nulle. Source : Wikimedia Commons.}
-    \label{fig:enthalpie_libre_reaction}
-\end{figure}
-
-Nous pouvons alors définir l'enthalpie libre de réaction, de la même manière que nous avons défini l'enthalpie de réaction :
+Nous avons donc démontrer que le système chimique va évoluer dans le sens qui minimise son enthalpie libre. En particulier, l'avancement de la réaction $\xi$ va évoluer de sorte à ce qu'il minimise l'enthalpie libre. Nous pouvons alors définir l'enthalpie libre de réaction, de la même manière que nous avons défini l'enthalpie de réaction :
 \begin{definition}
     L'enthalpie libre d'une réaction chimique, notée $\Delta_r G$, correspond à la variation d'enthalpie d'un système chimique par unité d'avancement au cours d'une transformation monotherme et monobare. Autrement dit :
     \begin{equation}
@@ -204,35 +191,28 @@ Nous pouvons alors définir l'enthalpie libre de réaction, de la même manière
     \end{equation}
 \end{definition}
 
-Comme on peut le voir sur la figure \ref{fig:enthalpie_libre_reaction}, si $\Delta_r G <0$, alors la réaction évolue dans le sens direct. Au contraire, si $\Delta_r G > 0$, la réaction évolue dans le sens inverse. L'équilibre est atteint lorsque l'enthalpie est minimale, c'est-à-dire lorsque $\Delta_r G = 0$.
+Si $\Delta_r G <0$, alors la réaction évolue dans le sens direct. Au contraire, si $\Delta_r G > 0$, la réaction évolue dans le sens inverse. L'équilibre est atteint lorsque l'enthalpie est minimale, c'est-à-dire lorsque $\Delta_r G = 0$, comme on peut le voir sur la figure \ref{fig:enthalpie_libre_reaction}.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.7\linewidth]{Pictures/deplacement_equilibre.jpg}
+    \caption{Enthalpie libre du système $G$ en fonction de l'avancement. L'enthalpie libre de réaction correspond à la pente de la courbe. L'état d'équilibre est atteint lorsque l'enthalpie est minimale, et l'enthalpie libre de réaction est nulle. Source : Wikimedia Commons.}
+    \label{fig:enthalpie_libre_reaction}
+\end{figure}
 
 A priori, l'enthalpie libre de réaction dépend de l'avancement de la réaction et plus généralement des concentrations ou pressions partielles des constituants chimiques du mélange. Il n'est donc pas possible de la tabuler directement. Pour cela, nous définissons l'enthalpie libre standard de réaction :
-\begin{definition}[Enthalpie libre standard de réaction]
+\begin{definition}
     L'enthalpie libre standard d'une réaction chimique, notée $\Delta_r G\degree(T)$, est l'enthalpie libre de la réaction lorsque les constituants sont tous pris dans leur état standard.
 \end{definition}
 \begin{remark}
     Puisque les constituants sont pris dans leur état standard, leur concentration/pression partielle est fixe et l'enthalpie libre standard de réaction ne dépend donc que de la température.
 \end{remark}
 
-En général, l'enthalpie libre standard de réaction nous informe si une réaction chimique va se faire spontanément ou non dans les conditions usuelles de pression et de température. Si $\Delta_rG\degree<0$ la réaction aura tendance à se faire spontanément, sinon il sera nécessaire de jouer sur les paramètres extérieurs pour favoriser la réaction : c'est ce que l'on appelle l'optimisation chimique. Pour pouvoir prévoir le caractère spontané ou non de la réaction, il est donc nécessaire de mieux caractériser l'enthalpie libre standard de réaction, afin de comprendre ce qui fixe l'équilibre chimique et comment l'optimiser.
-
-\begin{capex}
-Exprimer l'enthalpie libre standard de réaction en fonction de l'enthalpie standard de réaction, de la température, et de l'entropie standard de réaction, que l'on définira.
-\end{capex}
-
-Nous avons ainsi défini l'entropie standard de réaction :
-\begin{definition}[Entropie standard de réaction]
-L'entropie standard de réaction, notée $\Delta_r S^\circ$, correspond à la variation d'entropie d'un système chimique par unité d'avancement au cours d'une transformation monotherme et monobare, lorsque les composés sont pris dans leur état standard. Autrement dit :
-\begin{equation}
-\Delta_r S^\circ = \left. \frac{\partial S}{\partial \xi} \right|_{T,P^\circ}
-\end{equation}
-\end{definition}
+En général, l'enthalpie libre standard de réaction nous informe si une réaction chimique va se faire spontanément ou non dans les conditions usuelles de pression et de température. Si $\Delta_rG\degree<0$ la réaction aura tendance à se faire spontanément, sinon il sera nécessaire de jouer sur les paramètres extérieurs pour favoriser la réaction: c'est ce que l'on appelle l'optimisation chimique. Pour pouvoir prévoir le caractère spontané ou non de la réaction, il est donc nécessaire de mieux caractériser l'enthalpie libre standard de réaction, afin de comprendre ce qui fixe l'équilibre chimique et comment l'optimiser.
 
 \section{Potentiel chimique}
 
-\subsection{Définition}
-
-Pour caractériser plus en détail l'enthalpie libre de réaction, nous pouvons noter $n_i$ la quantité de matière de chaque constituant $A_i$ dans le système physico-chimique, et nous appelons $\nu_i$ le coefficient stoechiométrique algébrique associé dans la réaction, qui peut s'écrire :
+Pour cela, nous pouvons noter $n_i$ la quantité de matière de chaque constituant $A_i$ dans le système physico-chimique, et nous appelons $\nu_i$ le coefficient stoechiométrique algébrique associé dans la réaction, qui peut s'écrire :
 \begin{equation}
     \sum_i \nu_i A_i = 0
 \end{equation}
@@ -242,8 +222,7 @@ L'enthalpie libre du système dépend a priori de la température, de la pressio
     G = G(T,p, n_1, ..., n_N)
 \end{equation}
 Nous définissons le potentiel chimique $\mu_i$ d'un constituant de la façon suivante :
-\begin{definition}[Potentiel chimique]
-Le potentiel chimique d'un constituant $i$ est défini par :
+\begin{definition}
     \begin{equation}
     \mu_i = \left. \frac{\partial G}{\partial n_i} \right|_{T,p}
     \end{equation}
@@ -251,11 +230,6 @@ Le potentiel chimique d'un constituant $i$ est défini par :
 \end{definition}
 
 Ce potentiel chimique est utile, car l'enthalpie libre de réaction s'écrit comme une combinaison linéaire des potentiels chimiques :
-\begin{capex}
-Exprimer l'enthalpie libre d'un système chimique en fonction des potentiels chimiques.
-\end{capex}
-
-On peut alors en déduire le théorème suivant :
 \begin{theorem}
     Soit une réaction chimique faisant intervenir les constituants $A_i$ qui s'écrit de façon algébrique :
     \begin{equation}
@@ -268,20 +242,19 @@ Alors l'enthalpie libre $\Delta_r G$ de la réaction est fonction des potentiels
 \end{theorem}
 
 \begin{demonstration}
-%    Pour le démontrer, nous utilisons le fait que l'enthalpie libre est une grandeur extensive. Ainsi, si on multiplie toutes les quantités de matière par une constante $\lambda$, on doit également multiplier $G$ par $\lambda$ :
-%    \begin{equation}
-%        G(T,p,\lambda n_1,...,\lambda n_N) = \lambda G(T,p,n_1,...,n_N)
-%    \end{equation}
-%    On dérive par rapport à $\lambda$ :
-%    \begin{equation}
-%        \sum_i \left. \frac{\partial G}{\partial n_i} \right|_{T,p} n_i = G
-%    \end{equation}
-%    ou encore en utilisant la définition du potentiel chimique :
-Nous avons vu dans la \textbf{CE2} que :
+    Pour le démontrer, nous utilisons le fait que l'enthalpie libre est une grandeur extensive. Ainsi, si on multiplie toutes les quantités de matière par une constante $\lambda$, on doit également multiplier $G$ par $\lambda$ :
+    \begin{equation}
+        G(T,p,\lambda n_1,...,\lambda n_N) = \lambda G(T,p,n_1,...,n_N)
+    \end{equation}
+    On dérive par rapport à $\lambda$ :
+    \begin{equation}
+        \sum_i \left. \frac{\partial G}{\partial n_i} \right|_{T,p} n_i = G
+    \end{equation}
+    ou encore en utilisant la définition du potentiel chimique :
     \begin{equation}
         G = \sum_i \mu_i n_i
     \end{equation}
-    Par ailleurs, au cours de la réaction, les quantités de matière varient en fonction de l'avancement :
+    Enfin, au cours de la réaction, les quantités de matière varient en fonction de l'avancement :
     \begin{equation}
         \dd n_i = \nu_i \dd \xi
     \end{equation}
@@ -330,62 +303,51 @@ Nous rappelons ici les expressions des activités des différents constituants e
     \end{equation}
 \end{proposition}
 
-%Nous obtenons alors l'expression suivante de l'enthalpie libre de réaction :
-%\begin{equation}
-%    \Delta_r G = \sum_i \nu_i\left(\mu_i\degree(T) + RT \ln(a_i)\right)
-%\end{equation}
-%Nous remarquons que lorsque les constituants sont tous dans leur état standard, leur activité est égale à 1, si bien que le second terme dans la somme est nulle. Nous avons donc la relation suivante :
-%\begin{proposition}
-%    L'enthalpie libre standard de réaction s'exprime en fonction des potentiels chimiques standard :
-%    \begin{equation}
-%        \Delta_r G\degree = \sum_i \nu_i \mu_i\degree
-%    \end{equation}
-%\end{proposition}
+Nous obtenons alors l'expression suivante de l'enthalpie libre de réaction :
+\begin{equation}
+    \Delta_r G = \sum_i \nu_i\left(\mu_i\degree(T) + RT \ln(a_i)\right)
+\end{equation}
+Nous remarquons que lorsque les constituants sont tous dans leur état standard, leur activité est égale à 1, si bien que le second terme dans la somme est nulle. Nous avons donc la relation suivante :
+\begin{proposition}
+    L'enthalpie libre standard de réaction s'exprime en fonction des potentiels chimiques standard :
+    \begin{equation}
+        \Delta_r G\degree = \sum_i \nu_i \mu_i\degree
+    \end{equation}
+\end{proposition}
 
-Rappelons-nous maintenant de la définition du quotient de réaction, vue en première année\,:
+Rappelons-nous maintenant de la définition du quotient de réaction, vue en première année :
 \begin{definition}
     Le quotient de réaction $Q$ d'une réaction de la forme $\sum_i \nu_i A_i =0$ est défini en fonction des activités $a_i$ des différents constituants :
     \begin{equation}
         Q = \prod_i a_i^{\nu_i}
     \end{equation}
 \end{definition}
-%Nous pouvons alors remarquer que, en raison des propriétés du logarithme :
-%\begin{equation}
-%    \ln Q = \sum_i \nu_i \ln a_i
-%\end{equation}
-%
-%Ainsi, l'expression de l'enthalpie libre standard de réaction est directement liée au quotient réactionnel :
-%\begin{proposition}
-%    L'enthalpie libre d'une réaction chimique s'exprime en fonction du quotient réactionnel et de l'enthalpie libre standard :
-%    \begin{equation}
-%        \Delta_r G = \Delta_r G\degree + RT \ln(Q)
-%    \end{equation}
-%\end{proposition}
-%
-%A l'équilibre chimique, l'enthalpie libre de réaction est nulle. Ainsi, nous retrouvons la loi d'actions de masse :
-
-\begin{capex}
-Relier l'enthalpie libre de réaction et le quotient réactionnel, et en déduire le sens d'évolution d'un système.
-\end{capex}
-
-Nous avons ainsi démontré la loi d'actions de masse :
-
-\begin{theorem}[Loi d'actions de masse]
-    A l'équilibre chimique, le quotient réactionnel est fixé par la relation suivante :
-    \begin{equation}
-        Q = K^\circ(T)
-    \end{equation}
-Où nous avons défini la constante de réaction, qui ne dépend que de la température :
+Nous pouvons alors remarquer que, en raison des propriétés du logarithme :
 \begin{equation}
-K^\circ(T) =  \exp \left( - \frac{\Delta_rG\degree}{RT} \right)
+    \ln Q = \sum_i \nu_i \ln a_i
 \end{equation}
+
+Ainsi, l'expression de l'enthalpie libre standard de réaction est directement liée au quotient réactionnel :
+\begin{proposition}
+    L'enthalpie libre d'une réaction chimique s'exprime en fonction du quotient réactionnel et de l'enthalpie libre standard :
+    \begin{equation}
+        \Delta_r G = \Delta_r G\degree + RT \ln(Q)
+    \end{equation}
+\end{proposition}
+
+A l'équilibre chimique, l'enthalpie libre de réaction est nulle. Ainsi, nous retrouvons la loi d'actions de masse :
+\begin{theorem}[Loi d'actions de masse]
+    A l'équilibre chimique, le quotient réactionnel est relié à l'enthalpie libre de réaction par la relation suivante :
+    \begin{equation}
+        Q = \exp \left( - \frac{\Delta_rG\degree}{RT} \right) = K\degree(T)
+    \end{equation}
+    où l'on a défini la constante de réaction $K\degree(T)$ qui ne dépend que de la température.
 \end{theorem}
 \begin{remark}
     La loi d'actions de masse caractérise l'équilibre d'un système chimique. Elle nous permet de savoir comment un système va évoluer lorsque l'on fait varier les activités des constituants chimiques du mélange ou les paramètres extérieurs (pression, température). Elle est essentielle pour pouvoir prédire l'efficacité d'une réaction chimique et son avancement final. Dans ce chapitre, nous avons pu démontrer que la loi d'actions de masse est une conséquence du second principe de la thermodynamique, et qu'elle traduit la minimisation d'un potentiel thermodynamique : l'enthalpie libre.
 \end{remark}
 
-De manière plus générale, nous avons démontré qu'il existe une relation directe entre enthalpie libre de réaction et quotient de réaction :
-
+De manière plus générale, il existe une relation directe entre enthalpie libre de réaction et quotient de réaction :
 \begin{proposition}
     L'enthalpie libre de réaction dépend du quotient de réaction et de la constante d'équilibre de la réaction :
     \begin{equation}
@@ -394,38 +356,26 @@ De manière plus générale, nous avons démontré qu'il existe une relation dir
     Ainsi, si $Q < K\degree(T)$, $\Delta_rG<0$ et la réaction évolue dans le sens direct. Si $Q > K\degree(T)$, $\Delta_rG>0$ et la réaction évolue dans le sens indirect. 
 \end{proposition}
 
-Lorsque $K^\circ(T) \gg 1$ on peut souvent supposer que la réaction est quantitative : l'intégralité du réactif limitant est consommée. Attention cependant aux limites de cette approximation (discutées notamment dans le TD).
-
 \section{Méthodes d'optimisation}
 
-Lorsqu'une réaction chimique n'est pas totale, on a un équilibre chimique, caractérisé par l'équation\,:
+Nous allons maintenant nous intéresser aux différentes méthode d'optimisation. Elles se basent sur différentes propriétés de l'enthalpie libre de réaction, mais on constate empiriquement qu'elles obéissent toujours au principe de La Châtelier :
+\begin{theorem}
+    Lorsque l'on perturbe les conditions d'un système réactif à l'équilibre, l'équilibre va spontanément être déplacé dans le sens qui tend à s'opposer à la perturbation imposée.
+\end{theorem}
+\begin{remark}
+    Cette loi est une loi empirique. Elle n'est pas au programme, veillez donc à ne pas l'utiliser en concours pour justifier votre raisonnement. Mais vous pouvez vous en servir à l'oral, ou bien pour vous-même pour vérifier la cohérence de vos résultats.
+\end{remark}
+
+La relation à l'équilibre s'écrit :
 \begin{equation}
     \prod_i a_i^{\nu_i} = K\degree(T)
 \end{equation}
-Nous pouvons comprendre la notion d'équilibre chimique à travers l'expérience suivante :
+Les activités peuvent être écrites en fonction des conditions environnementales et des quantités initiales de réactifs. En agissant sur ces grandeurs, on va pouvoir modifier la solution de l'équation et maximiser l'avancement, donc le rendement de la réaction.
+
+Nous allons nous intéresser en particulier à une expérience illustrative que nous pouvons faire en classe :
 \begin{equation}
     \ce{\color{blue}{[Cu(H2O)6]^{2+}(aq)} + 4 Cl-(aq) = \color{green}{[CuCl4]^{2-}(aq)} + 6H2O(l)}
 \end{equation}
-
-\begin{capex}
-On a une solution avec des concentrations respectives $c_1$ et $c_2$ en sulfate de cuivre et en chlorure de sodium. Déterminer l'équation qui contrôle la composition du systèle chimique dans l'état final.
-\end{capex}
-
-Nous allons maintenant nous intéresser aux différents méthodes d'optimisation : comment maximiser l'avancement de la réaction chimique ? Elles se basent sur différentes propriétés de l'enthalpie libre de réaction, mais on constate empiriquement qu'elles obéissent toujours au principe de modération de Le Châtelier :
-\begin{theorem}[Principe de Le Châtelier]
-Lorsque l'on perturbe les conditions d'un système réactif à l'équilibre, l'équilibre va spontanément être déplacé dans le sens qui tend à s'opposer à la perturbation imposée.
-\end{theorem}
-\begin{remark}
-Cette loi est une loi empirique. Elle n'est pas explicitement au programme, mais elle est très utile pour vérifier la cohérence de vos résultats.
-\end{remark}
-
-Pour optimiser l'équilibre chimique, il faut agir sur les différentes variables intervenant dans l'équation d'équilibre :
-\begin{equation}
-    \prod_i a_i^{\nu_i} = K\degree(T)
-\end{equation}
-
-Les activités peuvent être écrites en fonction des conditions environnementales et des quantités initiales de réactifs. En agissant sur ces grandeurs, on va pouvoir modifier la solution de l'équation et maximiser l'avancement, donc le rendement de la réaction.
-
 Les procédés d'optimisation, bien sûr, s'appliquent en général à des réactions faites dans le milieu de l'industrie, pour lesquelles les problématiques de rendement sont très importantes. On peut citer notamment la réaction de production de l'ammoniaque, un fort engrais, ou encore les questions de stockage de l'hydrogène.
 
 \begin{figure}[htbp]
@@ -442,38 +392,34 @@ Les procédés d'optimisation, bien sûr, s'appliquent en général à des réac
     Attention ! Si l'on augmente la quantité de \textbf{tous} les réactifs, on va évidemment diminuer $Q$ et faire évoluer la réaction dans le sens direct, mais on n'améliorera pas forcément le rendement. En effet, le rendement est calculé en fonction du réactif limitant. Si on augmente l'activité du réactif limitant, on augmente l'avancement de la réaction mais pas forcément le rendement.
  \end{remark}
 
-\begin{capex}
-Toujours avec l'exemple de la réaction entre les ions cuivre(II) et les ions chlorure, relier le rendement de la réaction à la stoechiométrie des réactifs. En déduire que l'on peut améliorer le rendrement en introduisant les ions chlorure (réactif non limitant) en large excès.
-\end{capex}
+ Pour s'en convaincre, on dresse le tableau d'avancement suivant. On choisit un tableau en concentrations :
 
-% Pour s'en convaincre, on dresse le tableau d'avancement suivant. On choisit un tableau en concentrations :
-%
-% 
-% \begin{tblr}{%
-%  vlines, hlines,
-%  colspec = {Q[c] Q[c] X[c] X[c] X[c] X[c]},
-%  vline{4} = {1}{ text = \clap{\ce{+}} },
-%  vline{5} = {1}{ text = \clap{\ce{->}} },
-%  vline{6} = {1}{ text = \clap{\ce{+}} },
-%}
-%  État          & Avancement & \ce{[Cu(H2O)6]^{2+}}   & \ce{4 Cl-}   & \ce{6 H2O} & \ce{[CuCl4]^{2-}}  \\
-%  Initial       & $x=0$      & $c_1$      & $c_2$       & excès        & 0 \\
-%  Intermédiaire & $x$        & $c_1-x$    & $c_2-4x$    & excès      & $x$ \\
-%  Final         & $\xi_f$      & $c_1-x_f$  & $c_2-4x_f$  & excès   & $x_f$ \\
-%\end{tblr}
-%
-%
-%Le quotient de réaction s'écrit alors, à l'équilibre :
-%\begin{equation}
-%    Q = \frac{x_f c\degree^4}{(c_1-x_f)(c_2-4x_f)^4} = K\degree(T)
-%\end{equation}
-%Supposons que le réactif limitant est le cuivre hydraté. Alors le rendement de la réaction est donné par $\eta = x_f/c_1$ et l'on peut écrire :
-%\begin{equation}
-%    Q = \frac{\eta}{(1-\eta)\left(\frac{c_2}{c_1}-4\eta\right)^4} \cdot \left( \frac{c\degree}{c_1}\right)^4 = K\degree(T)
-%\end{equation}
-%Si on augmente $c_2/c_1$, alors on diminue le quotient de réaction et on fait augmenter le rendement de la réaction. On constate donc que pour optimiser le rendement on peut introduire l'un des réactifs en large excès.
+ 
+ \begin{tblr}{%
+  vlines, hlines,
+  colspec = {Q[c] Q[c] X[c] X[c] X[c] X[c]},
+  vline{4} = {1}{ text = \clap{\ce{+}} },
+  vline{5} = {1}{ text = \clap{\ce{->}} },
+  vline{6} = {1}{ text = \clap{\ce{+}} },
+}
+  État          & Avancement & \ce{[Cu(H2O)6]^{2+}}   & \ce{4 Cl-}   & \ce{6 H2O} & \ce{[CuCl4]^{2-}}  \\
+  Initial       & $x=0$      & $c_1$      & $c_2$       & excès        & 0 \\
+  Intermédiaire & $x$        & $c_1-x$    & $c_2-4x$    & excès      & $x$ \\
+  Final         & $\xi_f$      & $c_1-x_f$  & $c_2-4x_f$  & excès   & $x_f$ \\
+\end{tblr}
 
-Cette méthode est compatible avec le principe de modération de Le Châtelier : si on introduit un réactif en excès, la réaction va évoluer dans le sens de la consommation de ce réactif.
+
+Le quotient de réaction s'écrit alors, à l'équilibre :
+\begin{equation}
+    Q = \frac{x_f c\degree^4}{(c_1-x_f)(c_2-4x_f)^4} = K\degree(T)
+\end{equation}
+Supposons que le réactif limitant est le cuivre hydraté. Alors le rendement de la réaction est donné par $\eta = x_f/c_1$ et l'on peut écrire :
+\begin{equation}
+    Q = \frac{\eta}{(1-\eta)\left(\frac{c_2}{c_1}-4\eta\right)^4} \cdot \left( \frac{c\degree}{c_1}\right)^4 = K\degree(T)
+\end{equation}
+Si on augmente $c_2/c_1$, alors on diminue le quotient de réaction et on fait augmenter le rendement de la réaction. On constate donc que pour optimiser le rendement on peut introduire l'un des réactifs en large excès.
+
+Cette méthode est compatible avec le principe de modération de La Châtelier : si on introduit un réactif en excès, la réaction va évoluer dans le sens de la consommation de ce réactif.
 
 Cette méthode fonctionne bien si l'un des réactifs est beaucoup plus cher que l'autre et s'il n'est pas polluant.
 
@@ -483,25 +429,20 @@ Dans le cadre d'une réaction chimique impliquant des composés gazeux, on peut 
 \begin{equation}
     \ce{2 Pd(s) + H2(g) = 2 PdH(s)}
 \end{equation}
-
-\begin{capex}
-Montrer qu'une augmentation de la pression permet d'améliorer le rendement de la réaction.
-\end{capex}
-
-%Les composés solides ayant une activité de 1, le quotient réactionnel s'écrit :
-%\begin{equation}
-%    Q = \frac{p\degree}{p_{\ce{H2}}} = \frac{p\degree}{p\, x_{\ce{H2}}}
-%\end{equation}
-%où $x_{\ce{H2}}$ est la fraction molaire en dihydrogène. En augmentant la pression totale, on augmente ainsi la pression partielle en dihydrogène et on réduit le quotient réactionnel, ce qui fait évoluer la réaction dans le sens direct. Ceci est compatible avec le principe de Le Châtelier : une augmentation de la pression fait évoluer le système dans le sens de la consommation du gaz.
+Les composés solides ayant une activité de 1, le quotient réactionnel s'écrit :
+\begin{equation}
+    Q = \frac{p\degree}{p_{\ce{H2}}} = \frac{p\degree}{p\, x_{\ce{H2}}}
+\end{equation}
+où $x_{\ce{H2}}$ est la fraction molaire en dihydrogène. En augmentant la pression totale, on augmente ainsi la pression partielle en dihydrogène et on réduit le quotient réactionnel, ce qui fait évoluer la réaction dans le sens direct. Ceci est compatible avec le principe de Le Châtelier : une augmentation de la pression fait évoluer le système dans le sens de la consommation du gaz.
 
 De manière générale, on a la propriété suivante :
 \begin{proposition}
     Une augmentation de la pression déplace l'équilibre dans le sens qui fait diminuer le nombre de moles de gaz.
 \end{proposition}
 \begin{demonstration}
-    Cette démonstration formelle n'est pas à connaître. Par contre, il faut savoir mener ce raisonnement pour un exemple (CE7). Considérons une réaction de la forme :
+    Cette démonstration formelle n'est pas à connaître. Par contre, il faut savoir mener ce raisonnement pour un exemple (cf TD). Considérons une réaction de la forme :
     \begin{equation}
-        \sum_i \nu_i A_i + \sum_j \nu_j' G_j = 0
+        \sum_i \nu_i A_i + \sum_j \nu_j' G_j
     \end{equation}
     où les composés $G_j$ sont gazeux et les autres sont non gazeux. Nous notons $p$ la pression totale et $x_j$ la fraction molaire de chacun des composés. Le quotient réactionnel s'écrit alors :
     \begin{equation}
@@ -512,9 +453,8 @@ De manière générale, on a la propriété suivante :
         \item Si $\sum_j \nu_j'<0$, la réaction diminue le nombre de moles de gaz dans le sens direct. Une augmentation de la pression fait diminuer $Q$, et la réaction évolue dans le sens direct.
         \item Si $\sum_j \nu_j'>0$, la réaction augmente le nombre de moles de gaz dans le sens direct. Une augmentation de la pression fait augmenter $Q$, et la réaction évolue dans le sens indirect.
     \end{itemize}
+    L'augmentation de la pression fait donc évoluer l'aquilibre dans le sens d'une diminution du nombre de moles de gaz, ce qui est cohérent avec le principe de modération de La Châtelier.
 \end{demonstration}
-
-    L'augmentation de la pression fait donc évoluer l'équilibre dans le sens d'une diminution du nombre de moles de gaz, ce qui est cohérent avec le principe de modération de Le Châtelier (en effet, par la loi des gaz parfaits, augmenter la pression à température constante revient à augmenter le nombre de moles de gaz).
 
 \begin{encart}[Stockage de l'hydrogène]
     L'hydrogène est souvent présenté comme un carburant vert en raison de nombreux avantages : il peut être produit à partir d'électricité, et donc directement des énergies renouvelables. Sa combustion, par ailleurs, ne produit pas de dioxyde de carbone et ne contribue donc pas au réchauffement climatique.
@@ -525,7 +465,7 @@ De manière générale, on a la propriété suivante :
 
     \begin{center}
         \includegraphics[width=0.6\linewidth]{Pictures/fabrication_PdH.png} \\
-        Synthèse de l'hydrure de palladium dans une cellule à enclumes de diamant.\\Source : Hemmes et al (1989).
+        Synthèse de l'hydrure de palladium dans une cellule à enclumes de diamant. Source : Hemmes et al (1989).
     \end{center}
 \end{encart}
 
@@ -533,7 +473,7 @@ De manière générale, on a la propriété suivante :
 
 Nous pouvons finalement nous intéresser à la température. Celle-ci n'agit pas sur les activités des constituants chimiques, donc pas sur le quotient de réaction, mais elle agit directement sur la constante de réaction $K\degree(T)$.
 
-Nous reprenons l'exemple de la réaction de formation du tétrachlorure de cuivre :
+Nous pouvons prendre l'exemple de la réaction de formation du tétrachlorure de cuivre :
 \begin{equation}
     \ce{\color{blue}{[Cu(H2O)6]^{2+}(aq)} + 4 Cl-(aq) = \color{green}{[CuCl4]^{2-}(aq)} + 6H2O(l)}
 \end{equation}
@@ -543,7 +483,7 @@ La dépendance de cette constante en fonction de la température est donnée par
 \begin{theorem}[Loi de Van't Hoff]
     La constante d'équilibre $K\degree(T)$ d'une réaction chimique dépend de la température selon la loi suivante :
     \begin{equation}
-        \frac{\dd \ln K\degree}{\dd T} = \frac{\Delta_r H\degree}{R T^2}
+        \frac{\dd \ln K\degree}{\dd T} = \frac{\Delta_r H\degree}{R T²}
     \end{equation}
     où $\Delta_r H\degree$ est l'enthalpie standard de réaction, et $R$ la constante des gaz parfaits. 
 \end{theorem}
@@ -571,7 +511,7 @@ La dépendance de cette constante en fonction de la température est donnée par
     (on a utilisé à nouveau la relation $\Delta_rG\degree = \Delta_rH\degree-T\Delta_rS\degree$). On obtient bien la loi de Van't Hoff.
 \end{demonstration}
 
-On peut vérifier la compatibilité de la loi de Van't Hoff avec le principe de modération de Le Châtelier. Si la réaction est endothermique, alors $\Delta_r H\degree > 0$. Lorsque la température augmente, d'après la loi de Van't Hoff, la constante d'équilibre va augmenter et l'équilibre évolue dans le sens direct, c'est-à-dire qu'il consomme de l'énergie thermique, ce qui vient s'oppposer à la diminution initiale de la température.
+On peut vérifier la compatibilité de la loi de Van't Hoff avec le principe de modération de La Châtelier. Si la réaction est endothermique, alors $\Delta_r H\degree > 0$. Lorsque la température augmente, d'après la loi de Van't Hoff, la constante d'équilibre va augmenter et l'équilibre évolue dans le sens direct, c'est-à-dire qu'il consomme de l'énergie thermique, ce qui vient s'oppposer à la diminution initiale de la température.
 
 Au contraire, si la réaction est exothermique, une augmentation de la température fait évoluer l'équilibre dans le sens indirect, ce qui consomme de l'énergie thermique et s'oppose également à la diminution initiale de température.
 
@@ -581,13 +521,13 @@ Dans le cadre de notre expérience avec le cuivre, nous avons observé un dépla
 
 De la même manière que l'enthalpie standard de réaction, l'enthalpie libre standard de réaction ne peut pas être tabulée pour toutes les réactions chimiques possibles. Pour la calculer, nous utilisons également la loi de Hess.
 
-Nous pouvons pour cela définir l'entropie standard d'un constituant :
+Nous avons rapidement défini, lors de la démonstration de la loi de Van't Hoff, une entropie standard de réaction. Pour définir plus rigoureusement cette quantité nous pouvons définir l'entropie standard d'un constituant :
 \begin{definition}
     L'entropie standard $S\degree$ d'un constituant chimique est son entropie par unité de quantité de matière, lorsqu'il est dans son état standard. C'est une grandeur intensive qui se mesure en J$\cdot$K$^{-1}\cdot$mol$^{-1}$. 
 \end{definition}
-Les entropies standard des constituants chimiques sont tabulées. On peut alors exprimer l'entropie standard de réaction que nous avons défini précédemment :
-\begin{proposition}
-    On considère toujours une réaction de la forme :
+Les entropies standard des constituants chimiques sont tabulées. On peut alors définir l'entropie standard de réaction :
+\begin{definition}
+    L'entropie standard d'une réaction chimique correspond à la variation d'entropie par unité d'avancement de la réaction chimique dans les conditions standard. Si la réaction s'écrit :
     \begin{equation}
         \sum_i \nu_i A_i = 0
     \end{equation}
@@ -595,18 +535,10 @@ Les entropies standard des constituants chimiques sont tabulées. On peut alors 
     \begin{equation}
         \Delta_r S\degree = \sum_i \nu_i S\degree(A_i)
     \end{equation}
-\end{proposition}
-Il s'agit d'une propriété analogue à la loi de Hess pour l'enthalpie standard de réaction. 
+\end{definition}
+Il s'agit d'une définition analogue à la loi de Hess pour l'enthalpie standard de réaction. 
 
-\begin{remark}
-L'entropie molaire d'un gaz est généralement beaucoup plus élevée que celle d'une phase condensée. Ainsi, si la réaction fait intervenir des composés gazeux, $\Delta_r S^\circ$ est généralement positif dans le cas d'une augmentation du nombre de moles de gaz, et négatif dans le cas contraire.
-\end{remark}
-
-\begin{capex}
-Déterminer le signe de l'entropie standard de la réaction de formation de l'hydrure de palladium. Quel impact cela a-t-il sur le rendement de la réaction ?
-\end{capex}
-
-Enfin, nous avons déjà vu que l'enthalpie libre standard de réaction peut s'exprimer en fonction de l'enthalpie et de l'entropie standards de réaction :
+Enfin, nous avons vu dans la démonstration de la loi de Van't Hoff que l'enthalpie libre standard de réaction s'écrit :
 \begin{proposition}
     Pour une transformation chimique monobare et monotherme, l'enthalpie libre standard de réaction $\Delta_r G\degree$ est reliée à l'enthalpie standard de réaction $\Delta_r H\degree$ et l'entropie standard de réaction $\Delta_r S\degree$ par :
     \begin{equation}
@@ -619,18 +551,13 @@ Enfin, nous avons déjà vu que l'enthalpie libre standard de réaction peut s'e
     \begin{itemize}
         \item On calcule l'enthalpie standard de réaction $\Delta_r H\degree$ à partir de la loi de Hess et des enthalpies libres standard de formation tabulées;
         \item On calcule l'entropie standard de réaction à partir des entropies standard tabulées ;
-        \item On calcule l'enthalpie libre standard de réaction à l'aide de l'expression :
+        \item On calcule l'enthalpie libre standard de réaction à l'ide de l'expression :
         \begin{equation}
             \Delta_r G\degree(T) = \Delta_r H\degree - T \Delta_r S\degree
         \end{equation}
     \end{itemize}
+    Nous verrons des exemples en TD.
 \end{encart}
 
-\begin{capex}
-Déterminer l'enthalpie libre standard de la réaction chimique permettant de former l'hydrure de palladium, à température ambiante. \\
-Données à 25$^\circ$C : \\
-$\Delta_f H^\circ(\ce{PdH(s)}) = 12$\,kJ$\cdot$mol$^{-1}$ ; $S^\circ_(\ce{PdH(s)}) = 52$\,J$\cdot$mol$^{-1} \cdot$K$^{-1}$ ;\\
- $S^\circ_m(\ce{Pd(s)}) = 38$\,J$\cdot$mol$^{-1} \cdot$K$^{-1}$ ;\ $S^\circ_m(\ce{H2(g)}) = 131$\,J$\cdot$mol$^{-1} \cdot$K$^{-1}$ 
-\end{capex}
 
 \end{document}

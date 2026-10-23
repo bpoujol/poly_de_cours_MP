@@ -24,7 +24,7 @@ gamma_air = 1.4
 #Volume
 V = 4.   # en L
 #Quantite de matiere en reactifs
-n0 = 0.05 # en mol
+n0 = 0.025 # en mol
 #Quantite de matiere en air
 n_air = 4 #en mol
 #Temperature initiale
@@ -70,8 +70,8 @@ for i in range(N):
 
   #METHODE D'EULER
   #Variation infinitesimale de xi et T
-  d_xi = v(T,xi)*dt*V
-  d_T = -Delta_r_H*d_xi/Cv(xi)
+  d_xi = v(T,xi)*dt*V  #Definition de la vitesse de reaction
+  d_T = -Delta_r_H*d_xi/Cv(xi) #Premier principe (Q4)
   #On incrémente xi et T
   xi = xi+d_xi
   T = T+d_T

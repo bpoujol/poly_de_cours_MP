@@ -1,0 +1,87 @@
+\documentclass[a4paper,12pt,fleqn]{article}
+\usepackage{amsmath}
+\usepackage{fancyhdr}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{esvect}
+\usepackage[skins]{tcolorbox}
+\usepackage[french]{babel}
+\usepackage{booktabs}
+\usepackage{mhchem}
+
+
+\newcommand{\dd}{\mathrm{d}}
+
+% ANU Exams Office mandated margins and footer style
+\setlength{\topmargin}{-1cm}
+\setlength{\textheight}{9.75in}
+\setlength{\oddsidemargin}{0.0in}
+\setlength{\evensidemargin}{0.0in}
+\setlength{\textwidth}{16cm}
+\pagestyle{fancy}
+\lhead{} 
+\chead{} 
+\rhead{} 
+\lfoot{} 
+\cfoot{\footnotesize{Page \thepage \ / \pageref{finalpage} -- \examcode}} 
+\rfoot{} 
+
+\newcounter{question}
+\newcommand*\qst{%
+  \stepcounter{question}%
+  \paragraph{$\square$\,\,\textbf{\thequestion \quad -- }}}
+
+  \newcommand*\noq{
+  \paragraph{}}
+
+\newtcolorbox{myframe}[2][]{%
+  enhanced,colback=white,colframe=black,coltitle=black,
+  sharp corners,boxrule=0.4pt,
+  fonttitle=\itshape,
+  attach boxed title to top left={yshift=-0.3\baselineskip-0.4pt,xshift=2mm},
+  boxed title style={tile,size=minimal,left=0.5mm,right=0.5mm,
+    colback=white,before upper=\strut},
+  title=#2,#1
+}
+
+\begin{document}
+\section*{TD numérique de thermochimie}
+
+Dans cet exercice, nous cherchons à modéliser l'évolution de la température d'un système fermé, siège d'une réaction chimique, en fonction du temps. Nous allons nous intéresser à la réaction suivante :
+\begin{equation}
+    \ce{NO2(g) + CO(g) -> CO2(g) + NO(g)}
+\end{equation}
+
+On introduit dans un réacteur calorifugé de volume fixe $V = 4$\,L, une quantité $n_{air} = 4$\,mol d'air et une petite quantité $n_0$ de dioxyde d'azote et de monoxyde de carbone en proportions stœchiométriques. On cherche à savoir comment la température va évoluer dans le réacteur. On donne : 
+\begin{center}
+\begin{tabular}{rcccc}
+        & $\ce{NO2}$ & $\ce{CO}$ & $\ce{CO2}$ & $\ce{NO}$ \\
+        \midrule
+         $\Delta_fH^\circ$ [kJ/mol] & 33 & -110 & -393 & 90 \\
+         $S^\circ_m$ [J/K/mol] & 240 & 198 & 214 & 211 \\
+         \bottomrule
+    \end{tabular}
+\end{center}
+
+\qst Déterminer l'enthalpie standard de réaction, que l'on supposera indépendante de la température. Comment va évoluer la température du système ?
+
+\qst Déterminer la constante de réaction et montrer que la réaction est quantitative. Faire un tableau d'avancement, on note l'avancement $\xi$.
+
+\qst Déterminer la capacité thermique à volume constant du réacteur en fonction de l'avancement $\xi$, et des coefficients de Laplace $\gamma$ de chacun des gaz. On rappelle que pour un gaz parfait : $C_v = \dfrac{n R}{\gamma - 1}$
+
+\qst Appliquer le 1er principe infinitésimal au système entre deux instants $t$ et $t+\dd t$. Relier alors la variation de température $\dd T$ et l'avancement $\dd \xi$.
+
+\qst La réaction est d'ordre 1 par rapport à chacun des réactifs. Écrire la loi de vitesse, en notant $v = \dfrac{1}{V} \dd \xi/\dd t$ la vitesse de réaction, en fonction de la constante de vitesse $k$, $n_0$, $\xi$ et le volume total $V$.
+
+\qst A partir de la loi d'Arrhénius, exprimer $k$ en fonction d'une constante $\mathcal{A} = 1.19 \times 10^{10}$\,L$\cdot$mol$^{-1}\cdot$s$^{-1}$ et de l'énergie d'activation $E_a = 1.33 \times 10^5$\,kJ$\cdot$mol$^{-1}$
+
+\qst Compléter le code fourni et simuler l'évolution d'un système dans lequel on a introduit une faible quantité de réactifs $n_0 = 0.1$\,mol, à une température initiale de 650\,K. Expliquer l'allure de la courbe obtenue.
+
+\qst Que se passe-t-il si on démarre la réaction à température ambiante ?  Et à haute température ($800$\,K) ? Expliquer. Mettre en évidence l'existence d'une température minimale pour que la réaction puisse se faire : c'est la raison pour laquelle on doit souvent démarrer les réactions de combustion avec une étincelle.
+
+\qst Que se passe-t-il si on augmente la quantité de matière de réactifs ? (essayer de diviser $n_0$ par deux). Commenter. 
+
+\label{finalpage}
+
+\end{document}

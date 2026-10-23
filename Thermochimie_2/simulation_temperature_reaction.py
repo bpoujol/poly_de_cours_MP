@@ -42,6 +42,7 @@ N = len(les_t)
 
 #initialisation des températures
 les_T = np.zeros((N))
+les_xi = np.zeros((N))
 
 #Calcul de la capacité thermique totale en fonction de l'avancement
 def Cv(xi):
@@ -65,6 +66,7 @@ xi = 0
 for i in range(N):
   #On enregistre la température
   les_T[i] = T
+  les_xi[i] = xi
 
   #METHODE D'EULER
   #Variation infinitesimale de xi et T

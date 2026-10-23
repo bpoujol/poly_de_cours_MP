@@ -427,22 +427,24 @@ Connaissant la forme générale du profil de la raie (par exemple, une fonction 
 	\caption{Evolution de trains d'onde dans l'interféromètre de Michelson.}
 \end{figure}
 
-\begin{figure}[p]
-	\centering \includegraphics[width=\linewidth]{spectre_iasi.png} \includegraphics[width=\linewidth]{iasi_chimie.png} \includegraphics[width=\linewidth]{co2_iasi.png}
-
-	\caption{En haut : spectre obtenu à partir de l'instrument IASI. La température de brillance est une unité de mesure du rayonnement couramment utilisée en climatologie. Au milieu : estimation de la concentration en différents composés chimiques à partir de ce spectre. En bas : évolution de la concentration en dioxyde de carbone dans l'atmosphère mesurée par l'instrument IASI.} 
-\end{figure}
-
 \begin{encart}[L'interféromètre IASI]
 	IASI (Infrared Atmospheric Sounding Interferometer) est un instrument de mesure lancé à bord de trois satellites qui a révolutionné la chimie de l'atmosphère et les prévisions météorologiques. L'instrument est un interféromètre de Michelson, qui travaille dans le domaine de l'infrarouge. Il pointe vers la surface de la Terre et analyse le rayonnement infrarouge émis par la surface de la Terre, l'atmosphère et les nuages.
 
-	L'instrument réalise un chariotage complet toutes les 250\,ms, ce qui permet d'obtenir un spectre complet de la zone recherchée. On peut alors :
+	L'instrument réalise un chariotage complet toutes les 250\,ms, ce qui permet d'obtenir un spectre complet de la zone recherchée. La méthode utilisée est la spectroscopie par transformée de Fourier, qui est détaillée dans un exercice du TD. On peut alors :
 	\begin{itemize}
-		\item Estimer les concentrations en gaz trace (ozone, monoxyde de carbone, méthane, dioxyde de carbone) en identifiant les raies d'émission et d'absorption de ces gaz ;
+		\item Estimer les concentrations en gaz trace (ozone, monoxyde de carbone, méthane, dioxyde de carbone) en identifiant les raies d'émission et d'absorption de ces gaz. Ceci permet notamment de suivre les incendies, émissions volcaniques, le trou de la couche d'ozone, la concentration des gaz à effet de serre, les émissions de polluants par des industriels ;
 		\item Déterminer la température et l'humidité en fonction de l'altitude (le rayonnement émis dépend de la température), pour peu qu'il n'y ait pas de nuages. Ceci a permis une nette amélioration des prévisions météorologiques.
 	\end{itemize} 
 \end{encart}
 
+\begin{figure}[htbp]
+	\centering \includegraphics[width=0.5\linewidth]{schema_iasi.png} \includegraphics[width=\linewidth]{spectre_iasi.png}
+	\caption{En haut : schéma de l'instrument IASI. Source : Siméoni, Denis, Christian Singer, and Gilles Chalon (1997). \textit{Infrared atmospheric sounding interferometer}. Acta astronautica. En bas : spectre obtenu à partir de l'instrument IASI. La température de brillance est une unité de mesure du rayonnement couramment utilisée en climatologie.}
+\end{figure}
+\begin{figure}[p]
+	\centering \includegraphics[width=0.65\linewidth]{iasi_chimie.png} \includegraphics[width=0.75\linewidth]{panache_co.png} \includegraphics[width=0.9\linewidth]{sources_methane_iasi.png} 
+	\caption{En haut : estimation de la concentration en différents composés chimiques à partir de ce spectre. Au milieu : carte de la concentration en monoxyde de carbone, permettant d'identifier un panache de fumée issu des incendie au Canada lors de l'été 2023. Source : Clerbaux. \textit{Composition atmosphérique : que voir par spectroscopie infrarouge depuis l’espace ?} En bas : identification de sites de fortes émissions de méthane depuis l'espace à l'aide de l'instrument IASI. Source : Van Damme, M., Clarisse, L., Whitburn, S. et al. \textit{Industrial and agricultural ammonia point sources exposed.} Nature (2018).} 
+\end{figure}
 
 \subsection{Configuration en coin d'air : franges d'égale épaisseur}
 
@@ -475,6 +477,12 @@ On admet l'expression de la différence de marche en fonction de la position $x$
 \end{proposition}
 Ainsi, la différence de marche est directement proportionnelle à la position et on observe des franges d'interférence dites \textit{franges d'égale épaisseur}.
 
+\begin{figure}[htbp]
+	\centering \includegraphics[width=0.35\linewidth]{coin_air_laser.jpeg}\includegraphics[width=0.35\linewidth]{coin_air.png}
+	\caption{Allure des franges observées en coin d'air en lumière monochromatique (à gauche) et en lumière blanche (à droite). Pour la lumière blanche, deux configurations sont montrées avec un angle $\alpha$ plus faible en haut et plus élevé en bas.} 
+\end{figure}
+
+
 \begin{capex}
 	Faire un schéma équivalent du dispositif avec la méthode des images, en faisant figurer les sources secondaires. Expliquer alors qualitativement la présence de franges d'interférences.
 \end{capex}
@@ -488,12 +496,6 @@ La différence de marche étant directement proportionnelle à la position sur l
 \begin{remark}
 	Cette propriété peut être utilisée pour mesurer l'épaisseur ou l'indice optique d'une lamelle, par exemple, comme nous le verrons en TP.
 \end{remark}
-
-
-\begin{figure}[htbp]
-	\centering \includegraphics[width=0.35\linewidth]{coin_air_laser.jpeg}\includegraphics[width=0.35\linewidth]{coin_air.png}
-	\caption{Allure des franges observées en coin d'air en lumière monochromatique (à gauche) et en lumière blanche (à droite). Pour la lumière blanche, deux configurations sont montrées avec un angle $\alpha$ plus faible en haut et plus élevé en bas.} 
-\end{figure}
 
 
 

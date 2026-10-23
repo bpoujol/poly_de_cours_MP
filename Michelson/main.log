@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.9.16)  4 NOV 2025 18:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.8.28)  22 OCT 2026 20:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -998,9 +998,9 @@ Package: babel 2024/01/07 v24.1 The Babel package
 (/usr/share/texlive/texmf-dist/tex/generic/babel-french/french.ldf
 Language: french 2023-12-19 v3.5r French support from the babel system
 Package babel Info: Hyphen rules for 'acadian' set to \l@french
-(babel)             (\language9). Reported on input line 91.
+(babel)             (\language7). Reported on input line 91.
 Package babel Info: Hyphen rules for 'canadien' set to \l@french
-(babel)             (\language9). Reported on input line 92.
+(babel)             (\language7). Reported on input line 92.
 \FB@stdchar=\count346
 Package babel Info: Making : an active character on input line 420.
 Package babel Info: Making ; an active character on input line 421.
@@ -2180,53 +2180,71 @@ File: longueur_coherence_3.png Graphic file (type png)
 <use longueur_coherence_3.png>
 Package pdftex.def Info: longueur_coherence_3.png  used on input line 426.
 (pdftex.def)             Requested size: 136.57635pt x 165.59023pt.
-<spectre_iasi.png, id=144, 513.92pt x 189.70876pt>
+Package mdframed Info: mdframed works in twoside mode on input line 430.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 430.
+ [11 <./raie_mercure.png> <./longueur_coherence_1.png> <./longueur_coherence_2.
+png> <./longueur_coherence_3.png>]
+Package mdframed Info: Not enough space on this page on input line 438.
+<schema_iasi.png, id=157, 841.1425pt x 772.8875pt>
+File: schema_iasi.png Graphic file (type png)
+<use schema_iasi.png>
+Package pdftex.def Info: schema_iasi.png  used on input line 441.
+(pdftex.def)             Requested size: 213.39568pt x 196.07538pt.
+<spectre_iasi.png, id=158, 513.92pt x 189.70876pt>
 File: spectre_iasi.png Graphic file (type png)
 <use spectre_iasi.png>
-Package pdftex.def Info: spectre_iasi.png  used on input line 431.
+Package pdftex.def Info: spectre_iasi.png  used on input line 441.
 (pdftex.def)             Requested size: 426.79135pt x 157.54794pt.
-<iasi_chimie.png, id=145, 1308.38812pt x 971.12813pt>
+<iasi_chimie.png, id=159, 1308.38812pt x 971.12813pt>
 File: iasi_chimie.png Graphic file (type png)
 <use iasi_chimie.png>
-Package pdftex.def Info: iasi_chimie.png  used on input line 431.
-(pdftex.def)             Requested size: 426.79135pt x 316.76872pt.
-<co2_iasi.png, id=146, 782.925pt x 236.885pt>
-File: co2_iasi.png Graphic file (type png)
-<use co2_iasi.png>
-Package pdftex.def Info: co2_iasi.png  used on input line 431.
-(pdftex.def)             Requested size: 426.79135pt x 129.1341pt.
-Package mdframed Info: mdframed works in twoside mode on input line 436.
+Package pdftex.def Info: iasi_chimie.png  used on input line 445.
+(pdftex.def)             Requested size: 277.41176pt x 205.89893pt.
+<panache_co.png, id=160, 1291.82625pt x 848.16875pt>
+File: panache_co.png Graphic file (type png)
+<use panache_co.png>
+Package pdftex.def Info: panache_co.png  used on input line 445.
+(pdftex.def)             Requested size: 320.0935pt x 210.15213pt.
+<sources_methane_iasi.png, id=161, 1583.9175pt x 826.08624pt>
+File: sources_methane_iasi.png Graphic file (type png)
+<use sources_methane_iasi.png>
+Package pdftex.def Info: sources_methane_iasi.png  used on input line 445.
+(pdftex.def)             Requested size: 384.1096pt x 200.31937pt.
+
+
+LaTeX Warning: Float too large for page by 51.47939pt on input line 447.
+
+
+Underfull \vbox (badness 4303) has occurred while \output is active []
+
+ [12 <./schema_iasi.png> <./spectre_iasi.png>] [13 <./iasi_chimie.png> <./panac
+he_co.png> <./sources_methane_iasi.png>]
+Package mdframed Info: mdframed works in twoside mode on input line 452.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 436.
- [11 <./raie_mercure.png> <./longueur_coherence_1.png> <./longueur_coherence_2.
-png> <./longueur_coherence_3.png>] [12 <./spectre_iasi.png> <./iasi_chimie.png>
- <./co2_iasi.png>]
-Package mdframed Info: Not enough space on this page on input line 444.
-Package mdframed Info: mdframed works in twoside mode on input line 450.
+(mdframed)              on input line 452.
+Package mdframed Info: mdframed works in twoside mode on input line 465.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 450.
-Package mdframed Info: mdframed works in twoside mode on input line 463.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 463.
-Package mdframed Info: mdframed works in twoside mode on input line 478.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 478.
- [13]
-<coin_air_laser.jpeg, id=183, 220.825pt x 229.85875pt>
+(mdframed)              on input line 465.
+<coin_air_laser.jpeg, id=179, 220.825pt x 229.85875pt>
 File: coin_air_laser.jpeg Graphic file (type jpg)
 <use coin_air_laser.jpeg>
-Package pdftex.def Info: coin_air_laser.jpeg  used on input line 494.
+Package pdftex.def Info: coin_air_laser.jpeg  used on input line 481.
 (pdftex.def)             Requested size: 149.37958pt x 155.49867pt.
-<coin_air.png, id=184, 459.7175pt x 460.72125pt>
+<coin_air.png, id=180, 459.7175pt x 460.72125pt>
 File: coin_air.png Graphic file (type png)
 <use coin_air.png>
-Package pdftex.def Info: coin_air.png  used on input line 494.
+Package pdftex.def Info: coin_air.png  used on input line 481.
 (pdftex.def)             Requested size: 149.37958pt x 149.70451pt.
- [14 <./coin_air_laser.jpeg> <./coin_air.png>] (./main.aux)
+Package mdframed Info: mdframed works in twoside mode on input line 486.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 486.
+ [14 <./coin_air_laser.jpeg> <./coin_air.png>]
+[15] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
@@ -2236,11 +2254,11 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 57834 strings out of 476080
- 1283926 string characters out of 5792744
+ 57849 strings out of 476080
+ 1284316 string characters out of 5792744
  2321223 words of memory out of 5000000
- 78465 multiletter control sequences out of 15000+600000
- 641412 words of font info for 329 fonts, out of 8000000 for 9000
+ 78479 multiletter control sequences out of 15000+600000
+ 641309 words of font info for 328 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
  102i,13n,107p,1173b,1786s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/fontawesome5/FontAwesome5Fr
@@ -2257,10 +2275,10 @@ ts/type1/urw/avantgar/uagd8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
 .pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (14 pages, 7904161 bytes).
+Output written on main.pdf (15 pages, 11662744 bytes).
 PDF statistics:
- 312 PDF objects out of 1000 (max. 8388607)
- 224 compressed objects within 3 object streams
- 85 named destinations out of 1000 (max. 500000)
- 71891 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 321 PDF objects out of 1000 (max. 8388607)
+ 228 compressed objects within 3 object streams
+ 87 named destinations out of 1000 (max. 500000)
+ 71901 words of extra memory for PDF output out of 74296 (max. 10000000)
 

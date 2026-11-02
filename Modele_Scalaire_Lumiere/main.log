@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.9.16)  31 OCT 2025 09:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.8.28)  1 NOV 2026 17:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -998,9 +998,9 @@ Package: babel 2024/01/07 v24.1 The Babel package
 (/usr/share/texlive/texmf-dist/tex/generic/babel-french/french.ldf
 Language: french 2023-12-19 v3.5r French support from the babel system
 Package babel Info: Hyphen rules for 'acadian' set to \l@french
-(babel)             (\language9). Reported on input line 91.
+(babel)             (\language7). Reported on input line 91.
 Package babel Info: Hyphen rules for 'canadien' set to \l@french
-(babel)             (\language9). Reported on input line 92.
+(babel)             (\language7). Reported on input line 92.
 \FB@stdchar=\count346
 Package babel Info: Making : an active character on input line 420.
 Package babel Info: Making ; an active character on input line 421.
@@ -2192,12 +2192,12 @@ Package mdframed Info: mdframed works in twoside mode on input line 595.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 595.
-<interferences_deux_ondes.png, id=165, 902.37125pt x 563.10374pt>
+ [12]
+<interferences_deux_ondes.png, id=179, 902.37125pt x 563.10374pt>
 File: interferences_deux_ondes.png Graphic file (type png)
 <use interferences_deux_ondes.png>
 Package pdftex.def Info: interferences_deux_ondes.png  used on input line 616.
 (pdftex.def)             Requested size: 426.79135pt x 266.33429pt.
- [12]
 <fresnel_mirror.jpg, id=180, 844.15375pt x 261.97874pt>
 File: fresnel_mirror.jpg Graphic file (type jpg)
 <use fresnel_mirror.jpg>
@@ -2279,7 +2279,7 @@ are/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/t
 ype1/urw/times/utmri8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/es
 vect/vect10.pfb>
-Output written on main.pdf (16 pages, 2590276 bytes).
+Output written on main.pdf (16 pages, 2590336 bytes).
 PDF statistics:
  366 PDF objects out of 1000 (max. 8388607)
  292 compressed objects within 3 object streams
